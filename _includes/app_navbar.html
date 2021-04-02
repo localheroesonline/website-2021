@@ -1,0 +1,26 @@
+<!-- NAVBAR -->
+<div class="app-navbar">
+    <div class="container">
+        <div class="inner-container"> 
+            <input type="checkbox" id="check">
+            <ul class="nav-list">
+                <!-- {% for item in site.pages %}
+                    <li class="nav-item" {% if page.url contains item.url %} class=" active" {% endif %}>
+                        <a  href="{{ item.url }}">{{ item.title }}</a>
+                    </li>
+                {% endfor %} -->
+                <li class="nav-item"><a class="active" href="{{site.baseurl}}#home">Home</a></li>
+                <li class="nav-item"><a href="{{site.baseurl}}#our-heroes">Over Local Heroes</a></li>
+                <li class="nav-item"><a href="{{site.baseurl}}#how-work">Hoe Het Werkt</a></li>
+                <li class="nav-item"><a href="{{site.baseurl}}#one-hero">Onze Heroes</a></li>
+                <li class="nav-item"><a href="{{site.baseurl}}b2b.html">B2B</a></li>
+                <li class="nav-item"><a href="faq.html">FAQ</a></li>
+                <li class="nav-item"><a href="blog.html">Blog</a></li>
+                <li class="nav-item"><a href="#contact">Contact</a></li>
+            </ul>
+            <label for="check" class="hamburger">
+                <i class="fa fa-bars"></i>
+            </label>
+        </div>
+    </div>
+</div>

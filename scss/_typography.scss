@@ -1,0 +1,45 @@
+/** @format */
+.main-heading {
+  font-size: font-size(lg);
+  margin-bottom: 1rem;
+  font-weight: font-weight(black);
+  color: $primary-color;
+  @media (max-width: 576px) {
+    font-size: font-size(sm);
+  }
+}
+
+.sub-heading {
+  font-size: font-size(md);
+  font-weight: font-weight(regular);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: $secondary-color;
+  @media (max-width: 576px) {
+    font-size: font-size(sm);
+  }
+}
+
+.main-title {
+  font-size: font-size(sm);
+  margin-bottom: 0.5rem;
+  font-weight: font-weight(medium);
+  @media (max-width: 576px) {
+    font-size: font-size(xs);
+  }
+}
+
+.sub-title {
+  font-size: font-size(xs);
+  margin-bottom: 0.5rem;
+  font-weight: font-weight(medium);
+  @media (max-width: 576px) {
+    font-size: font-size(xxs);
+  }
+}
+
+.lead {
+  font-size: font-size(xs);
+  color: $secondary-color;
+  font-weight: font-weight(regular);
+}
