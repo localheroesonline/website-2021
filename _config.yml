@@ -32,6 +32,9 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.localheroesonline.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: localheroesNL
 github_username:  localheroesonline
+mixpanel-project-token: 624a5eaf9d84caf4c6c5af9a45a08a4a # production = d75409912bb950e41f6c85be92aba32d
+mixpanel-api-host: https://api-eu.mixpanel.com
+google_analytics: UA-260378921
 
 # Build settings
 markdown: kramdown
