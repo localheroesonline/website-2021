@@ -60,7 +60,7 @@
             d.parentNode.insertBefore(b, d)
         }
     })(document, window.mixpanel || []);
-    mixpanel.init('{{ site.mixpanel-project-token }}', {
-        api_host: '{{ site.mixpanel-api-host }}'
+    mixpanel.init("{{ site.mixpanel-project-token }}", {
+        api_host: "{{ site.mixpanel-api-host }}"
     });
 </script>
