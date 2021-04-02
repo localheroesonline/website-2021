@@ -17,22 +17,32 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
+title: Local Heroes
 
-title: Your awesome title
-email: your-email@example.com
+# This is the place to set up the contact form recipient
+email: info@localheroesonline.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog /jekyll-localheroes-v2
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+  Local Heroes is het e-commerce platform waarmee je eenvoudig en altijd
+  via de app het aanbod van lokale ondernemers kan bestellen.
+  Boodschappen doen via Local Heroes is een win-win-win.
+  - Steun lokale ondernemers, versterk je buurt
+  - Altijd verse en lekkere producten van de markt in huis
+  - Bespaar tijd, geld én moeite
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://www.localheroesonline.com" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: localheroesNL
+github_username:  localheroesonline
 
 # Build settings
+markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+
+incremental: true
+
+paginate: 5
+paginate_path: "/blog/page/:num"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
