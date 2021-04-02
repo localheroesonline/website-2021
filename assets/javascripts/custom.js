@@ -1,0 +1,117 @@
+var base_ur = "http://localhost/localheroes-v2/";
+
+// APP STORE BUTTON FIXED
+$(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+    if (scroll >= $('#app-store-btn').offset().top) {
+        $(".app-store ").addClass("app-store-btn-fixed-top");
+
+        $(".mockup-image ").addClass("add-p");
+    } else {
+        $(".app-store").removeClass("app-store-btn-fixed-top");
+        $(".mockup-image ").removeClass("add-p");
+    }
+});
+
+
+// APP STORE BUTTON FIXED
+$(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+    if (scroll >= $('#re-block').offset().top) {
+       $(".app-store").removeClass("app-store-btn-fixed-top");
+        // $(".mockup-image ").addClass("add-p");
+    } else {
+        // $(".app-store").removeClass("app-store-btn-fixed-top");
+        // $(".mockup-image ").removeClass("add-p");
+    }
+});
+
+
+// TOOL TIP
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+
+// CHECK MOBILE DEVICE
+$(document).ready(function () {
+	$(document).on('click','.nav-item',function(){
+		var checkDevice = isMobileDevice();
+		if(checkDevice==true){
+			$("#check").prop("checked", false);
+		}	
+	});	
+});
+
+function isMobileDevice() {
+    return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+}
+
+// APP NAVBAR
+$(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+    if (scroll >= 400) {
+        $(".app-navbar").addClass("light-navbar");
+    }
+    else{
+      $(".app-navbar").removeClass("light-navbar");
+    }
+}); 
+
+// HAMBURGER
+$('.hamburger').click(function(){
+    $(this).find('i').toggleClass('fa-bars fa-times-circle')
+});
+
+var width = $(window).width();
+if (width <= 576) {
+  $(".app-navbar").addClass("mobile-navbar");
+
+} else {
+    $(".app-navbar").removeClass("mobile-navbar");
+}
+
+
+$('.mobile-navbar a').click(function(){
+    $(this).find('i').toggleClass('fa-bars fa-times-circle')
+});
+
+
+// SLICK SLIDER
+$('.slick-carousel').slick({
+  infinite: true,
+  slidesToShow: 3, // Shows a three slides at a time
+  slidesToScroll: 1, // When you click an arrow, it scrolls 1 slide at a time
+  arrows: true, // Adds arrows to sides of slider
+  dots: false, // Adds the dots on the bottom
+  responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            adaptiveHeight: true,
+          },
+        },
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+          },
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+});
