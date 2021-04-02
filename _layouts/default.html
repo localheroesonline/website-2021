@@ -1,39 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Local Heroes | {{page.title}}</title>
-    <link rel="stylesheet" href="resources/bootstrap/css/bootstrap.min.css">
-    <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+<html lang="{{ page.lang | default: site.lang | default: "nl" }}">
+{% include head.html %}
 
-    <!-- FONT AWESOME 5 -->
-    <link rel="stylesheet" href="resources/fontawesome/all.css" />
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick-theme.min.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.css">
-
-    <link rel="stylesheet" href="css/main.css">
-</head>
 <body>
     {% include app_navbar.html %}
     
     {{content}}
 
     {% include app_footer.html %}
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-
-    <!-- BOOTSTRAP 4.6 -->
-    <script src="resources/bootstrap/js/bootstrap.bundle.js"></script>
-
-    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-
-    <!-- SLICK SLIDER -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js"></script>
-
-    <script src="js/custom.js"></script>
 </body>
 </html>
