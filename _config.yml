@@ -32,11 +32,20 @@ description: >- # this means to ignore newlines until "baseurl:"
   - Bespaar tijd, geld én moeite
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.localheroesonline.com" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: localheroesNL
+twitter_url: https://twitter.com/localheroesNL
+facebook_url: https://www.facebook.com/localheroesonelineamsterdam
+instagram_url: https://www.instagram.com/local.heroes.online/
+linkedin_company_url: https://www.linkedin.com/company/local-heroes-online/
+linkedin_mcoumans_url: https://www.linkedin.com/in/maarten-coumans-b78989/
 github_username:  localheroesonline
+
+# tracking events
 google_analytics: UA-260378921
-mixpanel-project-token: 624a5eaf9d84caf4c6c5af9a45a08a4a # production = d75409912bb950e41f6c85be92aba32d
+mixpanel-project-token: 624a5eaf9d84caf4c6c5af9a45a08a4a
+# mixpanel-project-token: d75409912bb950e41f6c85be92aba32d # production
 mixpanel-api-host: https://api-eu.mixpanel.com
+
+# general variables
 btw: NL859626064
 kvk: 73680648
 business_address_street: Bilderdijkkade
@@ -44,8 +53,8 @@ business_address_street_number: 50D10
 business_address_zipcode: 1053VN
 business_address_city: Amsterdam
 business_phone: +31(0)-621351869
-company_official_name: F.o.R. BV
-company_working_name: Local Heroes
+business_official_name: F.o.R. BV
+business_working_name: Local Heroes
 
 # Build settings
 markdown: kramdown
