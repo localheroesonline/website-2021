@@ -34,7 +34,7 @@ title: Home Page
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <h4 class="main-heading ft-light ft-xxl">Over Local <br>Heroes</h4>
+                <h4 class="main-heading ft-light ft-lg">Over Local Heroes</h4>
                 <!-- <p class="ft-xs ft-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor at architecto assumenda. </p> -->
             </div>
             <div class="col-md-8">
@@ -49,36 +49,47 @@ title: Home Page
     </div>
 </section>
 <!-- MAP -->
-<section class="section-wrap map">
-        <div class="map-content">
-            <h4 class="main-heading ft-primary">Check of we ook al bij jou actief zijn.</h4>
-            <a href="#"><span class="icon ft-md ft-primary"><i class="fa fa-map-marker-alt"></i></span> Huidige locatie</a>
-            <div class="zip-block">
-                <input id="demo" type="text" class="form-control">
-                <span class="search-icon"><i class="fa fa-search"></i></span>
-            </div>
-            <div class="info-block">
-                <h4 class="main-heading">Yes!!!</h4>
-                <p class="ft-sm ft-dark">We bezorgen al bij jou, <a href="#" class="ft-danger fw-bold" onclick="DetectAndServe('{{page.title}}')"> download</a> de app en plaats je eerste bestelling.</p>
-                <!-- <div class="row mt-4">
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Email">
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Local Heroes">
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <button class="v-btn v-btn-primary">Volg ons avontuur!</button>
-                        </div>
-                    </div>
-                </div> -->
-            </div>
+<section id="zipcode-check" class="section-wrap map">
+    <div class="map-content">
+        <h4 class="main-heading ft-primary">Check of we ook al bij jou actief zijn.</h4>
+        <a href="#zipcode-check" onclick="showPosition()"><span class="icon ft-md ft-primary"><i class="fa fa-map-marker-alt"></i></span> Huidige locatie</a>
+        <div class="zip-block">
+            <input id="mijn_postcode" type="text" class="form-control">
+            <span class="search-icon"><i class="fa fa-search"></i></span>
         </div>
+        <div class="info-block" id="bezorgen_mogelijk" style="display:none;">
+            <h4 class="main-heading">Yes! We bezorgen in jouw buurt </h4>
+            <p class="ft-sm ft-dark"><a href="#" class="ft-danger fw-bold" onclick="DetectAndServe('{{page.title}}')">Download de app</a> en plaats je eerste bestelling.</p>
+        </div>
+        <div class="info-block" id="bezorgen_niet_mogelijk" style="display:none;">
+            <h4 class="main-heading">Helaas nog niet</h4>
+            <p class="ft-sm ft-dark">We bezorgen nog niet in je postcode gebied. Je kan natuurlijk wel gebruik maken van onze afhaal mogelijkheid.</p>
+            <p class="ft-sm ft-dark">Wil je ook de hoogte blijven van Local Heroes? Vul dan onderstaande velden in:</p>          
+            <div class="row mt-4">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="lead_email" placeholder="Email">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="lead_name" placeholder="Naam">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="lead_zipcode" placeholder="Postcode">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <button class="v-btn v-btn-primary" onclick="SignupLead()">Schrijf je in!</button>
+                    </div>
+                </div>
+            </div>
+            <p class="ft-sm ft-dark">Ben je ondernemer of beleidsmaker? Klik <a href= "b2b.html" class="ft-danger">hier</a> voor onze B2B pagina.</p>
+        </div>
+    </div>
 </section>
 <!-- HOW IT WORKS -->
 <section id="how-work" class="section-wrap app-how-work how-work-bg-img">
@@ -86,7 +97,7 @@ title: Home Page
         <div class="row">
             <div class="col-md-6 offset-md-6 col-sm-12">
                 <div class="how-work-wapper">
-                    <h4 class="main-heading ft-light">Hoe het werkt</h4>
+                    <h4 class="main-heading ft-light ft-lg">Hoe werkt het?</h4>
                     <p class="main-title ft-light mb-2">Bestel het lekkerste uit de buurt via onze app</p>
                     <ul>
                         <li>
@@ -168,7 +179,7 @@ title: Home Page
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h4 class="main-heading ft-light text-center mb-5">Deze mensen gingen je voor</h4>
+                <h4 class="main-heading ft-light text-center mb-5 ft-lg">Deze mensen gingen je voor</h4>
             </div>
             <div class="col-md-4">
                 <div class="review-block">
@@ -217,7 +228,7 @@ title: Home Page
 </section>
 
 <script>
-var x = document.getElementById("demo");
+var x = document.getElementById("mijn_postcode");
 function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
@@ -234,12 +245,42 @@ function showPosition(position) {
       function(data) {
     //console.log(data.results[0].address_components[7].long_name);
     // console.log(data.results[0].formatted_address); 
-    $("#demo").val(data.results[0].address_components[7].long_name);
+    $("#mijn_postcode").val(data.results[0].address_components[7].long_name);
     
 }); 
 
 }
 
 getLocation();
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script>
+    $(document).ready(function() {
 
+        $("#mijn_postcode").keyup(function() {
+            var zip = $('#mijn_postcode').val();
+            if (zip.length == 4) {
+                if (
+                    (zip == 1016) ||
+                    (zip == 1051) ||
+                    (zip == 1052) ||
+                    (zip == 1053) ||
+                    (zip == 1054) ||
+                    (zip == 1055) ||
+                    (zip == 1056) ||
+                    (zip == 1057) ||
+                    (zip == 1058)
+                ) {
+                    $('#bezorgen_mogelijk').show();
+                    $('#bezorgen_niet_mogelijk').hide();
+                } else {
+                    $('#bezorgen_mogelijk').hide();
+                    $('#bezorgen_niet_mogelijk').show();
+                }
+                mixpanel.track('Zipcode entered', {
+                    "Zipcode": zip
+                });
+            }
+        });
+    });
 </script>
