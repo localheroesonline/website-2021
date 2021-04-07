@@ -1567,14 +1567,14 @@ hr.base {
 }
 
 .app-how-work.how-work-bg-img {
-    background-image: url(../assets/mindersaturatie.png);
+    background-image: url(../mindersaturatie.png);
     background-size: cover;
     background-position-x: 100%
 }
 
 .app-how-work::before {
     content: "";
-    background-image: url(../assets/bg-left.png);
+    background-image: url(../bg-left.png);
     position: absolute;
     width: 200px;
     background-size: cover;
@@ -1585,7 +1585,7 @@ hr.base {
 
 .app-how-work::after {
     content: "";
-    background-image: url(../assets/bg-right.png);
+    background-image: url(../bg-right.png);
     position: absolute;
     width: 53%;
     background-size: cover;
@@ -1680,7 +1680,7 @@ hr.base {
 .section-our-heroes::before {
     position: absolute;
     content: "";
-    background-image: url(../assets/Group_98.png);
+    background-image: url(../Group_98.png);
     background-size: cover;
     background-position-x: 100%;
     left: 0;
@@ -1715,7 +1715,7 @@ hr.base {
 
 .map::before {
     content: "";
-    background-image: url(../assets/map-bg.png);
+    background-image: url(../map-bg.png);
     background-size: cover;
     background-position: center;
     position: absolute;
@@ -1795,7 +1795,7 @@ hr.base {
 .section-footer::before {
     position: absolute;
     content: "";
-    background-image: url(../assets/footer-bg.png);
+    background-image: url(../footer-bg.png);
     background-size: cover;
     background-position-x: 100%;
     left: 0;
