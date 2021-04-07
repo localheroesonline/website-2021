@@ -7,9 +7,9 @@ css:
   - /assets/css/main.css
 
 js:
+  - /assets/javascripts/bootstrap.bundle.js # BOOTSTRAP 4.6  
   - https://code.jquery.com/jquery-3.5.1.js
-  - /assets/javascripts/bootstrap.bundle.js # BOOTSTRAP 4.6
   - https://code.jquery.com/jquery-migrate-1.2.1.min.js
   - https://cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js # SLICK SLIDER
-  - /assets/javascripts/custom.js
   - /assets/javascripts/all.min.js # FONT AWESOME 5
+  - /assets/javascripts/custom.js  
