@@ -1703,14 +1703,14 @@ hr.base {
 
 .map {
     position: relative;
-    height: 400px;
+    height: 550px;
     z-index: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center
+    align-items: top
 }
 
 .map::before {
