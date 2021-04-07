@@ -137,7 +137,11 @@ title: B2B
         </div>
     </section>
     <!-- REGISTRATION -->
-    <form class="needs-validation" novalidate>
+    {% if jekyll.environment == "production" %}
+    <form class="needs-validation" novalidate method="post" action="https://api.localheroesonline.com/website/lead_acquisition">
+    {% else %}
+    <form class="needs-validation" novalidate method="post" action="https://localheroes-api-staging.herokuapp.com/website/lead_acquisition">
+    {% endif %}
     <div href="javascript:void(0)" id="reg-form"></div>
     <section class="b2b-section">
         <div class="container">
@@ -152,23 +156,23 @@ title: B2B
                         <div class="form-group row">
                             <div class="col-6">
                                 <label for="inputFirstName">Voornaam</label>
-                                <input type="text" id="inputFirstName" class="form-control" placeholder="Voornaam" required>
+                                <input type="text" id="inputFirstName" name="first_name" class="form-control" placeholder="Voornaam" required>
                                 <div class="invalid-feedback">Fijn als we weten hoe je heet!</div>
                                 <div class="valid-feedback">Top!</div>
                             </div>
                             <div class="col-6">
                                 <label for="inputLastName">Achternaam</label>
-                                <input type="text" id="inputLastName" class="form-control" placeholder="Achternaam">
+                                <input type="text" id="inputLastName"  name="last_name" class="form-control" placeholder="Achternaam">
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-6">
                                 <label for="inputShopName">Winkelnaam</label>
-                                <input type="text" id="inputShopName" class="form-control" placeholder="Winkelnaam">
+                                <input type="text" id="inputShopName" name="store_name" class="form-control" placeholder="Winkelnaam">
                             </div>
                             <div class="col-6">
                                 <label for="inputRole">Rol</label>
-                                <select class="form-control" id="inputRole">
+                                <select class="form-control" id="inputRole" name="role">
                                   <option>Lokale Ondernemer</option>
                                   <option>Winkeliersvereniging</option>
                                   <option>Beleidsmaker</option>
@@ -178,13 +182,13 @@ title: B2B
                         <div class="form-group row">
                             <div class="col-6">
                                 <label for="inputPhone">Telefoon</label>
-                                <input type="text" id="inputPhone" class="form-control" placeholder="06..." required>
+                                <input type="text" id="inputPhone" name="phone" class="form-control" placeholder="06..." required>
                                 <div class="invalid-feedback">Bellen werkt makkelijker met een geldig telefoonnr :-)</div>
                                 <div class="valid-feedback">Fijn!</div>
                             </div>
                             <div class="col-6">
                                 <label for="inputEmail">Email</label>
-                                <input type="email" id="inputEmail" class="form-control" placeholder="Email Address" required>
+                                <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email Address" required>
                                 <div class="invalid-feedback">Voer ajb een geldig email adres in</div>
                                 <div class="valid-feedback">Ziet er goed uit!</div>
                             </div>
@@ -193,9 +197,6 @@ title: B2B
                             <button class="v-btn v-btn-primary btn-lg" type="submit">Registreer gratis</button>
                             
                         </div>
-                        <!-- <div class="form-group text-center text-md-right">
-                            <a href="#" class="v-btn v-btn-primary btn-lg">Registreer gratis</a>
-                        </div> -->
                         <div class="content">
                             Ons Head of Operations <a href="https://www.linkedin.com/in/matthew-van-gelder-b6461753">Matthew van Gelderen</a> belt je zo snel mogelijk terug. 
                         </div>
