@@ -1,4 +1,4 @@
-var base_ur = "http://localhost/localheroes-v2/";
+var base_ur = "http://127.0.0.1:4000/";
 
 // APP STORE BUTTON FIXED
 $(window).scroll(function() {    
@@ -115,3 +115,51 @@ $('.slick-carousel').slick({
         },
       ],
 });
+
+// REDIRECT VISITOR TO APP STORE / PLAY STORE DEPENDING ON OS
+function getMobileOperatingSystem() {
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    // Windows Phone must come first because its UA also contains "Android"
+    if (/windows phone/i.test(userAgent)) {
+        return "Windows Phone";
+    }
+
+    if (/android/i.test(userAgent)) {
+        return "Android";
+    }
+
+    // iOS detection from: http://stackoverflow.com/a/9039885/177710
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        return "iOS";
+    }
+
+    return "unknown";
+}
+
+function DetectAndServe(campaign) {
+  let os = getMobileOperatingSystem();
+  if (os == "Android") {
+      mixpanel.track("Goto App Marketplace", {
+          "Marketplace": "Android",
+          "Campaign": campaign,
+      });
+      window.location.href = "https://play.google.com/store/apps/details?id=com.localheroes.consumer";
+  } else if (os == "iOS") {
+      mixpanel.track("Goto App Marketplace", {
+        "Marketplace": "iOS",
+        "Campaign": campaign,
+      });
+      window.location.href = "https://apps.apple.com/us/app/lh-consumer/id1470938037";
+  } else if (os == "Windows Phone") {
+      mixpanel.track("Goto Local Heroes Home", {
+          "Campaign": campaign,
+      });
+      window.location.href = "/";
+  } else {
+      mixpanel.track("Goto Local Heroes Home", {
+        "Campaign": campaign,
+      });
+      window.location.href = "/";
+  }
+}
