@@ -163,3 +163,7 @@ function DetectAndServe(campaign) {
       window.location.href = "/";
   }
 }
+
+function SignupLead() {
+  // TODO - Implement signup via MailChimp or signup via new API endpoint (which will write it to a new table in our DB)
+}
