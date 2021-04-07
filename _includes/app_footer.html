@@ -17,7 +17,7 @@
                 <div class="footer-app-store">
                     <!-- <a href=""><img src="assets/google-store.png" class="img-fluid" alt=""></a>
                     <a href=""><img src="assets/app-store.png" class="img-fluid" alt=""></a> -->
-                        <a href="#" class="v-btn v-btn-danger btn-lg"><span class="ft-sm mr-2"><i class="fas fa-download"></i></span>Download nu de app</a>
+                        <a href="#" class="v-btn v-btn-danger btn-lg" onclick="DetectAndServe('{{page.title}}')"><span class="ft-sm mr-2"><i class="fas fa-download"></i></span>Download nu de app</a>
                 </div>
                 <div class="row">
                     <div class="col-md-9">
@@ -41,12 +41,12 @@
                     </div>
                 </div>
                 <div class="social-icons">
-                    <a href="{{site.business_whatsapp_url}}" data-toggle="tooltip" data-placement="top" title="We reageren van ma t/m za tussen 09:00 - 21:00" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
-                    <a href="mailto:{{site.email}}" data-toggle="tooltip" data-placement="top" title="We reageren van ma t/m za tussen 09:00 - 21:00"  class="email"><i class="fa fa-envelope"></i></a>
-                    <a href="{{facebook_url}}" class="facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="{{twitter_url}}" class="twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="{{linkedin_company_url}}" class="linkedin"><i class="fab fa-linkedin"></i></a>
-                    <a href="{{instagram_url}}" class="instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="{{site.business_whatsapp_url}}" target="_blank" rel="noopener noreferrer" data-toggle="tooltip" data-placement="top" title="We reageren van ma t/m za tussen 09:00 - 21:00" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:{{site.email}}" target="_blank" rel="noopener noreferrer" data-toggle="tooltip" data-placement="top" title="We reageren van ma t/m za tussen 09:00 - 21:00"  class="email"><i class="fa fa-envelope"></i></a>
+                    <a href="{{site.facebook_url}}" target="_blank" rel="noopener noreferrer" class="facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="{{site.twitter_url}}" target="_blank" rel="noopener noreferrer" class="twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="{{site.linkedin_company_url}}" target="_blank" rel="noopener noreferrer" class="linkedin"><i class="fab fa-linkedin"></i></a>
+                    <a href="{{site.instagram_url}}" target="_blank" rel="noopener noreferrer" class="instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
