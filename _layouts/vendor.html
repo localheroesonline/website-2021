@@ -1,0 +1,173 @@
+---
+layout: default_gen
+title: Vendor
+exclude: true
+---
+<header class="profile-banner bg-img-box">
+    <div class="bg-img" style="background-image: url({{page.vendor_cover_image}})"
+    ></div>
+    <div class="bg-overlay bg-overlay-dark"></div>
+    <div class="banner-content">
+        <div class="profile-card">
+            <div class="profile-img">
+                <img src="{{page.vendor_image}}" alt="{{page.vendor_shop_name}}" class="img-fluid">
+            </div>
+            <div class="content">
+                <h4 class="main-heading ft-light mb-2">{{page.vendor_shop_name}}</h4>
+                <p class="ft-base">{{page.vendor_category_name}}</p>
+            </div>
+        </div>
+        <div class="contact-info">
+            <a href="https://wa.me/{{page.vendor_whatsapp}}" class="v-btn v-btn-success">
+                <i class="fab fa-whatsapp"></i>
+                <span class="d-none d-sm-inline-flex">Whatsapp</span>
+            </a>
+        </div>
+    </div>
+</header>
+<!-- <div class="page-title">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="title text-center">Vendor</h2>
+            </div>
+        </div>
+    </div>
+</div> -->
+<main class="main-content page-vendor">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 order-md-1">
+                <div class="block">
+                    <div class="header">
+                        <div class="category-tabs">
+                            <a href="#" class="tab-item active">{{page.vendor_category_name}}</a>
+                            <a href="#" class="tab-item">Food</a>
+                            <a href="#" class="tab-item">Drinks</a>
+                            <a href="#" class="tab-item">Tea & Coffee</a>
+                        </div>
+                    </div>
+                    <div class="header row">
+                        <div class="col-8">
+                            <div class="adon-group">
+                                <input placeholder="Zoek products" type="text" class="form-control"><span class="icon icon-md"><i class="fa fa-search"></i></span>
+                            </div>
+                        </div>
+                        <div class="col-4 text-right">
+                            <div class="dropdown">
+                                <a href="" class="v-btn v-btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Filter
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Nieuw</a>
+                                    <a class="dropdown-item" href="#">Prijs laag - hoog</a>
+                                    <a class="dropdown-item" href="#">Prijs hoog - laag</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="product-list">
+                            <a class="items item-links" href="{{page.product_01_url}}">
+                                <div class="product-details">
+                                    <img src="{{page.product_01_image}}"  alt="{{page.product_01_name}}" class="img-fluid product-img">
+                                    <div class="product-info">
+                                        <h4>{{page.product_01_name}}</h4>
+                                        <p>{{page.product_01_details}}</p>
+                                    </div>
+                                </div>
+                                <div class="product-pricing">
+                                    € {{page.product_01_price}}
+                                </div>
+                            </a>
+                            <a class="items item-links" href="{{page.product_02_url}}">
+                                <div class="product-details">
+                                    <img src="{{page.product_02_image}}"  alt="{{page.product_02_name}}" class="img-fluid product-img">
+                                    <div class="product-info">
+                                        <h4>{{page.product_02_name}}</h4>
+                                        <p>{{page.product_02_details}}</p>
+                                    </div>
+                                </div>
+                                <div class="product-pricing">
+                                    € {{page.product_02_price}}
+                                </div>
+                            </a>
+                            <a class="items item-links" href="{{page.product_03_url}}">
+                                <div class="product-details">
+                                    <img src="{{page.product_03_image}}"  alt="{{page.product_03_name}}" class="img-fluid product-img">
+                                    <div class="product-info">
+                                        <h4>{{page.product_03_name}}</h4>
+                                        <p>{{page.product_03_details}}</p>
+                                    </div>
+                                </div>
+                                <div class="product-pricing">
+                                    € {{page.product_03_price}}
+                                </div>
+                            </a>
+                            <a class="items item-links" href="{{page.product_04_url}}">
+                                <div class="product-details">
+                                    <img src="{{page.product_04_image}}"  alt="{{page.product_04_name}}" class="img-fluid product-img">
+                                    <div class="product-info">
+                                        <h4>{{page.product_04_name}}</h4>
+                                        <p>{{page.product_04_details}}</p>
+                                    </div>
+                                </div>
+                                <div class="product-pricing">
+                                    € {{page.product_04_price}}
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer text-center">
+                        <a href="#" class="v-btn v-btn-base invert">Load More <span><i class="fas fa-sync"></i></span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 order-md-0">
+                <div class="block">
+                    <div class="header">
+                        <h4 class="main-title">Over</h4>
+                    </div>
+                    <div class="content">
+                        <p>{{page.vendor_description}}</p>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="header">
+                        <h4 class="main-title">Adres</h4>
+                    </div>
+                    <div class="content">
+                        <p>{{page.vendor_address}}</p>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="header">
+                        <h4 class="main-title">Openingstijden</h4>
+                    </div>
+                    <div class="content">
+                        <ul class="timing-hours">
+                            <li>Maandag <span>09:00 - 17:00</span></li>
+                            <li>Dinsdag <span>09:00 - 17:00</span></li>
+                            <li>Woensdag <span>09:00 - 17:00</span></li>
+                            <li>Donderdag <span>09:00 - 17:00</span></li>
+                            <li>Vrijdag <span>09:00 - 17:00</span></li>
+                            <li>Zaterdag <span>09:00 - 17:00</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="header">
+                        <h4 class="main-title">Contact</h4>
+                    </div>
+                    <div class="content">
+                        <ul class="contact-list">
+                            <li><span class="icon icon-sm text-left"><i class="fa fa-envelope"></i></span>{{page.vendor_email}}</li>
+                            <li><span class="icon icon-sm text-left"><i class="fa fa-phone"></i></span>{{page.vendor_whatsapp}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
