@@ -73,10 +73,18 @@ page_gen:
   - data: 'products'
     template: 'product'
     dir: 'products'
-    name_expr: record['id'] + "_" + record['product_name']
-    title_expr: record['product_name'] + " van " + record['user_shop_name']
+    name_expr: record['vendor_url'] + "_" + record['product_url']
+    title_expr: record['product_name'] + " van " + record['vendor_shop_name']
     extension: 'html'
     debug: true
+
+  - data: 'vendors'
+    template: 'vendor'
+    dir: 'products'
+    name_expr: record['vendor_url']
+    title_expr: record['vendor_shop_name']
+    extension: 'html'
+    debug: true    
 
 # Exclude from processing.
 # The following items will not be processed, by default.
