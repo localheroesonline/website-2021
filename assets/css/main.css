@@ -338,7 +338,18 @@ table {
     display: flex
 }
 
+.btn-store {
+    display: -webkit-box;
+    display: -ms-flexbox;
+}
+
 .app-header .app-store a {
+    max-width: 250px;
+    display: block;
+    margin-block: 10px;
+}
+
+.btn-store a {
     max-width: 250px;
     display: block;
     margin-block: 10px;
