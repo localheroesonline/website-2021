@@ -1,4 +1,5 @@
 css:
+  - https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css # Cookie consent
   - /assets/css/bootstrap.min.css # BOOTSTRAP 4.6
   - https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap # GOOGLE FONTS
   - /assets/css/all.css # FONT AWESOME 5

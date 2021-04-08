@@ -17,6 +17,29 @@
     <link rel="stylesheet" href="{{ href }}">
   {% endfor %}
 
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+  <script>
+  window.cookieconsent.initialise({
+    "palette": {
+      "popup": {
+        "background": "#1d8a8a"
+      },
+      "button": {
+        "background": "#62ffaa"
+      }
+    },
+    "theme": "edgeless",
+    "type": "opt-out",
+    "content": {
+      "message": "De website maakt gebruik van cookies om ervoor te zorgen dat u de beste ervaring op onze website krijgt.",
+      "dismiss": "Prima!",
+      "deny": "Cookies weigeren",
+      "link": "Meer weten",
+      "href": "https://jekyll.localheroesonline.com/privacyverklaring"
+    }
+  });
+  </script>
+
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
   
