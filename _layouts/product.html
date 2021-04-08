@@ -1,0 +1,163 @@
+---
+layout: default_gen
+title: Product
+---
+
+<header class="profile-banner bg-img-box">
+        <div class="bg-img" style="background-image: url({{page.vendor_cover_image}})"></div>
+        <div class="bg-overlay bg-overlay-dark"></div>
+        <div class="banner-content">
+            <div class="profile-card">
+                <div class="profile-img">
+                    <img src="{{page.vendor_image}}" alt="{{page.vendor_shop_name}}" class="img-fluid">
+                </div>
+                <div class="content">
+                    <h4 class="main-heading ft-light mb-2">{{page.vendor_shop_name}}</h4>
+                    <p class="ft-base">{{page.vendor_category_name}}</p>
+                </div>
+            </div>
+            <div class="contact-info">
+                <a href="https://wa.me/{{page.vendor_whatsapp}}" class="v-btn v-btn-success" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    <span class="d-none d-sm-inline-flex">Whatsapp</span>
+                </a>
+            </div>
+        </div>
+</header>
+<div class="page-title">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2 class="title text-center">{{page.product_name}}</h2>
+                <p class="ft-xs">{{page.product_category_name}}</p>
+                {% if page.product_stock_status=='In_stock' %}
+                <p class="ft-xs">{{page.product_details}} | <span class="badge badge-success ft-xs">Op voorraad</span></p>
+                {% endif %}
+                {% if page.product_stock_status=='Out_stock' %}
+                <p class="ft-xs">{{page.product_details}} | <span class="badge badge-danger ft-xs">Niet op voorraad</span></p>
+                {% endif %}
+                {% if page.product_stock_status=='temp_stock' %}
+                <p class="ft-xs">{{page.product_details}} | <span class="badge badge-warning ft-xs">Tijdelijk uit voorraad</span></p>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+</div>
+<main class="main-content page-product">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8  order-sm-1">
+                <div class="block">
+                    <div class="content product-img-wapper">
+                        <img src="{{page.product_image}}" class="img-fluid product-img" alt="{{page.product_name}}">
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="header"><h4 class="main-title">Omschrijving</h4></div>
+                    <div class="content">
+                        <p>{{page.product_information}}</p>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="content">
+                        <div class="rating-price ft-md">
+                            <span class="icon icon-md mr-1"><i class="fa fa-thumbs-up"></i></span>{{page.rating}} 
+                            <span class="lead ft-xxs"> {{page.rating_count}} Stemmen </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="header">
+                        <h4 class="main-title">Product Details</h4>
+                    </div>
+                    <div class="content">
+                        <table class="table table-sm table-default">
+                            <tbody>
+                                <tr>
+                                    <th>Type</th>
+                                    <td>{{page.product_type}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Unit</th>
+                                    <td>{{page.product_unit}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Minimale afname</th>
+                                    <td>{{page.product_minimum_order}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Prijs/Kg</th>
+                                    <td>{{page.kg_price}}</td>
+                                </tr>
+                                <tr>
+                                    <th>BTW</th>
+                                    <td>{{page.vat}} %</td>
+                                </tr>
+                                <tr>
+                                    <th>Prijs</th>
+                                    <td>{{page.product_price}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 order-sm-2">
+                <div class="block">
+                    <div class="header">
+                        <h4 class="main-title">Verkoper Details</h4>
+                    </div>
+                    <div class="content">
+                        <a href="{{page.vendor_url}}.html" class="card user-card no-border">
+                            <div class="user-content">
+                                <img src="{{page.vendor_image}}" alt="{{page.vendor_shop_name}}" class="img-fluid user-icon user-icon-md mr-2">
+                                <div class="user-info">
+                                    <h4 class="title">{{page.user_shop_name}}</h4>
+                                    <p>Amsterdam, Ten Katemarkt</p>
+                                </div>
+                            </div>
+                            <div class="rating-price">
+                                <span class="icon icon-xs mr-1"><i class="fa fa-thumbs-up"></i></span>{{vendor_rating}}%
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="header">
+                        <h4 class="main-title">Adres</h4>
+                    </div>
+                    <div class="content">
+                        <p>{{page.vendor_address}}</p>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="header">
+                        <h4 class="main-title">Openingstijden</h4>
+                    </div>
+                    <div class="content">
+                        <ul class="timing-hours">
+                            <li>Maandag <span>09:00 - 17:00</span></li>
+                            <li>Dinsdag <span>09:00 - 17:00</span></li>
+                            <li>Woensdag <span>09:00 - 17:00</span></li>
+                            <li>Donderdag <span>09:00 - 17:00</span></li>
+                            <li>Vrijdag <span>09:00 - 17:00</span></li>
+                            <li>Zaterdag <span>09:00 - 17:00</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="header">
+                        <h4 class="main-title">Contact</h4>
+                    </div>
+                    <div class="content">
+                        <ul class="contact-list">
+                            <li><span class="icon icon-sm text-left"><i class="fa fa-envelope"></i></span>{{page.vendor_email}}</li>
+                            <li><span class="icon icon-sm text-left"><i class="fa fa-phone"></i></span>{{page.vendor_whatsapp}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
