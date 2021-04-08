@@ -1,0 +1,13 @@
+---
+exclude: true
+---
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "nl" }}">
+{% include head.html %}
+
+<body>   
+    {{content}}
+
+    {% include app_footer.html %}
+</body>
+</html>
