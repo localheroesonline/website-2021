@@ -52,7 +52,7 @@ title: Home Page
 <section id="zipcode-check" class="section-wrap map">
     <div class="map-content">
         <h4 class="main-heading ft-primary">Check of we ook al bij jou actief zijn</h4>
-        <a href="#zipcode-check" onclick="showPosition()"><span class="icon ft-md ft-primary"><i class="fa fa-map-marker-alt"></i></span> Huidige locatie</a>
+        <a href="#zipcode-check" onclick="getLocation()"><span class="icon ft-md ft-primary"><i class="fa fa-map-marker-alt"></i></span> Huidige locatie</a>
         <div class="zip-block">
             <input id="mijn_postcode" type="text" class="form-control">
             <span class="search-icon"><i class="fa fa-search"></i></span>
@@ -224,8 +224,8 @@ title: Home Page
                 </div>
             </div>
             <div class="col-md-12">
-                <h4 class="main-heading ft-light text-center mb-5 ft-sm">Meer reviews op <a href="https://www.google.com/search?q=local+heroes&sz=0&sxsrf=ALeKk00oVF6mlkt0gqgdJ3cdX-572O5iEA:1617876763740&tbas=0&biw=1920&bih=969&dpr=1#lrd=0x47c609899fcd2623:0x5ec9dccd8071f067,1,,," target="_blank">Google</a>,
-                    <a href="https://play.google.com/store/apps/details?id=com.localheroes.consumer&gl=NL&showAllReviews=true" target="_blank">Google Play</a> & <a href="" target="_blank">App Store</a></h4>
+                <h4 class="main-heading ft-light text-center mb-5 ft-sm">Meer reviews op <a class="link-light" href="https://www.google.com/search?q=local+heroes&sz=0&sxsrf=ALeKk00oVF6mlkt0gqgdJ3cdX-572O5iEA:1617876763740&tbas=0&biw=1920&bih=969&dpr=1#lrd=0x47c609899fcd2623:0x5ec9dccd8071f067,1,,," target="_blank">Google</a>,
+                    <a href="https://play.google.com/store/apps/details?id=com.localheroes.consumer&gl=NL&showAllReviews=true" class="link-light" target="_blank">Google Play</a> & <a href="" class="link-light" target="_blank">App Store</a></h4>
             </div>
         </div>
     </div>
@@ -255,7 +255,7 @@ function showPosition(position) {
 
 }
 
-getLocation();
+// getLocation();
 </script>
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script>

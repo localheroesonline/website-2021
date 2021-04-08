@@ -580,6 +580,16 @@ a.active {
     color: #006168
 }
 
+a.link-light{
+    color:#f0edeb;
+}
+a.link-light:hover{
+    color:#fff;
+}
+a.link-danger{
+    color:#ff4934;
+}
+
 ul {
     list-style: none
 }
@@ -1703,7 +1713,7 @@ hr.base {
 
 .map {
     position: relative;
-    height: 550px;
+
     z-index: 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1724,7 +1734,6 @@ hr.base {
     top: 0;
     width: 100%;
     bottom: 0;
-    height: 400px;
     z-index: -1
 }
 
