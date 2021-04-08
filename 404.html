@@ -1,6 +1,8 @@
 ---
 permalink: /404.html
 layout: default
+title: Oeps, pagina niet gevonden
+exclude: true
 ---
 
 <style type="text/css" media="screen">
@@ -11,15 +13,29 @@ layout: default
   }
   h1 {
     margin: 30px 0;
-    font-size: 4em;
+    font-size: 3em;
     line-height: 1;
     letter-spacing: -1px;
   }
 </style>
 
 <div class="container">
-  <h1>404</h1>
+  <h1>{{page.title}}</h1>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+  <p class="font-weight-bold">Je gewenste pagina is niet gevonden, sorry!</p>
+  <p>Hieronder een overzicht van alle pagina's op onze website:</p>
+  <ul class="list-group">
+    {% for apage in site.pages %}
+      {% if apage.exclude != true %}
+      <li class="list-group-item"><a href="{{site.canonical_domain}}{{site.baseurl}}{{apage.url}}">{{apage.title}}</a></li>
+      {% endif %}
+    {% endfor %}
+    <p>Hieronder een overzicht van alle posts op onze website:</p>
+    {% for item in site.posts %}
+      {% if item.exclude != true %}
+      <li class="list-group-item"><a href="{{site.canonical_domain}}{{site.baseurl}}{{item.url}}">{{item.title}}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+  </p>  
 </div>
