@@ -65,28 +65,30 @@ title: Home Page
             <h4 class="main-heading">Hou me op hoogte</h4>
             <p class="ft-sm ft-dark">We bezorgen nog niet in je postcode gebied. Je kan natuurlijk wel gebruik maken van onze afhaal mogelijkheid.</p>
             <p class="ft-sm ft-dark">Blijf op de hoogte van uitbreidingen van Local Heroes bij jou in de buurt:</p>
-            <div class="row mt-4">
-                <div class="col-md-3">
-                    <div class="form-group">
-                        <input type="email" class="form-control" id="lead_email" placeholder="Email">
+            <form class="needs-validation" novalidate method="post" action="https://api.localheroesonline.com/website/lead_consumer">
+                <div class="row mt-4">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="lead_first_name" id="lead_first_name" placeholder="Naam">
+                        </div>
+                    </div>                    
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="lead_email" id="lead_email" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="lead_zipcode" id="lead_zipcode" placeholder="Postcode">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <button class="v-btn v-btn-primary" type="submit">Hou me op de hoogte!</button>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="lead_name" placeholder="Naam">
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="lead_zipcode" placeholder="Postcode">
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="form-group">
-                        <button class="v-btn v-btn-primary" onclick="SignupLead()">Hou me op de hoogte!</button>
-                    </div>
-                </div>
-            </div>
+            </form>
             <p class="ft-sm ft-dark">Ben je ondernemer of beleidsmaker? Klik <a href= "b2b.html" class="ft-danger">hier</a> voor onze B2B pagina.</p>
         </div>
     </div>
