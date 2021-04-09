@@ -53,7 +53,7 @@ title: Homepage
 <section id="zipcode-check" class="section-wrap map">
     <div class="map-content">
         <h4 class="main-heading ft-primary">Check of we ook al bij jou actief zijn</h4>
-        <a href="#zipcode-check" onclick="getLocation()"><span class="icon ft-md ft-primary"><i class="fa fa-map-marker-alt"></i></span> Huidige locatie</a>
+        <a href="#zipcode-check" class="get-location" onclick="getLocation()"><span class="icon ft-md ft-primary"><i class="fa fa-map-marker-alt"></i></span> Huidige locatie</a>
         <div class="zip-block">
             <input id="mijn_postcode" type="text" class="form-control">
             <span class="search-icon"><i class="fa fa-search"></i></span>
@@ -134,43 +134,52 @@ title: Homepage
 <!-- OUR HEROES -->
 <section id="one-hero" class="section-wrap section-our-heroes">
     <div class="container">
-        <div class="slick-carousel heroes-wapper">
-            <!-- Inside the containing div, add one div for each slide -->
-            <div class="slide-item">
-                <!-- You can put an image or text inside each slide div -->
-                <div class="hero-img">
-                    <img src="assets/v9.png" alt="Viscenter Volendam">
-                </div>
-                <div class="content text-center">
-                    <p>“Bestel zeeverse gefileerde vis van Jordy bij <span class="ft-secondary">Viscenter Volendam</span>”</p>
-                    <a href="products/viscenter-volendam" class="v-btn v-btn-primary btn-md">Toon assortiment</a>
-                </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h4 class="main-heading ft-primary text-center ft-lg mb-4">Onze helden</h4>
             </div>
-            <div  class="slide-item">
-                <div class="hero-img">
-                    <img src="assets/v8.png" alt="Bakkerij Straathof">
-                </div>
-                <div class="content text-center">
-                    <p>“Ontdek bij Jolanda het ambachtelijk gebakken brood van <span class="ft-secondary">Bakkerij Straathof</span>”</p>
-                    <a href="products/bakkerij-straathof" class="v-btn v-btn-primary btn-md">Toon assortiment</a>
-                </div>
-            </div>
-            <div class="slide-item">
-                <div class="hero-img">
-                    <img src="assets/v7.png" alt="Lex Groente">
-                </div>
-                <div class="content text-center">
-                    <p>“Ontdek de vele groenten van Rik bij <span class="ft-secondary">Lex Groente</span>”</p>
-                    <a href="products/lex-groente" class="v-btn v-btn-primary btn-md">Toon assortiment</a>
-                </div>
-            </div>
-            <div  class="slide-item">
-                <div class="hero-img">
-                    <img src="https://s3.eu-central-1.amazonaws.com/images.localheroesonline.com/legacy/users/Boer%20Geert-1.jpg" alt="Boer Geert">
-                </div>
-                <div class="content text-center">
-                    <p>“De beste tapas, vleeswaren en broodjes van de Ten Katemarkt bij <span class="ft-secondary">Boer Geert</span>”</p>
-                    <a href="products/boer-geert" class="v-btn v-btn-primary btn-md">Toon assortiment</a>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="slick-carousel heroes-wapper">
+                    <!-- Inside the containing div, add one div for each slide -->
+                    <div class="slide-item">
+                        <!-- You can put an image or text inside each slide div -->
+                        <div class="hero-img">
+                            <img src="assets/v9.png" alt="Viscenter Volendam">
+                        </div>
+                        <div class="content text-center">
+                            <p>“Bestel zeeverse gefileerde vis van Jordy bij <span class="ft-secondary">Viscenter Volendam</span>”</p>
+                            <a href="products/viscenter-volendam" class="v-btn v-btn-primary btn-md">Toon assortiment</a>
+                        </div>
+                    </div>
+                    <div  class="slide-item">
+                        <div class="hero-img">
+                            <img src="assets/v8.png" alt="Bakkerij Straathof">
+                        </div>
+                        <div class="content text-center">
+                            <p>“Ontdek bij Jolanda het ambachtelijk gebakken brood van <span class="ft-secondary">Bakkerij Straathof</span>”</p>
+                            <a href="products/bakkerij-straathof" class="v-btn v-btn-primary btn-md">Toon assortiment</a>
+                        </div>
+                    </div>
+                    <div class="slide-item">
+                        <div class="hero-img">
+                            <img src="assets/v7.png" alt="Lex Groente">
+                        </div>
+                        <div class="content text-center">
+                            <p>“Ontdek de vele groenten van Rik bij <span class="ft-secondary">Lex Groente</span>”</p>
+                            <a href="products/lex-groente" class="v-btn v-btn-primary btn-md">Toon assortiment</a>
+                        </div>
+                    </div>
+                    <div  class="slide-item">
+                        <div class="hero-img">
+                            <img src="https://s3.eu-central-1.amazonaws.com/images.localheroesonline.com/legacy/users/Boer%20Geert-1.jpg" alt="Boer Geert">
+                        </div>
+                        <div class="content text-center">
+                            <p>“De beste tapas, vleeswaren en broodjes van de Ten Katemarkt bij <span class="ft-secondary">Boer Geert</span>”</p>
+                            <a href="products/boer-geert" class="v-btn v-btn-primary btn-md">Toon assortiment</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -226,7 +235,7 @@ title: Homepage
                 </div>
             </div>
             <div class="col-md-12">
-                <h4 class="main-heading ft-light text-center mb-5 ft-sm">Meer reviews op <a class="link-light" href="https://www.google.com/search?q=local+heroes&sz=0&sxsrf=ALeKk00oVF6mlkt0gqgdJ3cdX-572O5iEA:1617876763740&tbas=0&biw=1920&bih=969&dpr=1#lrd=0x47c609899fcd2623:0x5ec9dccd8071f067,1,,," target="_blank">Google</a>,
+                <h4 class="ft-light text-center ft-sm fw-medium">Meer reviews op <a class="link-light" href="https://www.google.com/search?q=local+heroes&sz=0&sxsrf=ALeKk00oVF6mlkt0gqgdJ3cdX-572O5iEA:1617876763740&tbas=0&biw=1920&bih=969&dpr=1#lrd=0x47c609899fcd2623:0x5ec9dccd8071f067,1,,," target="_blank">Google</a>,
                     <a href="https://play.google.com/store/apps/details?id=com.localheroes.consumer&gl=NL&showAllReviews=true" class="link-light" target="_blank">Google Play</a> & <a href="https://apps.apple.com/nl/app/local-heroes/id1470938037#see-all/reviews" class="link-light" target="_blank">App Store</a></h4>
             </div>
         </div>

@@ -562,7 +562,7 @@ html {
 
 body {
     font-family: "Open Sans", sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     line-height: 1.8;
     font-weight: 400;
     letter-spacing: 1px;
@@ -577,8 +577,6 @@ body.overlay {
 a {
     text-decoration: none;
     color: #525252;
-    font-size: 0.8rem;
-    font-weight: 600
 }
 
 a:hover {
@@ -588,7 +586,7 @@ a:hover {
 
 a.active {
     font-weight: 600;
-    color: #006168
+    color: #ff4934;
 }
 
 a.link-light{
@@ -1707,7 +1705,7 @@ hr.base {
     left: 0;
     right: 0;
     height: 200px;
-    top: 256px
+    top: 325px
 }
 
 .section-our-heroes .heroes-wapper .slide-item .hero-img {
@@ -1766,6 +1764,14 @@ hr.base {
     border-radius: 20px
 }
 
+.map .map-content .get-location{
+    font-weight: 600;
+
+}
+.map .map-content .get-location:hover{
+    color:#ff4934;
+}
+
 .map .map-content .zip-block .form-control:focus {
     border-color: #006168
 }
@@ -1791,6 +1797,7 @@ hr.base {
     font-weight: 700;
     font-size: 1.3rem
 }
+.section-reviews a {color:#00da9a; }
 
 .section-reviews .review-block p {
     color: rgba(255, 255, 255, 0.5);
@@ -1809,19 +1816,20 @@ hr.base {
     position: relative;
     background-color: #f1edea;
     z-index: 0;
-    padding-bottom: 2rem
+    padding-bottom: 8rem
 }
-
+.section-footer .footer-links a{font-weight: 600; color:#525252;}
+.section-footer .footer-links a:hover{color:#ff4934}
 .section-footer::before {
     position: absolute;
     content: "";
     background-image: url(../footer-bg.png);
     background-size: cover;
-    background-position-x: 100%;
+    /* background-position-x: 100%; */
     left: 0;
     right: 0;
     bottom: 0;
-    height: 150px;
+    height: 260px;
     z-index: -1
 }
 
@@ -1836,7 +1844,7 @@ hr.base {
 }
 
 .section-footer .footer-app-store {
-    margin-top: 2rem;
+    margin-top: 1rem;
     max-width: 400px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1851,7 +1859,7 @@ hr.base {
 }
 
 .section-footer .additional-info {
-    margin-top: 3rem
+    margin-top: 1rem
 }
 
 .section-footer .additional-info ul li {
@@ -1907,7 +1915,8 @@ hr.base {
     text-align: center;
     background-color: #006168;
     color: #fff;
-    line-height: 40px
+    line-height: 40px;
+    margin-bottom: 2rem;
 }
 
 .social-icons a:hover {
