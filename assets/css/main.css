@@ -1538,14 +1538,18 @@ hr.base {
 }
 
 .accordion .card .card-body {
-    padding: 0 0 1rem 0;
-    font-size: 0.8rem
+    padding: 0 0 1rem 1rem;
+    font-size: 0.8rem;
+    margin: 0.5rem 2rem 0rem 0.5rem
 }
 
 .accordion .card:last-child {
     border-bottom: 0
 }
 
+.accordion ul {
+    list-style: inside
+}
 .style-3::-webkit-scrollbar-track {
     border-radius: 20px
 }
