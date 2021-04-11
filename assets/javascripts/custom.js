@@ -4,25 +4,22 @@ var base_ur = "http://127.0.0.1:4000/";
 $(window).scroll(function() {    
     var scroll = $(window).scrollTop();
     if (scroll >= $('#app-store-btn').offset().top) {
-        $(".app-store ").addClass("app-store-btn-fixed-top");
+        $(".app-download-btn ").addClass("show-btn");
 
-        $(".mockup-image ").addClass("add-p");
     } else {
-        $(".app-store").removeClass("app-store-btn-fixed-top");
-        $(".mockup-image ").removeClass("add-p");
+        $(".app-download-btn").removeClass("show-btn");
     }
 });
 
 
-// APP STORE BUTTON FIXED
+// REMOVE FIXED BUTTON ONCE REACH SCROLL TO BOTTOM
 $(window).scroll(function() {    
     var scroll = $(window).scrollTop();
     if (scroll >= $('#re-block').offset().top) {
        $(".app-store").removeClass("app-store-btn-fixed-top");
-        // $(".mockup-image ").addClass("add-p");
+        
     } else {
-        // $(".app-store").removeClass("app-store-btn-fixed-top");
-        // $(".mockup-image ").removeClass("add-p");
+      
     }
 });
 
@@ -70,7 +67,7 @@ if (width <= 576) {
     $(".app-navbar").removeClass("mobile-navbar");
 }
 
-
+// TOGGLE ICON NAVBAR
 $('.mobile-navbar a').click(function(){
     $(this).find('i').toggleClass('fa-bars fa-times-circle')
 });
@@ -85,18 +82,25 @@ $('.slick-carousel').slick({
   dots: false, // Adds the dots on the bottom
   responsive: [
         {
+          breakpoint: 1500,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            adaptiveHeight: true,
+          },
+        },
+        {
           breakpoint: 1200,
           settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            adaptiveHeight: true,
+            slidesToShow: 4,
+            slidesToScroll: 4,
           },
         },
         {
           breakpoint: 992,
           settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
+            slidesToShow: 3,
+            slidesToScroll: 3,
           },
         },
         {

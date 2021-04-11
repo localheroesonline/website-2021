@@ -1,5 +1,31 @@
 <!-- FOOTERS -->
-<footer class="section-wrap section-footer" id="contact">
+<footer class="section-wrap app-footer" id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-4">
+                <div class="footer-links">
+                    <a href="/terms-conditions" class="ft-xs">Algemene voorwaarden</a><br>
+                    <a href="/disclaimer-web" class="ft-xs">Disclaimer Site</a><br>
+                    <a href="/privacyverklaring" class="ft-xs">Privacyverklaring</a> 
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="social-icons">
+                     <a href="{{site.business_whatsapp_url}}" target="_blank" rel="noopener noreferrer" data-toggle="tooltip" data-placement="top" title="We reageren van ma t/m za tussen 09:00 - 21:00" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:{{site.email}}" target="_blank" rel="noopener noreferrer" data-toggle="tooltip" data-placement="top" title="We reageren van ma t/m za tussen 09:00 - 21:00"  class="email"><i class="fa fa-envelope"></i></a>
+                    <a href="{{site.facebook_url}}" target="_blank" rel="noopener noreferrer" class="facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="{{site.twitter_url}}" target="_blank" rel="noopener noreferrer" class="twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="{{site.linkedin_company_url}}" target="_blank" rel="noopener noreferrer" class="linkedin"><i class="fab fa-linkedin"></i></a>
+                    <a href="{{site.instagram_url}}" target="_blank" rel="noopener noreferrer" class="instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+                <!-- <p class="ft-dark text-center">© 2021 <a href="#" class="ft-primary fw-bold">Local Heroes</a></p> -->
+                <p class="ft-dark text-center">
+                    <span>&copy; {{ site.time | date: '%Y' }} <a href="/" class="ft-primary fw-bold">Local Heroes</a></span></p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- <footer class="section-wrap section-footer" id="contact">
     <div class="container">
         <div class="row">
             <div class="col-md-5">
@@ -15,8 +41,7 @@
                     <h4 class="main-heading">Bestel het <span class="fw-bold ft-danger">beste</span> uit de buurt</h4>
                 </div>
                 <div class="footer-app-store">
-                    <!-- <a href=""><img src="assets/google-store.png" class="img-fluid" alt=""></a>
-                    <a href=""><img src="assets/app-store.png" class="img-fluid" alt=""></a> -->
+                   
                         <a href="#" class="v-btn v-btn-danger btn-lg" onclick="DetectAndServe('{{page.title}}')"><span class="ft-sm mr-2"><i class="fas fa-download"></i></span>Download nu de app</a>
                 </div>
                 <div class="row">
@@ -64,7 +89,7 @@
             </div>
         </div>
     </div>
-</footer>
+</footer> -->
 
 {% for path in site.data.assets.js %}    
 

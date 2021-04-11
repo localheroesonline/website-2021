@@ -3,7 +3,7 @@ layout: default
 title: Homepage
 ---
 <!-- HEADER -->
-<section id="home" class="section-wrap app-header">
+<!-- <section id="home" class="section-wrap app-header">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -29,28 +29,171 @@ title: Homepage
             </div>
         </div>
     </div>
-</section>
-<!-- OUR HEROES -->
-<section id="our-heroes" class="section-wrap our-heroes skin-primary">
+</section> -->
+<!-- HEADER -->
+<section id="home" class="section-wrap app-header skin-base">
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
-                <h4 class="main-heading ft-light ft-lg">Over Local Heroes</h4>
-                <!-- <p class="ft-xs ft-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor at architecto assumenda. </p> -->
-            </div>
-            <div class="col-md-8">
+            <div class="col-md-6 order-md-1">
+                <div class="header-content">
+                    <div class="logo d-block d-sm-block d-md-none">
+                        <img src="assets/home/logo.png" class="img-fluid" alt="Local Heroes logo">
+                    </div>
+                    <div class="header-title">
+                        Bestel het beste <br>uit de buurt
+                    </div>
                     <div class="content">
-                    <p class="ft-sm ft-light"> Local Heroes is het e-commerce platform waarmee je eenvoudig en altijd via de app het aanbod van <span class="ft-danger fw-bold">lokale</span> ondernemers kan
-                    bestellen</p>
-                    <img src="assets/mindersaturatie.png" class="img-fluid my-4" alt="Onze buurtbakker: Bakkerij Straathof">
-                    <p class="ft-sm ft-light">Ja, je kunt je mandje vullen met producten van verschillende ondernemers en in één keer afrekenen. Het is dus niet nodig om meerdere bestellingen te plaatsen bij verschillende ondernemers. Wij zorgen dat alles wordt samengevoegd zodat je kunt genieten van het beste uit de buurt!</p>
-                    </div>  
+                        Local Heroes is hét e-commerce platform waarmee je eenvoudig en altijd via de app het aanbod
+                        van <span class="ft-danger">lokale</span> ondernemers kan bestellen
+                    </div>
+                </div>
+                <div id="app-store-btn" class=""></div>
+                <div class="action-btns">
+                    <a href="" class="v-btn v-btn-danger fw-bold" onclick="DetectAndServe('{{page.title}}')"><i class="fa fa-download"></i> <span>Download
+                            nu de</span>
+                        app</a>
+                    <a href="b2b.html" class="v-btn v-btn-primary"> <i class="fas fa-handshake"></i>
+                        <span>Samenwerken</span></a>
+                    <a href="#" class="v-btn v-btn-primary">Onze Heroes</a>
+                </div>
+            </div>
+            <div class="col-md-6 order-md-0">
+                <div class="logo d-none d-sm-none d-md-block">
+                    <img src="assets/home/logo.png" class="img-fluid" alt="Local Heroes logo">
+                </div>
+                <div class="header-mob">
+                    <img src="assets/home/header-mob.png" class="img-fluid" alt="Bestel het beste uit de buurt met de Local Heroes app">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- HOW ITS WORKS -->
+<section id="how-work" class="section-wrap how-work skin-primary">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h4 class="main-heading ft-base fw-bold mb-4 text-center">Hoe werkt Local Heroes?</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="hw-block">
+                    <img src="assets/home/icon-mobile-100.png" class="img-fluid" alt="">
+                    <div class="title">Download <br>Local Heroes</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="hw-block">
+                    <img src="assets/home/icon-fruits-100.png" class="img-fluid" alt="">
+                    <div class="title">Selecteer boodschappen van je favoriete lokale
+                        ondernemer</div>
+
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="hw-block">
+                    <img src="assets/home/icon-veggies-100.png" class="img-fluid" alt="">
+                    <div class="title">Wij verzamelen<br>
+                        je producten</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="hw-block">
+                    <img src="assets/home/icon-cart-100.png" class="img-fluid" alt="">
+                    <div class="title">Laat je boodschappen thuis bezorgen of haal ze op bij het Pick Up Point
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- VIDEO -->
+<section id="our-heroes" class="video-wrap">
+    <video width="100%" controls poster="assets/home/video-playback.png">
+        <source src="https://drive.google.com/file/d/1z5AmMbQ-1p1HukO80WW33bKrhkF0OnB1/view" type="video/mp4">
+    </video>
+</section>
+<!-- LOCAL HEROES -->
+<section  id="our-heroes" class="section-wrap local-hero skin-base">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="our-hero-content">
+                    <h4 class="main-heading fw-bold mb-4">Hoe werkt Local Heroes?</h4>
+                    <p>Local Heroes is het e-commerce platform waarmee je eenvoudig en altijd via de app het aanbod
+                        van <span class="ft-danger">lokale</span> ondernemers kan bestellen </p>
+                    <p>Ja, je kunt je mandje vullen met producten van verschillende ondernemers en in één keer
+                        afrekenen. Het is dus niet nodig om meerdere bestellingen te plaatsen bij verschillende
+                        ondernemers. Wij zorgen dat alles wordt samengevoegd zodat je kunt genieten van het beste
+                        uit de buurt!</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="hero-block">
+                    <img src="assets/home/localhero.png" class="img-fluid" alt="Onze buurtbakker: Bakkerij Straathof">
+                </div>
             </div>
         </div>
     </div>
 </section>
 <!-- MAP -->
-<section id="zipcode-check" class="section-wrap map">
+<section id="zipcode-check"  class="section-wrap map">
+    <div class="map-content">
+        <h4 class="main-heading ft-base">Check of we ook al bij jou actief zijn</h4>
+        <a href="#" onclick="getLocation()" class="ft-primary fw-bold"><span class="icon ft-primary ft-md"><i
+                    class="fa fa-map-marker-alt"></i></span>
+            Huidige
+            locatie</a>
+        <div class="row">
+            <div class="col-md-6 offset-md-2">
+                <div class="zip-block form-group">
+                    <input id="mijn_postcode" type="text" class="form-control">
+                    <span class="search-icon ft-secondary"><i class="fa fa-search"></i></span>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <button class="v-btn v-btn-primary btn-md">Check</button>
+            </div>
+        </div>
+        <div class="info-block" id="bezorgen_mogelijk" style="display:none;">
+            <h4 class="main-heading">Yes! We bezorgen in jouw buurt 🎉</h4>
+            <p class="ft-sm ft-dark"><a href="#" class="ft-danger fw-bold" onclick="DetectAndServe('{{page.title}}')">Download de app</a> en plaats je eerste bestelling.</p>
+        </div>
+        <div class="info-block" id="bezorgen_niet_mogelijk" style="display:none;">
+            <h4 class="main-heading">Houd me op hoogte</h4>
+            <p class="ft-sm ft-dark">We bezorgen nog niet in je postcode gebied.</br>
+                Je kan natuurlijk wel gebruik maken van onze afhaal mogelijkheid!</br></br>
+                Ontvang een email zodra Local Heroes bij jou in de buurt actief wordt:</p>
+            <form class="needs-validation" novalidate method="post" action="https://api.localheroesonline.com/website/lead_consumer">
+                <div class="row mt-4">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="lead_first_name" id="lead_first_name" placeholder="Naam">
+                        </div>
+                    </div>                    
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="lead_email" id="lead_email" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="lead_zipcode" id="lead_zipcode" placeholder="Postcode">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <button class="v-btn v-btn-primary" type="submit">Ja graag!</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <p class="ft-sm ft-dark">Ben je ondernemer of beleidsmaker? Klik <a href= "b2b.html" class="ft-danger">hier</a>.</p>
+        </div>
+    </div>
+</section>
+<!-- <section id="zipcode-check" class="section-wrap map">
     <div class="map-content">
         <h4 class="main-heading ft-primary">Check of we ook al bij jou actief zijn</h4>
         <a href="#zipcode-check" class="get-location" onclick="getLocation()"><span class="icon ft-md ft-primary"><i class="fa fa-map-marker-alt"></i></span> Huidige locatie</a>
@@ -94,9 +237,9 @@ title: Homepage
             <p class="ft-sm ft-dark">Ben je ondernemer of beleidsmaker? Klik <a href= "b2b.html" class="ft-danger">hier</a>.</p>
         </div>
     </div>
-</section>
+</section> -->
 <!-- HOW IT WORKS -->
-<section id="how-work" class="section-wrap app-how-work how-work-bg-img">
+<!-- <section id="how-work" class="section-wrap app-how-work how-work-bg-img">
     <div class="container">
         <div class="row">
             <div class="col-md-6 offset-md-6 col-sm-12">
@@ -130,7 +273,7 @@ title: Homepage
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- OUR HEROES -->
 <section id="one-hero" class="section-wrap section-our-heroes">
     <div class="container">
@@ -150,7 +293,7 @@ title: Homepage
                         </div>
                         <div class="content text-center">
                             <p>“Bestel zeeverse gefileerde vis van Jordy bij <span class="ft-secondary">Viscenter Volendam</span>”</p>
-                            <a href="products/viscenter-volendam" class="v-btn v-btn-primary btn-md">Toon assortiment</a>
+                            <a href="products/viscenter-volendam" class="v-btn v-btn-acent btn-md fw-bold">Toon assortiment</a>
                         </div>
                     </div>
                     <div  class="slide-item">
@@ -159,7 +302,7 @@ title: Homepage
                         </div>
                         <div class="content text-center">
                             <p>“Ontdek bij Jolanda het ambachtelijk gebakken brood van <span class="ft-secondary">Bakkerij Straathof</span>”</p>
-                            <a href="products/bakkerij-straathof" class="v-btn v-btn-primary btn-md">Toon assortiment</a>
+                            <a href="products/bakkerij-straathof" class="v-btn v-btn-acent btn-md fw-bold">Toon assortiment</a>
                         </div>
                     </div>
                     <div class="slide-item">
@@ -168,7 +311,7 @@ title: Homepage
                         </div>
                         <div class="content text-center">
                             <p>“Ontdek de vele groenten van Rik bij <span class="ft-secondary">Lex Groente</span>”</p>
-                            <a href="products/lex-groente" class="v-btn v-btn-primary btn-md">Toon assortiment</a>
+                            <a href="products/lex-groente" class="v-btn v-btn-acent btn-md fw-bold">Toon assortiment</a>
                         </div>
                     </div>
                     <div  class="slide-item">
@@ -177,7 +320,7 @@ title: Homepage
                         </div>
                         <div class="content text-center">
                             <p>“De beste tapas, vleeswaren en broodjes van de Ten Katemarkt bij <span class="ft-secondary">Boer Geert</span>”</p>
-                            <a href="products/boer-geert" class="v-btn v-btn-primary btn-md">Toon assortiment</a>
+                            <a href="products/boer-geert" class="v-btn v-btn-acent btn-md fw-bold">Toon assortiment</a>
                         </div>
                     </div>
                 </div>
@@ -185,12 +328,49 @@ title: Homepage
         </div>
     </div>
 </section>
+<!-- PRODUCT FEATURES -->
+<section class="section-wrap features skin-base">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="features-content">
+                    <div class="logo">
+                        <img src="assets/home/logo.png" class="img-fluid" alt="Local Heroes logo">
+                    </div>
+                    <div class="additional-info">
+                        <h4 class="fw-bold mb-2 ft-primary">Boodschappen doen via Local Heroes is een
+                            win-win-win.
+                        </h4>
+                        <ul class="">
+                            <li>
+                                <img src="assets/icons/support_entrepreneurs.png" alt="Steun lokale ondernemers">
+                                <p>Steun lokale ondernemers</p>
+                            </li>
+                            <li>
+                                <img src="assets/icons/fresh_produce.png"
+                                    alt="Altijd verse en lekkere producten van de markt in huis">
+                                <p>Verse ambachtelijke producten uit de buurt</p>
+                            </li>
+                            <li>
+                                <img src="assets/icons/save_time.png" alt="Bespaar tijd, geld én moeite">
+                                <p>Bespaar tijd, geld én moeite</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="feature-mob">
+        <img src="assets/home/footer-mob.png" class="img-fluid" alt="Heerlijk ambachtelijk brood van Bakkerij Straathof">
+    </div>
+</section>
 <!-- REVIEWS -->
 <section id="reviews" class="section-wrap section-reviews skin-primary">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h4 class="main-heading ft-light text-center mb-5 ft-lg">Lokaal shoppen is geweldig...</h4>
+                <h4 class="main-heading ft-light text-center mb-5">Lokaal shoppen is geweldig...</h4>
             </div>
             <div class="col-md-4">
                 <div class="review-block">
@@ -235,8 +415,8 @@ title: Homepage
                 </div>
             </div>
             <div class="col-md-12">
-                <h4 class="ft-light text-center ft-sm fw-medium">Meer reviews op <a class="link-light" href="https://www.google.com/search?q=local+heroes&sz=0&sxsrf=ALeKk00oVF6mlkt0gqgdJ3cdX-572O5iEA:1617876763740&tbas=0&biw=1920&bih=969&dpr=1#lrd=0x47c609899fcd2623:0x5ec9dccd8071f067,1,,," target="_blank">Google</a>,
-                    <a href="https://play.google.com/store/apps/details?id=com.localheroes.consumer&gl=NL&showAllReviews=true" class="link-light" target="_blank">Google Play</a> & <a href="https://apps.apple.com/nl/app/local-heroes/id1470938037#see-all/reviews" class="link-light" target="_blank">App Store</a></h4>
+                <h4 class="main-heading ft-light text-center ft-sm">Meer reviews op <a class="ft-secondary" href="https://www.google.com/search?q=local+heroes&sz=0&sxsrf=ALeKk00oVF6mlkt0gqgdJ3cdX-572O5iEA:1617876763740&tbas=0&biw=1920&bih=969&dpr=1#lrd=0x47c609899fcd2623:0x5ec9dccd8071f067,1,,," target="_blank">Google</a>,
+                    <a href="https://play.google.com/store/apps/details?id=com.localheroes.consumer&gl=NL&showAllReviews=true" class="ft-secondary" target="_blank">Google Play</a> & <a href="https://apps.apple.com/nl/app/local-heroes/id1470938037#see-all/reviews" class="ft-secondary" target="_blank">App Store</a></h4>
             </div>
         </div>
     </div>
