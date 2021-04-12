@@ -67,58 +67,26 @@ exclude: true
                             </div>
                         </div>
                     </div> -->
+                    {% for item in site.data.products %}
+                    {% if item.vendor_shop_name == page.vendor_shop_name %}
                     <div class="content">
                         <div class="product-list">
-                            <a class="items item-links" href="{{page.product_01_url}}">
+                            <a class="items item-links" href="{{page.vendor_url}}_{{item.product_url}}">
                                 <div class="product-details">
-                                    <img src="{{page.product_01_image}}"  alt="{{page.product_01_name}}" class="img-fluid product-img">
+                                    <img src="{{item.product_image}}"  alt="{{item.product_name}}" class="img-fluid product-img">
                                     <div class="product-info">
-                                        <h4>{{page.product_01_name}}</h4>
-                                        <p>{{page.product_01_details}}</p>
+                                        <h4>{{item.product_name}}</h4>
+                                        <p>{{item.product_details}}</p>
                                     </div>
                                 </div>
                                 <div class="product-pricing">
-                                    € {{page.product_01_price}}
-                                </div>
-                            </a>
-                            <a class="items item-links" href="{{page.product_02_url}}">
-                                <div class="product-details">
-                                    <img src="{{page.product_02_image}}"  alt="{{page.product_02_name}}" class="img-fluid product-img">
-                                    <div class="product-info">
-                                        <h4>{{page.product_02_name}}</h4>
-                                        <p>{{page.product_02_details}}</p>
-                                    </div>
-                                </div>
-                                <div class="product-pricing">
-                                    € {{page.product_02_price}}
-                                </div>
-                            </a>
-                            <a class="items item-links" href="{{page.product_03_url}}">
-                                <div class="product-details">
-                                    <img src="{{page.product_03_image}}"  alt="{{page.product_03_name}}" class="img-fluid product-img">
-                                    <div class="product-info">
-                                        <h4>{{page.product_03_name}}</h4>
-                                        <p>{{page.product_03_details}}</p>
-                                    </div>
-                                </div>
-                                <div class="product-pricing">
-                                    € {{page.product_03_price}}
-                                </div>
-                            </a>
-                            <a class="items item-links" href="{{page.product_04_url}}">
-                                <div class="product-details">
-                                    <img src="{{page.product_04_image}}"  alt="{{page.product_04_name}}" class="img-fluid product-img">
-                                    <div class="product-info">
-                                        <h4>{{page.product_04_name}}</h4>
-                                        <p>{{page.product_04_details}}</p>
-                                    </div>
-                                </div>
-                                <div class="product-pricing">
-                                    € {{page.product_04_price}}
+                                    € {{item.product_price}}
                                 </div>
                             </a>
                         </div>
                     </div>
+                    {% endif %}
+                    {% endfor %}
                     <!-- <div class="footer text-center">
                         <a href="#" class="v-btn v-btn-base invert">Load More <span><i class="fas fa-sync"></i></span></a>
                     </div> -->
