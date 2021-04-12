@@ -4,8 +4,7 @@ title: Vendor
 exclude: true
 ---
 <header class="profile-banner bg-img-box">
-    <div class="bg-img" style="background-image: url('{{page.vendor_cover_image}}')"
-    ></div>
+    <div class="bg-img" style="background-image: url('{{page.vendor_cover_image}}')"></div>
     <div class="bg-overlay bg-overlay-dark"></div>
     <div class="banner-content">
         <div class="profile-card">
@@ -99,6 +98,11 @@ exclude: true
                     </div>
                     <div class="content">
                         <p>{{page.vendor_description}}</p>
+                        <p>&nbsp;</p>
+                        <div class="rating-price ft-md">
+                            <span class="icon icon-md mr-1"><i class="fa fa-thumbs-up"></i></span>{{page.vendor_rating}} 
+                            <span class="lead ft-xxs"> {{page.vendor_rating_count}} Stemmen </span>
+                        </div>
                     </div>
                 </div>
                 <div class="block">
@@ -129,8 +133,7 @@ exclude: true
                         <h4 class="main-title">Bestellen</h4>
                     </div>
                     <div class="content">
-                        <p>Deze mooie ambachtelijke producten vandaag in huis?</p>
-                        <p>Download de app, tik op "Heroes" & tik op "{{page.vendor_shop_name}}"</p>
+                        <p>Deze mooie ambachtelijke producten vandaag in huis? Download dan de app. Tik op "Heroes" & tik op "{{page.vendor_shop_name}}"</p>
                         <p>&nbsp;</p>
                         <div class="app-download-btn">
                             <a href="" onclick="DetectAndServe('{{page.title}}')" class="v-btn v-btn-danger fw-bold mt-2"><i class="fa fa-download"></i> <span>Download de app</span></a>
