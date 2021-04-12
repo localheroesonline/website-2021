@@ -39,15 +39,15 @@ exclude: true
         <div class="row">
             <div class="col-md-8 order-md-1">
                 <div class="block">
-                    <div class="header">
+                    <!-- <div class="header">
                         <div class="category-tabs">
                             <a href="#" class="tab-item active">{{page.vendor_category_name}}</a>
                             <a href="#" class="tab-item">Food</a>
                             <a href="#" class="tab-item">Drinks</a>
                             <a href="#" class="tab-item">Tea & Coffee</a>
                         </div>
-                    </div>
-                    <div class="header row">
+                    </div> -->
+                    <!-- <div class="header row">
                         <div class="col-8">
                             <div class="adon-group">
                                 <input placeholder="Zoek products" type="text" class="form-control"><span class="icon icon-md"><i class="fa fa-search"></i></span>
@@ -66,7 +66,7 @@ exclude: true
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="content">
                         <div class="product-list">
                             <a class="items item-links" href="{{page.product_01_url}}">
@@ -119,9 +119,9 @@ exclude: true
                             </a>
                         </div>
                     </div>
-                    <div class="footer text-center">
+                    <!-- <div class="footer text-center">
                         <a href="#" class="v-btn v-btn-base invert">Load More <span><i class="fas fa-sync"></i></span></a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="col-md-4 order-md-0">
@@ -158,13 +158,19 @@ exclude: true
                 </div>
                 <div class="block">
                     <div class="header">
-                        <h4 class="main-title">Contact</h4>
+                        <h4 class="main-title">Bestellen</h4>
                     </div>
                     <div class="content">
-                        <ul class="contact-list">
+                        <p>Deze mooie ambachtelijke producten vandaag in huis?</p>
+                        <p>Download de app, tik op "Heroes" & tik op "{{page.vendor_shop_name}}"</p>
+                        <p>&nbsp;</p>
+                        <div class="app-download-btn">
+                            <a href="" onclick="DetectAndServe('{{page.title}}')" class="v-btn v-btn-danger fw-bold mt-2"><i class="fa fa-download"></i> <span>Download de app</span></a>
+                        </div>                                             
+                        <!-- <ul class="contact-list">
                             <li><span class="icon icon-sm text-left"><i class="fa fa-envelope"></i></span>{{page.vendor_email}}</li>
                             <li><span class="icon icon-sm text-left"><i class="fa fa-phone"></i></span>{{page.vendor_whatsapp}}</li>
-                        </ul>
+                        </ul>-->
                     </div>
                 </div>
             </div>
