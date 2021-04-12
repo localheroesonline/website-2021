@@ -15,17 +15,16 @@ title: Homepage
                         Bestel het beste <br>uit de buurt
                     </div>
                     <div class="content">
-                        Local Heroes is hét e-commerce platform waarmee je eenvoudig en altijd via de app het aanbod
-                        van <span class="ft-danger">lokale ondernemers</span> kan bestellen
+                        Local Heroes is hét e-commerce platform waarmee je eenvoudig en altijd via de app het aanbod van <span class="ft-danger">lokale ondernemers</span> kan bestellen
                     </div>
                 </div>
                 <div id="app-store-btn" class=""></div>
                 <div class="action-btns">
                     <a href="" class="v-btn v-btn-danger fw-bold" onclick="DetectAndServe('{{page.title}}')">
                         <i class="fa fa-download"></i> <span>Download nu de app</span></a>
-                    <a href="b2b.html" class="v-btn v-btn-primary"> 
+                    <a href="ondernemer.html" class="v-btn v-btn-primary">
                         <i class="fas fa-handshake"></i><span>Ik ben ondernemer</span></a>
-                    <a href="#" class="v-btn v-btn-primary">
+                    <a href="beleidsmaker.html" class="v-btn v-btn-primary">
                         <i class="fas fa-user-tie"></i><span>Ik ben beleidsmaker</span></a>
                 </div>
             </div>
@@ -79,24 +78,18 @@ title: Homepage
 </section>
 <!-- OVER ONS VIDEO -->
 <section id="over-ons" class="video-wrap">
-    <video width="100%" controls poster="assets/home/video-playback.png">
-        <source src="https://www.youtube.com/embed/Cve4EeKM5vQ" type="video/mp4">
-        <!-- <source src="https://www.youtube.com/embed/lWp4jlNfGz4" type="video/mp4"> -->
-    </video>
+    <iframe src="https://www.youtube.com/embed/Cve4EeKM5vQ" title="Gemeente Amsterdam & Local Heroes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </section>
+<!-- New video https://www.youtube.com/embed/lWp4jlNfGz4 -->
 <!-- OVER ONS TEKST -->
-<section  class="section-wrap local-hero skin-base">
+<section class="section-wrap local-hero skin-base">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
                 <div class="our-hero-content">
                     <h4 class="main-heading fw-bold mb-4">Over Local Heroes</h4>
-                    <p>Wij geloven in de kwaliteit en ambacht van de lokale ondernemer. 
-                    Van de groenteman en bakker op de hoek. Tot jouw favoriete traiteur, het kaaswinkeltje en de visverkoper op de markt.
-                        We geven deze <span class="ft-danger">vaklieden</span> het online podium dat ze verdienen.</p>
-                    <p>Via Local Heroes kun je gemakkelijk je boodschappen doen bij de lokale ondernemers uit jouw buurt.
-                    Dagelijks verzamelen we de bestellingen en leggen deze klaar op het Pickup-Up point
-                    óf we brengen je boodschappen vers naar je voordeur.</p>
+                    <p>Wij geloven in de kwaliteit en ambacht van de lokale ondernemer. Van de groenteman en bakker op de hoek. Tot jouw favoriete traiteur, het kaaswinkeltje en de visverkoper op de markt. We geven deze <span class="ft-danger">vaklieden</span>                        het online podium dat ze verdienen.</p>
+                    <p>Via Local Heroes kun je gemakkelijk je boodschappen doen bij de lokale ondernemers uit jouw buurt. Dagelijks verzamelen we de bestellingen en leggen deze klaar op het Pickup-Up point óf we brengen je boodschappen vers naar je voordeur.</p>
                 </div>
             </div>
             <div class="col-md-6">
@@ -108,7 +101,7 @@ title: Homepage
     </div>
 </section>
 <!-- POSTCODE CHECK -->
-<section id="zipcode-check"  class="section-wrap map">
+<section id="zipcode-check" class="section-wrap map">
     <div class="container">
         <div class="row">
             <div class="col-md-8 offset-md-2">
@@ -116,8 +109,8 @@ title: Homepage
                     <h4 class="main-heading ft-base">Check of we ook al bij jou actief zijn</h4>
                     <div class="row">
                         <div class="col-md-4 offset-md-3">
-                        <a href="#zipcode-check" onclick="getLocation()" class="ft-primary fw-bold">
-                            <span class="icon ft-primary ft-md"><i class="fa fa-map-marker-alt"></i>
+                            <a href="#zipcode-check" onclick="getLocation()" class="ft-primary fw-bold">
+                                <span class="icon ft-primary ft-md"><i class="fa fa-map-marker-alt"></i>
                             </span>Huidige locatie</a>
                         </div>
                     </div>
@@ -147,7 +140,7 @@ title: Homepage
                                     <div class="form-group">
                                         <input type="text" class="form-control" name="lead_first_name" id="lead_first_name" placeholder="Naam">
                                     </div>
-                                </div>                    
+                                </div>
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <input type="email" class="form-control" name="lead_email" id="lead_email" placeholder="Email">
@@ -193,7 +186,7 @@ title: Homepage
                             <a href="products/viscenter-volendam" class="v-btn v-btn-acent btn-md fw-bold">Toon assortiment</a>
                         </div>
                     </div>
-                    <div  class="slide-item">
+                    <div class="slide-item">
                         <div class="hero-img">
                             <img src="assets/v8.png" alt="Bakkerij Straathof">
                         </div>
@@ -211,7 +204,7 @@ title: Homepage
                             <a href="products/lex-groente" class="v-btn v-btn-acent btn-md fw-bold">Toon assortiment</a>
                         </div>
                     </div>
-                    <div  class="slide-item">
+                    <div class="slide-item">
                         <div class="hero-img">
                             <img src="https://s3.eu-central-1.amazonaws.com/images.localheroesonline.com/legacy/users/Boer%20Geert-1.jpg" alt="Boer Geert">
                         </div>
@@ -242,8 +235,7 @@ title: Homepage
                                 <p>Steun lokale ondernemers</p>
                             </li>
                             <li>
-                                <img src="assets/icons/fresh_produce.png"
-                                    alt="Altijd verse en lekkere producten van de markt in huis">
+                                <img src="assets/icons/fresh_produce.png" alt="Altijd verse en lekkere producten van de markt in huis">
                                 <p>Verse ambachtelijke producten uit de buurt</p>
                             </li>
                             <li>
@@ -319,23 +311,24 @@ title: Homepage
 
 <script>
     var x = document.getElementById("mijn_postcode");
+
     function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-        x.innerHTML = "Geolocation is not supported by this browser.";
-    }
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
     }
 
     function showPosition(position) {
-    x.innerHTML = "Latitude: " + position.coords.latitude +
-    "<br>Longitude: " + position.coords.longitude;
+        x.innerHTML = "Latitude: " + position.coords.latitude +
+            "<br>Longitude: " + position.coords.longitude;
 
-    $.getJSON("https://maps.googleapis.com/maps/api/geocode/json?latlng="+position.coords.latitude+","+position.coords.longitude+"&key=AIzaSyDhFRaugRy6QcMH9VA1PnHHMKu7466M_hY",
-        function(data) {
-        $("#mijn_postcode").val(data.results[0].address_components[7].long_name);
-        
-    });
+        $.getJSON("https://maps.googleapis.com/maps/api/geocode/json?latlng=" + position.coords.latitude + "," + position.coords.longitude + "&key=AIzaSyDhFRaugRy6QcMH9VA1PnHHMKu7466M_hY",
+            function(data) {
+                $("#mijn_postcode").val(data.results[0].address_components[7].long_name);
+
+            });
 
     }
 
