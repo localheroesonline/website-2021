@@ -57,7 +57,7 @@ title: Homepage
             <div class="col-md-3">
                 <div class="hw-block">
                     <img src="assets/home/icon-fruits-100.png" class="img-fluid" alt="">
-                    <div class="title">Selecteer boodschappen van je favoriete lokale ondernemer</div>
+                    <div class="title">Selecteer boodschappen van je favoriete lokale ondernemers</div>
 
                 </div>
             </div>
@@ -132,8 +132,8 @@ title: Homepage
                     <div class="info-block" id="bezorgen_niet_mogelijk" style="display:none;">
                         <h4 class="main-heading">Houd me op hoogte 🔔</h4>
                         <p class="ft-sm ft-dark">We bezorgen nog niet in je postcode gebied.</br>
-                            Je kan natuurlijk wel gebruik maken van onze afhaal mogelijkheid!</br></br>
-                            Ontvang een email zodra Local Heroes bij jou in de buurt actief wordt:</p>
+                            Je kan natuurlijk wel gebruik maken van onze <a href="https://goo.gl/maps/kE9cqQRpKEAf3dGz6" target="_blank">afhaal mogelijkheid</a>!</br></br>
+                            Ontvang een email zodra Local Heroes ook bij jou in de buurt actief wordt</p>
                         <form class="needs-validation" novalidate method="post" action="https://api.localheroesonline.com/website/lead_consumer">
                             <div class="row mt-4">
                                 <div class="col-md-3">
@@ -326,8 +326,9 @@ title: Homepage
 
         $.getJSON("https://maps.googleapis.com/maps/api/geocode/json?latlng=" + position.coords.latitude + "," + position.coords.longitude + "&key=AIzaSyDhFRaugRy6QcMH9VA1PnHHMKu7466M_hY",
             function(data) {
-                $("#mijn_postcode").val(data.results[0].address_components[7].long_name);
-
+                $("#mijn_postcode").val(data.results[0].address_components[7].long_name.substring(0,4));
+                $("#lead_zipcode").val(data.results[0].address_components[7].long_name);
+                $("#mijn_postcode").keyup();
             });
 
     }
