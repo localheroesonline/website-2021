@@ -1,10 +1,6 @@
 /** @format */
 /** @format */
 /**
- * /* http://meyerweb.com/eric/tools/css/reset/ 
- *    v2.0 | 20110126
- *    License: none (public domain)
- *
  * @format
  */
 html,
@@ -229,11 +225,11 @@ table {
 
 .app-navbar .inner-container .app-download-btn {
   visibility: hidden;
+  line-height: 60px;
 }
 
 .app-navbar .inner-container .app-download-btn.show-btn {
   visibility: visible;
-  line-height: 60px;
 }
 
 .app-navbar .inner-container .hamburger {
@@ -1491,12 +1487,19 @@ hr.base {
   margin-left: 0;
 }
 
-@media (max-width: 440px) {
-
-.app-header.app-header .action-btns a:nth-child(2) {
+@media (max-width: 576px) {
+  .app-header.app-header {
+    height: auto;
+  }
+  .app-header.app-header .action-btns {
+    flex-wrap: wrap;
+  }
+  .app-header.app-header .action-btns a {
     margin-left: 0;
+    flex: 100%;
   }
 }
+
 @media (max-width: 767px) {
   .app-header.app-header {
     height: auto;
@@ -1511,10 +1514,20 @@ hr.base {
     flex-wrap: wrap;
   }
   .app-header.app-header .action-btns a {
-    margin-bottom: 1rem;
+    margin: 0 1rem 0 0;
   }
-  .app-header.app-header .action-btns a:last-child {
+}
+
+@media (max-width: 992px) {
+  .app-header.app-header {
+    height: auto;
+  }
+  .app-header.app-header .action-btns {
+    flex-wrap: wrap;
+  }
+  .app-header.app-header .action-btns a {
     margin-left: 0;
+    margin-bottom: 1rem;
   }
 }
 
@@ -1621,7 +1634,7 @@ hr.base {
 
 @media (max-width: 576px) {
   .section-our-heroes.section-our-heroes::before {
-    top: 386px;
+    top: 395px;
   }
 }
 
@@ -1753,6 +1766,10 @@ hr.base {
   margin-top: 1rem;
   border-radius: 8px;
   box-shadow: 0 1px 2px #ddd;
+}
+
+.section-reviews .review-block {
+  margin-bottom: 1rem;
 }
 
 .section-reviews .review-block .subject {
