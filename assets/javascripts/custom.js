@@ -123,7 +123,7 @@ $('.slick-carousel').slick({
 // REDIRECT VISITOR TO APP STORE / PLAY STORE DEPENDING ON OS
 function getMobileOperatingSystem() {
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
+    window.alert(userAgent);
     // Windows Phone must come first because its UA also contains "Android"
     if (/windows phone/i.test(userAgent)) {
         return "Windows Phone";
@@ -137,12 +137,13 @@ function getMobileOperatingSystem() {
     if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
         return "iOS";
     }
-
+    
     return "unknown";
-}
+};
 
 function DetectAndServe(campaign) {
   let os = getMobileOperatingSystem();
+  window.alert(os);
   if (os == "Android") {
       mixpanel.track("Goto App Marketplace", {
           "Marketplace": "Android",
@@ -166,8 +167,4 @@ function DetectAndServe(campaign) {
       });
       window.location.href = "/";
   }
-}
-
-function SignupLead() {
-  // TODO - Implement signup via MailChimp or signup via new API endpoint (which will write it to a new table in our DB)
-}
+};
