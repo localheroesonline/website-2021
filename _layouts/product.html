@@ -4,25 +4,27 @@ title: Product
 ---
 
 <header class="profile-banner bg-img-box">
-        <div class="bg-img" style="background-image: url('{{page.vendor_cover_image}}')"></div>
-        <div class="bg-overlay bg-overlay-dark"></div>
-        <div class="banner-content">
-            <div class="profile-card">
-                <div class="profile-img">
+    <div class="bg-img" style="background-image: url('{{page.vendor_cover_image}}')"></div>
+    <div class="bg-overlay bg-overlay-dark"></div>
+    <div class="banner-content">
+        <div class="profile-card">
+            <div class="profile-img">
+                <a href="{{page.vendor_url}}.html">
                     <img src="{{page.vendor_image}}" alt="{{page.vendor_shop_name}}" class="img-fluid">
-                </div>
-                <div class="content">
-                    <h4 class="main-heading ft-light mb-2">{{page.vendor_shop_name}}</h4>
-                    <p class="ft-base">{{page.vendor_category_name}}</p>
-                </div>
-            </div>
-            <div class="contact-info">
-                <a href="https://wa.me/{{page.vendor_whatsapp}}" class="v-btn v-btn-success" target="_blank">
-                    <i class="fab fa-whatsapp"></i>
-                    <span class="d-none d-sm-inline-flex">Whatsapp</span>
                 </a>
             </div>
+            <div class="content">
+                <h4 class="main-heading ft-light mb-2">{{page.vendor_shop_name}}</h4>
+                <p class="ft-base">{{page.vendor_category_name}}</p>
+            </div>
         </div>
+        <div class="contact-info">
+            <a href="https://wa.me/{{page.vendor_whatsapp}}" class="v-btn v-btn-success" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+                <span class="d-none d-sm-inline-flex">Whatsapp</span>
+            </a>
+        </div>
+    </div>
 </header>
 <div class="page-title">
     <div class="container">
@@ -47,7 +49,78 @@ title: Product
 <main class="main-content page-product">
     <div class="container">
         <div class="row">
-            <div class="col-md-8  order-sm-1">
+            <div class="col-md-4 order-sm-1">
+                <div class="block">
+                        <div class="header">
+                            <h4 class="main-title">Over</h4>
+                        </div>
+                        <div class="content">
+                            <p>{{page.vendor_description}}</p>
+                            <p>&nbsp;</p>
+                            <div class="rating-price ft-md">
+                                <span class="icon icon-md mr-1"><i class="fa fa-thumbs-up"></i></span>{{page.vendor_rating}} 
+                                <span class="lead ft-xxs"> {{page.vendor_rating_count}} Stemmen </span>
+                            </div>
+                        </div>
+                    <!-- <div class="header">
+                        <h4 class="main-title">Verkoper Details</h4>
+                    </div>
+                    <div class="content">
+                        <a href="{{page.vendor_url}}.html" class="card user-card no-border">
+                            <div class="user-content">
+                                <img src="{{page.vendor_image}}" alt="{{page.vendor_shop_name}}" class="img-fluid user-icon user-icon-md mr-2">
+                                <div class="user-info">
+                                    <h4 class="title">{{page.user_shop_name}}</h4>
+                                    <p>Amsterdam, Ten Katemarkt</p>
+                                </div>
+                            </div>
+                            <div class="rating-price">
+                                <span class="icon icon-xs mr-1"><i class="fa fa-thumbs-up"></i></span>{{page.vendor_rating}}%
+                            </div>
+                        </a>
+                    </div> -->
+                </div>
+                <div class="block">
+                    <div class="header">
+                        <h4 class="main-title">Adres</h4>
+                    </div>
+                    <div class="content">
+                        <p>{{page.vendor_address}}</p>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="header">
+                        <h4 class="main-title">Openingstijden</h4>
+                    </div>
+                    <div class="content">
+                        <ul class="timing-hours">
+                            <li>Maandag <span>09:00 - 17:00</span></li>
+                            <li>Dinsdag <span>09:00 - 17:00</span></li>
+                            <li>Woensdag <span>09:00 - 17:00</span></li>
+                            <li>Donderdag <span>09:00 - 17:00</span></li>
+                            <li>Vrijdag <span>09:00 - 17:00</span></li>
+                            <li>Zaterdag <span>09:00 - 17:00</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="header">
+                        <h4 class="main-title">Bestellen</h4>
+                    </div>
+                    <div class="content">
+                        <p>Dit mooie ambachtelijke product vandaag in huis? Download dan de app. Tik op "Heroes" & tik op "{{page.vendor_shop_name}}"</p>
+                        <p>&nbsp;</p>
+                        <div class="app-download-btn">
+                            <a href="" onclick="DetectAndServe('{{page.title}}')" class="v-btn v-btn-danger fw-bold mt-2"><i class="fa fa-download"></i> <span>Download de app</span></a>
+                        </div>                                             
+                        <!-- <ul class="contact-list">
+                            <li><span class="icon icon-sm text-left"><i class="fa fa-envelope"></i></span>{{page.vendor_email}}</li>
+                            <li><span class="icon icon-sm text-left"><i class="fa fa-phone"></i></span>{{page.vendor_whatsapp}}</li>
+                        </ul>-->
+                    </div>
+                </div>
+            </div>            
+            <div class="col-md-8  order-sm-2">
                 <div class="block">
                     <div class="content product-img-wapper">
                         <img src="{{page.product_image}}" class="img-fluid product-img" alt="{{page.product_name}}">
@@ -100,61 +173,6 @@ title: Product
                                 </tr>
                             </tbody>
                         </table>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 order-sm-2">
-                <div class="block">
-                    <div class="header">
-                        <h4 class="main-title">Verkoper Details</h4>
-                    </div>
-                    <div class="content">
-                        <a href="{{page.vendor_url}}.html" class="card user-card no-border">
-                            <div class="user-content">
-                                <img src="{{page.vendor_image}}" alt="{{page.vendor_shop_name}}" class="img-fluid user-icon user-icon-md mr-2">
-                                <div class="user-info">
-                                    <h4 class="title">{{page.user_shop_name}}</h4>
-                                    <p>Amsterdam, Ten Katemarkt</p>
-                                </div>
-                            </div>
-                            <div class="rating-price">
-                                <span class="icon icon-xs mr-1"><i class="fa fa-thumbs-up"></i></span>{{vendor_rating}}%
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="block">
-                    <div class="header">
-                        <h4 class="main-title">Adres</h4>
-                    </div>
-                    <div class="content">
-                        <p>{{page.vendor_address}}</p>
-                    </div>
-                </div>
-                <div class="block">
-                    <div class="header">
-                        <h4 class="main-title">Openingstijden</h4>
-                    </div>
-                    <div class="content">
-                        <ul class="timing-hours">
-                            <li>Maandag <span>09:00 - 17:00</span></li>
-                            <li>Dinsdag <span>09:00 - 17:00</span></li>
-                            <li>Woensdag <span>09:00 - 17:00</span></li>
-                            <li>Donderdag <span>09:00 - 17:00</span></li>
-                            <li>Vrijdag <span>09:00 - 17:00</span></li>
-                            <li>Zaterdag <span>09:00 - 17:00</span></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="block">
-                    <div class="header">
-                        <h4 class="main-title">Contact</h4>
-                    </div>
-                    <div class="content">
-                        <ul class="contact-list">
-                            <li><span class="icon icon-sm text-left"><i class="fa fa-envelope"></i></span>{{page.vendor_email}}</li>
-                            <li><span class="icon icon-sm text-left"><i class="fa fa-phone"></i></span>{{page.vendor_whatsapp}}</li>
-                        </ul>
                     </div>
                 </div>
             </div>
