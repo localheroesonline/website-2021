@@ -48,8 +48,64 @@ title: Product
 </div>
 <main class="main-content page-product">
     <div class="container">
-        <div class="row">
-            <div class="col-md-4 order-sm-1">
+        <div class="row">            
+            <div class="col-lg-8  order-md-2">
+                <div class="block">
+                    <div class="content product-img-wapper">
+                        <img src="{{page.product_image}}" class="img-fluid product-img" alt="{{page.product_name}}">
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="header"><h4 class="main-title">Omschrijving</h4></div>
+                    <div class="content">
+                        <p>{{page.product_information}}</p>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="content">
+                        <div class="rating-price ft-md">
+                            <span class="icon icon-md mr-1"><i class="fa fa-thumbs-up"></i></span>{{page.rating}} 
+                            <span class="lead ft-xxs"> {{page.rating_count}} Stemmen </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="header">
+                        <h4 class="main-title">Product Details</h4>
+                    </div>
+                    <div class="content">
+                        <table class="table table-sm table-default">
+                            <tbody>
+                                <tr>
+                                    <th>Type</th>
+                                    <td>{{page.product_type}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Unit</th>
+                                    <td>{{page.product_unit}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Minimale afname</th>
+                                    <td>{{page.product_minimum_order}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Prijs/Kg</th>
+                                    <td>{{page.kg_price}}</td>
+                                </tr>
+                                <tr>
+                                    <th>BTW</th>
+                                    <td>{{page.vat}} %</td>
+                                </tr>
+                                <tr>
+                                    <th>Prijs</th>
+                                    <td>{{page.product_price}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 order-md-1">
                 <div class="block">
                         <div class="header">
                             <h4 class="main-title">Over deze lokale ondernemer</h4>
@@ -116,62 +172,6 @@ title: Product
                             <li><span class="icon icon-sm text-left"><i class="fa fa-envelope"></i></span>{{page.vendor_email}}</li>
                             <li><span class="icon icon-sm text-left"><i class="fa fa-phone"></i></span>{{page.vendor_whatsapp}}</li>
                         </ul>-->
-                    </div>
-                </div>
-            </div>            
-            <div class="col-md-8  order-sm-2">
-                <div class="block">
-                    <div class="content product-img-wapper">
-                        <img src="{{page.product_image}}" class="img-fluid product-img" alt="{{page.product_name}}">
-                    </div>
-                </div>
-                <div class="block">
-                    <div class="header"><h4 class="main-title">Omschrijving</h4></div>
-                    <div class="content">
-                        <p>{{page.product_information}}</p>
-                    </div>
-                </div>
-                <div class="block">
-                    <div class="content">
-                        <div class="rating-price ft-md">
-                            <span class="icon icon-md mr-1"><i class="fa fa-thumbs-up"></i></span>{{page.rating}} 
-                            <span class="lead ft-xxs"> {{page.rating_count}} Stemmen </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="block">
-                    <div class="header">
-                        <h4 class="main-title">Product Details</h4>
-                    </div>
-                    <div class="content">
-                        <table class="table table-sm table-default">
-                            <tbody>
-                                <tr>
-                                    <th>Type</th>
-                                    <td>{{page.product_type}}</td>
-                                </tr>
-                                <tr>
-                                    <th>Unit</th>
-                                    <td>{{page.product_unit}}</td>
-                                </tr>
-                                <tr>
-                                    <th>Minimale afname</th>
-                                    <td>{{page.product_minimum_order}}</td>
-                                </tr>
-                                <tr>
-                                    <th>Prijs/Kg</th>
-                                    <td>{{page.kg_price}}</td>
-                                </tr>
-                                <tr>
-                                    <th>BTW</th>
-                                    <td>{{page.vat}} %</td>
-                                </tr>
-                                <tr>
-                                    <th>Prijs</th>
-                                    <td>{{page.product_price}}</td>
-                                </tr>
-                            </tbody>
-                        </table>
                     </div>
                 </div>
             </div>
