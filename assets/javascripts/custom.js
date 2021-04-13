@@ -167,6 +167,6 @@ function DetectAndServe(campaign) {
       });
       window.location.href = "/";
   }
-  window.alert(campaign);
-  window.alert(window.location.href);
+  // window.alert(campaign);
+  // window.alert(window.location.href);
 };
