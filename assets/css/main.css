@@ -721,7 +721,7 @@ hr.base {
 
 .bg-img-box .bg-img {
   background-size: cover;
-  background-position: center center;
+  background-position: 75% 95%;
   background-repeat: no-repeat;
   z-index: 1;
 }
@@ -1943,10 +1943,10 @@ hr.base {
 }
 
 .product-list .items .product-details .product-img {
-  margin-right: 1rem;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  margin-right: 2rem;
+  width: 75px;
+  height: 75px;
+  border-radius: 25%;
   border: 1px solid #f1edea;
 }
 
@@ -1999,8 +1999,8 @@ hr.base {
 }
 
 .product-img-wapper .product-img {
-  height: 400px;
-  object-fit: cover;
+  height: 500px;
+  object-fit: scale-down;
 }
 
 @media (max-width: 576px) {
