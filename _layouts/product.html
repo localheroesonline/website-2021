@@ -94,12 +94,11 @@ title: Product
                     </div>
                     <div class="content">
                         <ul class="timing-hours">
-                            <li>Maandag <span>09:00 - 17:00</span></li>
-                            <li>Dinsdag <span>09:00 - 17:00</span></li>
-                            <li>Woensdag <span>09:00 - 17:00</span></li>
-                            <li>Donderdag <span>09:00 - 17:00</span></li>
-                            <li>Vrijdag <span>09:00 - 17:00</span></li>
-                            <li>Zaterdag <span>09:00 - 17:00</span></li>
+                            {% for openinghours in site.data.openinghours-vendors %}
+                            {% if openinghours.vendor_url == page.vendor_url %}
+                            <li>{{openinghours.day_type}} <span>{{openinghours.start_time}} - {{openinghours.end_time}}</span></li>
+                            {% endif %}
+                            {% endfor %}
                         </ul>
                     </div>
                 </div>
