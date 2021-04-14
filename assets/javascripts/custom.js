@@ -146,20 +146,21 @@ function DetectAndServe(campaign) {
   // window.alert(os);
   console.log('Campaign: ' + campaign);
   console.log('OS: ' + os);
+  var url = "https://apps.apple.com/us/app/lh-consumer/id1470938037";
   if (os == "Android") {
       mixpanel.track("Goto App Marketplace", {
           "Marketplace": "Android",
           "Campaign": campaign,
       });
       console.log('Redirect to Android store');
-      window.location.replace("https://play.google.com/store/apps/details?id=com.localheroes.consumer");
+      url = "https://play.google.com/store/apps/details?id=com.localheroes.consumer";
   } else if (os == "iOS") {
       mixpanel.track("Goto App Marketplace", {
         "Marketplace": "iOS",
         "Campaign": campaign,
       });
       console.log('Redirect to iOS store');
-      window.location.replace("https://apps.apple.com/us/app/lh-consumer/id1470938037");
+      url = "https://apps.apple.com/us/app/lh-consumer/id1470938037";
   // @todo: I disabled the redirect to the homepage as it is useless.
   // Redirect to apple store in case it is not android. Fix later.
   } else {
@@ -168,8 +169,12 @@ function DetectAndServe(campaign) {
       "Campaign": campaign,
     });
     console.log('Fallback to iOS store');
-    window.location.replace("https://apps.apple.com/us/app/lh-consumer/id1470938037");
+    url = "https://apps.apple.com/us/app/lh-consumer/id1470938037";
   }
+
+  // Try redirect using jQuery
+  $(location).attr('href',url);
+  return;
 //  window.alert(campaign);
 
   //window.alert(window.location.href);
