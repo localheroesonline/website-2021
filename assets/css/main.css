@@ -1743,6 +1743,9 @@ hr.base {
   margin: 0 auto;
   text-align: center;
 }
+.map .map-content .btn-check{
+  margin-top: 2.3rem;
+}
 
 .map .map-content .zip-block {
   position: relative;

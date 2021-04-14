@@ -109,20 +109,25 @@ title: Homepage
                     <h4 class="main-heading ft-base">Check of we ook al bij jou actief zijn</h4>
                     <div class="row">
                         <div class="col-md-4 offset-md-3">
-                            <a href="#zipcode-check" onclick="getLocation()" class="ft-primary fw-bold">
-                                <span class="icon ft-primary ft-md"><i class="fa fa-map-marker-alt"></i>
-                            </span>Huidige locatie</a>
+                            
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-4 offset-md-3">
+                        <div class="col-8 col-md-8 col-lg-4 offset-lg-3">
                             <div class="zip-block form-group">
-                                <input id="mijn_postcode" type="text" class="form-control">
-                                <span class="search-icon ft-secondary"><i class="fa fa-search"></i></span>
+                                <a href="#zipcode-check" onclick="getLocation()" class="ft-primary fw-bold">
+                                    <span class="icon ft-primary ft-md"><i class="fa fa-map-marker-alt"></i>
+                                    </span>
+                                    Huidige locatie
+                                </a>
+                                <div class="zip-block">
+                                    <input id="mijn_postcode" type="text" class="form-control">
+                                    <span class="search-icon ft-secondary"><i class="fa fa-search"></i></span>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-2">
-                            <button class="v-btn v-btn-primary btn-md" onclick="getLocation()">Check</button>
+                        <div class="col-4 col-md-4 col-lg-2">
+                            <button class="v-btn v-btn-primary btn-md btn-block btn-check" onclick="getLocation()">Check</button>
                         </div>
                     </div>
                     <div class="info-block" id="bezorgen_mogelijk" style="display:none;">
@@ -131,29 +136,29 @@ title: Homepage
                     </div>
                     <div class="info-block" id="bezorgen_niet_mogelijk" style="display:none;">
                         <h4 class="main-heading">Houd me op hoogte 🔔</h4>
-                        <p class="ft-sm ft-dark">We bezorgen nog niet in je postcode gebied.</br>
-                            Je kan natuurlijk wel gebruik maken van onze <a href="https://goo.gl/maps/kE9cqQRpKEAf3dGz6" target="_blank">afhaal mogelijkheid</a>!</br></br>
-                            Ontvang een email zodra Local Heroes ook bij jou in de buurt actief wordt</p>
+                        <p>We bezorgen nog niet in je postcode gebied.</p>
+                        <p class="my-2">Je kan natuurlijk wel gebruik maken van onze <a href="https://goo.gl/maps/kE9cqQRpKEAf3dGz6" class="ft-danger" target="_blank">afhaal mogelijkheid</a>!</p>
+                        <p>Ontvang een email zodra Local Heroes ook bij jou in de buurt actief wordt</p>
                         <form class="needs-validation" novalidate method="post" action="https://api.localheroesonline.com/website/lead_consumer">
                             <div class="row mt-4">
-                                <div class="col-md-3">
+                                <div class="col-12 col-md-3">
                                     <div class="form-group">
                                         <input type="text" class="form-control" name="lead_first_name" id="lead_first_name" placeholder="Naam">
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-8 col-md-3">
                                     <div class="form-group">
                                         <input type="email" class="form-control" name="lead_email" id="lead_email" placeholder="Email">
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-4 col-md-3 pl-0">
                                     <div class="form-group">
                                         <input type="text" class="form-control" name="lead_zipcode" id="lead_zipcode" placeholder="Postcode">
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-12 col-md-3">
                                     <div class="form-group">
-                                        <button class="v-btn v-btn-primary" type="submit">Ja graag!</button>
+                                        <button class="v-btn v-btn-primary btn-block" type="submit">Ja graag!</button>
                                     </div>
                                 </div>
                             </div>
