@@ -168,20 +168,15 @@ function DetectAndServe(campaign) {
           "Campaign": campaign,
       });
       window.location.href = "/";
-  } else {
-      mixpanel.track("Goto Local Heroes Home", {
-        "Campaign": campaign,
-      });
-      window.location.href = "/";
   */
+  } else {
+    console.log('Fallback to iOS store');
+    mixpanel.track("Goto iOS Marketplace (unknown)", {
+      "Marketplace": "Unknown",
+      "Campaign": campaign,
+    });
+    window.location.href = "https://apps.apple.com/us/app/lh-consumer/id1470938037";
   }
-
-  console.log('Fallback to iOS store');
-  mixpanel.track("Goto iOS Marketplace (unknown)", {
-    "Marketplace": "Unknown",
-    "Campaign": campaign,
-  });
-  window.location.href = "https://apps.apple.com/us/app/lh-consumer/id1470938037";
 //  window.alert(campaign);
 
   //window.alert(window.location.href);
