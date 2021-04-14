@@ -152,14 +152,14 @@ function DetectAndServe(campaign) {
           "Campaign": campaign,
       });
       console.log('Redirect to Android store');
-      window.location.href = "https://play.google.com/store/apps/details?id=com.localheroes.consumer";
+      location.href = "https://play.google.com/store/apps/details?id=com.localheroes.consumer";
   } else if (os == "iOS") {
       mixpanel.track("Goto App Marketplace", {
         "Marketplace": "iOS",
         "Campaign": campaign,
       });
       console.log('Redirect to iOS store');
-      window.location.href = "https://apps.apple.com/us/app/lh-consumer/id1470938037";
+      location.href = "https://apps.apple.com/us/app/lh-consumer/id1470938037";
   /*
   // @todo: I disabled the redirect to the homepage as it is useless.
   // Redirect to apple store in case it is not android. Fix later.
@@ -175,7 +175,7 @@ function DetectAndServe(campaign) {
       "Marketplace": "Unknown",
       "Campaign": campaign,
     });
-    window.location.href = "https://apps.apple.com/us/app/lh-consumer/id1470938037";
+    location.href = "https://apps.apple.com/us/app/lh-consumer/id1470938037";
   }
 //  window.alert(campaign);
 
