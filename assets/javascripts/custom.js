@@ -163,11 +163,11 @@ function DetectAndServe(campaign) {
   // @todo: I disabled the redirect to the homepage as it is useless.
   // Redirect to apple store in case it is not android. Fix later.
   } else {
-    console.log('Fallback to iOS store');
     mixpanel.track("Goto iOS Marketplace (unknown)", {
       "Marketplace": "Unknown",
       "Campaign": campaign,
     });
+    console.log('Fallback to iOS store');
     location.href = "https://apps.apple.com/us/app/lh-consumer/id1470938037";
   }
 //  window.alert(campaign);
