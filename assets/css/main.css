@@ -136,7 +136,7 @@ table {
 
 /** @format */
 .main-heading {
-  font-size: 1.6rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
   font-weight: 800;
   color: #006068;
@@ -144,7 +144,7 @@ table {
 
 @media (max-width: 576px) {
   .main-heading {
-    font-size: 1.3rem;
+    font-size: 1.7rem;
   }
 }
 
