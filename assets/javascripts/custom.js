@@ -142,6 +142,7 @@ function getMobileOperatingSystem() {
 };
 
 function DetectAndServe(campaign) {
+  event.preventDefault();
   let os = getMobileOperatingSystem();
   // window.alert(os);
   console.log('Campaign: ' + campaign);
