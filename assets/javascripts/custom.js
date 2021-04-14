@@ -160,15 +160,8 @@ function DetectAndServe(campaign) {
       });
       console.log('Redirect to iOS store');
       location.href = "https://apps.apple.com/us/app/lh-consumer/id1470938037";
-  /*
   // @todo: I disabled the redirect to the homepage as it is useless.
   // Redirect to apple store in case it is not android. Fix later.
-  } else if (os == "Windows Phone") {
-      mixpanel.track("Goto Local Heroes Home", {
-          "Campaign": campaign,
-      });
-      window.location.href = "/";
-  */
   } else {
     console.log('Fallback to iOS store');
     mixpanel.track("Goto iOS Marketplace (unknown)", {
