@@ -124,7 +124,7 @@ title: Homepage
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4 col-md-4 col-lg-2">
+                        <div class="col-4 col-md-4 col-lg-2 pl-0">
                             <button class="v-btn v-btn-primary btn-md btn-block btn-check" onclick="getLocation()">Check</button>
                         </div>
                     </div>
@@ -185,12 +185,10 @@ title: Homepage
                         <div class="hero-img">
                             <a href="products/{{item.vendor_url}}"><img src="https://axajvrynho.cloudimg.io/v7/{{item.vendor_image}}?width=300" alt="{{item.vendor_shop_name}}"></a>
                         </div>
-                        <p>&nbsp;</p>
                         <div class="content text-center">
                             <p><span class="ft-secondary">{{item.vendor_shop_name}}</span></br>{{item.vendor_category_name}}</p>
-                            <p>&nbsp;</p>
-                            <a href="products/{{item.vendor_url}}" class="v-btn v-btn-acent btn-md fw-bold">Toon assortiment</a>
                         </div>
+                        <a href="products/{{item.vendor_url}}" class="v-btn v-btn-acent btn-md fw-bold">Toon assortiment</a>
                     </div>
                     {% endfor %}
                 </div>
@@ -211,15 +209,15 @@ title: Homepage
                         <h4 class="fw-bold mb-2 ft-primary">Boodschappen doen via Local Heroes is een win-win-win.</h4>
                         <ul class="">
                             <li>
-                                <img src="assets/icons/support_entrepreneurs.png" alt="Steun lokale ondernemers">
+                                <img src="assets/home/check-icon.png" alt="Steun lokale ondernemers">
                                 <p>Steun lokale ondernemers</p>
                             </li>
                             <li>
-                                <img src="assets/icons/fresh_produce.png" alt="Altijd verse en lekkere producten van de markt in huis">
+                                <img src="assets/home/check-icon.png" alt="Altijd verse en lekkere producten van de markt in huis">
                                 <p>Verse ambachtelijke producten uit de buurt</p>
                             </li>
                             <li>
-                                <img src="assets/icons/save_time.png" alt="Bespaar tijd, geld én moeite">
+                                <img src="assets/home/check-icon.png" alt="Bespaar tijd, geld én moeite">
                                 <p>Bespaar tijd, geld én moeite</p>
                             </li>
                         </ul>

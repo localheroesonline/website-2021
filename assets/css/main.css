@@ -201,7 +201,6 @@ table {
   color: #00da9a;
   font-weight: 400;
 }
-
 .app-navbar {
   background-color: #f1edea;
   height: 60px;
@@ -243,6 +242,7 @@ table {
 }
 
 .app-navbar .inner-container .hamburger {
+  display: none;
   cursor: pointer;
   position: relative;
   z-index: 1040;
@@ -251,10 +251,16 @@ table {
   line-height: 60px;
 }
 
+@media (max-width: 992px) {
+  .app-navbar .inner-container .hamburger.hamburger {
+    display: block;
+  }
+}
+
 .app-navbar .inner-container .nav-list {
   align-items: center;
-  display: none;
   margin-left: auto;
+  display: flex;
 }
 
 .app-navbar .inner-container .nav-list .nav-item {
@@ -1607,6 +1613,7 @@ hr.base {
 /* The width of each slide */
 .slick-slide {
   width: 300px;
+  text-align: center;
 }
 
 .slick-slide:focus {
@@ -1638,8 +1645,14 @@ hr.base {
 .section-our-heroes .heroes-wapper .slide-item .hero-img {
   max-width: 234px;
   margin: 0 auto;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
+.section-our-heroes .heroes-wapper .slide-item .content{
+  min-height: 80px;
+}
 .section-our-heroes .heroes-wapper .slide-item .content p {
   font-size: 0.9rem;
   font-weight: 500;
@@ -1650,7 +1663,7 @@ hr.base {
 
 @media (max-width: 576px) {
   .section-our-heroes.section-our-heroes::before {
-    top: 395px;
+    top: 370px;
   }
 }
 
@@ -1672,18 +1685,19 @@ hr.base {
 .features .additional-info ul li {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid rgba(0, 96, 104, 0.1);
+  
   padding: 0.5rem 0;
 }
 
 .features .additional-info ul li img {
-  width: 30px;
+  width: 20px;
   margin-right: 1rem;
 }
 
 .features .additional-info ul li p {
   flex: 1;
   color: #006068;
+  font-weight:bold;
 }
 
 .features .additional-info ul li:last-child {
@@ -1816,6 +1830,9 @@ hr.base {
 .app-footer .footer-links a {
   color: #006068;
   margin-bottom: 0.5rem;
+}
+.app-footer .footer-links a:hover{
+  text-decoration: underline;
 }
 
 @media (max-width: 767px) {
