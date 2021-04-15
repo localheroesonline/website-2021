@@ -176,7 +176,4 @@ function DetectAndServe(campaign) {
   // Try redirect using jQuery
   $(location).attr('href',url);
   return;
-//  window.alert(campaign);
-
-  //window.alert(window.location.href);
 };

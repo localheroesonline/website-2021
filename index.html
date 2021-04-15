@@ -179,48 +179,19 @@ title: Homepage
             <div class="col-md-12">
                 <div class="slick-carousel heroes-wapper">
                     <!-- Inside the containing div, add one div for each slide -->
+                    {% for item in site.data.vendors %}
                     <div class="slide-item">
                         <!-- You can put an image or text inside each slide div -->
                         <div class="hero-img">
-                            <img src="assets/v9.png" alt="Viscenter Volendam">
+                            <a href="products/{{item.vendor_url}}"><img src="https://axajvrynho.cloudimg.io/v7/{{item.vendor_image}}?width=300" alt="{{item.vendor_shop_name}}"></a>
                         </div>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
                         <div class="content text-center">
-                            <p>“Bestel zeeverse gefileerde vis van Jordy bij <span class="ft-secondary">Viscenter Volendam</span>”</p>
-                            <a href="products/viscenter-volendam" class="v-btn v-btn-acent btn-md fw-bold">Toon assortiment</a>
-                        </div>
-                    </div>
-                    <div class="slide-item">
-                        <div class="hero-img">
-                            <img src="assets/v8.png" alt="Bakkerij Straathof">
-                        </div>
-                        <div class="content text-center">
-                            <p>“Ontdek bij Jolanda het ambachtelijk gebakken brood van <span class="ft-secondary">Bakkerij Straathof</span>”</p>
-                            <a href="products/bakkerij-straathof" class="v-btn v-btn-acent btn-md fw-bold">Toon assortiment</a>
-                        </div>
-                    </div>
-                    <div class="slide-item">
-                        <div class="hero-img">
-                            <img src="assets/v7.png" alt="Lex Groente">
-                        </div>
-                        <div class="content text-center">
-                            <p>“Ontdek de vele groenten van Rik bij <span class="ft-secondary">Lex Groente</span>”</p>
-                            <a href="products/lex-groente" class="v-btn v-btn-acent btn-md fw-bold">Toon assortiment</a>
-                        </div>
-                    </div>
-                    {% for item in site.data.vendors %}
-                    {% if (item.vendor_url != 'viscenter-volendam') and (item.vendor_url != 'bakkerij-straathof') and (item.vendor_url != 'lex-groente') and (item.vendor_url != 'local-heroes-pakketten') %}
-                    <div class="slide-item">
-                        <div class="hero-img">
-                            <img src="{{item.vendor_image}}" alt="{{item.vendor_shop_name}}">
-                            <p>&nbsp;</p>
-                            <p>&nbsp;</p>
-                        </div>
-                        <div class="content text-center">
-                            <p>{{item.vendor_category_name}} <span class="ft-secondary">{{item.vendor_shop_name}}</span></p>
+                            <p><span class="ft-secondary">{{item.vendor_shop_name}}</span></br>{{item.vendor_category_name}}</p>
                             <a href="products/{{item.vendor_url}}" class="v-btn v-btn-acent btn-md fw-bold">Toon assortiment</a>
                         </div>
                     </div>
-                    {% endif %}
                     {% endfor %}
                 </div>
             </div>
