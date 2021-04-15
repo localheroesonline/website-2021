@@ -1461,7 +1461,7 @@ hr.base {
 }
 
 .app-header .header-mob {
-  max-width: 450px;
+  max-width: 530px;
   margin: 0 auto;
   position: relative;
   top: 0px;
@@ -1661,7 +1661,7 @@ hr.base {
 }
 
 .features .features-content {
-  margin-top: 2rem;
+  margin-top: 0rem;
 }
 
 .features .additional-info {
@@ -1691,7 +1691,7 @@ hr.base {
 }
 
 .features .feature-mob {
-  max-width: 300px;
+  max-width: 360px;
   position: absolute;
   bottom: 0;
   margin: 0 auto;
