@@ -1,0 +1,17 @@
+[[redirects]]
+from = "https://jekyll.localheroesonline.com/faq.php"
+to = "https://jekyll.localheroesonline.com/faq.html"
+status = 302
+force = true
+
+[[redirects]]
+from = "https://www.localheroesonline.com/faq.php"
+to = "https://www.localheroesonline.com/faq.html"
+status = 302
+force = true
+
+[[redirects]]
+from = "https://localheroesonline.com/faq.php"
+to = "https://localheroesonline.com/faq.html"
+status = 302
+force = true
