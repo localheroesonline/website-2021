@@ -144,6 +144,20 @@ table {
   }
 }
 
+/** @format */
+.vendor-heading {
+  font-size: 1.9rem;
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+  color: #006068;
+}
+
+@media (max-width: 576px) {
+  .vendor-heading {
+    font-size: 1.5rem;
+  }
+}
+
 .sub-heading {
   font-size: 1.3rem;
   font-weight: 400;
@@ -2263,4 +2277,8 @@ hr.base {
 
 .category-card {
   margin-bottom: 1rem;
+}
+
+.top-buffer {
+  margin-top: 20px;
 }
