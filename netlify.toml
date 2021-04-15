@@ -1,0 +1,114 @@
+[[redirects]]
+from = "https://jobs.localheroesonline.com/*"
+to = "https://localheroes.recruitee.com/:splat"
+status = 302
+force = true
+
+[[redirects]]
+from = "https://giel.localheroesonline.com/*"
+to = "https://goudsmit.tech/:splat"
+status = 302
+force = true
+
+[[redirect]]
+from = "https://www.localheroesonline.com/api/img/email/*"
+to = "https://static.localheroesonline.com/email/:splat"
+status = 302
+force = true
+
+[[redirect]]
+from = "https://www.localheroesonline.com/api/img/*"
+to = "https://static.localheroesonline.com/img/:splat"
+status = 302
+force = true
+
+[[redirects]]
+from = "/jobs"
+to = "https://localheroes.recruitee.com/"
+status = 200
+force = true
+
+# redirect meant to display a continuous google slideshow on the smart television of hub pickup #002 (back of the hub)
+[[redirects]]
+from = "/v2_a"
+to = "https://docs.google.com/presentation/d/e/2PACX-1vTG-fP0i7zidUzli7DuFnM8hiaIjrqiZnGhTt4cOWLndjsJcjAwUtoe6Wu5dHUw6VfEDEZe9VR6bdo7/pub?start=true&loop=true&delayms=3000&slide=id.gb8b17a9f7c_0_1"
+status = 302
+force = true
+
+# redirect meant to display a continuous google slideshow on the smart television of hub pickup #002 (front of the hub)
+[[redirects]]
+from = "/v2_v"
+to = "https://docs.google.com/presentation/d/e/2PACX-1vT9YjiQtsXgkpFsGYIg5ASYIIURpSh4vVPKOzxKNpZG5UfHYMskxVc_o_PnO8WUNWwlHakkm1Y19r3X/pub?start=true&loop=true&delayms=3000"
+status = 302
+force = true
+
+[[redirects]]
+from = "/index.php"
+to = "/index.html"
+status = 200
+force = true
+
+[[redirects]]
+from = "/faq.php"
+to = "/faq.html"
+status = 200
+force = true
+
+[[redirects]]
+from = "/disclaimer-web.php"
+to = "/disclaimer-web.html"
+status = 200
+force = true
+
+[[redirects]]
+from = "/disclaimer-app.php"
+to = "/disclaimer-app.html"
+status = 200
+force = true
+
+[[redirects]]
+from = "/privacyverklaring.php"
+to = "/privacyverklaring.html"
+status = 200
+force = true
+
+[[redirects]]
+from = "/privacy.php"
+to = "/privacy.html"
+status = 200
+force = true
+
+[[redirects]]
+from = "/terms-conditions.php"
+to = "/terms-conditions.html"
+status = 200
+force = true
+
+[[redirects]]
+from = "/karv2.php"
+to = "/karv2.html"
+status = 200
+force = true
+
+[[redirects]]
+from = "/*.php"
+to = "/:splat"
+status = 200
+force = false
+
+# code Dirk
+# [[redirects]]
+# from = "https://jekyll.localheroesonline.com/faq.php"
+# to = "https://jekyll.localheroesonline.com/faq.html"
+# status = 302
+# force = true
+# [[redirects]]
+# from = "https://www.localheroesonline.com/faq.php"
+# to = "https://www.localheroesonline.com/faq.html"
+# status = 302
+# force = true
+# [[redirects]]
+# from = "https://localheroesonline.com/faq.php"
+# to = "https://localheroesonline.com/faq.html"
+# status = 302
+# force = true
