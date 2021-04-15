@@ -63,5 +63,9 @@
     mixpanel.init("{{ site.mixpanel-project-token }}", {
         api_host: "{{ site.mixpanel-api-host }}"
     });
-    mixpanel.track("Visit {{page.title}}");
+    mixpanel.track("Visit {{page.name}}", {
+        "Page Title": "{{page.title}}",
+        "Page URL": "{{page.url}}",
+        "Page Name": "{{page.name}}",
+    });
 </script>
