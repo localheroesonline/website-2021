@@ -109,26 +109,26 @@
             mixpanel.track("Goto App Marketplace", {
                 "Marketplace": "Android",
                 "Campaign": "app.html",
-                "OS": os,
+                "$os": os,
             });
             window.location.href = "https://play.google.com/store/apps/details?id=com.localheroes.consumer";
         } else if (os == "iOS") {
             mixpanel.track("Goto App Marketplace", {
                 "Marketplace": "iOS",
                 "Campaign": "app.html",
-                "OS": os,
+                "$os": os,
             });
             window.location.href = "https://apps.apple.com/us/app/lh-consumer/id1470938037";
         } else if (os == "Windows Phone") {
             mixpanel.track("Goto Local Heroes Home", {
                 "Campaign": "app.html",
-                "OS": os,
+                "$os": os,
             });
             window.location.href = "https://www.localheroesonline.com";
         } else {
             mixpanel.track("Goto Local Heroes Home", {
                 "Campaign": "app.html",
-                "OS": os,
+                "$os": os,
             });
             window.location.href = "https://www.localheroesonline.com";
         }
