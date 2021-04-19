@@ -1470,7 +1470,7 @@ hr.base {
 .app-header::after{
     position: absolute;
     content: "";
-    background-image: url(../home/tv.png);
+    background-image: url(https://axajvrynho.cloudimg.io/v7/https://www.localheroesonline.com/assets/home/tv.png);
     width: 140px;
     height: 140px;
     left: 30px;
@@ -1732,7 +1732,7 @@ hr.base {
 
 .features::before {
   content: "";
-  background-image: url(../home/feature-bg.png);
+  background-image: url(https://axajvrynho.cloudimg.io/v7/https://www.localheroesonline.com/assets/home/feature-bg.png);
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -1764,7 +1764,7 @@ hr.base {
 
 .map::before {
   content: "";
-  background-image: url(../home/map.png);
+  background-image: url(https://axajvrynho.cloudimg.io/v7/https://www.localheroesonline.com/assets/home/map.png);
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -2065,7 +2065,8 @@ hr.base {
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(https://www.localheroesonline.com/assets/b2b/localheroes-bg.png);
+  background-position: center center;
+  background-image: url(https://axajvrynho.cloudimg.io/v7/https://www.localheroesonline.com/assets/b2b/localheroes-bg.png);
 }
 
 .page-b2b .b2b-how-work .b2b-hw-block {
