@@ -109,26 +109,26 @@
             mixpanel.track("Goto App Marketplace", {
                 "Marketplace": "Android",
                 "Campaign": "qr-code-cargo-bike-0001",
-                "OS": os,
+                "$os": os,
             });
             window.location.href = "https://play.google.com/store/apps/details?id=com.localheroes.consumer&referrer=utm_source%3Dcargo-bike-0001%26utm_medium%3Dqr-code%26utm_campaign%3Dqr-code-cargo-bike-0001-awareness";
         } else if (os == "iOS") {
             mixpanel.track("Goto App Marketplace", {
                 "Marketplace": "iOS",
                 "Campaign": "qr-code-cargo-bike-0001",
-                "OS": os,
+                "$os": os,
             });
             window.location.href = "https://apps.apple.com/us/app/lh-consumer/id1470938037?pt=119703705&ct=newhubcarqr&mt=8";
         } else if (os == "Windows Phone") {
             mixpanel.track("Goto Local Heroes Home", {
                 "Campaign": "qr-code-cargo-bike-0001",
-                "OS": os,
+                "$os": os,
             });
             window.location.href = "https://www.localheroesonline.com";
         } else {
             mixpanel.track("Goto Local Heroes Home", {
                 "Campaign": "qr-code-cargo-bike-0001",
-                "OS": os,
+                "$os": os,
             });
             window.location.href = "https://www.localheroesonline.com";
         }
