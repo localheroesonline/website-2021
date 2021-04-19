@@ -38,6 +38,7 @@ instagram_url: https://www.instagram.com/local.heroes.online/
 linkedin_company_url: https://www.linkedin.com/company/local-heroes-online/
 linkedin_mcoumans_url: https://www.linkedin.com/in/maarten-coumans-b78989/
 github_username:  localheroesonline
+environment: production
 
 # tracking events
 google_analytics: UA-260378921
