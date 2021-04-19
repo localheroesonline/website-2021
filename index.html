@@ -39,6 +39,11 @@ title: Homepage
         </div>
     </div>
 </section>
+<script type="text/javascript">
+    mixpanel.track_links("#home a", "Click b2b link", {
+        "referrer": document.referrer
+    });
+</script>
 <!-- HOE WERKT HET -->
 <section id="hoe-werkt-het" class="section-wrap how-work skin-primary">
     <div class="container">
@@ -137,7 +142,7 @@ title: Homepage
                         <p>We bezorgen nog niet in je postcode gebied.</p>
                         <p class="my-2">Je kan natuurlijk wel gebruik maken van onze <a href="https://goo.gl/maps/kE9cqQRpKEAf3dGz6" class="ft-danger" target="_blank">afhaal mogelijkheid</a>!</p>
                         <p>Ontvang een email zodra Local Heroes ook bij jou in de buurt actief wordt</p>
-                        <form class="needs-validation" novalidate method="post" action="https://api.localheroesonline.com/website/lead_consumer">
+                        <form class="needs-validation" id="register_consumer" novalidate method="post" action="https://api.localheroesonline.com/website/lead_consumer">
                             <div class="row mt-4">
                                 <div class="col-12 col-md-3">
                                     <div class="form-group">
@@ -161,6 +166,18 @@ title: Homepage
                                 </div>
                             </div>
                         </form>
+                        <script type="text/javascript">
+                            mixpanel.track_forms("#register_consumer", "Lead registered", {
+                                "referrer": document.referrer,
+                                "Lead First name": document.getElementById("lead_first_name").value,
+                                "Lead Email": document.getElementById("lead_email").value,
+                                "Lead Zipcode": document.getElementById("lead_zipcode").value,
+                            });
+                            mixpanel.identify(document.getElementById("lead_email").value);
+                            mixpanel.people.set({"First Name": document.getElementById("lead_first_name").value});
+                            mixpanel.people.set({"Zipcode": document.getElementById("lead_zipcode").value});
+                            mixpanel.people.set({"Role": "Consumer");
+                        </script>                        
                     </div>
                 </div>
             </div>
@@ -177,7 +194,7 @@ title: Homepage
         </div>
         <div class="row">
             <div class="col-md-12">
-                <div class="slick-carousel heroes-wapper">
+                <div class="slick-carousel heroes-wapper" id="vendor-carousel">
                     <!-- Inside the containing div, add one div for each slide -->
                     {% for item in site.data.vendors %}
                     <div class="slide-item">
@@ -196,6 +213,11 @@ title: Homepage
         </div>
     </div>
 </section>
+<script type="text/javascript">
+    mixpanel.track_links("#vendor-carousel a", "Click vendor link", {
+        "referrer": document.referrer
+    });
+</script>
 <!-- UNIQUE SELLING POINTS -->
 <section class="section-wrap features skin-base">
     <div class="container">
@@ -279,10 +301,15 @@ title: Homepage
                     <h4 class="sub-title">- Lea Friebe</h4>
                 </div>
             </div>
-            <div class="col-md-12">
+            <div class="col-md-12" id="review_links">
                 <h4 class="main-heading ft-light text-center ft-sm">Meer reviews op <a class="ft-secondary" href="https://www.google.com/search?q=local+heroes&sz=0&sxsrf=ALeKk00oVF6mlkt0gqgdJ3cdX-572O5iEA:1617876763740&tbas=0&biw=1920&bih=969&dpr=1#lrd=0x47c609899fcd2623:0x5ec9dccd8071f067,1,,," target="_blank">Google</a>,
                     <a href="https://play.google.com/store/apps/details?id=com.localheroes.consumer&gl=NL&showAllReviews=true" class="ft-secondary" target="_blank">Google Play</a> & <a href="https://apps.apple.com/nl/app/local-heroes/id1470938037#see-all/reviews" class="ft-secondary" target="_blank">App Store</a></h4>
             </div>
+            <script type="text/javascript">
+                mixpanel.track_links("#review_links a", "Click review link", {
+                    "referrer": document.referrer
+                });
+            </script>
         </div>
     </div>
 </section>
