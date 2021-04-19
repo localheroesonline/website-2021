@@ -11,7 +11,7 @@
             </div>
             <div class="col-md-6 col-lg-4">
                 <div class="social-icons">
-                     <a href="{{site.business_whatsapp_url}}" target="_blank" rel="noopener noreferrer" data-toggle="tooltip" data-placement="top" title="We reageren van ma t/m za tussen 09:00 - 21:00" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="{{site.business_whatsapp_url}}" target="_blank" rel="noopener noreferrer" data-toggle="tooltip" data-placement="top" title="We reageren van ma t/m za tussen 09:00 - 21:00" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
                     <a href="mailto:{{site.email}}" target="_blank" rel="noopener noreferrer" data-toggle="tooltip" data-placement="top" title="We reageren van ma t/m za tussen 09:00 - 21:00"  class="email"><i class="fa fa-envelope"></i></a>
                     <a href="{{site.facebook_url}}" target="_blank" rel="noopener noreferrer" class="facebook"><i class="fab fa-facebook"></i></a>
                     <a href="{{site.twitter_url}}" target="_blank" rel="noopener noreferrer" class="twitter"><i class="fab fa-twitter"></i></a>
@@ -24,6 +24,12 @@
         </div>
     </div>
 </footer>
+
+<script type="text/javascript">
+    mixpanel.track_links("#contact a", "Click footer link", {
+        "referrer": document.referrer
+    });
+</script>
 
 {% for path in site.data.assets.js %}    
 
