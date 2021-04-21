@@ -64,7 +64,8 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-datapage-generator
-
+  - jekyll-sitemap
+  - jekyll-seo-tag
 incremental: true
 
 paginate: 5
