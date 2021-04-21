@@ -192,12 +192,8 @@ title: Ik ben ondernemer
                                 <input type="text" id="inputShopName" name="store_name" class="form-control" placeholder="Winkelnaam">
                             </div>
                             <div class="col-6">
-                                <label class="ft-secondary" for="inputRole">Rol</label>
-                                <select class="form-control" id="inputRole" name="role">
-                                  <option>Lokale ondernemer</option>
-                                  <option>Winkeliersvereniging</option>
-                                  <option>Beleidsmaker</option>
-                                </select>                                
+                                <label class="ft-secondary" for="inputCity">Plaats</label>
+                                <input type="text" id="inputCity" name="city" class="form-control" placeholder="Plaats">
                             </div>
                         </div>
                         <div class="form-group row">
@@ -212,8 +208,18 @@ title: Ik ben ondernemer
                                 <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email Address" required>
                                 <div class="invalid-feedback">Voer ajb een geldig email adres in</div>
                                 <div class="valid-feedback">Ziet er goed uit!</div>
-                            </div>
+                            </div>                         
                         </div>
+                        <div class="form-group row">
+                            <div class="col-6">
+                                <label class="ft-secondary" for="inputRole">Rol</label>
+                                <select class="form-control" id="inputRole" name="role">
+                                  <option>Lokale Ondernemer</option>
+                                  <option>Winkeliersvereniging</option>
+                                  <option>Beleidsmaker</option>
+                                </select>                                
+                            </div>                            
+                        </div>                          
                         <div class="form-group text-center text-md-right">
                             <button class="v-btn v-btn-acent mt-4 btn-lg" type="submit">Aanmelden</button>                        
                         </div>
