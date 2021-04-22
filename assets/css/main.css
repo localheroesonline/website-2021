@@ -2255,7 +2255,7 @@ hr.base {
   width: 200px;
   border: 1px solid #f1edea;
   margin-right: 1rem;
-  height: 200px;
+  /* height: 200px; */
 }
 
 .blog-wrap .blog-item .blog-content {
