@@ -7,15 +7,15 @@
                         app</span></a>
             </div>
             <input type="checkbox" id="check">
-            <ul class="nav-list">
-                <li class="nav-item"><a href="index.html">Home</a></li>
-                <li class="nav-item"><a href="/{{site.baseurl}}#hoe-werkt-het">Hoe werkt het</a></li>
-                <li class="nav-item"><a href="/{{site.baseurl}}#over-ons">Over ons</a></li>                
-                <li class="nav-item"><a href="/{{site.baseurl}}#onze-heroes">Onze Heroes</a></li>
-                <li class="nav-item"><a href="/{{site.baseurl}}#contact">Contact</a></li>
-                <li class="nav-item"><a href="/{{site.baseurl}}ik_ben_ondernemer.html">Ondernemer</a></li>
-                <li class="nav-item"><a href="/{{site.baseurl}}ik_ben_beleidsmaker.html">Beleidsmaker</a></li>
-                <li class="nav-item"><a href="/{{site.baseurl}}faq.html">FAQ</a></li>
+            <ul class="nav-list" id="navbar_list">
+                <li class="nav-item"><a href="{{site.url}}#">Home</a></li>
+                <li class="nav-item"><a href="{{site.url}}#hoe-werkt-het">Hoe werkt het</a></li>
+                <li class="nav-item"><a href="{{site.url}}#over-ons">Over ons</a></li>                
+                <li class="nav-item"><a href="{{site.url}}#onze-heroes">Onze Heroes</a></li>
+                <li class="nav-item"><a href="{{site.url}}#contact">Contact</a></li>
+                <li class="nav-item"><a href="ik_ben_ondernemer.html">Ondernemer</a></li>
+                <li class="nav-item"><a href="ik_ben_beleidsmaker.html">Beleidsmaker</a></li>
+                <li class="nav-item"><a href="faq.html">FAQ</a></li>
                 <!-- <li class="nav-item"><a href="/{{site.baseurl}}blog.html">Blog</a></li> -->
             </ul>
             <label for="check" class="hamburger">
@@ -24,3 +24,8 @@
         </div>
     </div>
 </div>
+<!-- TODO: Navigate within index.html to #over-ons -->
+<script type="text/javascript">
+    var eventNavigate = "Navigate within index.html";
+    mixpanel.track_links("#navbar_list a", eventNavigate);
+</script>
