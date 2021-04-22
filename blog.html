@@ -18,11 +18,11 @@ title: Blog
                 <div class="blog-wrap">
                     {% for post in site.posts %}
                     <a href="{{ post.url }}" class="blog-item">
-                        <img src="{{ post.images[0] }}?height=200" class="img-fluid blog-img" alt="{{ post.title }}">
+                        <img src="{{ post.images[0] }}" class="img-fluid blog-img" alt="{{ post.title }}">
                         <div class="blog-content">
                             <h5 class="written-by">{{ post.author }}</h5>
                             <h2 class="blog-title">{{ post.title }}</h2>
-                            <p>{{ post.excerpt }}</p>
+                            <!-- <p>{{ post.excerpt }}</p> -->
                             <div class="dated-read">
                                 {{ post.date | date_to_string }} - leestijd circa {{ post.minutes_to_read }} min
                             </div>
