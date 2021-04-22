@@ -6,6 +6,8 @@ The environment variable is set in _config.yml. production is default.
 ## Fire up Jekyll:
 `bundle exec jekyll serve --watch --trace`
 
-## Fire up Jekyll in developer mode. 
-Meaning no tracking is done in Google Analytics. Website events are tracked to  :
+## Fire up Jekyll in developer mode chaining 2 different config.yml files
+In _config.dev.yml various site variables are overriden.
+This means no tracking is done in Google Analytics.
+Website events are tracked to Mixpanel to a test project for easy experimenting: https://eu.mixpanel.com/report/2293700/view/2840060/live:
 `bundle exec jekyll serve --watch --trace --config _config.yml,_config.dev.yml`
