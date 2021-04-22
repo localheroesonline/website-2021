@@ -4,11 +4,15 @@ title:  "Welcome to Jekyll!"
 author: Mick Perez
 date:   2021-03-23 18:05:00 +0530
 categories: jekyll update
-images: https://jekyllrb.com/img/logo-2x.png
+images:
+  - https://jekyllrb.com/img/logo-2x.png
 comments: true
 published: true
 minutes_to_read: 1
 ---
+
+![Jekyll Logo]({{ page.images[0] }}){:height="auto" width="600"}
+
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
 Jekyll requires blog post files to be named according to the following format:
