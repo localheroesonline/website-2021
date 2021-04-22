@@ -16,53 +16,19 @@ title: Blog
         <div class="row">
             <div class="col-md-8">
                 <div class="blog-wrap">
-                    <a href="#" class="blog-item">
-                        <img src="https://axajvrynho.cloudimg.io/v7/https://www.localheroesonline.com/assets/vender-product-bg.jpeg?height=200" class="img-fluid blog-img" alt="">
+                    {% for post in site.posts %}
+                    <a href="{{ post.url }}" class="blog-item">
+                        <img src="{{ post.images[0] }}?height=200" class="img-fluid blog-img" alt="{{ post.title }}">
                         <div class="blog-content">
-                            <h5 class="written-by">Laura Vanderkam in Forge</h5>
-                            <h2 class="blog-title">A Mental Trick to Make Any Task Less Intimidating</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio quos corrupti voluptatum porro ipsa accusamus aperiam quibusdam mollitia quidem enim, provident assumenda, voluptate</p>
+                            <h5 class="written-by">{{ post.author }}</h5>
+                            <h2 class="blog-title">{{ post.title }}</h2>
+                            <p>{{ post.excerpt }}</p>
                             <div class="dated-read">
-                                Feb 19 - 4 min read 
+                                {{ post.date | date_to_string }} - leestijd circa {{ post.minutes_to_read }} min
                             </div>
                         </div>
                     </a>
-                    <a href="#" class="blog-item">
-                        <img src="https://axajvrynho.cloudimg.io/v7/https://www.localheroesonline.com/assets/vender-product-bg.jpeg?height=200" class="img-fluid blog-img" alt="">
-                        <div class="blog-content">
-                            <h5 class="written-by">Laura Vanderkam in Forge</h5>
-                            <h2 class="blog-title">A Mental Trick to Make Any Task Less Intimidating</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio quos corrupti voluptatum porro ipsa accusamus
-                                aperiam quibusdam mollitia quidem enim, provident </p>
-                            <div class="dated-read">
-                                Feb 19 - 4 min read
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="blog-item">
-                        <img src="https://axajvrynho.cloudimg.io/v7/https://www.localheroesonline.com/assets/vender-product-bg.jpeg?height=200" class="img-fluid blog-img" alt="">
-                        <div class="blog-content">
-                            <h5 class="written-by">Laura Vanderkam in Forge</h5>
-                            <h2 class="blog-title">A Mental Trick to Make Any Task Less Intimidating</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio quos corrupti voluptatum porro ipsa accusamus
-                                aperiam quibusdam mollitia quidem enim, provident </p>
-                            <div class="dated-read">
-                                Feb 19 - 4 min read
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="blog-item">
-                        <img src="https://axajvrynho.cloudimg.io/v7/https://www.localheroesonline.com/assets/vender-product-bg.jpeg?height=200" class="img-fluid blog-img" alt="">
-                        <div class="blog-content">
-                            <h5 class="written-by">Laura Vanderkam in Forge</h5>
-                            <h2 class="blog-title">A Mental Trick to Make Any Task Less Intimidating</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio quos corrupti voluptatum porro ipsa accusamus
-                                aperiam quibusdam mollitia quidem enim, provident </p>
-                            <div class="dated-read">
-                                Feb 19 - 4 min read
-                            </div>
-                        </div>
-                    </a>
+                    {% endfor %}
                 </div>
                 <div class="load-more text-center mb-3">
                     <a href="#" class="v-btn v-btn-base invert btn-lg">Load More..</a>

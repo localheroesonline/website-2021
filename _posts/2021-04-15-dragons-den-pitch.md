@@ -1,15 +1,16 @@
 ---
 layout: post
-title: "Gezien op TV: Local Heroes bij Dragons' Den"
-images:
-  - /assets/images/@stock/blog-1.jpg
-  - /assets/images/@stock/blog-2.jpg
-author: mickperez
+title: "Gezien op TV: Local Heroes pitcht bij Dragons' Den"
+author: Mick Perez
 date: 2021-04-15 21:30:00
-categories:
+tags:
   - dragonsden
   - tv
+images:
+  - https://mcusercontent.com/2c6c4fa8749879f0b0ea59fed/images/02a3be67-0b29-4510-a542-f7a5fc9743a7.jpg
 comments: true
+published: true
+minutes_to_read: 4
 ---
 Beste Dragons,
 
@@ -34,9 +35,9 @@ Net als de gemeente Amsterdam gaat jou gemeente je helpen met een mooie locatie 
 
 Je hebt net een bestelling binnen gekregen. Kijk in je telefoon en voltooi deze bestelling en kom deze afleveren op het pickup point
 
-<Matthew neemt de bestellingen aan en gaat ze allocaten, Maarten legt uit wat er nu gebeurt>
+(Matthew neemt de bestellingen aan en gaat ze allocaten, Maarten legt uit wat er nu gebeurt)
 
-Jullie zijn weer Dragon's.... zijn er vragen?
+Jullie zijn weer Dragons.... zijn er vragen?
 
 Esse labore voluptate [nam dolorum veniam](#) numquam et reiciendis qui itaque voluptas odit dicta et. est ullam et omnis repellat qui aliquam delectus quod aperiam quam tenetur odit illo voluptatem. optio tenetur occaecati autem vel occaecati voluptas iste sunt libero quo est ex eum. aut molestiae ea est inventore aut quia ab voluptatem hic iste
 
