@@ -1,0 +1,15 @@
+title: Local Heroes - DEVELOPMENT
+email: mick@localheroesonline.com
+description: >- # this means to ignore newlines until "baseurl:"
+  DEVELOPMENT Local Heroes is het e-commerce platform waarmee je eenvoudig en altijd
+  via de app het aanbod van lokale ondernemers kan bestellen.
+  Boodschappen doen via Local Heroes is een win-win-win.
+  - Steun lokale ondernemers, versterk je buurt
+  - Altijd verse en lekkere producten van de markt in huis
+  - Bespaar tijd, geld én moeite
+url: http://127.0.0.1:4000/ # the base hostname & protocol for your site, e.g. http://example.com
+environment: development
+
+# tracking events
+google_analytics: NOWHERE
+mixpanel-project-token: 624a5eaf9d84caf4c6c5af9a45a08a4a # development
