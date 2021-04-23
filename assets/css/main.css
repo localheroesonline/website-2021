@@ -637,6 +637,9 @@ img-round {
   color: #f1edea !important;
 }
 
+.ft-acent {
+  color: #ffcffa !important;
+}
 .ft-primary {
   color: #006068 !important;
 }
@@ -2020,6 +2023,7 @@ hr.base {
   font-weight: 700;
   font-size: 2rem;
   margin-bottom: 1.4rem;
+  line-height: 40px;
 }
 
 .page-b2b p {
@@ -2069,6 +2073,12 @@ hr.base {
   background-image: url(https://axajvrynho.cloudimg.io/v7/https://www.localheroesonline.com/assets/b2b/localheroes-bg.png);
 }
 
+@media(max-width:767px){
+.page-b2b .fast-delivery {
+    height:auto;
+  }
+}
+
 .page-b2b .b2b-how-work .b2b-hw-block {
   max-width: 300px;
   margin: 1rem auto;
@@ -2109,11 +2119,15 @@ hr.base {
 }
 
 @media (max-width: 767px) {
+  .page-b2b .b2b-section-title{
+    margin-bottom: 1rem;
+  }
   .page-b2b.page-b2b .b2b-section {
-    padding: 2rem  0;
+    padding: 4rem  0;
   }
   .page-b2b.page-b2b .b2b-header {
     height: auto;
+    padding-top:0;
   }
   .page-b2b.page-b2b .b2b-header .content {
     padding: 0;
