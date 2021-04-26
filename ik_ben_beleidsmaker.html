@@ -16,8 +16,8 @@ title: Ik ben beleidsmaker
                         <p class="ft-primary">
                             U zoekt naar mogelijkheden om uw binnenstad of uw wijkcentrum een nieuwe impuls te geven
                             en ondernemers te ondersteunen. Local Heroes biedt een oplossing voor consumenten die
-                            lokaal willen kopen bij uw locale ondernemers.<br>
-                            Wat is er mooier dan enthousiaste bewoners en ondernemers die trots zijn op hun wijk.
+                            lokaal willen kopen bij uw lokale ondernemers.<br>
+                            Wat is er mooier dan enthousiaste bewoners en ondernemers die trots zijn op hun buurt.
                         </p>
                     </div>
                 </div>
@@ -34,16 +34,14 @@ title: Ik ben beleidsmaker
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="section-title text-center mb-4 ft-secondary"><span class="ft-light">Hoe werkt</span>
-                        Local Heroes?</div>
+                    <div class="section-title text-center mb-4 ft-secondary"><span class="ft-light">Hoe werkt</span> Local Heroes?</div>
                 </div>
                 <div class="col-md-12">
                     <div class="oval-block oval">
                         <div class="oval-content entrepreneurs">
                             <img src="assets/policy/fish.png" class="img-fluid" alt="">
                             <h4>Ondernemers</h4>
-                            <p>Lokaal bekende en gedreven ondernemers met veel aandacht voor assortiment en klant
-                            </p>
+                            <p>Lokaal bekende en gedreven ondernemers met veel aandacht voor assortiment en klant</p>
                         </div>
                         <div class="oval-content local-hero">
                             <img src="assets/logo.png" class="img-fluid mb-3" alt="">
@@ -52,8 +50,7 @@ title: Ik ben beleidsmaker
                         <div class="oval-content customers">
                             <img src="assets/policy/family.png" class="img-fluid" alt="">
                             <h4>Consumenten</h4>
-                            <p>Consumenten die kiezen voor Local Heroes vanwege beleving gemak, snelheid, prijs,
-                                ruime keus en lokaal </p>
+                            <p>Consumenten die kiezen voor Local Heroes vanwege beleving, ambacht, gemak, snelheid, prijs, ruime aanbod en lokaal</p>
                         </div>
                     </div>
                 </div>
@@ -74,15 +71,110 @@ title: Ik ben beleidsmaker
                         <div class="section-title ft-primary">Pick up Points</div>
                         <p class="ft-primary">
                             Local Heroes verzorgt pick-up points waar klanten hun bestellingen vanuit verschillende
-                            ondernemers in 1 keer kunnen ophalen.<br><br>
+                            ondernemers in één keer kunnen ophalen.<br><br>
 
                             Bent u een beleidsmaker in uw gemeente of een gebiedsmanager van een winkelgebied en
-                            ziet u kansen om uw locale ondernemers te ondersteunen en de inwoners te stimuleren om
-                            locaal te kopen</p>
-                        <a href="#" class="v-btn v-btn-danger btn-md mt-4">Registeren</a>
+                            ziet u kansen om uw lokale ondernemers te ondersteunen en de inwoners te stimuleren om
+                            lokaal te kopen? </p>
+                        <a href="#reg-form" class="v-btn v-btn-danger btn-md mt-4">Ja, meld mij aan</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <!-- REGISTRATION -->
+    {% if site.environment == "production" %}
+    <form class="needs-validation" novalidate method="post" action="https://api.localheroesonline.com/website/lead_vendor">
+    {% else %}
+    <form class="needs-validation" novalidate method="post" action="https://localheroes-api-staging.herokuapp.com/website/lead_vendor">
+    {% endif %}
+    <div href="javascript:void(0)" id="reg-form"></div>
+    <section class="policy-section registration skin-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 order-md-2">
+                    <div class="reg-from">
+                        <div class="policy-section-title ft-light mb-1">Meld je nu aan</div>
+                        <p class="ft-light mb-3">Geheel kosteloos</p>
+                        <div class="form-group row">
+                            <div class="col-6">
+                                <label class="ft-secondary"  for="inputFirstName">Voornaam</label>
+                                <input type="text" id="inputFirstName" name="first_name" class="form-control" placeholder="Voornaam" required>
+                                <div class="invalid-feedback">Fijn als we weten hoe je heet!</div>
+                                <div class="valid-feedback">Top!</div>
+                            </div>
+                            <div class="col-6">
+                                <label class="ft-secondary" for="inputLastName">Achternaam</label>
+                                <input type="text" id="inputLastName"  name="last_name" class="form-control" placeholder="Achternaam">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-6">
+                                <label class="ft-secondary" for="inputShopName">Winkelnaam</label>
+                                <input type="text" id="inputShopName" name="store_name" class="form-control" placeholder="Winkelnaam">
+                            </div>
+                            <div class="col-6">
+                                <label class="ft-secondary" for="inputCity">Plaats</label>
+                                <input type="text" id="inputCity" name="city" class="form-control" placeholder="Plaats">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-6">
+                                <label class="ft-secondary" for="inputPhone">Telefoon</label>
+                                <input type="text" id="inputPhone" name="phone" class="form-control" placeholder="06..." required>
+                                <div class="invalid-feedback">Bellen werkt makkelijker met een geldig telefoonnr :-)</div>
+                                <div class="valid-feedback">Fijn!</div>
+                            </div>
+                            <div class="col-6">
+                                <label class="ft-secondary" for="inputEmail">Email</label>
+                                <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email Address" required>
+                                <div class="invalid-feedback">Voer ajb een geldig email adres in</div>
+                                <div class="valid-feedback">Ziet er goed uit!</div>
+                            </div>                         
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-6">
+                                <label class="ft-secondary" for="inputRole">Rol</label>
+                                <select class="form-control" id="inputRole" name="role">
+                                  <option>Beleidsmaker</option>
+                                  <option>Lokale Ondernemer</option>
+                                  <option>Winkeliersvereniging</option>
+                                </select>                                
+                            </div>                            
+                        </div>                          
+                        <div class="form-group text-center text-md-right">
+                            <button class="v-btn v-btn-acent mt-4 btn-lg" type="submit">Aanmelden</button>                        
+                        </div>
+                    </div>
+                </div>
+               <div class="col-md-4 order-md-1">
+                    <div class="vendor-img">
+                        <img src="https://axajvrynho.cloudimg.io/v7/https://www.localheroesonline.com/assets/matthew_van_gelder.jpg?width=250" class="img-fluid" alt="Matthew van Gelder op LinkedIn">
+                        <p>Ons Head of Operations <a href="https://www.linkedin.com/in/matthew-van-gelder-b6461753" class="ft-secondary">Matthew van Gelder</a> belt je zo snel mogelijk terug.</p>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </section>
+    </form>
 </main>
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+</script>
