@@ -637,6 +637,9 @@ img-round {
   color: #f1edea !important;
 }
 
+.ft-acent {
+  color: #ffcffa !important;
+}
 .ft-primary {
   color: #006068 !important;
 }
@@ -2020,6 +2023,7 @@ hr.base {
   font-weight: 700;
   font-size: 2rem;
   margin-bottom: 1.4rem;
+  line-height: 40px;
 }
 
 .page-b2b p {
@@ -2069,6 +2073,12 @@ hr.base {
   background-image: url(https://axajvrynho.cloudimg.io/v7/https://www.localheroesonline.com/assets/b2b/localheroes-bg.png);
 }
 
+@media(max-width:767px){
+.page-b2b .fast-delivery {
+    height:auto;
+  }
+}
+
 .page-b2b .b2b-how-work .b2b-hw-block {
   max-width: 300px;
   margin: 1rem auto;
@@ -2109,11 +2119,15 @@ hr.base {
 }
 
 @media (max-width: 767px) {
+  .page-b2b .b2b-section-title{
+    margin-bottom: 1rem;
+  }
   .page-b2b.page-b2b .b2b-section {
-    padding: 2rem  0;
+    padding: 4rem  0;
   }
   .page-b2b.page-b2b .b2b-header {
     height: auto;
+    padding-top:0;
   }
   .page-b2b.page-b2b .b2b-header .content {
     padding: 0;
@@ -2138,6 +2152,166 @@ hr.base {
 }
 
 /* END OF B2B */
+/* POLICY PAGE */
+.page-policy .policy-section {
+  padding: 4rem 0;
+}
+
+.page-policy .section-title {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  line-height: 45px;
+}
+
+.page-policy p {
+  font-size: 0.9rem;
+}
+
+.page-policy .policy-header {
+  padding-top: 1rem;
+  position: relative;
+}
+
+.page-policy .policy-header .content {
+  padding-left: 4.5rem;
+  padding-right: 2rem;
+  max-width: 600px;
+  z-index: 1;
+  position: relative;
+}
+
+.page-policy .policy-header .map-marker-group {
+  max-width: 300px;
+  margin: 0 auto;
+  margin-top: 4rem;
+}
+
+@media (max-width: 576px) {
+  .page-policy .policy-header.policy-header {
+    padding-top: 0;
+  }
+  .page-policy .policy-header.policy-header .content {
+    padding: 0;
+  }
+}
+
+.page-policy .how-work {
+  position: relative;
+}
+
+.page-policy .how-work .oval-block {
+  position: relative;
+  max-width: 800px;
+  height: 300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-policy .how-work .oval-block::before {
+  content: "";
+  background: #ff4934;
+  left: 0;
+  width: 500px;
+  height: 300px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+
+.page-policy .how-work .oval-block::after {
+  content: "";
+  right: 0;
+  z-index: 0;
+  background: #f1edea;
+  width: 500px;
+  height: 300px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+
+.page-policy .how-work .oval-block .oval-content {
+  position: relative;
+  z-index: 2;
+}
+
+.page-policy .how-work .oval-block .oval-content h4 {
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 0;
+}
+
+.page-policy .how-work .oval-block .oval-content p {
+  font-size: 0.8rem;
+}
+
+.page-policy .how-work .oval-block .oval-content.local-hero {
+  background-color: #fff;
+  border-radius: 50%;
+  width: 240px;
+  height: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #006068;
+  flex-direction: column;
+  padding: 0.6rem;
+  text-align: center;
+}
+
+.page-policy .how-work .oval-block .oval-content.local-hero img {
+  max-width: 150px;
+}
+
+.page-policy .how-work .oval-block .oval-content.entrepreneurs, .page-policy .how-work .oval-block .oval-content.customers {
+  width: 240px;
+  text-align: center;
+  padding: 0.5rem 0.5rem 0.5rem;
+}
+
+.page-policy .how-work .oval-block .oval-content.entrepreneurs img, .page-policy .how-work .oval-block .oval-content.customers img {
+  max-width: 100px;
+}
+
+.page-policy .how-work .oval-block .oval-content.customers {
+  color: #006068;
+  padding: 0.6rem;
+}
+
+.page-policy .how-work .oval-block .oval-content.customers h4 {
+  color: #006068;
+}
+
+.page-policy .how-work .oval-block .oval-content.customers p {
+  color: #006068;
+}
+
+@media (max-width: 767px) {
+  .page-policy .how-work.how-work .oval-block {
+    flex-direction: column;
+    height: 800px;
+  }
+  .page-policy .how-work.how-work .oval-block::before {
+    left: unset;
+    top: 0;
+    width: 300px;
+    height: 500px;
+  }
+  .page-policy .how-work.how-work .oval-block::after {
+    right: unset;
+    bottom: 0;
+    top: unset;
+    width: 300px;
+    height: 500px;
+  }
+}
+
+/* END OF POLICY */
 
 .category-tabs {
   display: flex;
