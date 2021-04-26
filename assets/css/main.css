@@ -2311,6 +2311,23 @@ hr.base {
   }
 }
 
+.page-policy .policy-section-title {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1.4rem;
+  line-height: 40px;
+}
+
+.page-policy .registration .vendor-img {
+  max-width: 250px;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.page-policy .registration .vendor-img p {
+  font-size: 0.9rem;
+}
+
 /* END OF POLICY */
 
 .category-tabs {
