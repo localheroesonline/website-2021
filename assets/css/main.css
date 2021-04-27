@@ -2074,9 +2074,10 @@ hr.base {
 }
 
 @media(max-width:767px){
-.page-b2b .fast-delivery {
+  .page-b2b .fast-delivery {
     height:auto;
   }
+
 }
 
 .page-b2b .b2b-how-work .b2b-hw-block {
@@ -2133,7 +2134,7 @@ hr.base {
     padding: 0;
   }
   .page-b2b.page-b2b .increase-sales .card-group-img {
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
   .page-b2b.page-b2b .more-customers .map-marker-group-img {
     margin-top: 2rem;
@@ -2329,6 +2330,13 @@ hr.base {
 }
 
 /* END OF POLICY */
+
+/* PAGE: THANK YOU REGISTRATION */
+.page-thankyou .thankyou-header-mob{
+  max-width: 450px;
+  margin-top: 1rem;
+}
+
 
 .category-tabs {
   display: flex;
