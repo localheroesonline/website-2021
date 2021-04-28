@@ -1,8 +1,18 @@
 ---
-layout: default_gen
+layout: generated
 title: Vendor
-exclude: true
+exclude: false
 ---
+{% if site.mixpanel-project-token and site.mixpanel-api-host %}
+<script type="text/javascript">
+    mixpanel.track("Visit Vendor", {
+        "Vendor Shop Name": "{{page.vendor_shop_name}}",
+        "Vendor URL": "{{page.vendor_url}}",
+        "Vendor Address": "{{page.vendor_address}}",
+        "Vendor ID": "{{page.vendor_id}}",
+    });
+</script>
+{% endif %}
 <header class="profile-banner bg-img-box">
     <div class="bg-img" style="background-image: url('https://axajvrynho.cloudimg.io/v7/{{page.vendor_cover_image}}?height=300')"></div>
     <div class="bg-overlay bg-overlay-dark"></div>
@@ -70,7 +80,7 @@ exclude: true
                     {% if item.vendor_shop_name == page.vendor_shop_name %}
                     <div class="content">
                         <div class="product-list">
-                            <a class="items item-links" href="{{page.vendor_url}}_{{item.product_url}}">
+                            <a class="items item-links" href="../producten/{{page.vendor_url}}_{{item.product_url}}">
                                 <div class="product-details">
                                     <img src="https://axajvrynho.cloudimg.io/v7/{{item.product_image}}?width=100"  alt="{{item.product_name}}" class="img-fluid product-img">
                                     <div class="product-info">
