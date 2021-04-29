@@ -28,7 +28,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   via de app het aanbod van lokale ondernemers kan bestellen.
   Boodschappen doen via Local Heroes is een win-win-win.
   - Steun lokale ondernemers, versterk je buurt
-  - Altijd verse en lekkere producten van de markt in huis
+  - Verse ambachtelijke producten uit de buurt
   - Bespaar tijd, geld én moeite
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://www.localheroesonline.com # the base hostname & protocol for your site, e.g. http://example.com
