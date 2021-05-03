@@ -1,5 +1,9 @@
 vendor_url,day_type,start_time,end_time,day_number
+t-stoepje-jan-koelewijn,NULL,NULL,NULL,NULL
+t-stoepje-coert-westerink-kar-1,NULL,NULL,NULL,NULL
+t-stoepje-wilco-lokhorst,NULL,NULL,NULL,NULL
 local-heroes-pakketten,NULL,NULL,NULL,NULL
+t-stoepje-aart-veldhuizen,NULL,NULL,NULL,NULL
 het-warme-notengilde,tuesday,08:00:00,17:00:00,2
 het-warme-notengilde,wednesday,08:00:00,17:00:00,3
 het-warme-notengilde,thursday,08:00:00,17:00:00,4
@@ -73,7 +77,7 @@ boer-geert,friday,07:00:00,18:00:00,5
 boer-geert,saturday,07:00:00,18:00:00,6
 beauty-one,tuesday,09:30:00,18:30:00,2
 beauty-one,wednesday,09:30:00,18:30:00,3
-beauty-one,thursday,08:30:00,17:00:00,4
+beauty-one,thursday,09:30:00,18:30:00,4
 beauty-one,friday,08:30:00,17:00:00,5
 beauty-one,saturday,08:30:00,17:00:00,6
 de-gouden-tent,monday,09:00:00,16:30:00,1
@@ -137,13 +141,6 @@ loukane-fruit,monday,08:00:00,17:00:00,1
 loukane-fruit,wednesday,08:00:00,17:00:00,3
 loukane-fruit,friday,08:00:00,17:00:00,5
 loukane-fruit,saturday,08:00:00,17:00:00,6
-tomeij-koffie-amsterdam,monday,00:01:00,23:59:00,1
-tomeij-koffie-amsterdam,tuesday,00:01:00,23:59:00,2
-tomeij-koffie-amsterdam,wednesday,00:01:00,23:59:00,3
-tomeij-koffie-amsterdam,thursday,00:01:00,23:59:00,4
-tomeij-koffie-amsterdam,friday,00:01:00,23:59:00,5
-tomeij-koffie-amsterdam,saturday,00:01:00,23:59:00,6
-tomeij-koffie-amsterdam,sunday,00:01:00,23:59:00,7
 landmarkt,monday,09:00:00,20:00:00,1
 landmarkt,tuesday,09:00:00,20:00:00,2
 landmarkt,wednesday,09:00:00,20:00:00,3
