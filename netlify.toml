@@ -1,3 +1,4 @@
+# https://jobs.localheroesonline.com redirects to https://localheroes.recruitee.com/
 [[redirects]]
 from = "https://jobs.localheroesonline.com/*"
 to = "https://localheroes.recruitee.com/:splat"
@@ -22,6 +23,7 @@ to = "https://static.localheroesonline.com/img/:splat"
 status = 302
 force = true
 
+# https://www.localheroesonline.com/jobs redirects to https://localheroes.recruitee.com/
 [[redirects]]
 from = "/jobs"
 to = "https://localheroes.recruitee.com/"
@@ -95,20 +97,3 @@ from = "/*.php"
 to = "/:splat"
 status = 200
 force = false
-
-# code Dirk
-# [[redirects]]
-# from = "https://jekyll.localheroesonline.com/faq.php"
-# to = "https://jekyll.localheroesonline.com/faq.html"
-# status = 302
-# force = true
-# [[redirects]]
-# from = "https://www.localheroesonline.com/faq.php"
-# to = "https://www.localheroesonline.com/faq.html"
-# status = 302
-# force = true
-# [[redirects]]
-# from = "https://localheroesonline.com/faq.php"
-# to = "https://localheroesonline.com/faq.html"
-# status = 302
-# force = true
