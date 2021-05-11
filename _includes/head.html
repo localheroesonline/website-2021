@@ -11,8 +11,10 @@
   <meta name="msapplication-TileColor" content="#00aba9">
   <meta name="theme-color" content="#000000">
 
+  {% comment %}
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  {% endcomment %}
   
   {% for path in site.data.assets.css %}
   
@@ -28,7 +30,6 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
   {% feed_meta %}
-  {% seo %}
   
   {% if site.google_analytics and site.environment == "production" %}
      {% include google-analytics.html %}
@@ -37,4 +38,6 @@
   {% if site.mixpanel-project-token and site.mixpanel-api-host %}
      {% include mixpanel.html %}
   {% endif %}
+
+  {% seo %}
 </head>
