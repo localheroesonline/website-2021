@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Welcome to Jekyll!"
+sitemap: false
 author: Mick Perez
 date:   2021-03-23 18:05:00 +0530
 categories: jekyll update
