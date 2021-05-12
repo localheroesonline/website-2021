@@ -131,15 +131,15 @@ table {
 }
 
 /** @format */
-.main-heading {
+h1.main-heading {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  font-weight: 800;
+  font-weight: 700;
   color: #006068;
 }
 
 @media (max-width: 576px) {
-  .main-heading {
+  h1.main-heading {
     font-size: 1.7rem;
   }
 }
@@ -1497,7 +1497,7 @@ hr.base {
   font-weight: 500;
 }
 
-.app-header .header-content .header-title {
+.app-header .header-content h1.header-title {
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 50px;
@@ -1822,7 +1822,7 @@ hr.base {
   margin-bottom: 1rem;
 }
 
-.section-reviews .review-block .subject {
+.section-reviews .review-block h4.subject {
   font-weight: 700;
   font-size: 1.3rem;
 }
@@ -2019,7 +2019,7 @@ hr.base {
   padding: 5rem  0;
 }
 
-.page-b2b .b2b-section-title {
+.page-b2b h2.b2b-section-title {
   font-weight: 700;
   font-size: 2rem;
   margin-bottom: 1.4rem;
@@ -2158,7 +2158,7 @@ hr.base {
   padding: 4rem 0;
 }
 
-.page-policy .section-title {
+.page-policy h2.section-title {
   font-weight: 700;
   font-size: 2rem;
   margin-bottom: 1rem;
