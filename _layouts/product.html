@@ -27,7 +27,7 @@ exclude: false
                 </a>
             </div>
             <div class="content">
-                <h4 class="vendor-heading ft-light mb-1">{{page.vendor_shop_name}} | Local Heroes</h4>
+                <h1 class="vendor-heading ft-light mb-1">{{page.vendor_shop_name}} | Local Heroes</h1>
                 <p class="ft-base">{{page.vendor_category_name}}</p>
             </div>
         </div>
@@ -43,8 +43,8 @@ exclude: false
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h2 class="title text-center">{{page.product_name}}</h2>
-                <p class="ft-xs">{{page.product_category_name}}</p>
+                <h1 class="title text-center">{{page.product_name}}</h1>
+                <h2 class="ft-xs">{{page.product_category_name}}</h2>
                 {% if page.product_stock_status=='In_stock' %}
                 <p class="ft-xs">{{page.product_details}} | <span class="badge badge-success ft-xs">Op voorraad</span></p>
                 {% endif %}
@@ -69,9 +69,9 @@ exclude: false
                     </div>
                 </div>
                 <div class="block">
-                    <div class="header"><h4 class="main-title">Omschrijving</h4></div>
+                    <div class="header"><h2 class="main-title">Omschrijving</h2></div>
                     <div class="content">
-                        <p>{{page.product_information}}</p>
+                        <h3>{{page.product_information}}</h3>
                     </div>
                 </div>
                 <div class="block">
@@ -121,10 +121,10 @@ exclude: false
             <div class="col-lg-4 order-md-1">
                 <div class="block">
                         <div class="header">
-                            <h4 class="main-title">Over deze lokale ondernemer</h4>
+                            <h2 class="main-title">Over deze lokale ondernemer</h2>
                         </div>
                         <div class="content">
-                            <p>{{page.vendor_description}}</p>
+                            <h3>{{page.vendor_description}}</h3>
                             <p>&nbsp;</p>
                             <div class="rating-price ft-md">
                                 <span class="icon icon-md mr-1"><i class="fa fa-thumbs-up"></i></span>{{page.vendor_rating}} 
@@ -151,15 +151,15 @@ exclude: false
                 </div>
                 <div class="block">
                     <div class="header">
-                        <h4 class="main-title">Adres</h4>
+                        <h2 class="main-title">Adres</h2>
                     </div>
                     <div class="content">
-                        <p>{{page.vendor_address}}</p>
+                        <h3>{{page.vendor_address}}</h3>
                     </div>
                 </div>
                 <div class="block">
                     <div class="header">
-                        <h4 class="main-title">Openingstijden</h4>
+                        <h2 class="main-title">Openingstijden</h2>
                     </div>
                     <div class="content">
                         <ul class="timing-hours">
@@ -173,10 +173,10 @@ exclude: false
                 </div>
                 <div class="block">
                     <div class="header">
-                        <h4 class="main-title">Bestellen</h4>
+                        <h2 class="main-title">Bestellen</h2>
                     </div>
                     <div class="content">
-                        <p>Dit mooie ambachtelijke product vandaag in huis? Download dan de app. Tik op "Heroes" & tik op "{{page.vendor_shop_name}}"</p>
+                        <h3>Dit mooie ambachtelijke product vandaag in huis? Download dan de app. Tik op "Heroes" & tik op "{{page.vendor_shop_name}}"</h3>
                         <p>&nbsp;</p>
                         <div class="app-download-btn">
                             <a href="" onclick="DetectAndServe('{{page.name}}')" class="v-btn v-btn-danger fw-bold mt-2"><i class="fa fa-download"></i> <span>Download de app</span></a>

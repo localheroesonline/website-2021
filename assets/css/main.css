@@ -131,7 +131,7 @@ table {
 }
 
 /** @format */
-h1.main-heading {
+h2.main-heading {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   font-weight: 700;
@@ -139,7 +139,7 @@ h1.main-heading {
 }
 
 @media (max-width: 576px) {
-  h1.main-heading {
+  h2.main-heading {
     font-size: 1.7rem;
   }
 }
@@ -150,6 +150,7 @@ h1.main-heading {
   margin-bottom: 0.5rem;
   font-weight: 800;
   color: #006068;
+  line-height: 40px;
 }
 
 @media (max-width: 576px) {
@@ -1291,6 +1292,10 @@ hr.base {
   font-size: 0.9rem;
 }
 
+.block .content > h3{
+  font-size: 0.9rem;
+}
+
 .card.no-border {
   border: 0;
 }
@@ -1665,10 +1670,11 @@ hr.base {
   border: 1px solid #ddd;
   border-radius: 20px;
   overflow: hidden;
+  height:234px;
 }
 
 .section-our-heroes .heroes-wapper .slide-item .content{
-  min-height: 80px;
+  min-height: 65px;
 }
 .section-our-heroes .heroes-wapper .slide-item .content p {
   font-size: 0.9rem;
@@ -1711,7 +1717,7 @@ hr.base {
   margin-right: 1rem;
 }
 
-.features .additional-info ul li p {
+.features .additional-info ul li h3 {
   flex: 1;
   color: #006068;
   font-weight:bold;
@@ -1722,7 +1728,7 @@ hr.base {
 }
 
 .features .feature-mob {
-  max-width: 360px;
+  max-width: 330px;
   position: absolute;
   bottom: 0;
   margin: 0 auto;
@@ -1822,7 +1828,7 @@ hr.base {
   margin-bottom: 1rem;
 }
 
-.section-reviews .review-block h4.subject {
+.section-reviews .review-block h2.subject {
   font-weight: 700;
   font-size: 1.3rem;
 }
@@ -1997,7 +2003,7 @@ hr.base {
   border: 1px solid #f1edea;
 }
 
-.product-list .items .product-details .product-info h4 {
+.product-list .items .product-details .product-info h3 {
   font-size: 0.9rem;
   font-weight: 500;
   color: #006068;
@@ -2019,7 +2025,7 @@ hr.base {
   padding: 5rem  0;
 }
 
-.page-b2b h2.b2b-section-title {
+.page-b2b .b2b-section-title {
   font-weight: 700;
   font-size: 2rem;
   margin-bottom: 1.4rem;
@@ -2158,7 +2164,7 @@ hr.base {
   padding: 4rem 0;
 }
 
-.page-policy h2.section-title {
+.page-policy .section-title {
   font-weight: 700;
   font-size: 2rem;
   margin-bottom: 1rem;
