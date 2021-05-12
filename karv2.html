@@ -72,13 +72,13 @@ sitemap: false
                 "Campaign": "qr-code-pickup-point-002",
                 "$os": os,
             });
-            window.location.href = "https://www.localheroesonline.com";
+            window.location.href = "{{ site.url }}";
         } else {
             mixpanel.track("Goto Local Heroes Home", {
                 "Campaign": "qr-code-pickup-point-002",
                 "$os": os,
             });
-            window.location.href = "https://www.localheroesonline.com";
+            window.location.href = "{{ site.url }}";
         }
     }
 </script>    
