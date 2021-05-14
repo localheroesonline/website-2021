@@ -14,12 +14,12 @@ exclude: false
 </script>
 {% endif %}
 <header class="profile-banner bg-img-box">
-    <div class="bg-img" style="background-image: url('https://axajvrynho.cloudimg.io/v7/{{page.vendor_cover_image}}?height=300')"></div>
+    <div class="bg-img" style="background-image: url('{{ site.cloudimg }}{{page.vendor_cover_image}}?height=300')"></div>
     <div class="bg-overlay bg-overlay-dark"></div>
     <div class="banner-content">
         <div class="profile-card">
             <div class="profile-img">
-                <img src="https://axajvrynho.cloudimg.io/v7/{{page.vendor_image}}?width=150" alt="{{page.vendor_shop_name}}" class="img-fluid">
+                <img src="{{ site.cloudimg }}{{page.vendor_image}}?width=150" alt="{{page.vendor_shop_name}}" class="img-fluid">
             </div>
             <div class="content">
                 <h1 class="vendor-heading ft-light mb-1">{{page.vendor_shop_name}} | Local Heroes</h1>
@@ -82,7 +82,7 @@ exclude: false
                         <div class="product-list">
                             <a class="items item-links" href="../producten/{{page.vendor_url}}_{{item.product_url}}">
                                 <div class="product-details">
-                                    <img src="https://axajvrynho.cloudimg.io/v7/{{item.product_image}}?width=100"  alt="{{item.product_name}}" class="img-fluid product-img">
+                                    <img src="{{ site.cloudimg }}{{item.product_image}}?width=100"  alt="{{item.product_name}}" class="img-fluid product-img">
                                     <div class="product-info">
                                         <h3>{{item.product_name}}</h3>
                                         <p>{{item.product_details}}</p>

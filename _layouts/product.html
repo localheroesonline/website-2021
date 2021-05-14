@@ -17,13 +17,13 @@ exclude: false
 </script>
 {% endif %}
 <header class="profile-banner bg-img-box">
-    <div class="bg-img" style="background-image: url('https://axajvrynho.cloudimg.io/v7/{{page.vendor_cover_image}}?height=300')"></div>
+    <div class="bg-img" style="background-image: url('{{ site.cloudimg }}{{page.vendor_cover_image}}?height=300')"></div>
     <div class="bg-overlay bg-overlay-dark"></div>
     <div class="banner-content">
         <div class="profile-card">
             <div class="profile-img">
                 <a href="{{site.url}}/heroes/{{page.vendor_url}}.html">
-                    <img src="https://axajvrynho.cloudimg.io/v7/{{page.vendor_image}}?width=150" alt="{{page.vendor_shop_name}}" class="img-fluid">
+                    <img src="{{ site.cloudimg }}{{page.vendor_image}}?width=150" alt="{{page.vendor_shop_name}}" class="img-fluid">
                 </a>
             </div>
             <div class="content">
@@ -65,7 +65,7 @@ exclude: false
             <div class="col-lg-8  order-md-2">
                 <div class="block">
                     <div class="content product-img-wapper">
-                        <img src="https://axajvrynho.cloudimg.io/v7/{{page.product_image}}?width=600" class="img-fluid product-img" alt="{{page.product_name}}">
+                        <img src="{{ site.cloudimg }}{{page.product_image}}?width=600" class="img-fluid product-img" alt="{{page.product_name}}">
                     </div>
                 </div>
                 <div class="block">
