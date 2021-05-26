@@ -75,8 +75,14 @@ status = 200
 force = true
 
 [[redirects]]
+from = "/privacy.html"
+to = "/privacyverklaring.html"
+status = 200
+force = true
+
+[[redirects]]
 from = "/privacy.php"
-to = "/privacy.html"
+to = "/privacyverklaring.html"
 status = 200
 force = true
 
