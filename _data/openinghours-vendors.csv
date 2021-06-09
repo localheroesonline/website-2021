@@ -1,11 +1,5 @@
 vendor_url,day_type,start_time,end_time,day_number
-t-stoepje-niels-koelewijn-02,NULL,NULL,NULL,NULL
-t-stoepje-wilco-lokhorst,NULL,NULL,NULL,NULL
-t-stoepje-niels-koelewijn-01,NULL,NULL,NULL,NULL
-t-stoepje-aart-veldhuizen,NULL,NULL,NULL,NULL
-t-stoepje-jan-koelewijn,NULL,NULL,NULL,NULL
-t-stoepje-coert-westerink-02,NULL,NULL,NULL,NULL
-t-stoepje-coert-westerink-01,NULL,NULL,NULL,NULL
+tropische-winkel-rustem,NULL,NULL,NULL,NULL
 het-warme-notengilde,tuesday,08:00:00,17:00:00,2
 het-warme-notengilde,wednesday,08:00:00,17:00:00,3
 het-warme-notengilde,thursday,08:00:00,17:00:00,4
@@ -89,7 +83,6 @@ de-gouden-tent,wednesday,09:00:00,16:30:00,3
 de-gouden-tent,thursday,09:00:00,16:30:00,4
 de-gouden-tent,friday,09:00:00,16:30:00,5
 de-gouden-tent,saturday,09:00:00,16:30:00,6
-bilderdijk-wijnhuys,monday,13:00:00,19:00:00,1
 bilderdijk-wijnhuys,tuesday,11:00:00,19:00:00,2
 bilderdijk-wijnhuys,wednesday,11:00:00,19:00:00,3
 bilderdijk-wijnhuys,thursday,11:00:00,19:00:00,4
@@ -125,6 +118,11 @@ waldo-chocolade-patisserie,wednesday,10:00:00,18:30:00,3
 waldo-chocolade-patisserie,thursday,10:00:00,18:30:00,4
 waldo-chocolade-patisserie,friday,10:00:00,18:30:00,5
 waldo-chocolade-patisserie,saturday,09:00:00,18:30:00,6
+brouwerij-troost,monday,00:01:00,23:59:00,1
+brouwerij-troost,tuesday,00:01:00,23:59:00,2
+brouwerij-troost,wednesday,00:01:00,23:59:00,3
+brouwerij-troost,thursday,00:01:00,23:59:00,4
+brouwerij-troost,friday,00:01:00,15:00:00,5
 seoul-food,wednesday,12:00:00,19:00:00,3
 seoul-food,thursday,12:00:00,19:00:00,4
 seoul-food,friday,12:00:00,19:00:00,5
