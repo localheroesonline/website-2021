@@ -1,3 +1,10 @@
+# Short URL for Whatsapp Referral Code Campaign
+[[redirects]]
+from = "/warcc"
+to = "https://www.localheroesonline.com/app.html#utm_source=email&utm_medium=whatsapp&utm_campaign=referral_code&utm_content=2021-06"
+status = 301
+force = true
+
 # https://jobs.localheroesonline.com redirects to https://localheroes.recruitee.com/
 [[redirects]]
 from = "https://jobs.localheroesonline.com/*"
