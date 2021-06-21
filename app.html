@@ -74,9 +74,9 @@ sitemap: false
                 "Marketplace": "Android",
                 "Campaign": page,
                 "$os": os,                
-                "UTM Source": urlParams.get('utm_source'),
-                "UTM Medium": urlParams.get('utm_medium'),
-                "UTM Campaign": urlParams.get('utm_campaign'),
+                "utm_source": urlParams.get('utm_source'),
+                "utm_medium": urlParams.get('utm_medium'),
+                "utm_campaign": urlParams.get('utm_campaign'),
             });
             window.location.href = "https://play.google.com/store/apps/details?id=com.localheroes.consumer&utm_source=" + urlParams.get('utm_source') + "&utm_medium=" + urlParams.get('utm_medium') + "&utm_campaign=" + urlParams.get('utm_campaign');
         } else if (os == "iOS") {
@@ -84,27 +84,27 @@ sitemap: false
                 "Marketplace": "iOS",
                 "Campaign": page,
                 "$os": os,
-                "UTM Source": urlParams.get('utm_source'),
-                "UTM Medium": urlParams.get('utm_medium'),
-                "UTM Campaign": urlParams.get('utm_campaign'),                
+                "utm_source": urlParams.get('utm_source'),
+                "utm_medium": urlParams.get('utm_medium'),
+                "utm_campaign": urlParams.get('utm_campaign'),                
             });
             window.location.href = "https://apps.apple.com/us/app/lh-consumer/id1470938037?utm_source=" + urlParams.get('utm_source') + "&utm_medium=" + urlParams.get('utm_medium') + "&utm_campaign=" + urlParams.get('utm_campaign');
         } else if (os == "Windows Phone") {
             mixpanel.track("Goto Local Heroes Home", {
                 "Campaign": page,
                 "$os": os,
-                "UTM Source": urlParams.get('utm_source'),
-                "UTM Medium": urlParams.get('utm_medium'),
-                "UTM Campaign": urlParams.get('utm_campaign'),        
+                "utm_source": urlParams.get('utm_source'),
+                "utm_medium": urlParams.get('utm_medium'),
+                "utm_campaign": urlParams.get('utm_campaign'),        
             });
             window.location.href = "{{site.url}}#utm_source=" + urlParams.get('utm_source') + "&utm_medium=" + urlParams.get('utm_medium') + "&utm_campaign=" + urlParams.get('utm_campaign');
         } else {
             mixpanel.track("Goto Local Heroes Home", {
                 "Campaign": page,
                 "$os": os,
-                "UTM Source": urlParams.get('utm_source'),
-                "UTM Medium": urlParams.get('utm_medium'),
-                "UTM Campaign": urlParams.get('utm_campaign'),                
+                "utm_source": urlParams.get('utm_source'),
+                "utm_medium": urlParams.get('utm_medium'),
+                "utm_campaign": urlParams.get('utm_campaign'),                
             });
             window.location.href = "{{site.url}}#utm_source=" + urlParams.get('utm_source') + "&utm_medium=" + urlParams.get('utm_medium') + "&utm_campaign=" + urlParams.get('utm_campaign');
         }
