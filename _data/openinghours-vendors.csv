@@ -1,5 +1,4 @@
 vendor_url,day_type,start_time,end_time,day_number
-tropische-winkel-rustem,NULL,NULL,NULL,NULL
 het-warme-notengilde,tuesday,08:00:00,17:00:00,2
 het-warme-notengilde,wednesday,08:00:00,17:00:00,3
 het-warme-notengilde,thursday,08:00:00,17:00:00,4
@@ -71,7 +70,6 @@ boer-geert,wednesday,07:00:00,18:00:00,3
 boer-geert,thursday,07:00:00,18:00:00,4
 boer-geert,friday,07:00:00,18:00:00,5
 boer-geert,saturday,07:00:00,18:00:00,6
-beauty-one,monday,09:30:00,18:30:00,1
 beauty-one,tuesday,09:30:00,18:30:00,2
 beauty-one,wednesday,09:30:00,18:30:00,3
 beauty-one,thursday,09:30:00,18:30:00,4
@@ -157,6 +155,12 @@ vkusvill,thursday,09:30:00,18:30:00,4
 vkusvill,friday,09:30:00,18:30:00,5
 vkusvill,saturday,09:30:00,18:30:00,6
 vkusvill,sunday,09:30:00,18:30:00,7
+tropische-winkel-rustem,monday,09:00:00,18:00:00,1
+tropische-winkel-rustem,tuesday,09:00:00,18:00:00,2
+tropische-winkel-rustem,wednesday,09:00:00,18:00:00,3
+tropische-winkel-rustem,thursday,09:00:00,18:00:00,4
+tropische-winkel-rustem,friday,09:00:00,18:00:00,5
+tropische-winkel-rustem,saturday,09:00:00,18:00:00,6
 casa-brasil-portugal,monday,10:00:00,18:00:00,1
 casa-brasil-portugal,tuesday,10:00:00,18:00:00,2
 casa-brasil-portugal,wednesday,10:00:00,18:00:00,3
@@ -167,4 +171,4 @@ pinks-bakery,tuesday,08:00:00,17:00:00,2
 pinks-bakery,wednesday,08:00:00,17:00:00,3
 pinks-bakery,thursday,08:00:00,17:00:00,4
 pinks-bakery,friday,08:00:00,17:00:00,5
-pinks-bakery,saturday,08:00:00,17:00:00,6
+pinks-bakery,saturday,08:00:00,16:30:00,6
