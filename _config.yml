@@ -35,7 +35,18 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: https://www.localheroesonline.com # the base hostname & protocol for your site, e.g. http://example.com
 image_url: https://axajvrynho.cloudimg.io/v7/https://www.localheroesonline.com
 cloudimg: https://axajvrynho.cloudimg.io/v7/
-twitter_url: https://twitter.com/localheroesNL
+logo: https://www.localheroesonline.com/assets/logo.png # used by jekyll-seo-tag
+image: https://www.localheroesonline.com/assets/logo.png # used by jekyll-seo-tag
+social: # used by jekyll-seo-tag
+  name: Local Heroes Online # used by jekyll-seo-tag
+  links:
+    - https://twitter.com/localheroesNL # used by jekyll-seo-tag
+    - https://www.facebook.com/localheroesonelineamsterdam/ # used by jekyll-seo-tag
+    - https://www.linkedin.com/company/local-heroes-online/ # used by jekyll-seo-tag
+    - https://www.instagram.com/local.heroes.online/ # used by jekyll-seo-tag
+    - https://github.com/localheroesonline # used by jekyll-seo-tag
+# TODO: override image & description for generated vendor & product pages
+twitter_url: https://twitter.com/localheroesNL 
 facebook_url: https://www.facebook.com/localheroesonelineamsterdam
 instagram_url: https://www.instagram.com/local.heroes.online/
 linkedin_company_url: https://www.linkedin.com/company/local-heroes-online/
@@ -81,7 +92,7 @@ page_gen:
     name_expr: record['vendor_url']
     title_expr: record['vendor_shop_name']
     extension: 'html'
-    debug: true
+    debug: false
 
   - data: 'products'
     template: 'product'
@@ -89,7 +100,7 @@ page_gen:
     name_expr: record['vendor_url'] + "_" + record['product_url']
     title_expr: record['product_name'] + " van " + record['vendor_shop_name']
     extension: 'html'
-    debug: true
+    debug: false
 
 # Exclude from processing.
 # The following items will not be processed, by default.
