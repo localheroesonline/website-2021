@@ -11,3 +11,5 @@ In _config.dev.yml various site variables are overriden.
 This means no tracking is done in Google Analytics.
 Website events are tracked to Mixpanel to a test project for easy experimenting: https://eu.mixpanel.com/report/2293700/view/2840060/live:
 `bundle exec jekyll serve --watch --trace --config _config.yml,_config.dev.yml`
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/04fbc344-670b-4e27-86ac-80701a87a703/deploy-status)](https://app.netlify.com/sites/flamboyant-hamilton-7d94c5/deploys)
