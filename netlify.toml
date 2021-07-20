@@ -5,6 +5,13 @@ to = "https://www.localheroesonline.com/app.html#utm_source=email&utm_medium=wha
 status = 301
 force = true
 
+# Short URL for Referral Code Campaign via the app itself
+[[redirects]]
+from = "/arcc"
+to = "https://www.localheroesonline.com/app.html#utm_source=app&utm_medium=app&utm_campaign=referral_code&utm_content=2021-07"
+status = 301
+force = true
+
 # https://jobs.localheroesonline.com redirects to https://localheroes.recruitee.com/
 [[redirects]]
 from = "https://jobs.localheroesonline.com/*"
