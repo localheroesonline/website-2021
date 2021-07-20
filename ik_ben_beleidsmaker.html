@@ -96,54 +96,69 @@ title: Ik ben beleidsmaker
                     <div class="reg-from">
                         <h2 class="policy-section-title ft-light mb-1">Meld je nu aan</h2>
                         <p class="ft-light mb-3">Geheel kosteloos</p>
-                        <div class="form-group row">
-                            <div class="col-6">
-                                <label class="ft-secondary"  for="inputFirstName">Voornaam</label>
-                                <input type="text" id="inputFirstName" name="first_name" class="form-control" placeholder="Voornaam" required>
-                                <div class="invalid-feedback">Fijn als we weten hoe je heet!</div>
-                                <div class="valid-feedback">Top!</div>
-                            </div>
-                            <div class="col-6">
-                                <label class="ft-secondary" for="inputLastName">Achternaam</label>
-                                <input type="text" id="inputLastName"  name="last_name" class="form-control" placeholder="Achternaam">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-6">
-                                <label class="ft-secondary" for="inputShopName">Winkelnaam</label>
-                                <input type="text" id="inputShopName" name="store_name" class="form-control" placeholder="Winkelnaam">
-                            </div>
-                            <div class="col-6">
-                                <label class="ft-secondary" for="inputCity">Plaats</label>
-                                <input type="text" id="inputCity" name="city" class="form-control" placeholder="Plaats">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-6">
-                                <label class="ft-secondary" for="inputPhone">Telefoon</label>
-                                <input type="text" id="inputPhone" name="phone" class="form-control" placeholder="06..." required>
-                                <div class="invalid-feedback">Bellen werkt makkelijker met een geldig telefoonnr :-)</div>
-                                <div class="valid-feedback">Fijn!</div>
-                            </div>
-                            <div class="col-6">
-                                <label class="ft-secondary" for="inputEmail">Email</label>
-                                <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email Address" required>
-                                <div class="invalid-feedback">Voer ajb een geldig email adres in</div>
-                                <div class="valid-feedback">Ziet er goed uit!</div>
-                            </div>                         
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-6">
-                                <label class="ft-secondary" for="inputRole">Rol</label>
-                                <select class="form-control" id="inputRole" name="role">
-                                  <option>Beleidsmaker</option>
-                                  <option>Lokale Ondernemer</option>
-                                  <option>Winkeliersvereniging</option>
-                                </select>                                
-                            </div>                            
-                        </div>                          
-                        <div class="form-group text-center text-md-right">
-                            <button class="v-btn v-btn-acent mt-4 btn-lg" type="submit">Aanmelden</button>                        
+                        <div class='bgn-wf-wrapper' id='crmWebToEntityForm' >
+                            <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+                            <META HTTP-EQUIV='content-type' CONTENT='text/html;charset=UTF-8'>
+                            <form id="target" class="reg-from" action='https://bigin.zoho.eu/crm/WebToContactForm' name='CMIGNITEWebToContacts' method='POST' enctype='multipart/form-data' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory()' accept-charset='UTF-8'>
+                                <!-- Do not remove this code. -->
+                                <input type='text' style='display:none;' name='xnQsjsdp' value='6fe99b3f7f48f0cd229fdd3776846295ec8e10929fd81f22967907504d12e8f8' />
+                                <input type='hidden' name='zc_gad' id='zc_gad' value='' />
+                                <input type='text' style='display:none;' name='xmIwtLD' value='8b7b12d730e7d7baaa0350eff939081321d16b4a55bb12be1b9885c315941b77' />
+                                <input type='text' style='display:none;' name='actionType' value='Q29udGFjdHM=' />
+                                <input id="NewValue" type='text' style='display:none;' name='returnURL' value='https://www.localheroesonline.com/lead_business_confirmed.html'/>
+                                
+                                <div class="form-group row">
+                                    <div class="col-6">
+                                        <label class="ft-secondary" for="inputFirstName">First Name</label>
+                                        <input id="FirstName" class="form-control" name="First Name" type="text" maxlength="40" value="" placeholder="First Name"  />
+                                        <div class="invalid-feedback">Fijn als we weten hoe je heet!</div>
+                                        <div class="valid-feedback">Top!</div>
+                                    </div>
+                                    <div class="col-6 bgn-wf-row">
+                                        <label class="ft-secondary" for="inputLastName">Last Name</label>
+                                        <input id="LastName" class="form-control" name="Last Name" type="text" maxlength="80" value="" placeholder="Last Name"  />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-6">
+                                        <label class="ft-secondary" for="inputShopName">Plaats</label>
+                                        <input id="MailingCity" class="form-control" name="Mailing City" type="text" maxlength="100" value="" placeholder="Plaats"  />
+                                    </div>
+                                    <div class="col-6">
+                                        <label class="ft-secondary" for="inputShopName">Winkelgebied</label>
+                                        <input id="ShoppingArea" class="form-control" name="CONTACTCF4" type="text" maxlength="255" value="" placeholder="Winkelgebied"  />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-6">
+                                        <label class="ft-secondary" for="inputShopName">Phone</label>
+                                        <input id="Phone" class="form-control" name="Phone" type="text" maxlength="50" value="" placeholder="Phone"  />
+                                    </div>
+                                    <div class="col-6">
+                                        <label class="ft-secondary" for="inputShopName">Email</label>
+                                        <input id="Email" class="form-control" name="Email" type="text" maxlength="100" value="" placeholder="Email"  />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-6">
+                                        <label class="ft-secondary" for="inputShopName">Role</label>
+                                        <select id="Role" name="CONTACTCF3" class="form-control">
+                                            <option value="Role">Role</option>
+                                            <option value="Beleidsmaker">Beleidsmaker</option>
+                                            <option value="Ondernemersvereniging">Ondernemersvereniging</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-6">
+
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-md-12 text-md-right">
+                                        <button onclick='disableSubmitwhileReset()' class="v-btn v-btn-acent btn-lg" type='reset'>Opnieuw instellen</button>
+                                        <button class="v-btn v-btn-acent btn-lg"  id='formsubmit' type='submit' >Indienen</button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -158,6 +173,24 @@ title: Ik ben beleidsmaker
     </section>
     </form>
 </main>
+<!-- ZOHO FORM JAVASCRIPT -->
+<script>
+    var mndFileds=new Array('First Name','Last Name');
+    var fldLangVal=new Array('First Name','Last Name');
+    var name = '';
+    
+    var email = '';
+    
+    function disableSubmitwhileReset() {
+        var e = document.getElementById("formsubmit");
+        null !== document.getElementById("privacyTool") || null !== document.getElementById("consentTool") ? (e.disabled = !0, e.style.opacity = "0.5;") : e.removeAttribute("disabled")
+    }
+    function checkMandatory() {
+        var e, t = mndFileds.length; for (e = 0; e < t; e++){ var i = document.forms.CMIGNITEWebToContacts[mndFileds[e]]; if (i) { if (0 === i.value.replace(/^\s+|\s+$/g, "").length) return "file" === i.type ? (alert("Please select a file to upload."), i.focus(), !1) : (alert(fldLangVal[e] + " cannot be empty."), i.focus(), !1); if ("SELECT" === i.nodeName) { if ("-None-" === i.options[i.selectedIndex].value) return alert(fldLangVal[e] + " cannot be none."), i.focus(), !1 } else if ("checkbox" === i.type && !1 === i.checked) return alert("Please accept  " + fldLangVal[e]), i.focus(), !1; try { "Last Name" === i.name && (name = i.value) } catch (e) { murphy.error(e) } } } return validateFileUpload()
+    }
+     function validateFileUpload(){var e=document.getElementById("theFile"),t=0;if(e){if(e.files.length>3)return alert("You can upload a maximum of three files at a time."),!1;if("files"in e){var i=e.files.length;if(0!==i){for(var o=0;o<i;o++){var a=e.files[o];"size"in a&&(t+=a.size)}if(t>20971520)return alert("Total file(s) size should not exceed 20MB."),!1}}}}
+</script>
+
 <script>
     // Example starter JavaScript for disabling form submissions if there are invalid fields
     (function() {
