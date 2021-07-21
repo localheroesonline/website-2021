@@ -93,7 +93,7 @@ title: Ik ben beleidsmaker
         <div class="container">
             <div class="row">
                 <div class="col-md-8 order-md-2">
-                    <div class="reg-from">
+                    <div class="reg-from2">
                         <h2 class="policy-section-title ft-light mb-1">Meld je nu aan</h2>
                         <p class="ft-light mb-3">Geheel kosteloos</p>
                         <div class='bgn-wf-wrapper' id='crmWebToEntityForm' >
@@ -110,39 +110,39 @@ title: Ik ben beleidsmaker
                                 <div class="form-group row">
                                     <div class="col-6">
                                         <label class="ft-secondary" for="inputFirstName">First Name</label>
-                                        <input id="FirstName" class="form-control" name="First Name" type="text" maxlength="40" value="" placeholder="First Name"  />
+                                        <input id="FirstName" class="form-control" name="first_name" type="text" maxlength="40" value="" placeholder="First Name"  />
                                         <div class="invalid-feedback">Fijn als we weten hoe je heet!</div>
                                         <div class="valid-feedback">Top!</div>
                                     </div>
                                     <div class="col-6 bgn-wf-row">
                                         <label class="ft-secondary" for="inputLastName">Last Name</label>
-                                        <input id="LastName" class="form-control" name="Last Name" type="text" maxlength="80" value="" placeholder="Last Name"  />
+                                        <input id="LastName" class="form-control" name="last_name" type="text" maxlength="80" value="" placeholder="Last Name"  />
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-6">
                                         <label class="ft-secondary" for="inputShopName">Plaats</label>
-                                        <input id="MailingCity" class="form-control" name="Mailing City" type="text" maxlength="100" value="" placeholder="Plaats"  />
+                                        <input id="MailingCity" class="form-control" name="city" type="text" maxlength="100" value="" placeholder="Plaats"  />
                                     </div>
                                     <div class="col-6">
                                         <label class="ft-secondary" for="inputShopName">Winkelgebied</label>
-                                        <input id="ShoppingArea" class="form-control" name="CONTACTCF4" type="text" maxlength="255" value="" placeholder="Winkelgebied"  />
+                                        <input id="ShoppingArea" class="form-control" name="store_name" type="text" maxlength="255" value="" placeholder="Winkelgebied"  />
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-6">
                                         <label class="ft-secondary" for="inputShopName">Phone</label>
-                                        <input id="Phone" class="form-control" name="Phone" type="text" maxlength="50" value="" placeholder="Phone"  />
+                                        <input id="Phone" class="form-control" name="phone" type="text" maxlength="50" value="" placeholder="Phone"  />
                                     </div>
                                     <div class="col-6">
                                         <label class="ft-secondary" for="inputShopName">Email</label>
-                                        <input id="Email" class="form-control" name="Email" type="text" maxlength="100" value="" placeholder="Email"  />
+                                        <input id="Email" class="form-control" name="email" type="text" maxlength="100" value="" placeholder="Email"  />
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-6">
                                         <label class="ft-secondary" for="inputShopName">Role</label>
-                                        <select id="Role" name="CONTACTCF3" class="form-control">
+                                        <select id="Role" name="role" class="form-control">
                                             <option value="Role">Role</option>
                                             <option value="Beleidsmaker">Beleidsmaker</option>
                                             <option value="Ondernemersvereniging">Ondernemersvereniging</option>
@@ -189,6 +189,24 @@ title: Ik ben beleidsmaker
         var e, t = mndFileds.length; for (e = 0; e < t; e++){ var i = document.forms.CMIGNITEWebToContacts[mndFileds[e]]; if (i) { if (0 === i.value.replace(/^\s+|\s+$/g, "").length) return "file" === i.type ? (alert("Please select a file to upload."), i.focus(), !1) : (alert(fldLangVal[e] + " cannot be empty."), i.focus(), !1); if ("SELECT" === i.nodeName) { if ("-None-" === i.options[i.selectedIndex].value) return alert(fldLangVal[e] + " cannot be none."), i.focus(), !1 } else if ("checkbox" === i.type && !1 === i.checked) return alert("Please accept  " + fldLangVal[e]), i.focus(), !1; try { "Last Name" === i.name && (name = i.value) } catch (e) { murphy.error(e) } } } return validateFileUpload()
     }
      function validateFileUpload(){var e=document.getElementById("theFile"),t=0;if(e){if(e.files.length>3)return alert("You can upload a maximum of three files at a time."),!1;if("files"in e){var i=e.files.length;if(0!==i){for(var o=0;o<i;o++){var a=e.files[o];"size"in a&&(t+=a.size)}if(t>20971520)return alert("Total file(s) size should not exceed 20MB."),!1}}}}
+
+
+
+        $(".reg-from").submit(function (e) {
+        firstName = $("#FirstName").val();
+        lastName = $("#LastName").val();
+        Phone = $("#Phone").val();
+        Email = $("#Email").val();
+        ShoppingArea = $("#ShoppingArea").val();
+        MailingCity = $("#MailingCity").val();
+        Role = $("#Role option:selected").text();
+        alert(firstName + lastName + Phone + Email + ShoppingArea + MailingCity + Role);
+        finalval = "?FirstName=" + firstName + "&LastName=" + lastName + "&MailingCity=" + MailingCity + "&ShoppingArea=" + ShoppingArea + "&Phone=" + Phone + "&Email=" + Email + "&Role=" + Role;
+        $("#NewValue").val("https://www.localheroesonline.com/lead_business_confirmed.html" + finalval);
+      
+       
+
+    });
 </script>
 
 <script>
