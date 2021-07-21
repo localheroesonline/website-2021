@@ -99,7 +99,7 @@ title: Ik ben beleidsmaker
                         <div class='bgn-wf-wrapper' id='crmWebToEntityForm' >
                             <meta name='viewport' content='width=device-width, initial-scale=1.0'>
                             <META HTTP-EQUIV='content-type' CONTENT='text/html;charset=UTF-8'>
-                            <form id="target" class="reg-from" action='https://bigin.zoho.eu/crm/WebToContactForm' name='CMIGNITEWebToContacts' method='POST' enctype='multipart/form-data' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory()' accept-charset='UTF-8'>
+                            <form id="target" class="reg-from" action='#' name='CMIGNITEWebToContacts' method='POST' enctype='multipart/form-data' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory()' accept-charset='UTF-8'>
                                 <!-- Do not remove this code. -->
                                 <input type='text' style='display:none;' name='xnQsjsdp' value='6fe99b3f7f48f0cd229fdd3776846295ec8e10929fd81f22967907504d12e8f8' />
                                 <input type='hidden' name='zc_gad' id='zc_gad' value='' />
@@ -200,11 +200,24 @@ title: Ik ben beleidsmaker
         ShoppingArea = $("#ShoppingArea").val();
         MailingCity = $("#MailingCity").val();
         Role = $("#Role option:selected").text();
-        alert(firstName + lastName + Phone + Email + ShoppingArea + MailingCity + Role);
-        finalval = "?FirstName=" + firstName + "&LastName=" + lastName + "&MailingCity=" + MailingCity + "&ShoppingArea=" + ShoppingArea + "&Phone=" + Phone + "&Email=" + Email + "&Role=" + Role;
-        $("#NewValue").val("https://www.localheroesonline.com/lead_business_confirmed.html" + finalval);
-      
-       
+
+        fetch('https://localheroes-api-staging.herokuapp.com/website/lead_vendor', {
+                method: 'POST',
+            body: JSON.stringify({
+                first_name: firstName,
+                last_name: lastName,
+                store_name: ShoppingArea,
+                email: Email,
+                phone: Phone,
+                city: MailingCity,
+                role: Role,
+                }),
+                headers: {
+                    'Content-type': 'application/json; charset=UTF-8',
+                },
+            })
+                .then((response) => response.json())
+                .then((json) => console.log(json));
 
     });
 </script>
