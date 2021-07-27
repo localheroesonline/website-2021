@@ -5,18 +5,13 @@ name: Post-push
 on: [push]
 
 jobs:
-
   # When pushing to master, setup a pull-request into the live branch
   create-deployment-pr:
     name: Create deployment PR
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
-    # needs: [ syntax-check, newman ]
-    needs: [ syntax-check ]
-
     steps:
       - uses: actions/checkout@v2
-
       - name: Create deployment PR
         uses: repo-sync/pull-request@v2
         id: deploy-pr
