@@ -1,0 +1,26 @@
+# This is workflow experiment by Giel
+
+name: Post-push
+
+on: [push]
+
+jobs:
+  # When pushing to master, setup a pull-request into the live branch
+  create-deployment-pr:
+    name: Create deployment PR
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
+    steps:
+      - uses: actions/checkout@v2
+      - name: Create deployment PR
+        uses: repo-sync/pull-request@v2
+        id: deploy-pr
+        with:
+          destination_branch: "live"
+          source_branch: "master"
+          pr_title: "Deploy by pulling master into live"
+          pr_assignee: "${{ github.actor }}"
+          pr_body: "Auto generated pull request to deploy master to live"
+          pr_label: "deploy,auto"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
