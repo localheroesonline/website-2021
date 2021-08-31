@@ -81,6 +81,8 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 incremental: true
+sass:
+  sass_dir: _sass
 
 paginate: 5
 paginate_path: "/blog/page/:num"
