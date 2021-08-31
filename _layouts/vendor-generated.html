@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "nl" }}">
+
+{% include head_vendor.html %}
+
+{% if site.mixpanel-project-token and site.mixpanel-api-host %}
+<script type="text/javascript">
+    mixpanel.track("Visit Vendor", {
+        "Vendor Shop Name": "{{page.vendor_shop_name}}",
+        "Vendor URL": "{{page.vendor_url}}",
+        "Vendor Address": "{{page.vendor_address}}",
+        "Vendor ID": "{{page.vendor_id}}",
+    });
+</script>
+{% endif %}
+
+<body>
+    {% include navbar_vendor.html %}
+    
+    {{ content }}
+
+    {% include app_footer.html %}
+</body>
+</html>
