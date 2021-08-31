@@ -21,6 +21,7 @@ title: Local Heroes
 encoding: utf-8
 timezone: Europe/Amsterdam
 locale: nl_NL
+lang: nl
 # This is the place to set up the contact form recipient
 email: info@localheroesonline.com
 description: >- # this means to ignore newlines until "baseurl:"
@@ -82,7 +83,8 @@ plugins:
   - jekyll-seo-tag
 incremental: true
 sass:
-  sass_dir: _sass
+    sass_dir: _sass
+    style: compressed
 
 paginate: 5
 paginate_path: "/blog/page/:num"
