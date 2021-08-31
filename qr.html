@@ -62,50 +62,81 @@ sitemap: false
         // process utm params
         var urlParams = new URLSearchParams(window.location.hash.slice(1));
 
-        // example url: www.localheroesonline.com/qr.html#utm_source=t-stoepje-aart-veldhuizen&utm_medium=qr-flyer&utm_campaign=pickup-awareness
         // https://stackoverflow.com/questions/11920697/how-to-get-hash-value-in-a-url-in-js
-        // urlParams.get('utm_source') // t-stoepje-aart-veldhuizen
-        // urlParams.get('utm_medium') // qr-flyer
-        // urlParams.get('utm_campaign') // pickup-awareness
+        // example url: https://www.localheroesonline.com/qr.html#utm_source=t-stoepje-aart-veldhuizen&utm_medium=qr-flyer&utm_campaign=pickup-awareness
+        // example url with shortened utm params: https://www.localheroesonline.com/qr.html#s=pup003&m=qr-banner&c=front
+        
+        // Check if utm_source exists in the parameters
+        if (urlParams.has('utm_source')) { 
+            utm_source = urlParams.get('utm_source')
+        } // Check if s exists in the parameters
+        else if (urlParams.has('s')) { 
+            utm_source = urlParams.get('s')
+        }
+        else {
+            utm_source = '';
+        };
+
+        // Check if utm_medium exists in the parameters
+        if (urlParams.has('utm_medium')) { 
+            utm_medium = urlParams.get('utm_medium')
+        } // Check if m exists in the parameters
+        else if (urlParams.has('m')) { 
+            utm_medium = urlParams.get('m')
+        }
+        else {
+            utm_medium = '';
+        };
+
+        // Check if utm_campaign exists in the parameters
+        if (urlParams.has('utm_campaign')) { 
+            utm_campaign = urlParams.get('utm_campaign')
+        } // Check if c exists in the parameters
+        else if (urlParams.has('c')) { 
+            utm_campaign = urlParams.get('c')
+        }
+        else {
+            utm_campaign = '';
+        };
 
         if (os == "Android") {
             mixpanel.track("Goto App Marketplace", {
                 "Marketplace": "Android",
                 "Campaign": page,
                 "$os": os,                
-                "utm_source": urlParams.get('utm_source'),
-                "utm_medium": urlParams.get('utm_medium'),
-                "utm_campaign": urlParams.get('utm_campaign'),
+                "utm_source": utm_source,
+                "utm_medium": utm_medium,
+                "utm_campaign": utm_campaign,
             });
-            window.location.href = "https://play.google.com/store/apps/details?id=com.localheroes.consumer&utm_source=" + urlParams.get('utm_source') + "&utm_medium=" + urlParams.get('utm_medium') + "&utm_campaign=" + urlParams.get('utm_campaign');
+            window.location.href = "https://play.google.com/store/apps/details?id=com.localheroes.consumer&utm_source=" + utm_source + "&utm_medium=" + utm_medium + "&utm_campaign=" + utm_campaign;
         } else if (os == "iOS") {
             mixpanel.track("Goto App Marketplace", {
                 "Marketplace": "iOS",
                 "Campaign": page,
-                "$os": os,
-                "utm_source": urlParams.get('utm_source'),
-                "utm_medium": urlParams.get('utm_medium'),
-                "utm_campaign": urlParams.get('utm_campaign'),                
+                "$os": os,                
+                "utm_source": utm_source,
+                "utm_medium": utm_medium,
+                "utm_campaign": utm_campaign,            
             });
-            window.location.href = "https://apps.apple.com/us/app/lh-consumer/id1470938037?utm_source=" + urlParams.get('utm_source') + "&utm_medium=" + urlParams.get('utm_medium') + "&utm_campaign=" + urlParams.get('utm_campaign');
+            window.location.href = "https://apps.apple.com/us/app/lh-consumer/id1470938037?utm_source=" + utm_source + "&utm_medium=" + utm_medium + "&utm_campaign=" + utm_campaign;
         } else if (os == "Windows Phone") {
             mixpanel.track("Goto Local Heroes Home", {
                 "Campaign": page,
-                "$os": os,
-                "utm_source": urlParams.get('utm_source'),
-                "utm_medium": urlParams.get('utm_medium'),
-                "utm_campaign": urlParams.get('utm_campaign'),        
+                "$os": os,                
+                "utm_source": utm_source,
+                "utm_medium": utm_medium,
+                "utm_campaign": utm_campaign,     
             });
-            window.location.href = "{{site.url}}/heroes/" + urlParams.get('utm_source') + "?utm_source=" + urlParams.get('utm_source') + "&utm_medium=" + urlParams.get('utm_medium') + "&utm_campaign=" + urlParams.get('utm_campaign');
+            window.location.href = "{{site.url}}/heroes/" + utm_source + "?utm_source=" + utm_source + "&utm_medium=" + utm_medium + "&utm_campaign=" + utm_campaign;
         } else {
             mixpanel.track("Goto Local Heroes Home", {
                 "Campaign": page,
-                "$os": os,
-                "utm_source": urlParams.get('utm_source'),
-                "utm_medium": urlParams.get('utm_medium'),
-                "utm_campaign": urlParams.get('utm_campaign'),                
+                "$os": os,                
+                "utm_source": utm_source,
+                "utm_medium": utm_medium,
+                "utm_campaign": utm_campaign,              
             });
-            window.location.href = "{{site.url}}/heroes/" + urlParams.get('utm_source') + "?utm_source=" + urlParams.get('utm_source') + "&utm_medium=" + urlParams.get('utm_medium') + "&utm_campaign=" + urlParams.get('utm_campaign');
+            window.location.href = "{{site.url}}/heroes/" + utm_source + "?utm_source=" + utm_source + "&utm_medium=" + utm_medium + "&utm_campaign=" + utm_campaign;
         }
     }
     </script>
