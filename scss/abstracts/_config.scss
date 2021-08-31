@@ -1,0 +1,136 @@
+/** @format */
+
+$primary-color: #035f68;
+$secondary-color: #ffffff;
+$tertiary-color: #fe4933;
+$links-color: #2ac497;
+$text-color: #525252;
+$bg-color: #f0ede9;
+
+$base-color: #f0ede9;
+$light-color: #fff;
+$dark-color: #525252;
+
+$success-color: #009962;
+$warning-color: #f9bb01;
+$info-color: #0c67ff;
+$danger-color: #ec5744;
+
+$max-width: 1100px;
+
+// 13px - 0.812rem    - xxs
+// 14px - 0.875rem    - xs
+// 15px - 0.937rem    - sm
+// 16px - 1rem        - md
+// 20px - 1.25rem     - lg
+// 32px - 2rem        - xl
+// 35px - 2.18rem        - xxl
+
+// FONT & STYLES WEIGHTS
+$font-weights: (
+  light: 200,
+  regular: 400,
+  medium: 500,
+  bold: 700,
+  black: 800,
+);
+
+$fonts-size: (
+  xxs: 0.812rem,
+  xs: 0.875rem,
+  sm: 0.937rem,
+  md: 1rem,
+  lg: 1.25rem,
+  xl: 2rem,
+  xxl: 2.5rem,
+);
+
+$font-cases: (
+  upper: uppercase,
+  lower: lowercase,
+  capital: capitalize,
+);
+
+$transition-default: 0.25s ease-out 0.1s;
+
+// FONT-WEIGHT
+@function font-weight($weight-name) {
+  @return map-get($font-weights, $weight-name);
+}
+
+// FONT-SIZE
+@function font-size($size) {
+  @return map-get($fonts-size, $size);
+}
+
+// FONT CASE
+@function font-case($case) {
+  @return map-get($font-cases, $case);
+}
+
+// Set text color based on background
+@function set-text-color($color) {
+  @if (lightness($color) > 60) {
+    @return $dark-color;
+  } @else {
+    @return $light-color;
+  }
+}
+
+// Set background & text color
+@mixin set-background($color) {
+  background-color: $color;
+  color: set-text-color($color);
+}
+
+// SET BLOCK
+@mixin set-box-size($width, $height, $radius: 0) {
+  max-width: $width;
+  height: $height;
+  @if $radius != 0 {
+    border-radius: $radius;
+  }
+}
+
+@mixin set-image-size($width, $height, $radius: 0) {
+  width: $width;
+  height: $height;
+  vertical-align: middle;
+  object-fit: contain;
+  @if $radius != 0 {
+    border-radius: $radius;
+  }
+}
+
+// BREAK POINTS
+@mixin tv {
+  @media screen and(max-width:1400px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and(max-width:1200px) {
+    @content;
+  }
+}
+@mixin laptop {
+  @media screen and(max-width:992px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and(max-width:768px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media screen and(max-width:567px) {
+    @content;
+  }
+}
+
+@mixin xs-mobile {
+  @media screen and(max-width:420px) {
+    @content;
+  }
+}

@@ -1,0 +1,42 @@
+// PAGE: HOME
+.section-wrap {
+  padding: 4rem 0;
+  &.app-header {
+    padding: 0;
+  }
+}
+
+// PAGE:VENDOR
+main {
+  transition: all 0.1s ease-out;
+
+  &.main-content {
+    padding: 0 0 6rem 0;
+    min-height: calc(100vh - 214px);
+  }
+  &.page-vendor {
+    padding-top: 250px;
+  }
+  &.page-product {
+    padding-top: 100px;
+    padding-bottom: 160px;
+  }
+  &.page-referral {
+    padding-top: 80px;
+    padding-bottom: 3rem;
+    background-color: $base-color;
+
+    @include tablet {
+      padding-top: 2rem;
+    }
+  }
+  @include tablet {
+    &.page-vendor {
+      padding-top: 300px;
+    }
+    &.page-product {
+      padding-bottom: 60px;
+      padding-top: 80px;
+    }
+  }
+}

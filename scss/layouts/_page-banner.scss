@@ -1,0 +1,14 @@
+// HERO SCSS
+.page-header {
+  background-color: $light-color;
+  &-banner {
+    padding: 3rem 0;
+    position: relative;
+  }
+  .back-to-page {
+    color: $light-color;
+    position: absolute;
+    left: 0;
+    top: 10%;
+  }
+}
