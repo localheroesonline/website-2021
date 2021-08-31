@@ -1,0 +1,132 @@
+// APP NAVBAR
+.app-navbar {
+  background-color: $base-color;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  &.light-navbar {
+    background-color: $light-color;
+    box-shadow: 0 2px 8px #0000001a;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+  input[type="checkbox"]:checked ~ .nav-list {
+    // transform: translateX(0);
+    display: flex;
+  }
+  .inner-container {
+    display: flex;
+    justify-content: space-between;
+    .app-download-btn {
+      visibility: hidden;
+      line-height: 60px;
+      &.show-btn {
+        visibility: visible;
+      }
+    }
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      position: relative;
+      z-index: 1040;
+      color: $primary-color;
+      font-size: 1.5rem;
+      line-height: 60px;
+      @media (max-width: 992px) {
+        &.hamburger {
+          display: block;
+        }
+      }
+    }
+    .nav-list {
+      align-items: center;
+      display: flex;
+      margin-left: auto;
+      .nav-item {
+        margin-right: 1.5rem;
+        a {
+          display: flex;
+          align-items: center;
+          color: rgba($primary-color, 0.8);
+          font-weight: font-weight(medium);
+          padding: 1rem 0 0.8rem;
+          display: inline-block;
+          border-bottom: 2px solid transparent;
+          &.active,
+          &:hover {
+            color: $primary-color;
+          }
+          &.active {
+            border-color: darken($primary-color, 5%);
+          }
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+        img {
+          width: 16px;
+          margin-right: 10px;
+        }
+      }
+      @media (max-width: 992px) {
+        &.nav-list {
+          position: fixed;
+          transition: all 0.2s ease-out;
+          display: none;
+
+          right: 0;
+          flex-direction: column;
+          background-color: $light-color;
+          top: 0px;
+          bottom: 0;
+          width: 100%;
+          z-index: 1024;
+          padding: 4rem 3rem 1rem 3rem;
+          li {
+            width: 100%;
+            text-align: center;
+            a {
+              color: $primary-color;
+              text-align: center;
+              border-bottom: 2px solid transparent;
+              &:hover {
+                border-color: rgba($primary-color, 0.1);
+                background-color: transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-light {
+    background-color: transparent;
+    position: fixed;
+    transition: all 0.2s ease-out;
+    .inner-container {
+      .nav-list {
+        .nav-item {
+          a {
+            color: $base-color;
+            &:hover,
+            &.active {
+              color: $light-color;
+            }
+            &.active {
+              border-color: $base-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

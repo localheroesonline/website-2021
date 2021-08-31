@@ -1,0 +1,363 @@
+// HOME SCSS
+.logo {
+    max-width: 200px;
+}
+
+// APP HEADER
+.app-header {
+height: 600px;
+position: relative;
+    &::after{
+        position: absolute;
+        content: "";
+        background-image: url(https://axajvrynho.cloudimg.io/v7/https://www.localheroesonline.com/assets/home/tv.png);
+        width: 140px;
+        height: 140px;
+        left: 30px;
+        bottom: 50px;
+        z-index: 1;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .header-mob {
+        max-width: 530px;
+        margin: 0 auto;
+        position: relative;
+        top: 0px;
+    }
+    .header-content {
+        max-width: 400px;
+        color: $primary-color;
+        margin-top: 9rem;
+        font-weight: font-weight(medium);
+        .header-title {
+        font-size: font-size(xxl);
+        font-weight: font-weight(bold);
+        line-height: 50px;
+        margin-bottom: 1rem;
+        }
+    }
+    .action-btns {
+        margin-top: 1rem;
+        display: flex;
+        max-width: 500px;
+        a {
+        flex: 1;
+        text-align: center;
+        margin-left: 1rem;
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}
+@media (max-width: 576px) {
+    &.app-header {
+    height: auto;
+    .action-btns {
+        flex-wrap: wrap;
+        a {
+        margin-left: 0;
+        flex: 100%;
+        }
+    }
+    }
+}
+@media (max-width: 767px) {
+    &.app-header {
+    height: auto;
+    .header-content {
+        margin-top: 0rem;
+        .header-title {
+        margin-top: 1rem;
+        }
+    }
+    .action-btns {
+        flex-wrap: wrap;
+        a {
+        margin: 0 1rem 0 0;
+        }
+    }
+    }
+}
+@media (max-width: 992px) {
+    &.app-header {
+    height: auto;
+    .action-btns {
+        flex-wrap: wrap;
+        a {
+        margin-left: 0;
+        margin-bottom: 1rem;
+        }
+    }
+    }
+}
+}
+
+// HOW IT WORK
+.how-work {
+    .hw-block {
+        max-width: 260px;
+        margin: 1rem auto;
+        text-align: center;
+        color: $base-color;
+        img {
+        width: 80px;
+        }
+        .title {
+        font-weight: font-weight(medium);
+        }
+    }
+}
+
+// VIDEO SECTION
+.video-wrap {
+    background-color: $base-color;
+    position: relative;
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+// LOCAL HERO
+.local-hero {
+    padding-bottom: 0;
+    .our-hero-content {
+        max-width: 500px;
+        color: $primary-color;
+        p {
+        margin-bottom: 1rem;
+        font-size: font-size(xs);
+        color: $primary-color;
+        font-weight: font-weight(medium);
+        }
+    }
+    .hero-block {
+        max-width: 400px;
+        position: relative;
+        bottom: -9px;
+    }
+}
+
+// OUR HEROES
+.slick-carousel {
+    margin: 0 auto;
+    max-width: 1200px;
+    @media (max-width: 576px) {
+        max-width: 300px;
+    }
+}
+
+.slick-slide {
+    width: 300px;
+    text-align: center;
+    &:focus {
+        outline: none;
+        border: 0;
+    }
+}
+
+.slick-next::before,
+.slick-prev::before {
+    color: $primary-color;
+}
+
+.section-our-heroes {
+    position: relative;
+    background-color: $base-color;
+    &::before {
+        position: absolute;
+        content: "";
+        background-color: $primary-color;
+        left: 0;
+        right: 0;
+        height: 210px;
+        top: 394px;
+    }
+    .heroes-wapper {
+        .slide-item {
+        .hero-img {
+            max-width: 234px;
+            margin: 0 auto;
+            border: 1px solid $base-color;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 234px;
+        }
+        .content {
+                p {
+                font-size: font-size(xs);
+                font-weight: font-weight(medium);
+                text-align: center;
+                padding: 1rem;
+                color: $base-color;
+                }
+            }
+        }
+    }
+    @media (max-width: 576px) {
+            &.section-our-heroes {
+            &::before {
+                top: 386px;
+            }
+        }
+    }
+}
+
+// FEATURES
+.features {
+    padding-bottom: 0;
+    height: 460px;
+    position: relative;
+    .features-content {
+        margin-top:0rem;
+    }
+    .additional-info {
+        margin-top: 3rem;
+        max-width: 400px;
+        ul {
+        li {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 0;
+            img {
+            width: 20px;
+            margin-right: 1rem;
+            }
+            h3 {
+            flex: 1;
+            color: $primary-color;
+            font-weight: font-weight(bold);
+            }
+            &:last-child {
+            border-bottom: 0;
+            }
+        }
+        }
+    }
+    .feature-mob {
+        max-width: 330px;
+        position: absolute;
+        bottom: 0;
+        margin: 0 auto;
+        right: 20%;
+        img {
+        vertical-align: bottom;
+        }
+    }
+    &::before {
+        content: "";
+        background-image: url("https://axajvrynho.cloudimg.io/v7/https://www.localheroesonline.com/assets/home/feature-bg.png");
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 847px;
+        bottom: 0;
+        z-index: 0;
+        height: 120px;
+    }
+    @media (max-width: 767px) {
+        &.features {
+        height: auto;
+        .feature-mob {
+            position: unset;
+            max-width: 250px;
+            margin-top: 1rem;
+        }
+        }
+    }
+}
+
+// MAP
+.map {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    &::before {
+        content: "";
+        background-image: url("https://axajvrynho.cloudimg.io/v7/https://www.localheroesonline.com/assets/home/map.png");
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        width: 100%;
+        bottom: 0;
+        z-index: -1;
+    }
+    .map-content {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+        .zip-block {
+        position: relative;
+        .form-control {
+            position: relative;
+            height: 40px;
+            border-radius: 20px;
+            &:focus {
+            border-color: $primary-color;
+            }
+        }
+        .search-icon {
+            position: absolute;
+            top: 0;
+            right: 0;
+            line-height: 40px;
+            width: 40px;
+        }
+        }
+        .info-block {
+        background-color: #fff;
+        padding: 1rem;
+        margin-top: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 1px 2px #ddd;
+        }
+        .btn-check{
+        margin-top:2.3rem;
+        }
+    }
+}
+
+// REVIEWS
+.section-reviews {
+    .review-block {
+        margin-bottom: 1rem;
+        .subject {
+        font-weight: font-weight(bold);
+        font-size: font-size(md);
+        }
+        p {
+        color: rgba($light-color, 0.5);
+        margin: 1rem 0;
+        }
+        .rating {
+        a {
+            color: $acent-color;
+            &.active {
+            color: rgba($light-color, 0.5);
+            }
+        }
+        }
+    }
+}
+
+
+
+// .timing-hours {
+//     li {
+//         padding: 0.4rem 0;
+//         span {
+//         float: right;
+//         font-weight: font-weight(medium);
+//         }
+//     }
+// }
