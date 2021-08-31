@@ -1,0 +1,15 @@
+css:
+  - /assets/css/bootstrap.min.css # BOOTSTRAP 4.6
+  - https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap # GOOGLE FONTS
+  - /assets/css/all.css # FONT AWESOME 5
+  - https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick-theme.min.css
+  - https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.css
+  - /assets/css/main-vendor.css
+
+js:
+  - https://code.jquery.com/jquery-3.5.1.js # Bootstrap's JavaScript requires jQuery. jQuery must be included before Bootstrap's JavaScript
+  - https://code.jquery.com/jquery-migrate-1.2.1.min.js
+  - /assets/javascripts/bootstrap.bundle.js # BOOTSTRAP 4.6  
+  - https://cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js # SLICK SLIDER
+  - /assets/javascripts/all.min.js # FONT AWESOME 5
+  - /assets/javascripts/custom.js
