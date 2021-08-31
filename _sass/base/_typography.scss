@@ -1,0 +1,68 @@
+/** @format */
+h2 {
+    font-size: font-size(xs);
+    font-weight: font-weight(bold);
+    line-height: 16px;
+    color: $primary-color;
+  }
+  
+  h1 {
+    font-size: font-size(md);
+    font-weight: font-weight(black);
+    line-height: 30px;
+  }
+  
+  h3 {
+    font-size: font-size(lg);
+    color: $primary-color;
+    font-weight: font-weight(black);
+  }
+  
+  p {
+    font-size: font-size(xs);
+  }
+  
+  .main-heading {
+    font-size: font-size(xxl);
+    margin-bottom: 1rem;
+    font-weight: font-weight(bold);
+    color: $primary-color;
+    @media (max-width: 576px) {
+      font-size: font-size(md);
+    }
+  }
+  
+  .sub-heading {
+    font-size: font-size(md);
+    font-weight: font-weight(regular);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    color: $secondary-color;
+    @media (max-width: 576px) {
+      font-size: font-size(sm);
+    }
+  }
+  
+  .main-title {
+    font-size: font-size(sm);
+    margin-bottom: 0.5rem;
+    font-weight: font-weight(medium);
+    @media (max-width: 576px) {
+      font-size: font-size(xs);
+    }
+  }
+  
+  .sub-title {
+    font-size: font-size(xs);
+    margin-bottom: 0.5rem;
+    font-weight: font-weight(medium);
+    @media (max-width: 576px) {
+      font-size: font-size(xxs);
+    }
+  }
+  
+  .lead {
+    font-size: font-size(xs);
+    color: $secondary-color;
+    font-weight: font-weight(regular);
+  }

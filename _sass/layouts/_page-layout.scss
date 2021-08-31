@@ -1,0 +1,49 @@
+// PAGE: HOME
+.section-wrap {
+  padding: 4rem 0;
+  &.app-header {
+    padding: 0;
+  }
+}
+
+// PAGE:VENDOR
+main {
+  transition: all 0.1s ease-out;
+
+  &.main-content {
+    padding: 0 0 2rem 0;
+  }
+  &.page-vendor {
+    padding-top: 100px;
+  }
+  &.page-product {
+    padding-top: 60px;
+  }
+  &.page-referral{
+    section{
+      padding:4rem 0;
+      .section-title{
+        font-weight: font-weight(black);
+        font-size:font-size(xl);
+        margin-bottom: 1rem;
+        color:$primary-color;
+      }
+    }
+    @include tablet {
+      section{
+        padding:2rem 0;
+      }
+    }
+  }
+  @include tablet {
+    &.page-vendor {
+      padding-top: 150px;
+    }
+    .on-scroll-fixed-tab {
+      position: sticky;
+      top: 228px;
+      z-index: 22;
+      background-color: $base-color;
+    }
+  }
+}

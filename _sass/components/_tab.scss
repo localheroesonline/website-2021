@@ -1,0 +1,10 @@
+.hero-tab {
+  a {
+    font-weight: font-weight(medium);
+  }
+  @include tablet {
+    margin-bottom: 1rem;
+    flex-direction: row !important;
+    justify-content: space-between;
+  }
+}

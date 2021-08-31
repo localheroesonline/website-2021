@@ -1,0 +1,46 @@
+// PAGE REFERRAL CSS
+.referral-image{
+    position: relative;
+    .receive-coupon{
+        position: absolute;
+        right:-25px;
+        top:-24px;
+        background-color: $danger-color;
+        @include set-box-size(100px, 100px, 50%);
+        color:$light-color;
+        font-weight: font-weight(medium);
+        padding: 1rem 0.5rem;
+        text-align: center;
+        line-height: 24px;
+        span{
+            font-size:font-size(md);
+            font-weight: font-weight(bold);
+        }
+    }
+    @include tablet{
+        margin-bottom: 2rem;
+        .receive-coupon{
+            left:unset;
+            top:unset;
+            bottom:0;
+            right:20px;
+        }
+    }
+}
+.referral-content{
+    p{
+        margin-bottom: 1rem;
+        color:$primary-color;
+        font-weight: font-weight(medium);
+    }
+}
+
+.download-app{
+    margin-top: 1rem;
+    @include mobile{
+        &-btn{
+            width: 100%;
+            text-align: center;
+        }
+    }
+}

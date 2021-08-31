@@ -1,0 +1,184 @@
+.block {
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba($dark-color, 0.1);
+  overflow: hidden;
+  @include set-background($light-color);
+  &.of-hidden {
+    overflow: hidden;
+  }
+  &.base {
+    @include set-background($base-color);
+    border: 1px solid darken($base-color, 4%);
+  }
+  &.transparent {
+    background-color: transparent;
+  }
+  &.primary {
+    background-color: $primary-color;
+    .main-heading,
+    .main-title {
+      color: $light-color;
+    }
+    .sub-heading,
+    p {
+      color: rgba($light-color, 0.8);
+    }
+  }
+  &.secondary {
+    @include set-background($secondary-color);
+    .main-heading,
+    .main-title {
+      color: $light-color;
+    }
+    .sub-heading,
+    p {
+      color: rgba($light-color, 0.8);
+    }
+  }
+  &.light {
+    @include set-background($light-color);
+  }
+  &.dark {
+    @include set-background($dark-color);
+  }
+  &.no-padding {
+    .header,
+    .content,
+    .footer {
+      padding: 0.5rem 0;
+    }
+  }
+  &.no-border {
+    border: 0;
+  }
+  .header,
+  .content,
+  .footer {
+    padding: 1rem;
+  }
+
+  .header {
+    padding-bottom: 0;
+    font-weight: 400;
+  }
+  .content {
+    font-size: 0.9rem;
+  }
+}
+
+.card {
+  background-color: $light-color;
+  padding: 0.5rem;
+  &.no-border {
+    border: 0;
+  }
+}
+
+// PRODUCT CARD
+.product-card {
+  @extend .card;
+  max-width: 180px;
+  font-size: font-size(xs);
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba($dark-color, 0.1);
+  &-img {
+    max-width: 150px;
+    margin: 1rem auto;
+    img {
+      vertical-align: middle;
+      height: 80px;
+      object-fit: contain;
+    }
+  }
+  &-content {
+    h4 {
+      color: $dark-color;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .stuk-price {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .stuk {
+        color: lighten($dark-color, 40%);
+      }
+      .price {
+        color: $dark-color;
+        font-weight: font-weight(bold);
+        font-size: font-size(sm);
+      }
+    }
+  }
+  &.active{
+    background-color: rgba($light-color, 0.4);
+  }
+}
+
+// PRODUCT CARD FOR MOBILE
+.product-card-mobile {
+  display: flex;
+  cursor: pointer;
+  background-color: $light-color;
+  padding: 0.5rem;
+  box-shadow: 0 1px 3px rgba($dark-color, 0.1);
+  font-size: font-size(xs);
+  .product-img {
+    flex: 1 1 25%;
+    margin: 0;
+  }
+  .product-content {
+    flex: 1 1 55%;
+    padding: 0 1rem;
+    h4 {
+      color: $dark-color;
+    }
+    .stuk {
+      color: lighten($dark-color, 40%);
+      margin-bottom: 0.1rem;
+    }
+  }
+  .price-rating {
+    flex: 1 1 20%;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .price {
+      font-weight: font-weight(bold);
+      font-size: font-size(sm);
+    }
+    .rating {
+      justify-content: flex-end;
+    }
+  }
+  &.active{
+    background-color: rgba($light-color, 0.4);
+  }
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  font-size: font-size(xs);
+  color: lighten($dark-color, 30%);
+  font-weight: font-weight(medium);
+  span {
+    margin-right: 0.5rem;
+    color: $light-color;
+    text-shadow: 1px 0px 2px rgba($dark-color, 0.6);
+  }
+}
+
+.rating-vote {
+  display: flex;
+  @extend .rating;
+  .vote {
+    font-size: font-size(xs);
+    color: lighten($dark-color, 30%);
+    margin-left: 0.5rem;
+  }
+}
