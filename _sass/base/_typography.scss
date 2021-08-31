@@ -1,0 +1,45 @@
+/** @format */
+h2 {
+  font-size: font-size(xs);
+  font-weight: font-weight(bold);
+  line-height: 16px;
+  color: $primary-color;
+}
+
+h1 {
+  font-size: font-size(lg);
+  font-weight: font-weight(black);
+  line-height: 24px;
+}
+
+h3 {
+  font-size: font-size(xl);
+  color: $primary-color;
+  line-height: 24px;
+  font-weight: font-weight(bold);
+}
+
+p {
+  font-size: font-size(sm);
+  line-height: 25px;
+  font-weight: font-weight(medium);
+}
+
+strong {
+  font-size: font-size(md);
+  line-height: 18px;
+  font-weight: font-weight(bold);
+}
+
+label {
+  font-size: font-size(xs);
+  line-height: 16px;
+  font-weight: font-weight(black);
+}
+
+.small,
+small {
+  font-size: font-size(xxs);
+  line-height: 15px;
+  font-weight: font-weight(regular);
+}
