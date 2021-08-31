@@ -10,6 +10,8 @@
       border: 0;
       color: $text-color;
       padding: 0 0.4rem;
+      font-size: font-size(md);
+      font-weight: font-weight(light);
       &.active {
         color: $primary-color;
         font-weight: font-weight(bold);
@@ -19,6 +21,7 @@
         width: 25px;
         height: 25px;
         text-align: center;
+        color: $primary-color;
         line-height: 25px;
         border-radius: 50%;
         &.next-btn {

@@ -68,12 +68,15 @@
 .accordion-ingridents {
   margin-top: 1rem;
   .card {
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: rgba($light-color, 0.6);
-
+    padding: 0;
     .card-header {
       a {
-        padding: 0.4rem 1rem;
+        padding: 0.5rem 1rem;
+        font-size: font-size(sm);
+        font-weight: font-weight(medium);
+        color: $text-color;
         &::before {
           top: 8px !important;
         }
@@ -88,6 +91,9 @@
     li {
       border-bottom: 1px solid rgba($dark-color, 0.1);
       padding: 0.4rem 1rem;
+      font-size: font-size(sm);
+      font-weight: font-weight(medium);
+      color: $text-color;
       &:last-child {
         border: 0;
       }

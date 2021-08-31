@@ -11,39 +11,32 @@ main {
   transition: all 0.1s ease-out;
 
   &.main-content {
-    padding: 0 0 2rem 0;
+    padding: 0 0 6rem 0;
+    min-height: calc(100vh - 214px);
   }
   &.page-vendor {
-    padding-top: 100px;
+    padding-top: 250px;
   }
   &.page-product {
-    padding-top: 60px;
+    padding-top: 100px;
+    padding-bottom: 160px;
   }
-  &.page-referral{
-    section{
-      padding:4rem 0;
-      .section-title{
-        font-weight: font-weight(black);
-        font-size:font-size(xl);
-        margin-bottom: 1rem;
-        color:$primary-color;
-      }
-    }
+  &.page-referral {
+    padding-top: 80px;
+    padding-bottom: 3rem;
+    background-color: $base-color;
+
     @include tablet {
-      section{
-        padding:2rem 0;
-      }
+      padding-top: 2rem;
     }
   }
   @include tablet {
     &.page-vendor {
-      padding-top: 150px;
+      padding-top: 300px;
     }
-    .on-scroll-fixed-tab {
-      position: sticky;
-      top: 228px;
-      z-index: 22;
-      background-color: $base-color;
+    &.page-product {
+      padding-bottom: 60px;
+      padding-top: 80px;
     }
   }
 }

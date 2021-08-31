@@ -34,6 +34,14 @@
       line-height: 35px;
     }
   }
+  &.icon-lg {
+    width: 35px;
+    height: 35px;
+    font-size: font-size(lg);
+    i {
+      line-height: 35px;
+    }
+  }
   &.icon-base {
     @include set-background($base-color);
     &.invert {

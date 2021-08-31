@@ -1,20 +1,14 @@
 // APP NAVBAR
 .app-navbar {
-  background-color: $base-color;
   height: 60px;
   display: flex;
   align-items: center;
-  position: sticky;
-  top: 0;
   width: 100%;
   left: 0;
   right: 0;
   z-index: 10;
-  &.light-navbar {
-    background-color: $light-color;
-    box-shadow: 0 2px 8px #0000001a;
-  }
-
+  height: 80px;
+  background-color: $base-color;
   input[type="checkbox"] {
     display: none;
   }
@@ -25,11 +19,11 @@
   .inner-container {
     display: flex;
     justify-content: space-between;
-    .app-download-btn {
-      visibility: hidden;
-      line-height: 60px;
-      &.show-btn {
-        visibility: visible;
+    align-items: center;
+    .navbar-brand {
+      .navbar-logo {
+        display: flex;
+        width: 100px;
       }
     }
     .hamburger {
@@ -39,7 +33,7 @@
       z-index: 1040;
       color: $primary-color;
       font-size: 1.5rem;
-      line-height: 60px;
+      line-height: 30px;
       @media (max-width: 992px) {
         &.hamburger {
           display: block;
@@ -50,30 +44,31 @@
       align-items: center;
       display: flex;
       margin-left: auto;
+      flex-direction: row;
       .nav-item {
         margin-right: 1.5rem;
         a {
           display: flex;
           align-items: center;
+          font-weight: font-weight(regular);
           color: rgba($primary-color, 0.8);
-          font-weight: font-weight(medium);
           padding: 1rem 0 0.8rem;
           display: inline-block;
-          border-bottom: 2px solid transparent;
+          font-size: font-size(xs);
           &.active,
           &:hover {
             color: $primary-color;
           }
           &.active {
-            border-color: darken($primary-color, 5%);
-          }
-          &:last-child {
-            margin-right: 0;
+            font-weight: font-weight(bold);
           }
         }
         img {
           width: 16px;
           margin-right: 10px;
+        }
+        &:last-child {
+          margin-right: 0;
         }
       }
       @media (max-width: 992px) {
@@ -96,7 +91,6 @@
             a {
               color: $primary-color;
               text-align: center;
-              border-bottom: 2px solid transparent;
               &:hover {
                 border-color: rgba($primary-color, 0.1);
                 background-color: transparent;
@@ -105,14 +99,33 @@
           }
         }
       }
+      @include tablet {
+        &.nav-list {
+          li {
+            margin-right: 0;
+            a {
+              color: $primary-color;
+
+              &:hover {
+                color: $primary-color;
+              }
+            }
+          }
+        }
+      }
     }
   }
-
-  &-light {
+  &-transparent {
     background-color: transparent;
-    position: fixed;
     transition: all 0.2s ease-out;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
     .inner-container {
+      .hamburger {
+        color: #a09595;
+      }
       .nav-list {
         .nav-item {
           a {
@@ -128,5 +141,19 @@
         }
       }
     }
+  }
+  @include tablet {
+    height: 60px;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+.fixed {
+  position: fixed;
+  &.fixed-tlr {
+    top: 0;
+    left: 0;
+    right: 0;
   }
 }

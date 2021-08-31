@@ -1,13 +1,39 @@
 // VENDOR SCSS
+.bg-vendor-img {
+  background-image: url(../../assets/vendor-banner.png);
+  &::before {
+    content: "";
+    background-color: rgba(#000, 0.6);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    position: absolute;
+  }
+}
 
 // PAGE HEADER
 .page-header {
-  position: relative;
-  height: 200px;
+  height: 160px;
   transition: all 0.2s ease-out;
+  z-index: 9;
+
+  &::after {
+    background-color: $base-color;
+    content: "";
+    height: 80px;
+    width: 100%;
+    bottom: -80px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    position: absolute;
+  }
+
   &-inner {
     position: absolute;
-    top: 61%;
+    top: 63%;
     width: 100%;
     &-content {
       display: flex;
@@ -16,9 +42,15 @@
       .vendor-profile {
         display: flex;
         align-items: center;
-
+        padding-left: 2rem;
+        @include laptop {
+          padding-left: 0;
+        }
         .avtar {
-          padding-right: 1rem;
+          padding-right: 2rem;
+          @include tablet {
+            padding-right: 0.4rem;
+          }
           img {
             transition: all 0.2s ease-out;
             border: 4px solid $base-color;
@@ -26,19 +58,6 @@
         }
         .vendor-title {
           margin-bottom: 1rem;
-        }
-      }
-      .place-order {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        transition: all 0.2s ease-out;
-        .place-order-btn {
-          text-align: center;
-        }
-        p {
-          margin-top: 0.2rem;
-          color: $danger-color;
         }
       }
       @include tablet {
@@ -53,59 +72,93 @@
           }
         }
       }
-      @include laptop {
+      @include tablet {
         .vendor-profile {
-          max-width: 400px;
+          max-width: 500px;
         }
       }
     }
-  }
-  @include tablet {
-    height: 140px;
-    &-inner {
-      top: 60%;
+
+    .place-order {
+      .place-order-btn {
+        text-align: center;
+        padding: 0 3rem;
+      }
+      p {
+        margin-top: 0.7rem;
+        color: $tertiary-color;
+      }
+      @include tablet {
+        text-align: center;
+        margin-top: 1rem;
+        .place-order-btn {
+          width: 100%;
+        }
+      }
     }
-    &.on-scroll-fixed {
-      position: sticky;
-      top: 60px;
-      height: 100px;
-      z-index: 1;
+
+    @include mobile {
+      top: 60%;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+
+  @include mobile {
+    &::after {
+      height: 120px;
+      bottom: -120px;
+    }
+  }
+
+  @include tablet {
+    &.on-scroll-el {
+      height: 125px;
+      &::after {
+        height: 60px;
+        bottom: -60px;
+      }
       .page-header-inner {
-        top: 25px;
+        top: 38%;
+
         .vendor-profile {
           .avtar {
-            .user-icon {
-              transition: all 0.2s ease-out;
-              width: 60px;
-              height: 60px;
+            img {
+              width: 70px;
+              height: 70px;
             }
           }
           .vendor-title {
-            margin-bottom: 16px;
+            margin-bottom: 0;
           }
         }
-        .place-order {
-          background-color: $base-color;
-          transition: all 0.2s ease-out;
-          p {
-            display: none;
-          }
+        .rating-vote {
+          display: none;
         }
       }
-      .rating {
-        display: none;
+      .place-order {
+        p {
+          display: none;
+        }
       }
     }
   }
 }
 
 .about-vendor {
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
   background-color: rgba($light-color, 0.6);
+  p {
+    color: $text-color;
+    text-align: justify;
+  }
 }
 
 .product-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
   gap: 1rem;
   @include tablet {
     &.hidden-xs {
@@ -114,24 +167,14 @@
   }
 }
 
-.product-list-mobile {
-  display: none;
-  &-item {
-    border-bottom: 1px solid rgba($dark-color, 0.1);
-  }
-  @include tablet {
-    display: block;
-  }
-}
-
 // PRODUCT STATUS
 .status {
   border: 1px solid;
   border-radius: 5px;
   padding: 0 0.5rem;
-  font-size: font-size(xxs);
+  font-size: font-size(xs);
   display: inline-block;
-  font-weight: font-weight(bold);
+  font-weight: font-weight(black);
   &.full-wd {
     width: 100%;
     text-align: center;
@@ -144,9 +187,8 @@
     border-color: rgba($danger-color, 0.5);
     color: $danger-color;
     &.disabled {
-      border-color: rgba($dark-color, 0.4);
-      color: lighten($dark-color, 30%);
-      font-weight: font-weight(black);
+      border-color: #e4e2e2;
+      color: #b6b6b6;
     }
   }
 }
@@ -159,13 +201,41 @@
   }
   .search-icon {
     color: $primary-color;
-    margin-left: 1rem;
+    // margin-left: 1rem;
+  }
+  @include mobile {
+    padding: 0 1rem;
+    justify-content: space-around;
+  }
+}
+
+.product-content-wapper {
+  padding-left: 0;
+  padding-right: 0;
+
+  .tab-content {
+    .tab-pane {
+      padding: 0 1rem;
+    }
+
+    @include mobile {
+      .product-tab-pane {
+        padding: 0;
+      }
+      .contact-tab-pane {
+        padding: 0 2rem;
+      }
+      .overview-tab-pane {
+        padding: 0 2rem;
+      }
+    }
   }
 }
 
 .product-title {
   display: flex;
   align-items: center;
+  margin-bottom: 1.5rem;
   .localhero-icon {
     width: 15px;
     margin-right: 0.5rem;
@@ -178,7 +248,7 @@
     th,
     td {
       border: 0;
-      padding: 0.5rem 0;
+      padding: 0.8rem 0;
     }
     &:nth-child(2),
     &:nth-child(3),
@@ -192,12 +262,15 @@
   tbody {
     tr {
       th {
-        font-weight: font-weight(bold);
+        font-weight: font-weight(black);
+        font-size: font-size(xs);
+        color: $text-color;
       }
       td {
+        font-size: font-size(sm);
+        font-weight: font-weight(medium);
         &:nth-child(2) {
           text-align: right;
-          color: $darken-color;
         }
       }
     }
@@ -211,4 +284,11 @@
       float: right;
     }
   }
+}
+
+.map-area {
+  border: 2px solid $light-color;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-top: 1rem;
 }

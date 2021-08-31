@@ -10,6 +10,7 @@ body {
   letter-spacing: 1px;
   height: 100%;
   scroll-behavior: smooth;
+  overflow-x: hidden;
   &.overlay {
     overflow: hidden;
   }
@@ -18,9 +19,10 @@ body {
 a {
   text-decoration: none;
   font-size: font-size(xs);
-  color: $primary-color;
+  color: $links-color;
+  font-weight: font-weight(bold);
   &:hover {
-    color: darken($primary-color, 10%);
+    color: darken($links-color, 10%);
     text-decoration: none;
   }
   &.active {
@@ -101,19 +103,6 @@ img {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  &.bg-vendor-img {
-    background-image: url(../assets/vender-product-bg.jpeg);
-    &::before {
-      content: "";
-      background-color: rgba(#000, 0.6);
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      width: 100%;
-      position: absolute;
-    }
-  }
 }
 
 .postion-fixed {
@@ -255,6 +244,9 @@ img {
 }
 .ft-secondary {
   color: $secondary-color !important;
+}
+.ft-tertiary {
+  color: $tertiary-color !important;
 }
 .ft-warning {
   color: $warning-color !important;
