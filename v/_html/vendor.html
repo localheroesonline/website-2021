@@ -1,0 +1,289 @@
+{% if site.mixpanel-project-token and site.mixpanel-api-host %}
+<script type="text/javascript">
+    mixpanel.track("Visit Vendor", {
+        "Vendor Shop Name": "{{ page.vendor_shop_name }}",
+        "Vendor URL": "{{ page.vendor_url }}",
+        "Vendor Address": "{{ page.vendor_address }}",
+        "Vendor ID": "{{ page.vendor_id }}",
+    });
+</script>
+{% endif %}
+<!-- NAVBAR -->
+<div class="app-navbar">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="inner-container">
+                    <div class="app-download-btn">
+                        <a href="#" class="v-btn v-btn-danger"><i class="fa fa-download"></i>
+                            <span>Download nu de app</span></a>
+                    </div>
+                    <input type="checkbox" id="check">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a class="active" href="{{ site.url }}#">Home</a></li>
+                        <li class="nav-item"><a href="{{ site.url }}#hoe-werkt-het">Hoe werkt het</a></li>
+                        <li class="nav-item"><a href="{{ site.url }}#over-ons">Over ons</a></li>
+                        <li class="nav-item"><a href="{{ site.url }}#onze-heroes">Onze Heroes</a></li>
+                        <li class="nav-item"><a href="{{ site.url }}#contact">Contact</a></li>
+                        <li class="nav-item"><a href="ik_ben_ondernemer.html">Ondernemer</a></li>
+                        <li class="nav-item"><a href="ik_ben_beleidsmaker.html">Beleidsmaker</a></li>
+                        <li class="nav-item"><a href="faq.html">FAQ</a></li>    
+                    </ul>
+                    <label for="check" class="hamburger">
+                        <i class="fa fa-bars"></i>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- TODO: Navigate within index.html to #over-ons -->
+<script type="text/javascript">
+    var eventNavigate = "Navigate within index.html";
+    mixpanel.track_links("#navbar_list a", eventNavigate);
+</script>
+
+<header class="page-header bg-img bg-vendor-img" style="background-image: url('{{ site.cloudimg }}{{ page.vendor_cover_image }}?height=500'); background-position: 75% 90%;">
+    <div class="page-header-inner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="page-header-inner-content">
+                        <div class="vendor-profile">
+                            <div class="avtar">
+                                <img src="{{ site.cloudimg }}{{ page.vendor_image }}?width=150" alt="{{ page.vendor_shop_name }}" class="user-icon user-icon-xxl">
+                            </div>
+                            <div class="vendor-profile-content">
+                                <h1 class="vendor-title">{{ page.vendor_shop_name }}</h1>
+                                <p class="ft-base">{{ page.vendor_category_name }}</p>
+                                <div class="rating-vote">
+                                    <div class="rating ft-primary">
+                                        <span><i class="fa fa-thumbs-up"></i></span> {{ page.vendor_rating }}
+                                    </div>
+                                    <div class="vote">
+                                        {{ page.vendor_rating_count }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="place-order">
+                            <a href="" onclick="DetectAndServe('{{ page.name }}')" class="v-btn v-btn-danger place-order-btn"><i class="fas fa-download"></i> <span>Bestellen</span></a>
+                            <p>Voor 15:00 besteld, vandaag in huis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="main-content skin-base page-vendor">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-2 on-scroll-fixed-tab">
+                <div class="nav flex-column nav-pills hero-tab" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Over ons</a>
+                    <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Producten</a>
+                    <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Contact</a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-10">
+                <div class="tab-content" id="v-pills-tabContent">
+                    <!-- OVERVIEW -->
+                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                        <div class="block about-vendor">
+                            <div class="content">
+                                <h2 class="mb-3">Over deze lokale ondernemer</h2>
+                                <p>{{ page.vendor_description }}<a href="#" class="link-secondary active">Meer tonen</a> </p>
+                            </div>
+                        </div>
+                        <div class="block transparent border-0 bdr-0 no-padding">
+                            <div class="header">
+                                <div class="row">
+                                    <div class="col-md-5 align-self-center">
+                                        <h2 class="product-title">
+                                            <span class="localhero-icon"><img src="assets/localhero-icon.png" class="img-fluid" alt=""></span>
+                                            Hero producten
+                                        </h2>
+                                    </div>
+                                    <div class="col-md-7 text-right d-none d-sm-block">
+                                        <a href="#v-pills-profile" class="link-secondary fw-bold">Bekijk alle producten <i class="fa fa-chevron-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content product-list">
+
+                                {% for item in site.data.hero-products %}
+                                {% if item.vendor_shop_name == page.vendor_shop_name %}
+                                <div class="product-card product-list-item">
+                                    <div class="rating-vote">
+                                        <div class="rating">
+                                            <span><i class="fa fa-thumbs-up"></i></span> {{ item.rating }}
+                                        </div>
+                                    </div>
+                                    <div class="product-card-img">
+                                        <img src="{{ site.cloudimg }}{{item.product_image}}?width=100" alt="{{item.product_name}}">
+                                    </div>
+                                    <div class="product-card-content">
+                                        <h4>{{ item.product_name }}</h4>
+                                        <div class="stuk-price">
+                                            <span class="stuk">{{ item.product_details }}</span>
+                                            <span class="price">€ {{ item.product_price }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endif %}
+                                {% endfor %}
+
+                                <div class="footer d-block d-sm-none text-center">
+                                    <a href="#v-pills-profile" class="link-secondary fw-bold">Bekijk alle producten <i class="fa fa-chevron-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- PRODUCTS -->
+                        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                            <div class="block transparent border-0 bdr-0 no-padding">
+                                <div class="header">
+                                    <div class="row">
+                                        <div class="col-md-6 align-self-center">
+                                            <div class="category-search">
+                                                <div class="dropdown custom-dropdown category-dropdown">
+                                                    <a href="" class="v-btn custom-dropdown-btn dropdown-toggle" id="category-dropdown-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    All producten <span class="custom-dropdown-btn-icon"><i class="fa fa-chevron-down"></i></span>
+                                                </a>
+                                                    <div class="dropdown-menu custom-dropdown-menu" aria-labelledby="category-dropdown-btn">
+                                                        <a class="dropdown-item" href="#">Koek</a>
+                                                        <a class="dropdown-item" href="#">Taart en cake</a>
+                                                        <a class="dropdown-item" href="#">All producten</a>
+                                                    </div>
+                                                </div>
+                                                <span class="icon icon-md search-icon"><i class="fa fa-search"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul class="pagination">
+                                                <!-- <li class="page-item">
+                                                <a href="#" class="page-link icon-btn prev-btn disabled"><i class="fa fa-chevron-left"></i></a>
+                                            </li> -->
+                                                <li class="page-item">
+                                                    <a href="#" class="page-link active">1</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a href="#" class="page-link">2</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a href="#" class="page-link">3</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a href="#" class="page-link icon-btn next-btn"><i class="fa fa-chevron-right"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content product-list hidden-xs">
+
+                                    {% for item in site.data.products %}
+                                    {% if item.vendor_shop_name == page.vendor_shop_name %}
+                                    <div class="product-card product-list-item">
+                                        <div class="rating-vote">
+                                            <div class="rating">
+                                                <span><i class="fa fa-thumbs-up"></i></span> {{ item.rating }}
+                                            </div>
+                                        </div>
+                                        <div class="product-card-img">
+                                            <img src="{{ site.cloudimg }}{{item.product_image}}?width=100" alt="{{item.product_name}}">
+                                        </div>
+                                        <div class="product-card-content">
+                                            <h4>{{ item.product_name }}</h4>
+                                            {% if item.product_stock_status == "Out_stock" %}
+                                            <span class="status out-stock disabled full-wd">Niet op voorraad</span>
+                                            {% else if item.product_stock_status == "temp_stock" %}
+                                            <span class="status out-stock disabled full-wd">Niet op voorraad</span>
+                                            {% else if item.product_stock_status == "In_stock" %}
+                                            <div class="stuk-price">
+                                                <span class="stuk">{{ item.product_details }}</span>
+                                                <span class="price">€ {{ item.product_price }}</span>
+                                            </div>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                    {% endif %}
+                                    {% endfor %}
+                                </div>
+                                <div class="content product-list-mobile">
+
+                                    {% for item in site.data.products %}
+                                    {% if item.vendor_shop_name == page.vendor_shop_name %}
+                                    <div class="product-list-mobile-item product-card-mobile">
+                                        <div class="product-img">
+                                            <img src="{{ site.cloudimg }}{{ item.product_image }}?width=100" class="img-fluid" alt="{{ item.product_name }}">
+                                        </div>
+                                        <div class="product-content">
+                                            <h4>{{ item.product_name }}</h4>
+                                            <p class="stuk">{{ item.product_details }}</p>
+                                            {% if item.product_stock_status == "Out_stock" %}
+                                            <span class="status out-stock disabled">Niet op voorraad</span>
+                                            {% else if item.product_stock_status == "temp_stock" %}
+                                            <span class="status out-stock disabled">Niet op voorraad</span>
+                                            {% endif %}
+                                        </div>
+                                        <div class="price-rating">
+                                            <span class="price">€ {{ item.product_price }}</span>
+                                            <div class="rating">
+                                                <span class="icon icon-sm"><i class="fa fa-thumbs-up"></i></span> {{ item.rating }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endif %}
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        <!-- CONTACT -->
+                        <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <table class="table table-contact-us">
+                                        <tbody>
+                                            <tr>
+                                                <th>Mobile</th>
+                                                <td><a href="#" class="link-secondary fw-bold"><span class="mr-2"><i class="fab fa-whatsapp"></i></span>{{ page.vendor_whatsapp }}</a></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Email</th>
+                                                <td>{{ page.vendor_email }}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Adres</th>
+                                                <td>{{ page.vendor_address }}</td>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="2">Openingstijden</th>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <ul class="shop-timing">
+                                                        {% for openinghours in site.data.openinghours-vendors %} {% if openinghours.vendor_url == page.vendor_url %}
+                                                        <li>{{ openinghours.day_type }} <span>{{ openinghours.start_time }} - {{ openinghours.end_time }}</span></li>
+                                                        {% endif %} {% endfor %}
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-md-5 offset-md-1">
+                                    <div class="block">
+                                        <div class="content p-1">
+                                            <iframe src="{{ page.vendor_gmap_embed }}" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</main>
