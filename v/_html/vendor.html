@@ -39,21 +39,22 @@
             <!-- on-scroll-fixed-tab -->
             <div class="col-sm-12 col-md-3 col-lg-2 hero-tab-wapper sticky-tab-mobile">
                 <div class="nav flex-column nav-pills hero-tab" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Over ons</a>
-                    <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Producten</a>
-                    <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Contact</a>
+                    <a class="nav-link active" id="v-pills-about-tab" data-toggle="pill" href="#v-pills-about" role="tab" aria-controls="v-pills-about" aria-selected="true">Over ons</a>
+                    <a class="nav-link" id="v-pills-products-tab" data-toggle="pill" href="#v-pills-products" role="tab" aria-controls="v-pills-products" aria-selected="false">Producten</a>
+                    <a class="nav-link" id="v-pills-contact-tab" data-toggle="pill" href="#v-pills-contact" role="tab" aria-controls="v-pills-contact" aria-selected="false">Contact</a>
                 </div>
             </div>
             <div class="col-sm-12 col-md-9 col-lg-10 product-content-wapper">
                 <div class="tab-content" id="v-pills-tabContent">
                     <!-- OVERVIEW -->
-                    <div class="tab-pane fade show overview-tab-pane active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                    <div class="tab-pane fade show overview-tab-pane active" id="v-pills-about" role="tabpanel" aria-labelledby="v-pills-about-tab">
                         <div class="block about-vendor">
                             <div class="content">
                                 <h2 class="mb-3">Over deze lokale ondernemer</h2>
                                 <p>{{ page.vendor_description }}<a href="#" class="d-inline-block d-sm-none">Meer tonen</a> </p>
                             </div>
                         </div>
+                        <!-- Hero producten -->
                         <div class="block transparent border-0 bdr-0 no-padding">
                             <div class="header py-1">
                                 <div class="row">
@@ -65,7 +66,7 @@
                                         </h2>
                                     </div>
                                     <div class="col-sm-6 col-md-7 text-right d-none d-sm-block">
-                                        <a href="#v-pills-profile" class="">Bekijk alle producten <i class="fa fa-chevron-right"></i></a>
+                                        <a href="#v-pills-products" class="">Bekijk alle producten <i class="fa fa-chevron-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -97,156 +98,159 @@
                                 {% endfor %}
 
                                 <div class="footer d-block d-sm-none text-center pt-4">
-                                    <a href="#v-pills-profile" class="">Bekijk alle producten <i class="fa fa-chevron-right"></i></a>
+                                    <a href="#v-pills-products" class="">Bekijk alle producten <i class="fa fa-chevron-right"></i></a>
                                 </div>
                             </div>
                         </div>
-                        <!-- PRODUCTS -->
-                        <div class="tab-pane fade product-tab-pane" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-                            <div class="block transparent border-0 bdr-0 no-padding">
-                                <div class="header pb-4">
-                                    <div class="row">
-                                        <div class="col-md-6 align-self-center">
-                                            <div class="category-search">
-                                                <div class="dropdown custom-dropdown category-dropdown">
-                                                    <a href="" class="v-btn custom-dropdown-btn dropdown-toggle" id="category-dropdown-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        All producten <span class="custom-dropdown-btn-icon"><i class="fa fa-chevron-down"></i></span>
-                                                    </a>
-                                                    <div class="dropdown-menu custom-dropdown-menu" aria-labelledby="category-dropdown-btn">
-                                                        <a class="dropdown-item" href="#">Koek</a>
-                                                        <a class="dropdown-item" href="#">Taart en cake</a>
-                                                        <a class="dropdown-item" href="#">All producten</a>
-                                                    </div>
+                    </div>
+                    <!-- PRODUCTS -->
+                    <div class="tab-pane fade product-tab-pane" id="v-pills-products" role="tabpanel" aria-labelledby="v-pills-products-tab">
+                        <div class="block transparent border-0 bdr-0 no-padding">
+                            <div class="header pb-4">
+                                <div class="row">
+                                    <div class="col-md-6 align-self-center">
+                                        <div class="category-search">
+                                            <div class="dropdown custom-dropdown category-dropdown">
+                                                <a href="" class="v-btn custom-dropdown-btn dropdown-toggle" id="category-dropdown-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    All producten <span class="custom-dropdown-btn-icon"><i class="fa fa-chevron-down"></i></span>
+                                                </a>
+                                                <div class="dropdown-menu custom-dropdown-menu" aria-labelledby="category-dropdown-btn">
+                                                    <a class="dropdown-item" href="#">Koek</a>
+                                                    <a class="dropdown-item" href="#">Taart en cake</a>
+                                                    <a class="dropdown-item" href="#">All producten</a>
                                                 </div>
-                                                <span class="icon icon-lg search-icon"><i class="fa fa-search"></i></span>
                                             </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <ul class="pagination">
-                                                <!-- <li class="page-item">
-                                                <a href="#" class="page-link icon-btn prev-btn disabled"><i class="fa fa-chevron-left"></i></a>
-                                            </li> -->
-                                                <li class="page-item">
-                                                    <a href="#" class="page-link active">1</a>
-                                                </li>
-                                                <li class="page-item">
-                                                    <a href="#" class="page-link">2</a>
-                                                </li>
-                                                <li class="page-item">
-                                                    <a href="#" class="page-link">3</a>
-                                                </li>
-                                                <li class="page-item">
-                                                    <a href="#" class="page-link icon-btn next-btn"><i class="fa fa-chevron-right"></i></a>
-                                                </li>
-                                            </ul>
+                                            <span class="icon icon-lg search-icon"><i class="fa fa-search"></i></span>
                                         </div>
                                     </div>
+                                    <div class="col-md-6">
+                                        <ul class="pagination">
+                                            <!-- <li class="page-item">
+                                            <a href="#" class="page-link icon-btn prev-btn disabled"><i class="fa fa-chevron-left"></i></a>
+                                        </li> -->
+                                            <li class="page-item">
+                                                <a href="#" class="page-link active">1</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a href="#" class="page-link">2</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a href="#" class="page-link">3</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a href="#" class="page-link icon-btn next-btn"><i class="fa fa-chevron-right"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="content product-list hidden-xs">
-                                    {% for item in site.data.products %}
-                                    {% if item.vendor_shop_name == page.vendor_shop_name %}
-                                    <a href="{{ site.url }}/p/{{ item.vendor_url }}/{{ item.product_url }}">
-                                        <div class="product-card product-list-item">
-                                            <div class="rating-vote">
-                                                <div class="rating">
-                                                    <span><i class="fa fa-thumbs-up"></i></span> {{ item.rating }}
-                                                </div>
-                                            </div>
-                                            <div class="product-card-img">
-                                                <img src="{{ site.cloudimg }}{{ item.product_image }}?width=110" alt="{{ item.product_name }}">
-                                            </div>
-                                            <div class="product-card-content">
-                                                <h4>{{ item.product_name }}</h4>
-                                                {% if item.product_stock_status == "Out_stock" %}
-                                                <span class="status out-stock disabled full-wd">Niet op voorraad</span>
-                                                {% endif %}
-                                                <div class="stuk-price">
-                                                    {% if (item.product_details == '1 stuk') or (item.product_details == 'per stuk') %}
-                                                    <span class="stuk">per stuk</span>
-                                                    {% else %}
-                                                    <span class="stuk">per {{ item.product_details }}</span>
-                                                    {% endif %}
-                                                    <span class="price">€ {{ item.product_price }}</span>
-                                                </div>
+                            </div>
+                            <!-- PRODUCTS for Desktop -->
+                            <div class="content product-list hidden-xs">
+                                {% for item in site.data.products %}
+                                {% if item.vendor_shop_name == page.vendor_shop_name %}
+                                <a href="{{ site.url }}/p/{{ item.vendor_url }}/{{ item.product_url }}">
+                                    <div class="product-card product-list-item">
+                                        <div class="rating-vote">
+                                            <div class="rating">
+                                                <span><i class="fa fa-thumbs-up"></i></span> {{ item.rating }}
                                             </div>
                                         </div>
-                                    </a>
-                                    {% endif %}
-                                    {% endfor %}
-                                </div>
-                                <div class="content product-list-mobile">
-                                    {% for item in site.data.products %}
-                                    {% if item.vendor_shop_name == page.vendor_shop_name %}
-                                    <a href="{{ site.url }}/p/{{ item.vendor_url }}/{{ item.product_url }}" class="">
-                                        <div class="product-list-mobile-item product-card-mobile">
-                                            <div class="product-img">
-                                                <img src="{{ site.cloudimg }}{{ item.product_image }}?width=110" class="img-fluid" alt="{{ item.product_name }}">
-                                            </div>
-                                            <div class="product-content">
-                                                <h4>{{ item.product_name }}</h4>
-
+                                        <div class="product-card-img">
+                                            <img src="{{ site.cloudimg }}{{ item.product_image }}?width=110" alt="{{ item.product_name }}">
+                                        </div>
+                                        <div class="product-card-content">
+                                            <h4>{{ item.product_name }}</h4>
+                                            {% if item.product_stock_status == "Out_stock" %}
+                                            <span class="status out-stock disabled full-wd">Niet op voorraad</span>
+                                            {% else %}
+                                            <div class="stuk-price">
                                                 {% if (item.product_details == '1 stuk') or (item.product_details == 'per stuk') %}
-                                                <p class="stuk">per stuk</p>
+                                                <span class="stuk">per stuk</span>
                                                 {% else %}
-                                                <p class="stuk">per {{ item.product_details }}</p>
+                                                <span class="stuk">per {{ item.product_details }}</span>
                                                 {% endif %}
-
-                                                {% if item.product_stock_status == "Out_stock" %}
-                                                <span class="status out-stock disabled">Niet op voorraad</span>
-                                                {% endif %}
-                                            </div>
-                                            <div class="price-rating">
                                                 <span class="price">€ {{ item.product_price }}</span>
-                                                <div class="rating">
-                                                    <span class="icon icon-sm"><i class="fa fa-thumbs-up"></i></span> {{ item.rating }}
-                                                </div>
+                                            </div>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </a>
+                                {% endif %}
+                                {% endfor %}
+                            </div>
+                            <!-- PRODUCTS for Mobile -->
+                            <div class="content product-list-mobile">
+                                {% for item in site.data.products %}
+                                {% if item.vendor_shop_name == page.vendor_shop_name %}
+                                <a href="{{ site.url }}/p/{{ item.vendor_url }}/{{ item.product_url }}" class="">
+                                    <div class="product-list-mobile-item product-card-mobile">
+                                        <div class="product-img">
+                                            <img src="{{ site.cloudimg }}{{ item.product_image }}?width=110" class="img-fluid" alt="{{ item.product_name }}">
+                                        </div>
+                                        <div class="product-content">
+                                            <h4>{{ item.product_name }}</h4>
+
+                                            {% if (item.product_details == '1 stuk') or (item.product_details == 'per stuk') %}
+                                            <p class="stuk">per stuk</p>
+                                            {% else %}
+                                            <p class="stuk">per {{ item.product_details }}</p>
+                                            {% endif %}
+
+                                            {% if item.product_stock_status == "Out_stock" %}
+                                            <span class="status out-stock disabled">Niet op voorraad</span>
+                                            {% endif %}
+                                        </div>
+                                        <div class="price-rating">
+                                            <span class="price">€ {{ item.product_price }}</span>
+                                            <div class="rating">
+                                                <span class="icon icon-sm"><i class="fa fa-thumbs-up"></i></span> {{ item.rating }}
                                             </div>
                                         </div>
-                                    </a>
-                                    {% endif %}
-                                    {% endfor %}
-                                </div>
+                                    </div>
+                                </a>
+                                {% endif %}
+                                {% endfor %}
                             </div>
                         </div>
-                        <!-- CONTACT -->
-                        <div class="tab-pane fade contact-tab-pane" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <table class="table table-contact-us">
-                                        <tbody>
-                                            <tr>
-                                                <th>Mobile</th>
-                                                <td><a href="https://wa.me/{{ page.vendor_whatsapp }}" class="link-secondary fw-bold"><span class="mr-2"><i class="fab fa-whatsapp"></i></span>{{ page.vendor_whatsapp }}</a></td>
-                                            </tr>
-                                            <tr>
-                                                <th>Email</th>
-                                                <td>{{ page.vendor_email }}</td>
-                                            </tr>
-                                            <tr>
-                                                <th>Adres</th>
-                                                <td>{{ page.vendor_address }}</td>
-                                            </tr>
-                                            <tr>
-                                                <th colspan="2">Openingstijden</th>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2">
-                                                    <ul class="shop-timing">
-                                                        {% for openinghours in site.data.openinghours-vendors %}
-                                                        {% if openinghours.vendor_url == page.vendor_url %}
-                                                        <li>{{ openinghours.day_type }} <span>{{ openinghours.start_time }} - {{ openinghours.end_time }}</span></li>
-                                                        {% endif %}
-                                                        {% endfor %}
-                                                    </ul>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="col-md-5 offset-md-1">
-                                    <div class="map-area">
-                                        <iframe src="{{ page.vendor_gmap_embed }}" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                                    </div>
+                    </div>
+                    <!-- CONTACT -->
+                    <div class="tab-pane fade contact-tab-pane" id="v-pills-contact" role="tabpanel" aria-labelledby="v-pills-contact-tab">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <table class="table table-contact-us">
+                                    <tbody>
+                                        <tr>
+                                            <th>Mobile</th>
+                                            <td><a href="https://wa.me/{{ page.vendor_whatsapp }}" class="link-secondary fw-bold"><span class="mr-2"><i class="fab fa-whatsapp"></i></span>{{ page.vendor_whatsapp }}</a></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Email</th>
+                                            <td>{{ page.vendor_email }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Adres</th>
+                                            <td>{{ page.vendor_address }}</td>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">Openingstijden</th>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <ul class="shop-timing">
+                                                    {% for openinghours in site.data.openinghours-vendors %}
+                                                    {% if openinghours.vendor_url == page.vendor_url %}
+                                                    <li>{{ openinghours.day_type }} <span>{{ openinghours.start_time }} - {{ openinghours.end_time }}</span></li>
+                                                    {% endif %}
+                                                    {% endfor %}
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-md-5 offset-md-1">
+                                <div class="map-area">
+                                    <iframe src="{{ page.vendor_gmap_embed }}" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                                 </div>
                             </div>
                         </div>
