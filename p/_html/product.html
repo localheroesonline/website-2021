@@ -104,28 +104,30 @@
                     <div class="content popular-product-list hidden-xs">
                         {% for item in site.data.hero-products %}
                         {% if item.vendor_shop_name == page.vendor_shop_name %}
-                        <div class="product-card-sm product-list-item">
-                            <div class="rating-vote">
-                                <div class="rating small">
-                                    <span><i class="fas fa-thumbs-up"></i></span>
-                                    {{ item.rating }}
-                                </div>  
-                            </div>
-                            <div class="product-card-img">
-                                <img src="{{ site.cloudimg }}{{ item.product_image }}?width=110" alt="{{ item.product_name }}">
-                            </div>
-                            <div class="product-card-content">
-                                <h4>{{ item.product_name }}</h4>
-                                <div class="stuk-price">
-                                    {% if (item.product_details == '1 stuk') or (item.product_details == 'per stuk') %}
-                                    <span class="stuk">per stuk</span>
-                                    {% else %}
-                                    <span class="stuk">{{ item.product_details }}</span>
-                                    {% endif %}
-                                    <span class="price">€ {{ item.product_price }}</span>
+                        <a href="{{ site.url }}/p/{{ item.product_id }}/{{ item.vendor_url }}/{{ item.product_url }}" class="">
+                            <div class="product-card-sm product-list-item">
+                                <div class="rating-vote">
+                                    <div class="rating small">
+                                        <span><i class="fas fa-thumbs-up"></i></span>
+                                        {{ item.rating }}
+                                    </div>
+                                </div>
+                                <div class="product-card-img">
+                                    <img src="{{ site.cloudimg }}{{ item.product_image }}?width=110" alt="{{ item.product_name }}">
+                                </div>
+                                <div class="product-card-content">
+                                    <h4>{{ item.product_name }}</h4>
+                                    <div class="stuk-price">
+                                        {% if (item.product_details == '1 stuk') or (item.product_details == 'per stuk') %}
+                                        <span class="stuk">per stuk</span>
+                                        {% else %}
+                                        <span class="stuk">{{ item.product_details }}</span>
+                                        {% endif %}
+                                        <span class="price">€ {{ item.product_price }}</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                         {% endif %}
                         {% endfor %}
                     </div>
@@ -133,7 +135,7 @@
                     <div class="content product-list-mobile">
                         {% for item in site.data.hero-products %}
                         {% if item.vendor_shop_name == page.vendor_shop_name %}
-                        <a href="{{ site.url }}/p/{{ item.vendor_url }}/{{ item.product_url }}" class=""></a>
+                        <a href="{{ site.url }}/p/{{ item.product_id }}/{{ item.vendor_url }}/{{ item.product_url }}" class="">
                             <div class="product-list-mobile-item product-card-mobile">
                                 <div class="product-img">
                                     <img src="{{ site.cloudimg }}{{ item.product_image }}?width=110" class="img-fluid" alt="{{ item.product_name }}">
