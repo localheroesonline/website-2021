@@ -40,10 +40,10 @@ a {
     }
   }
   &.link-secondary {
-    color: $secondary-color;
+    color: $links-color;
     &:hover,
     &.active {
-      color: darken($secondary-color, 10%);
+      color: darken($links-color, 10%);
     }
   }
 }
