@@ -6,7 +6,7 @@
                     <div class="page-header-inner-content">
                         <div class="vendor-profile">
                             <div class="avtar">
-                                <img src="{{ site.cloudimg }}{{ page.vendor_image }}?width=150" alt="{{ page.vendor_shop_name }}" class="user-icon user-icon-xl">
+                                <img src="{{ site.cloudimg }}{{ page.vendor_image }}?width=125" alt="{{ page.vendor_shop_name }}" class="user-icon user-icon-xl">
                             </div>
                             <div class="vendor-profile-content">
                                 <h1 class="vendor-title">{{ page.vendor_shop_name }}</h1>
@@ -70,7 +70,6 @@
                                 </div>
                             </div>
                             <div class="content product-list">
-
                                 {% for item in site.data.hero-products %}
                                 {% if item.vendor_shop_name == page.vendor_shop_name %}
                                 <div class="product-card product-list-item">
@@ -80,12 +79,16 @@
                                         </div>
                                     </div>
                                     <div class="product-card-img">
-                                        <img src="{{ site.cloudimg }}{{item.product_image}}?width=110" alt="{{item.product_name}}">
+                                        <img src="{{ site.cloudimg }}{{ item.product_image }}?width=150" alt="{{ item.product_name }}">
                                     </div>
                                     <div class="product-card-content">
                                         <h4>{{ item.product_name }}</h4>
                                         <div class="stuk-price">
-                                            <span class="stuk">{{ item.product_details }}</span>
+                                            {% if (item.product_details == '1 stuk') or (item.product_details == 'per stuk') %}
+                                            <span class="stuk">per stuk</span>
+                                            {% else %}
+                                            <span class="stuk">per {{ item.product_details }}</span>
+                                            {% endif %}
                                             <span class="price">€ {{ item.product_price }}</span>
                                         </div>
                                     </div>
@@ -150,20 +153,21 @@
                                                 </div>
                                             </div>
                                             <div class="product-card-img">
-                                                <img src="{{ site.cloudimg }}{{item.product_image}}?width=110" alt="{{item.product_name}}">
+                                                <img src="{{ site.cloudimg }}{{ item.product_image }}?width=110" alt="{{ item.product_name }}">
                                             </div>
                                             <div class="product-card-content">
                                                 <h4>{{ item.product_name }}</h4>
                                                 {% if item.product_stock_status == "Out_stock" %}
                                                 <span class="status out-stock disabled full-wd">Niet op voorraad</span>
-                                                {% else if item.product_stock_status == "temp_stock" %}
-                                                <span class="status out-stock disabled full-wd">Niet op voorraad</span>
-                                                {% else if item.product_stock_status == "In_stock" %}
+                                                {% endif %}
                                                 <div class="stuk-price">
-                                                    <span class="stuk">{{ item.product_details }}</span>
+                                                    {% if (item.product_details == '1 stuk') or (item.product_details == 'per stuk') %}
+                                                    <span class="stuk">per stuk</span>
+                                                    {% else %}
+                                                    <span class="stuk">per {{ item.product_details }}</span>
+                                                    {% endif %}
                                                     <span class="price">€ {{ item.product_price }}</span>
                                                 </div>
-                                                {% endif %}
                                             </div>
                                         </div>
                                     </a>
@@ -180,10 +184,14 @@
                                             </div>
                                             <div class="product-content">
                                                 <h4>{{ item.product_name }}</h4>
-                                                <p class="stuk">{{ item.product_details }}</p>
+
+                                                {% if (item.product_details == '1 stuk') or (item.product_details == 'per stuk') %}
+                                                <p class="stuk">per stuk</p>
+                                                {% else %}
+                                                <p class="stuk">per {{ item.product_details }}</p>
+                                                {% endif %}
+
                                                 {% if item.product_stock_status == "Out_stock" %}
-                                                <span class="status out-stock disabled">Niet op voorraad</span>
-                                                {% else if item.product_stock_status == "temp_stock" %}
                                                 <span class="status out-stock disabled">Niet op voorraad</span>
                                                 {% endif %}
                                             </div>
@@ -208,7 +216,7 @@
                                         <tbody>
                                             <tr>
                                                 <th>Mobile</th>
-                                                <td><a href="https://wa.me/{{page.vendor_whatsapp}}" class="link-secondary fw-bold"><span class="mr-2"><i class="fab fa-whatsapp"></i></span>{{ page.vendor_whatsapp }}</a></td>
+                                                <td><a href="https://wa.me/{{ page.vendor_whatsapp }}" class="link-secondary fw-bold"><span class="mr-2"><i class="fab fa-whatsapp"></i></span>{{ page.vendor_whatsapp }}</a></td>
                                             </tr>
                                             <tr>
                                                 <th>Email</th>
