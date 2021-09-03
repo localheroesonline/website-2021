@@ -31,7 +31,7 @@
                                     <li>Hoeveelheid <span>{{ page.product_unit }}</span></li>
                                     <li>Prijs/Kg <span>€ {{ page.kg_price }}</span></li>
                                     <li>BTW	<span>{{ page.vat }} %</span></li>
-                                    <li>Prijs <span>{{ page.product_price }}</span></li>
+                                    <li>Prijs <span>€ {{ page.product_price }}</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -86,9 +86,9 @@
                                     <ul class="ingridents-list">
                                         <li>Type <span>{{ page.product_type }}</span></li>
                                         <li>Hoeveelheid <span>{{ page.product_unit }}</span></li>
-                                        <li>Prijs/Kg <span>{{ page.kg_price }}</span></li>
+                                        <li>Prijs/Kg <span>€ {{ page.kg_price }}</span></li>
                                         <li>BTW	<span>{{ page.vat }} %</span></li>
-                                        <li>Prijs <span>{{ page.product_price }}</span></li>
+                                        <li>Prijs <span>€ {{ page.product_price }}</span></li>
                                     </ul>
                                 </div>
                             </div>
@@ -98,15 +98,17 @@
                        <a href="" onclick="DetectAndServe('{{page.name}}')" class="v-btn v-btn-tertiary place-order-btn"><i class="fas fa-download"></i><span>Bestellen</span></a>
                        <p class="small ft-tertiary">Voor 15:00 besteld, vandaag in huis.</p>
                     </div>
+                    
                     <h1 class="mb-3 ft-primary pp-title">Populaire producten</h1>
+                    <!-- POPULAR PRODUCTS desktop -->
                     <div class="content popular-product-list hidden-xs">
                         {% for item in site.data.hero-products %}
                         {% if item.vendor_shop_name == page.vendor_shop_name %}
                         <div class="product-card-sm product-list-item">
                             <div class="rating-vote">
                                 <div class="rating small">
-                                    <span><i class="fa fa-thumbs-up"></i></span>
-                                    {{ item.rating }}%
+                                    <span><i class="fas fa-thumbs-up"></i></span>
+                                    {{ item.rating }}
                                 </div>  
                             </div>
                             <div class="product-card-img">
@@ -127,6 +129,7 @@
                         {% endif %}
                         {% endfor %}
                     </div>
+                    <!-- POPULAR PRODUCTS mobile -->
                     <div class="content product-list-mobile">
                         {% for item in site.data.hero-products %}
                         {% if item.vendor_shop_name == page.vendor_shop_name %}
