@@ -7,14 +7,14 @@
                     <div class="rating-vote d-none d-md-flex justify-content-center">
                         <div class="rating ft-primary">
                             <span><i class="fa fa-thumbs-up"></i></span>
-                            100%
+                            {{ page.rating }}
                         </div>
                         <div class="vote">
-                            2 Stemmen
+                            {{ page.rating_count }} Stemmen
                         </div>   
                     </div>
                     <div class="product-img">
-                        <img src="assets/cake.png" class="img-fluid" alt="">
+                        <img src="{{ site.cloudimg }}{{page.product_image}}?width=600" class="img-fluid" alt="{{page.product_name}}">
                     </div>
                 </div>
                 <div class="accordion accordion-ingridents d-none d-md-block" id="accordionExample">
@@ -27,11 +27,11 @@
                         <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                             <div class="card-body">
                                 <ul class="ingridents-list">
-                                    <li>Type	 <span>Koud</span></li>
-                                    <li>Hoeveelheid <span>stuks</span></li>
-                                    <li>Prijs/Kg <span>3.50</span></li>
-                                    <li>BTW	 <span>9%</span></li>
-                                    <li>Prijs <span>3.50</span></li>
+                                    <li>Type <span>{{ page.product_type }}</span></li>
+                                    <li>Hoeveelheid <span>{{ page.product_unit }}</span></li>
+                                    <li>Prijs/Kg <span>€ {{ page.kg_price }}</span></li>
+                                    <li>BTW	<span>{{ page.vat }} %</span></li>
+                                    <li>Prijs <span>{{ page.product_price }}</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -41,188 +41,121 @@
            <div class="col-sm-12 col-md-7 product-details-wapper">
                <div class="product-details">
                     <div class="product-info">
-                        <h3>Brownie cheese-cake</h3>
-                        <p class="price-n-stock">per stuk | <span class="status in-stock">Op voorraad</span> <span class="price">3.50</span></p>
+                        <h3>{{ page.product_name }}</h3>
+                        {% if (page.product_details == '1 stuk') or (page.product_details == 'per stuk') %}
+                        <p class="price-n-stock">per stuk | 
+                        {% else %}
+                        <p class="price-n-stock">{{ page.product_details }} | 
+                        {% endif %}
+
+                        {% if page.product_stock_status=='Out_stock' %}
+                        <span class="status out-stock disabled">Niet op voorraad</span>
+                        {% else %}
+                        <span class="status in-stock">Op voorraad</span>
+                        {% endif %}
+                        <span class="price">€ {{ page.product_price }}</span></p>
                     </div>
                     <div class="product-info-mobile">
                         <div class="name-stock">
-                            <h3>Brownie cheese-cake</h3>
+                            <h3>{{ page.product_name }}</h3>
+                            {% if page.product_stock_status=='Out_stock' %}
+                            <span class="status out-stock disabled">Niet op voorraad</span>
+                            {% else %}
                             <span class="status in-stock">Op voorraad</span>
+                            {% endif %}
                         </div>
                         <div class="price-stuk">
-                            <h2>€ 3.50</h2>
+                            <h2>€ {{ page.product_price }}</h2>
+                            {% if (page.product_details == '1 stuk') or (page.product_details == 'per stuk') %}
                             <span class="ft-sm">per stuk</span>
+                            {% else %}
+                            <span class="ft-sm">{{ page.product_details }}</span>
+                            {% endif %}
                         </div>    
                     </div>
                     <div class="product-description">
-                       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum hic explicabo, ab provident illum voluptas. Voluptatibus quasi quia accusantium sequi laborum optio delectus, nemo, voluptas enim ducimus iure blanditiis sed?</p>
+                       <p>{{ page.product_information }}</p>
                     </div>
                     <div class="accordion accordion-ingridents d-block d-md-none" id="accordionExample">
                         <div class="card">
                             <div class="card-header" >
-                                <a href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Product Details
-                                </a>
+                                <a href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Product Details</a>
                             </div>
                             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                                 <div class="card-body">
                                     <ul class="ingridents-list">
-                                        <li>Type	 <span>Koud</span></li>
-                                        <li>Hoeveelheid <span>stuks</span></li>
-                                        <li>Prijs/Kg <span>3.50</span></li>
-                                        <li>BTW	 <span>9%</span></li>
-                                        <li>Prijs <span>3.50</span></li>
+                                        <li>Type <span>{{ page.product_type }}</span></li>
+                                        <li>Hoeveelheid <span>{{ page.product_unit }}</span></li>
+                                        <li>Prijs/Kg <span>{{ page.kg_price }}</span></li>
+                                        <li>BTW	<span>{{ page.vat }} %</span></li>
+                                        <li>Prijs <span>{{ page.product_price }}</span></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="place-order">
-                       <a href="#" class="v-btn v-btn-tertiary place-order-btn"><i class="fas fa-download"></i> <span>Bestellen</span></a>
+                       <a href="" onclick="DetectAndServe('{{page.name}}')" class="v-btn v-btn-tertiary place-order-btn"><i class="fas fa-download"></i><span>Bestellen</span></a>
                        <p class="small ft-tertiary">Voor 15:00 besteld, vandaag in huis.</p>
                     </div>
                     <h1 class="mb-3 ft-primary pp-title">Populaire producten</h1>
                     <div class="content popular-product-list hidden-xs">
+                        {% for item in site.data.hero-products %}
+                        {% if item.vendor_shop_name == page.vendor_shop_name %}
                         <div class="product-card-sm product-list-item">
                             <div class="rating-vote">
                                 <div class="rating small">
                                     <span><i class="fa fa-thumbs-up"></i></span>
-                                    100%
+                                    {{ item.rating }}%
                                 </div>  
                             </div>
                             <div class="product-card-img">
-                                <img src="assets/cake.png" alt="">
+                                <img src="{{ site.cloudimg }}{{ item.product_image }}?width=110" alt="{{ item.product_name }}">
                             </div>
                             <div class="product-card-content">
-                                <h4>Carrot cake</h4>
+                                <h4>{{ item.product_name }}</h4>
                                 <div class="stuk-price">
-                                    <span class="stuk">1 Stuk</span>
-                                    <span class="price">4.00</span>
+                                    {% if (item.product_details == '1 stuk') or (item.product_details == 'per stuk') %}
+                                    <span class="stuk">per stuk</span>
+                                    {% else %}
+                                    <span class="stuk">{{ item.product_details }}</span>
+                                    {% endif %}
+                                    <span class="price">€ {{ item.product_price }}</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="product-card-sm product-list-item">
-                            <div class="rating-vote">
-                                <div class="rating small">
-                                    <span><i class="fa fa-thumbs-up"></i></span>
-                                    100%
-                                </div>  
-                            </div>
-                            <div class="product-card-img">
-                                <img src="assets/cake.png" alt="">
-                            </div>
-                            <div class="product-card-content">
-                                <h4>Carrot cake</h4>
-                                <div class="stuk-price">
-                                    <span class="stuk">1 Stuk</span>
-                                    <span class="price">4.00</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-card-sm product-list-item">
-                            <div class="rating-vote">
-                                <div class="rating small">
-                                    <span><i class="fa fa-thumbs-up"></i></span>
-                                    100%
-                                </div>  
-                            </div>
-                            <div class="product-card-img">
-                                <img src="assets/cake.png" alt="">
-                            </div>
-                            <div class="product-card-content">
-                                <h4>Carrot cake</h4>
-                                <div class="stuk-price">
-                                    <span class="stuk">1 Stuk</span>
-                                    <span class="price">4.00</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-card-sm product-list-item">
-                            <div class="rating-vote">
-                                <div class="rating small">
-                                    <span><i class="fa fa-thumbs-up"></i></span>
-                                    100%
-                                </div>  
-                            </div>
-                            <div class="product-card-img">
-                                <img src="assets/cake.png" alt="">
-                            </div>
-                            <div class="product-card-content">
-                                <h4>Carrot cake</h4>
-                                <div class="stuk-price">
-                                    <span class="stuk">1 Stuk</span>
-                                    <span class="price">4.00</span>
-                                </div>
-                            </div>
-                        </div>
+                        {% endif %}
+                        {% endfor %}
                     </div>
                     <div class="content product-list-mobile">
-                        <div class="product-list-mobile-item product-card-mobile">
-                            <div class="product-img">
-                                <img src="assets/cake.png" class="img-fluid" alt="">
-                            </div>
-                            <div class="product-content">
-                                <h4>Carrot Cake</h4>
-                                <p class="stuk">1 Stuk</p>
-                                <span class="status out-stock disabled">Niet op voorraad</span>
-                            </div>
-                            <div class="price-rating">
-                                <span class="price">104.00</span>
-                                <div class="rating">
-                                    <span class="icon icon-sm"><i class="fa fa-thumbs-up"></i></span>
-                                    100%
+                        {% for item in site.data.hero-products %}
+                        {% if item.vendor_shop_name == page.vendor_shop_name %}
+                        <a href="{{ site.url }}/p/{{ item.vendor_url }}/{{ item.product_url }}" class=""></a>
+                            <div class="product-list-mobile-item product-card-mobile">
+                                <div class="product-img">
+                                    <img src="{{ site.cloudimg }}{{ item.product_image }}?width=110" class="img-fluid" alt="{{ item.product_name }}">
+                                </div>
+                                <div class="product-content">
+                                    <h4>{{ item.product_name }}</h4>
+                                    {% if (item.product_details == '1 stuk') or (item.product_details == 'per stuk') %}
+                                    <p class="stuk">per stuk</p>
+                                    {% else %}
+                                    <p class="stuk">{{ item.product_details }}</p>
+                                    {% endif %}
+                                    {% if item.product_stock_status == "Out_stock" %}
+                                    <span class="status out-stock disabled">Niet op voorraad</span>
+                                    {% endif %}
+                                </div>
+                                <div class="price-rating">
+                                    <span class="price">€ {{ item.product_price }}</span>
+                                    <div class="rating">
+                                        <span class="icon icon-sm"><i class="fa fa-thumbs-up"></i></span> {{ item.rating }}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="product-list-mobile-item product-card-mobile">
-                            <div class="product-img">
-                                <img src="assets/cake.png" class="img-fluid" alt="">
-                            </div>
-                            <div class="product-content">
-                                <h4>Carrot Cake</h4>
-                                <p class="stuk">1 Stuk</p>
-                                <span class="status out-stock disabled">Niet op voorraad</span>
-                            </div>
-                            <div class="price-rating">
-                                <span class="price">104.00</span>
-                                <div class="rating">
-                                    <span class="icon icon-sm"><i class="fa fa-thumbs-up"></i></span>
-                                    100%
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-list-mobile-item product-card-mobile">
-                            <div class="product-img">
-                                <img src="assets/cake.png" class="img-fluid" alt="">
-                            </div>
-                            <div class="product-content">
-                                <h4>Carrot Cake</h4>
-                                <p class="stuk">1 Stuk</p>
-                            </div>
-                            <div class="price-rating">
-                                <span class="price">104.00</span>
-                                <div class="rating">
-                                    <span class="icon icon-sm"><i class="fa fa-thumbs-up"></i></span>
-                                    100%
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-list-mobile-item product-card-mobile">
-                            <div class="product-img">
-                                <img src="assets/cake.png" class="img-fluid" alt="">
-                            </div>
-                            <div class="product-content">
-                                <h4>Carrot Cake</h4>
-                                <p class="stuk">1 Stuk</p>
-                            </div>
-                            <div class="price-rating">
-                                <span class="price">104.00</span>
-                                <div class="rating">
-                                    <span class="icon icon-sm"><i class="fa fa-thumbs-up"></i></span>
-                                    100%
-                                </div>
-                            </div>
-                        </div>
+                        </a>
+                        {% endif %}
+                        {% endfor %}
                     </div>
                </div>
            </div>
