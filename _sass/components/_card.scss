@@ -64,19 +64,19 @@
   @extend .card;
   .product-card-img {
     max-width: 150px;
-    margin: 0.4rem auto;
+    margin: -1rem auto;
     img {
-      height: 65px;
+      height: 110px;
     }
   }
   h4 {
-    font-size: font-size(xxs);
+    font-size: font-size(sm);
   }
   .stuk-price {
     font-weight: font-weight(regular);
     .price,
     .stuk {
-      font-size: font-size(xxs);
+      font-size: font-size(sm);
     }
   }
 }
