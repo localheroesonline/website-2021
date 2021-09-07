@@ -198,13 +198,13 @@ title: Bestel het beste uit de buurt
                     <div class="slide-item">
                         <!-- You can put an image or text inside each slide div -->
                         <div class="hero-img">
-                            <a href="heroes/{{item.vendor_url}}"><img src="{{ site.cloudimg }}{{item.vendor_image}}?width=300" alt="{{item.vendor_shop_name}} - {{item.vendor_category_name}}"></a>
+                            <a href="{{ item.vendor_permalink }}"><img src="{{ site.cloudimg }}_prod_/vendor-profile/{{ item.vendor_image }}?width=300" alt="{{ item.vendor_shop_name }} - {{ item.vendor_category_name }}"></a>
                         </div>
                         <div class="content text-center">
-                            <h2 class="ft-secondary ft-xs">{{item.vendor_shop_name}}</h2>
-                            <h3 class="ft-xs ft-base">{{item.vendor_category_name}}</h3>
+                            <h2 class="ft-secondary ft-xs">{{ item.vendor_shop_name }}</h2>
+                            <h3 class="ft-xs ft-base">{{ item.vendor_category_name }}</h3>
                         </div>
-                        <a href="heroes/{{item.vendor_url}}" class="v-btn v-btn-acent btn-md fw-bold">Toon assortiment</a>
+                        <a href="{{ item.vendor_permalink }}" class="v-btn v-btn-acent btn-md fw-bold">Toon assortiment</a>
                     </div>
                     {% endfor %}
                 </div>
