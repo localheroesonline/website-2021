@@ -91,7 +91,7 @@
                                                 {% else %}
                                                 <span class="stuk">per {{ item.product_details }}</span>
                                                 {% endif %}
-                                                <span class="price">€ {{ item.product_price }}</span>
+                                                <span class="price">€ {{ item.product_price|number_format(2, ',', '.') }}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -171,7 +171,7 @@
                                                 {% else %}
                                                 <span class="stuk">per {{ item.product_details }}</span>
                                                 {% endif %}
-                                                <span class="price">€ {{ item.product_price }}</span>
+                                                <span class="price">€ {{ item.product_price|number_format(2, ',', '.') }}</span>
                                             </div>
                                             {% endif %}
                                         </div>
@@ -203,7 +203,7 @@
                                             {% endif %}
                                         </div>
                                         <div class="price-rating">
-                                            <span class="price">€ {{ item.product_price }}</span>
+                                            <span class="price">€ {{ item.product_price|number_format(2, ',', '.') }}</span>
                                             <div class="rating">
                                                 <span class="icon icon-sm"><i class="fa fa-thumbs-up"></i></span> {{ item.rating }}
                                             </div>
