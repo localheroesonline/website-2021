@@ -14,7 +14,7 @@
                         </div>   
                     </div>
                     <div class="product-img">
-                        <img src="{{ site.cloudimg }}{{page.product_image}}?width=600" class="img-fluid" alt="{{page.product_name}}">
+                        <img src="{{ site.cloudimg }}_prod_/product/{{ page.product_image }}?width=600" class="img-fluid" alt="{{ page.product_name }}">
                     </div>
                 </div>
                 <div class="accordion accordion-ingridents d-none d-md-block" id="accordionExample">
@@ -113,7 +113,7 @@
                                     </div>
                                 </div>
                                 <div class="product-card-img">
-                                    <img src="{{ site.cloudimg }}{{ item.product_image }}?width=110" alt="{{ item.product_name }}">
+                                    <img src="{{ site.cloudimg }}_prod_/product/{{ item.product_image }}?width=110" alt="{{ item.product_name }}">
                                 </div>
                                 <div class="product-card-content">
                                     <h4>{{ item.product_name }}</h4>
@@ -138,7 +138,7 @@
                         <a href="{{ site.url }}/p/{{ item.product_id }}/{{ item.vendor_url }}/{{ item.product_url }}" class="">
                             <div class="product-list-mobile-item product-card-mobile">
                                 <div class="product-img">
-                                    <img src="{{ site.cloudimg }}{{ item.product_image }}?width=110" class="img-fluid" alt="{{ item.product_name }}">
+                                    <img src="{{ site.cloudimg }}_prod_/product/{{ item.product_image }}?width=110" class="img-fluid" alt="{{ item.product_name }}">
                                 </div>
                                 <div class="product-content">
                                     <h4>{{ item.product_name }}</h4>

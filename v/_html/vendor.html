@@ -1,4 +1,4 @@
-<header class="page-header bg-img bg-vendor-img fixed fixed-tlr" style="background-image: url('{{ site.cloudimg }}{{ page.vendor_cover_image }}?height=500'); background-position: 75% 90%;">
+<header class="page-header bg-img bg-vendor-img fixed fixed-tlr" style="background-image: url('{{ site.cloudimg }}_prod_/vendor-cover/{{ page.vendor_cover_image }}?height=500'); background-position: 75% 90%;">
     <div class="page-header-inner">
         <div class="container">
             <div class="row">
@@ -6,7 +6,7 @@
                     <div class="page-header-inner-content">
                         <div class="vendor-profile">
                             <div class="avtar">
-                                <img src="{{ site.cloudimg }}{{ page.vendor_image }}?width=125" alt="{{ page.vendor_shop_name }}" class="user-icon user-icon-xl">
+                                <img src="{{ site.cloudimg }}_prod_/vendor-profile/{{ page.vendor_image }}?width=125" alt="{{ page.vendor_shop_name }}" class="user-icon user-icon-xl">
                             </div>
                             <div class="vendor-profile-content">
                                 <h1 class="vendor-title">{{ page.vendor_shop_name }}</h1>
@@ -81,7 +81,7 @@
                                             </div>
                                         </div>
                                         <div class="product-card-img">
-                                            <img src="{{ site.cloudimg }}{{ item.product_image }}?width=150" alt="{{ item.product_name }}">
+                                            <img src="{{ site.cloudimg }}_prod_/product/{{ item.product_image }}?width=150" alt="{{ item.product_name }}">
                                         </div>
                                         <div class="product-card-content">
                                             <h4>{{ item.product_name }}</h4>
@@ -158,7 +158,7 @@
                                             </div>
                                         </div>
                                         <div class="product-card-img">
-                                            <img src="{{ site.cloudimg }}{{ item.product_image }}?width=110" alt="{{ item.product_name }}">
+                                            <img src="{{ site.cloudimg }}_prod_/product/{{ item.product_image }}?width=110" alt="{{ item.product_name }}">
                                         </div>
                                         <div class="product-card-content">
                                             <h4>{{ item.product_name }}</h4>
@@ -187,7 +187,7 @@
                                 <a href="{{ site.url }}/p/{{ item.product_id }}/{{ item.vendor_url }}/{{ item.product_url }}" class="">
                                     <div class="product-list-mobile-item product-card-mobile">
                                         <div class="product-img">
-                                            <img src="{{ site.cloudimg }}{{ item.product_image }}?width=110" class="img-fluid" alt="{{ item.product_name }}">
+                                            <img src="{{ site.cloudimg }}_prod_/product/{{ item.product_image }}?width=110" class="img-fluid" alt="{{ item.product_name }}">
                                         </div>
                                         <div class="product-content">
                                             <h4>{{ item.product_name }}</h4>
