@@ -40,6 +40,9 @@
       font-weight: font-weight(medium);
       .stuk {
         color: #b6b6b6;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       .price {
         color: $text-color;
