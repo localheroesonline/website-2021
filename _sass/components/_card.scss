@@ -16,10 +16,10 @@
   box-shadow: 0 5px 8px rgba($dark-color, 0.1);
   &-img {
     max-width: 110px;
-    margin: 1rem auto;
+    margin: -1rem auto;
     img {
       vertical-align: middle;
-      height: 120px;
+      height: 110px;
       object-fit: contain;
     }
   }
