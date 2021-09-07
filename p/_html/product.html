@@ -17,21 +17,21 @@
                         <img src="{{ site.cloudimg }}_prod_/product/{{ page.product_image }}?width=600" class="img-fluid" alt="{{ page.product_name }}">
                     </div>
                 </div>
-                <div class="accordion accordion-ingridents d-none d-md-block" id="accordionExample">
+                <div class="accordion accordion-details d-none d-md-block" id="productDetails">
                     <div class="card">
                         <div class="card-header" >
                             <a href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             Product Details
                             </a>
                         </div>
-                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#productDetails">
                             <div class="card-body">
-                                <ul class="ingridents-list">
-                                    <li>Type <span>{{ page.product_type }}</span></li>
-                                    <li>Hoeveelheid <span>{{ page.product_unit }}</span></li>
-                                    <li>Prijs/Kg <span>€ {{ page.kg_price|number_format(2, ',', '.') }}</span></li>
-                                    <li>BTW	<span>{{ page.vat }} %</span></li>
-                                    <li>Prijs <span>€ {{ page.product_price|number_format(2, ',', '.') }}</span></li>
+                                <ul class="details-list">
+                                    <li>Bewaren <span>{{ page.product_type }}</span></li>
+                                    <li>Soort <span>{{ page.product_unit }}</span></li>
+                                    <li>Hoeveelheid <span>{{ page.product_details }}</span></li>
+                                    <li>Prijs/Kg <span>€ {{ page.product_kg_price|number_format(2, ',', '.') }}</span></li>
+                                    <li>BTW	<span>{{ page.product_vat }} %</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -62,29 +62,25 @@
                         </div>
                         <div class="price-stuk">
                             <h2>€ {{ page.product_price|number_format(2, ',', '.') }}</h2>
-                            {% if (page.product_details == '1 stuk') or (page.product_details == 'per stuk') %}
-                            <span class="ft-sm">per stuk</span>
-                            {% else %}
                             <span class="ft-sm">{{ page.product_details }}</span>
-                            {% endif %}
                         </div>    
                     </div>
                     <div class="product-description">
                        <p>{{ page.product_information }}</p>
                     </div>
-                    <div class="accordion accordion-ingridents d-block d-md-none" id="accordionExample">
+                    <div class="accordion accordion-details d-block d-md-none" id="productDetails">
                         <div class="card">
                             <div class="card-header" >
                                 <a href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Product Details</a>
                             </div>
-                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#productDetails">
                                 <div class="card-body">
-                                    <ul class="ingridents-list">
-                                        <li>Type <span>{{ page.product_type }}</span></li>
-                                        <li>Hoeveelheid <span>{{ page.product_unit }}</span></li>
-                                        <li>Prijs/Kg <span>€ {{ page.kg_price|number_format(2, ',', '.') }}</span></li>
-                                        <li>BTW	<span>{{ page.vat }} %</span></li>
-                                        <li>Prijs <span>€ {{ page.product_price|number_format(2, ',', '.') }}</span></li>
+                                    <ul class="details-list">
+                                        <li>Bewaren <span>{{ page.product_type }}</span></li>
+                                        <li>Soort <span>{{ page.product_unit }}</span></li>
+                                        <li>Hoeveelheid <span>{{ page.product_details }}</span></li>
+                                        <li>Prijs/Kg <span>€ {{ page.product_kg_price|number_format(2, ',', '.') }}</span></li>
+                                        <li>BTW	<span>{{ page.product_vat }} %</span></li>
                                     </ul>
                                 </div>
                             </div>
