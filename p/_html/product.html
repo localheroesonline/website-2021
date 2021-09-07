@@ -42,11 +42,7 @@
                <div class="product-details">
                     <div class="product-info">
                         <h3>{{ page.product_name }}</h3>
-                        {% if (page.product_details == '1 stuk') or (page.product_details == 'per stuk') %}
                         <p class="price-n-stock">per stuk | 
-                        {% else %}
-                        <p class="price-n-stock">{{ page.product_details }} | 
-                        {% endif %}
 
                         {% if page.product_stock_status=='Out_stock' %}
                         <span class="status out-stock disabled">Niet op voorraad</span>
@@ -118,11 +114,7 @@
                                 <div class="product-card-content">
                                     <h4>{{ item.product_name }}</h4>
                                     <div class="stuk-price">
-                                        {% if (item.product_details == '1 stuk') or (item.product_details == 'per stuk') %}
-                                        <span class="stuk">per stuk</span>
-                                        {% else %}
                                         <span class="stuk">{{ item.product_details }}</span>
-                                        {% endif %}
                                         <span class="price">€ {{ item.product_price|number_format(2, ',', '.') }}</span>
                                     </div>
                                 </div>
@@ -142,11 +134,7 @@
                                 </div>
                                 <div class="product-content">
                                     <h4>{{ item.product_name }}</h4>
-                                    {% if (item.product_details == '1 stuk') or (item.product_details == 'per stuk') %}
-                                    <p class="stuk">per stuk</p>
-                                    {% else %}
                                     <p class="stuk">{{ item.product_details }}</p>
-                                    {% endif %}
                                     {% if item.product_stock_status == "Out_stock" %}
                                     <span class="status out-stock disabled">Niet op voorraad</span>
                                     {% endif %}

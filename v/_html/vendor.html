@@ -81,16 +81,12 @@
                                             </div>
                                         </div>
                                         <div class="product-card-img">
-                                            <img src="{{ site.cloudimg }}_prod_/product/{{ item.product_image }}?width=150" alt="{{ item.product_name }}">
+                                            <img src="{{ site.cloudimg }}_prod_/product/{{ item.product_image }}?height=120" alt="{{ item.product_name }}">
                                         </div>
                                         <div class="product-card-content">
                                             <h4>{{ item.product_name }}</h4>
                                             <div class="stuk-price">
-                                                {% if (item.product_details == '1 stuk') or (item.product_details == 'per stuk') %}
-                                                <span class="stuk">per stuk</span>
-                                                {% else %}
-                                                <span class="stuk">per {{ item.product_details }}</span>
-                                                {% endif %}
+                                                <span class="stuk">{{ item.product_details }}</span>
                                                 <span class="price">€ {{ item.product_price|number_format(2, ',', '.') }}</span>
                                             </div>
                                         </div>
@@ -166,11 +162,7 @@
                                             <span class="status out-stock disabled full-wd">Niet op voorraad</span>
                                             {% else %}
                                             <div class="stuk-price">
-                                                {% if (item.product_details == '1 stuk') or (item.product_details == 'per stuk') %}
-                                                <span class="stuk">per stuk</span>
-                                                {% else %}
-                                                <span class="stuk">per {{ item.product_details }}</span>
-                                                {% endif %}
+                                                <span class="stuk">{{ item.product_details }}</span>
                                                 <span class="price">€ {{ item.product_price|number_format(2, ',', '.') }}</span>
                                             </div>
                                             {% endif %}
@@ -191,13 +183,7 @@
                                         </div>
                                         <div class="product-content">
                                             <h4>{{ item.product_name }}</h4>
-
-                                            {% if (item.product_details == '1 stuk') or (item.product_details == 'per stuk') %}
-                                            <p class="stuk">per stuk</p>
-                                            {% else %}
-                                            <p class="stuk">per {{ item.product_details }}</p>
-                                            {% endif %}
-
+                                            <p class="stuk">{{ item.product_details }}</p>
                                             {% if item.product_stock_status == "Out_stock" %}
                                             <span class="status out-stock disabled">Niet op voorraad</span>
                                             {% endif %}
