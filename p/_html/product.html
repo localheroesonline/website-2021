@@ -30,7 +30,7 @@
                                     <li>Bewaren <span>{{ page.product_type }}</span></li>
                                     <li>Type <span>{{ page.product_unit }}</span></li>
                                     <li>Hoeveelheid <span>{{ page.product_details }}</span></li>
-                                    <li>Prijs/Kg <span>€ {{ page.product_kg_price|number_format(2, ',', '.') }}</span></li>
+                                    <li>Prijs/Kg <span>€ {{ page.product_kg_price| precision: 2 }}</span></li>
                                     <li>BTW	<span>{{ page.product_vat }} %</span></li>
                                 </ul>
                             </div>
@@ -49,7 +49,7 @@
                         {% else %}
                         <span class="status in-stock">Op voorraad</span>
                         {% endif %}
-                        <span class="price">€ {{ page.product_price|number_format(2, ',', '.') }}</span></p>
+                        <span class="price">€ {{ page.product_price| precision: 2 }}</span></p>
                     </div>
                     <div class="product-info-mobile">
                         <div class="name-stock">
@@ -61,7 +61,7 @@
                             {% endif %}
                         </div>
                         <div class="price-stuk">
-                            <h2>€ {{ page.product_price|number_format(2, ',', '.') }}</h2>
+                            <h2>€ {{ page.product_price| precision: 2 }}</h2>
                             <span class="ft-sm">{{ page.product_details }}</span>
                         </div>    
                     </div>
@@ -79,7 +79,7 @@
                                         <li>Bewaren <span>{{ page.product_type }}</span></li>
                                         <li>Type <span>{{ page.product_unit }}</span></li>
                                         <li>Hoeveelheid <span>{{ page.product_details }}</span></li>
-                                        <li>Prijs/Kg <span>€ {{ page.product_kg_price|number_format(2, ',', '.') }}</span></li>
+                                        <li>Prijs/Kg <span>€ {{ page.product_kg_price| precision: 2 }}</span></li>
                                         <li>BTW	<span>{{ page.product_vat }} %</span></li>
                                     </ul>
                                 </div>
@@ -111,7 +111,7 @@
                                     <h4>{{ item.product_name }}</h4>
                                     <div class="stuk-price">
                                         <span class="stuk">{{ item.product_details }}</span>
-                                        <span class="price">€ {{ item.product_price|number_format(2, ',', '.') }}</span>
+                                        <span class="price">€ {{ item.product_price| precision: 2 }}</span>
                                     </div>
                                 </div>
                             </div>
@@ -136,7 +136,7 @@
                                     {% endif %}
                                 </div>
                                 <div class="price-rating">
-                                    <span class="price">€ {{ item.product_price|number_format(2, ',', '.') }}</span>
+                                    <span class="price">€ {{ item.product_price| precision: 2 }}</span>
                                     <div class="rating">
                                         <span class="icon icon-sm"><i class="fa fa-thumbs-up"></i></span> {{ item.rating }}
                                     </div>

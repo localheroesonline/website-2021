@@ -87,7 +87,7 @@
                                             <h4>{{ item.product_name }}</h4>
                                             <div class="stuk-price">
                                                 <span class="stuk">{{ item.product_details }}</span>
-                                                <span class="price">€ {{ item.product_price|number_format(2, ',', '.') }}</span>
+                                                <span class="price">€ {{ item.product_price| precision: 2 }}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -163,7 +163,7 @@
                                             {% else %}
                                             <div class="stuk-price">
                                                 <span class="stuk">{{ item.product_details }}</span>
-                                                <span class="price">€ {{ item.product_price|number_format(2, ',', '.') }}</span>
+                                                <span class="price">€ {{ item.product_price| precision: 2 }}</span>
                                             </div>
                                             {% endif %}
                                         </div>
@@ -189,7 +189,7 @@
                                             {% endif %}
                                         </div>
                                         <div class="price-rating">
-                                            <span class="price">€ {{ item.product_price|number_format(2, ',', '.') }}</span>
+                                            <span class="price">€ {{ item.product_price| precision: 2 }}</span>
                                             <div class="rating">
                                                 <span class="icon icon-sm"><i class="fa fa-thumbs-up"></i></span> {{ item.rating }}
                                             </div>
