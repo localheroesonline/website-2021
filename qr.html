@@ -127,7 +127,7 @@ sitemap: false
                 "utm_medium": utm_medium,
                 "utm_campaign": utm_campaign,     
             });
-            window.location.href = "{{site.url}}/heroes/" + utm_source + "?utm_source=" + utm_source + "&utm_medium=" + utm_medium + "&utm_campaign=" + utm_campaign;
+            window.location.href = "{{site.url}}/v/" + utm_source + "?utm_source=" + utm_source + "&utm_medium=" + utm_medium + "&utm_campaign=" + utm_campaign;
         } else {
             mixpanel.track("Goto Local Heroes Home", {
                 "Campaign": page,
@@ -136,7 +136,7 @@ sitemap: false
                 "utm_medium": utm_medium,
                 "utm_campaign": utm_campaign,              
             });
-            window.location.href = "{{site.url}}/heroes/" + utm_source + "?utm_source=" + utm_source + "&utm_medium=" + utm_medium + "&utm_campaign=" + utm_campaign;
+            window.location.href = "{{site.url}}/v/" + utm_source + "?utm_source=" + utm_source + "&utm_medium=" + utm_medium + "&utm_campaign=" + utm_campaign;
         }
     }
     </script>
