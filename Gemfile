@@ -16,7 +16,6 @@ gem "minima", "~> 2.5"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-paginate"
-  gem "jekyll-datapage-generator"
   gem 'jekyll-sitemap'
   gem 'jekyll-feed'
   gem 'jekyll-seo-tag'
