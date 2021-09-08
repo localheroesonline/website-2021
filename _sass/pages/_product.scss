@@ -1,0 +1,176 @@
+// PRODUCT IMAGE
+.product-image-box {
+  position: relative;
+  background-color: $light-color;
+  padding: 1rem;
+  box-shadow: 0 4px 15px rgba($dark-color, 0.1);
+  .product-img {
+    max-width: 400px;
+    margin: 1rem auto;
+    img {
+      vertical-align: middle;
+      height: 300px;
+      object-fit: contain;
+    }
+  }
+  @include mobile {
+    margin: 0rem 1rem 2rem;
+
+    .product-img {
+      img {
+        height: 250px;
+      }
+    }
+  }
+  @include laptop {
+    margin-bottom: 2rem;
+    .product-img {
+      img {
+        height: 200px;
+      }
+    }
+  }
+}
+
+// PRODUCT DETAILS WAPPER
+.product-details-wapper {
+  @include mobile {
+    padding-left: 0;
+    padding-right: 0;
+
+    .place-order,
+    .pp-title,
+    .accordion-details,
+    .product-description,
+    .product-info-mobile {
+      padding: 0 2rem;
+    }
+  }
+}
+
+// PRODUCT DETAILS
+.product-details {
+  padding-left: 2rem;
+  h3 {
+    margin: 1rem 0;
+  }
+  .price-n-stock {
+    font-size: font-size(sm);
+    color: $text-color;
+    .price {
+      font-size: font-size(lg);
+      font-weight: font-weight(black);
+      margin-left: 1rem;
+    }
+  }
+
+  .product-info-mobile {
+    display: flex;
+    justify-content: space-between;
+    display: none;
+    .name-stock {
+      width: 60%;
+      h3 {
+        font-size: font-size(lg);
+        margin-top: 0;
+        margin-bottom: 0.8rem;
+        line-height: 30px;
+        font-weight: font-weight(black);
+      }
+    }
+    .price-stuk {
+      padding-top: 0.4rem;
+      width: 40%;
+      text-align: right;
+      h2 {
+        font-size: font-size(lg);
+        color: $text-color;
+        font-weight: font-weight(bold);
+        margin-bottom: 0.2rem;
+      }
+    }
+  }
+
+  .product-description {
+    margin-top: 1.4rem;
+  }
+  .place-order {
+    display: flex;
+    margin: 2rem 0 2rem;
+    align-items: center;
+    .place-order-btn {
+      padding: 0 3rem;
+    }
+    p {
+      padding-left: 1rem;
+    }
+    @include tablet {
+      flex-direction: column;
+      margin: 1.3rem 0;
+      margin-bottom: 4rem;
+      .place-order-btn {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+  @include tablet {
+    padding-left: 0;
+    .product-info {
+      display: none;
+    }
+    .product-info-mobile {
+      display: flex;
+    }
+  }
+}
+
+// POPULAR PRODUCT
+.popular-products {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  .product-item {
+    flex: 0 1 25%;
+    @include laptop {
+      flex: 1 1 48%;
+    }
+  }
+  @include laptop {
+    flex-wrap: wrap;
+  }
+}
+
+// PRODUCT LIST
+.popular-product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 1rem;
+  @include tablet {
+    &.hidden-xs {
+      display: none;
+    }
+  }
+}
+
+// PRODUCT LIST ON MOBILE
+.product-list-mobile {
+  display: none;
+  &-item {
+    border-bottom: 1px solid rgba($dark-color, 0.1);
+  }
+  @include tablet {
+    display: block;
+  }
+}
+
+// MOCKUP IMAGE
+.mockup-image {
+  @include set-box-size(400px, auto);
+  width: 100%;
+  margin: 0 auto;
+  img {
+    @include set-image-size(400px, auto);
+  }
+}

@@ -1,0 +1,286 @@
+/** @format */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: font-size(sm);
+  line-height: 1.8;
+  font-weight: font-weight(regular);
+  letter-spacing: 1px;
+  height: 100%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  &.overlay {
+    overflow: hidden;
+  }
+}
+
+a {
+  text-decoration: none;
+  font-size: font-size(xs);
+  color: $links-color;
+  font-weight: font-weight(bold);
+  &:hover {
+    color: darken($links-color, 10%);
+    text-decoration: none;
+  }
+  &.active {
+    font-weight: font-weight(medium);
+    color: $primary-color;
+  }
+  &.link-light {
+    color: $base-color;
+  }
+  &.link-primary {
+    color: $primary-color;
+    &:hover,
+    &.active {
+      color: darken($primary-color, 10%);
+    }
+  }
+  &.link-secondary {
+    color: $links-color;
+    &:hover,
+    &.active {
+      color: darken($links-color, 10%);
+    }
+  }
+}
+
+ul {
+  list-style: none;
+  &.type {
+    margin-left: 1rem;
+    &.disc {
+      list-style-type: disc;
+    }
+  }
+  li {
+    font-size: font-size(xs);
+  }
+}
+
+img {
+  width: 100%;
+  &-round {
+    border-radius: 50%;
+  }
+}
+
+// LOGO
+.logo {
+  max-width: 300px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  a {
+    font-weight: 800;
+    font-size: 1rem;
+    color: $danger-color;
+    span {
+      background-color: $danger-color;
+      color: $light-color;
+      padding: 0.4rem 1rem;
+      border-radius: 5px;
+    }
+  }
+}
+
+.list-group {
+  .list-group-item {
+    border: 0;
+    border-bottom: 1px solid rgba($dark-color, 0.1);
+
+    &:last-child {
+      border: 0;
+    }
+  }
+}
+
+// BACKGROUND IMAGE
+.bg-img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.postion-fixed {
+  position: fixed;
+  &.top {
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+  &.left {
+    left: 0;
+    top: 0;
+    bottom: 0;
+  }
+  &.left {
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+  &.top-left {
+    top: 0;
+    left: 0;
+  }
+  &.top-right {
+    top: 0;
+    right: 0;
+  }
+  &.bottom-left {
+    bottom: 0;
+    left: 0;
+  }
+  &.bottom-right {
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.flex-wrap {
+  display: flex;
+  &.flex-start {
+    justify-content: start;
+  }
+  &.flex-end {
+    justify-content: end;
+  }
+  &.flex-center {
+    justify-content: center;
+  }
+}
+
+.animate {
+  &.bounce {
+    animation: bounce 1s infinite alternate;
+  }
+}
+
+// FONT CASES
+.ft-capitalize {
+  text-transform: font-case(capital);
+}
+.ft-uppercase {
+  text-transform: font-case(upper);
+}
+.ft-lower {
+  text-transform: font-case(lower);
+}
+
+// FONT SIZE
+.ft-xxs {
+  font-size: font-size(xxs);
+}
+.ft-xs {
+  font-size: font-size(xs);
+}
+.ft-sm {
+  font-size: font-size(sm);
+}
+.ft-md {
+  font-size: font-size(md);
+}
+.ft-lg {
+  font-size: font-size(lg);
+}
+.ft-xl {
+  font-size: font-size(xl);
+}
+.ft-xxl {
+  font-size: font-size(xxl);
+}
+
+// FONT WEIGHT
+.fw-light {
+  font-weight: font-weight(light);
+}
+.fw-regular {
+  font-weight: font-weight(regular);
+}
+.fw-medium {
+  font-weight: font-weight(medium);
+}
+.fw-bold {
+  font-weight: font-weight(bold);
+}
+.fw-black {
+  font-weight: font-weight(black);
+}
+
+// BACKGORUNDS COLOR
+.skin {
+  &-primary {
+    @include set-background($primary-color);
+  }
+  &-secondary {
+    @include set-background($secondary-color);
+  }
+  &-light {
+    @include set-background($light-color);
+  }
+  &-dark {
+    @include set-background($dark-color);
+  }
+  &-base {
+    @include set-background($base-color);
+  }
+  &-success {
+    @include set-background($success-color);
+  }
+  &-danger {
+    @include set-background($danger-color);
+  }
+}
+
+// FONTS COLOR
+.ft-base {
+  color: $base-color !important;
+}
+.ft-primary {
+  color: $primary-color !important;
+}
+.ft-secondary {
+  color: $secondary-color !important;
+}
+.ft-tertiary {
+  color: $tertiary-color !important;
+}
+.ft-warning {
+  color: $warning-color !important;
+}
+.ft-info {
+  color: $info-color !important;
+}
+.ft-danger {
+  color: $danger-color !important;
+}
+.ft-success {
+  color: $success-color !important;
+}
+.ft-dark {
+  color: $dark-color !important;
+}
+.ft-light {
+  color: $light-color !important;
+}
+
+// TEXT TRUNCATE
+.ft-truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// HR
+hr {
+  margin: 1rem 0;
+  &.primary {
+    border-color: $primary-color;
+  }
+  &.base {
+    border-color: $base-color;
+  }
+}

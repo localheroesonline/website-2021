@@ -1,0 +1,32 @@
+/** @format */
+.table,
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border-spacing: 0;
+  background-color: transparent;
+  th,
+  td {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    color: $dark-color;
+    vertical-align: middle;
+    background-color: transparent;
+  }
+
+  thead {
+    th {
+      font-weight: 600;
+      color: $dark-color;
+      border: 0;
+      border-bottom: 1px solid rgba($dark-color, 0.1);
+    }
+  }
+  tbody {
+    tr {
+      &:hover {
+        background-color: $base-color;
+      }
+    }
+  }
+}

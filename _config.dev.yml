@@ -15,3 +15,7 @@ environment: development
 # tracking events
 google_analytics: NOWHERE
 mixpanel-project-token: 624a5eaf9d84caf4c6c5af9a45a08a4a # development
+
+sass:
+    sass_dir: _sass
+    style: uncompressed

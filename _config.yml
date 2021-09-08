@@ -21,6 +21,7 @@ title: Local Heroes
 encoding: utf-8
 timezone: Europe/Amsterdam
 locale: nl_NL
+lang: nl
 # This is the place to set up the contact form recipient
 email: info@localheroesonline.com
 description: >- # this means to ignore newlines until "baseurl:"
@@ -77,30 +78,15 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
-  - jekyll-datapage-generator
   - jekyll-sitemap
   - jekyll-seo-tag
 incremental: true
+sass:
+    sass_dir: _sass
+    style: compressed
 
 paginate: 5
 paginate_path: "/blog/page/:num"
-
-page_gen:
-  - data: 'vendors'
-    template: 'vendor'
-    dir: 'heroes'
-    name_expr: record['vendor_url']
-    title_expr: record['vendor_shop_name']
-    extension: 'html'
-    debug: false
-
-  - data: 'products'
-    template: 'product'
-    dir: 'producten'
-    name_expr: record['vendor_url'] + "_" + record['product_url']
-    title_expr: record['product_name'] + " van " + record['vendor_shop_name']
-    extension: 'html'
-    debug: false
 
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -1,0 +1,118 @@
+// Icons
+.icon {
+  height: 25px;
+  width: 25px;
+  color: rgba($dark-color, 0.3);
+  border-radius: 4px;
+  text-align: center;
+  display: inline-block;
+  border: 1px solid transparent;
+  i {
+    line-height: 25px;
+  }
+  .round {
+    border-radius: 50%;
+  }
+  &.icon-xs {
+    width: 15px;
+    height: 15px;
+    i {
+      line-height: 15px;
+    }
+  }
+  &.icon-sm {
+    width: 25px;
+    height: 25px;
+    i {
+      line-height: 25px;
+    }
+  }
+  &.icon-md {
+    width: 35px;
+    height: 35px;
+    i {
+      line-height: 35px;
+    }
+  }
+  &.icon-lg {
+    width: 35px;
+    height: 35px;
+    font-size: font-size(lg);
+    i {
+      line-height: 35px;
+    }
+  }
+  &.icon-base {
+    @include set-background($base-color);
+    &.invert {
+      background-color: transparent;
+      color: darken($base-color, 10%);
+      border-color: darken($base-color, 5%);
+    }
+  }
+  &.icon-primary {
+    @include set-background($primary-color);
+    color: $light-color;
+    &.invert {
+      background-color: transparent;
+      color: $primary-color;
+      border-color: $primary-color;
+    }
+  }
+  &.icon-secondary {
+    @include set-background($secondary-color);
+    &.invert {
+      background-color: transparent;
+      color: $secondary-color;
+      border-color: $secondary-color;
+    }
+  }
+  &.icon-info {
+    @include set-background($info-color);
+    &.invert {
+      background-color: transparent;
+      color: $info-color;
+      border-color: $info-color;
+    }
+  }
+  &.icon-success {
+    @include set-background($success-color);
+    &.invert {
+      background-color: transparent;
+      color: $success-color;
+      border-color: $success-color;
+    }
+  }
+  &.icon-warning {
+    @include set-background($warning-color);
+    &.invert {
+      background-color: transparent;
+      color: $warning-color;
+      border-color: $warning-color;
+    }
+  }
+  &.icon-danger {
+    @include set-background($danger-color);
+    &.invert {
+      background-color: transparent;
+      color: $danger-color;
+      border-color: $danger-color;
+    }
+  }
+  &.icon-light {
+    @include set-background($light-color);
+    &.invert {
+      background-color: transparent;
+      color: darken($base-color, 10%);
+      border-color: darken($base-color, 5%);
+    }
+  }
+  &.icon-dark {
+    @include set-background($dark-color);
+    &.invert {
+      background-color: transparent;
+      color: $dark-color;
+      border-color: $dark-color;
+    }
+  }
+}

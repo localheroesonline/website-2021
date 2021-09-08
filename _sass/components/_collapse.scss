@@ -1,0 +1,105 @@
+// ACCORDION
+.accordion {
+  .card {
+    border-radius: 0;
+    border: 0;
+    border-top: 1px solid rgba($dark-color, 0.1);
+    border-bottom: 1px solid rgba($dark-color, 0.1);
+    &:first-child {
+      border-top: 0;
+    }
+    .card-header {
+      border-bottom: 0;
+      background-color: transparent;
+      padding: 0;
+      a {
+        position: relative;
+        display: block;
+        padding: 1rem 0;
+        font-size: font-size(sm);
+        color: $primary-color;
+        font-weight: font-weight(bold);
+        &::before {
+          font-family: "Font Awesome 5 Free";
+          content: "\f077";
+          font-weight: font-weight(black);
+          font-size: font-size(xs);
+          right: 10px;
+          top: 15px;
+          position: absolute;
+        }
+        &.collapsed {
+          &::before {
+            font-family: "Font Awesome 5 Free";
+            content: "\f078";
+            font-weight: font-weight(black);
+            font-size: font-size(xs);
+            position: absolute;
+            right: 10px;
+            top: 15px;
+          }
+        }
+      }
+    }
+    .card-body {
+      padding: 0 0 1rem 0;
+      font-size: font-size(xs);
+    }
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}
+// TAB
+.nav {
+  &.nav-pills {
+    .nav-link {
+      color: $primary-color;
+      border-radius: 10px;
+      padding: 0.3rem 1rem;
+      &.active {
+        background-color: $primary-color;
+        color: $light-color;
+      }
+    }
+  }
+}
+
+.accordion-details {
+  margin-top: 1rem;
+  .card {
+    border-radius: 10px;
+    background-color: rgba($light-color, 0.6);
+    padding: 0;
+    .card-header {
+      a {
+        padding: 0.5rem 1rem;
+        font-size: font-size(sm);
+        font-weight: font-weight(medium);
+        color: $text-color;
+        &::before {
+          top: 8px !important;
+        }
+      }
+    }
+    .card-body {
+      padding-bottom: 0;
+    }
+  }
+
+  .details-list {
+    li {
+      border-bottom: 1px solid rgba($dark-color, 0.1);
+      padding: 0.4rem 1rem;
+      font-size: font-size(sm);
+      font-weight: font-weight(medium);
+      color: $text-color;
+      &:last-child {
+        border: 0;
+      }
+      span {
+        float: right;
+      }
+    }
+  }
+}

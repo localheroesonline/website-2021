@@ -1,0 +1,41 @@
+// CATEGORIE, SEARCH & PAGINATION 
+.browse-controls {
+  display: none;
+}
+
+// PAGINATION
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  .page-item {
+    align-items: center;
+    .page-link {
+      background-color: transparent;
+      border: 0;
+      color: $text-color;
+      padding: 0 0.4rem;
+      font-size: font-size(md);
+      font-weight: font-weight(light);
+      &.active {
+        color: $primary-color;
+        font-weight: font-weight(bold);
+      }
+      &.icon-btn {
+        background-color: $light-color;
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        color: $primary-color;
+        line-height: 25px;
+        border-radius: 50%;
+        &.next-btn {
+        }
+      }
+    }
+  }
+  @include mobile {
+    justify-content: center;
+    padding-top: 1rem;
+  }
+}
