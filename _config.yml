@@ -80,6 +80,7 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-redirect-from
 incremental: true
 sass:
     sass_dir: _sass
