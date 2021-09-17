@@ -1,27 +1,30 @@
 var base_ur = "http://127.0.0.1:4000/";
 
-// APP STORE BUTTON FIXED
-$(window).scroll(function() {    
-    var scroll = $(window).scrollTop();
-    if (scroll >= $('#app-store-btn').offset().top) {
-        $(".app-download-btn ").addClass("show-btn");
+// ON SCROLL FIXED PRODUCT TAB ON MOBILE
+$(window).scroll(function() { 
 
-    } else {
-        $(".app-download-btn").removeClass("show-btn");
-    }
+  if($(window).scrollTop() > 0){
+      $(".page-header ").addClass("on-scroll-el");
+  }
+  else{
+    $(".page-header ").removeClass("on-scroll-el");
+  }  
+
+  if($(window).scrollTop() >= ($('#app-store-btn').offset().top-20)){
+    $(".app-download-btn ").addClass("show-btn");
+  }
+  else{
+    $(".app-download-btn").removeClass("show-btn");
+  }
 });
 
 
-// REMOVE FIXED BUTTON ONCE REACH SCROLL TO BOTTOM
-$(window).scroll(function() {    
-    var scroll = $(window).scrollTop();
-    if (scroll >= $('#re-block').offset().top) {
-       $(".app-store").removeClass("app-store-btn-fixed-top");
-        
-    } else {
-      
-    }
-});
+$('#bek-product').click(function(){
+      $('#v-pills-products').toggleClass('active show');
+      $('#v-pills-products-tab').toggleClass('active');
+      $('#v-pills-about').toggleClass('active show');
+      $('#v-pills-about-tab').toggleClass('active');
+  });
 
 
 // TOOL TIP
