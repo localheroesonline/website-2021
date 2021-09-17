@@ -226,7 +226,7 @@
                                             <td colspan="2">
                                                 <ul class="shop-timing">
                                                     {% for openinghours in site.data.openinghours-vendors %}
-                                                    {% if openinghours.vendor_url == page.vendor_url %}
+                                                    {% if openinghours.vendor_id == page.vendor_id %}
                                                     <li>{{ openinghours.day_type }} <span>{{ openinghours.start_time }} - {{ openinghours.end_time }}</span></li>
                                                     {% endif %}
                                                     {% endfor %}
