@@ -72,7 +72,7 @@
                             </div>
                             <div class="content product-list">
                                 {% for item in site.data.hero-products %}
-                                {% if item.vendor_shop_name == page.vendor_shop_name %}
+                                {% if item.vendor_id == page.vendor_id %}
                                 <a href="{{ site.url }}/p/{{ item.product_id }}/{{ item.vendor_url }}/{{ item.product_url }}" class="">
                                     <div class="product-card product-list-item">
                                         <div class="rating-vote d-none d-sm-block">
@@ -145,7 +145,7 @@
                             <!-- PRODUCTS for Desktop -->
                             <div class="content product-list hidden-xs">
                                 {% for item in site.data.products %}
-                                {% if item.vendor_shop_name == page.vendor_shop_name %}
+                                {% if item.vendor_id == page.vendor_id %}
                                 <a href="{{ site.url }}/p/{{ item.product_id }}/{{ item.vendor_url }}/{{ item.product_url }}" class="">
                                     <div class="product-card product-list-item">
                                         <div class="rating-vote">
@@ -175,7 +175,7 @@
                             <!-- PRODUCTS for Mobile -->
                             <div class="content product-list-mobile">
                                 {% for item in site.data.products %}
-                                {% if item.vendor_shop_name == page.vendor_shop_name %}
+                                {% if item.vendor_id == page.vendor_id %}
                                 <a href="{{ site.url }}/p/{{ item.product_id }}/{{ item.vendor_url }}/{{ item.product_url }}" class="">
                                     <div class="product-list-mobile-item product-card-mobile">
                                         <div class="product-img">
