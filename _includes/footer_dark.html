@@ -1,0 +1,36 @@
+<!-- FOOTER DARK -->
+<footer class="section-wrap app-footer app-footer-dark" id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="footer-links">
+                    <a href="/terms-conditions">Algemene voorwaarden</a><br>
+                    <a href="/disclaimer-web">Disclaimer Site</a><br>
+                    <a href="/privacyverklaring">Privacyverklaring</a><br>
+                </div>
+            </div>
+            <div class="col-md-3 order-md-3 d-none d-sm-block align-self-center">
+                <div class="europese-unie-logo">
+                    <img src="./assets/europese.png" class="img-fluid" alt="">
+                </div>
+            </div>
+            <div class="col-md-6  order-md-2 align-self-center">
+                <div class="social-icons">
+                    <a href="{{site.business_whatsapp_url}}" data-toggle="tooltip" data-placement="top" title="We reageren van ma t/m za tussen 09:00 - 21:00" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:{{site.email}}" data-toggle="tooltip" data-placement="top" title="We reageren van ma t/m za tussen 09:00 - 21:00"  class="email"><i class="fa fa-envelope"></i></a>
+                    <a href="{{site.facebook_url}}" class="facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="{{site.linkedin_company_url}}" class="linkedin"><i class="fab fa-linkedin"></i></a>
+                    <a href="{{site.instagram_url}}" class="instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="copyright">
+                    <div class="copy">
+                        &copy; {{ site.time | date: '%Y' }} <a href="#" class="fw-bold">Local Heroes</a>
+                    </div>
+                    <div class="europese-unie-logo d-block d-sm-none">
+                        <img src="{{ site.image_url }}/assets/europese.png" class="img-fluid" alt="Europa om de Hoek" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
