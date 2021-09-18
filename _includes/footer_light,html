@@ -18,7 +18,7 @@
                     <a href="{{site.instagram_url}}" target="_blank" rel="noopener noreferrer" class="instagram"><i class="fab fa-instagram"></i></a>
                 </div>
                 <p class="ft-dark text-center">
-                    <span>&copy; {{ site.time | date: '%Y' }} <a href="/" class="ft-primary fw-bold">Local Heroes</a></span></p>
+                    <span>&copy; {{ site.time | date: '%Y' }} <a href="#" class="ft-primary fw-bold">Local Heroes</a></span></p>
             </div>
             <div class="col-md-4 col-lg-4">
                 <a href="https://www.europaomdehoek.nl/" target="_blank" rel="noopener noreferrer">
