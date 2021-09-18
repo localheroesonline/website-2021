@@ -1,0 +1,63 @@
+<!-- MAIN CONTENT -->
+<main class="page page-referral">
+    <section class="ref-section skin-base">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="mockup-image referral-image">
+                        <div class="receive-coupon">
+                            <p> ontvang </p>
+                            <p class="euro">{{ page.referral_amount }}€</p> 
+                            <p>tegoed</p>
+                        </div>
+                        <img src="{{ site.image_url }}/assets/mockup.png?width=530" class="img-fluid" alt="Bestel het beste uit de buurt met de Local Heroes app">
+                    </div>
+                </div>
+                <div class="col-md-5 offset-md-1">
+                    <div class="content referral-content">
+                        <div class="ref-title text-center text-sm-left mt-2"><div id = "promo_code_receiver">Hey daar!</div></div>
+                        <p>Jouw vriend(in) {{ page.referral_owner_name }} support lokale ondernemers door online hun producten te kopen.</p> 
+                        <p>Hij/zij heeft jou <a href="" class="">{{ page.referral_amount }} euro tegoed</a> cadeau gedaan op jouw eerste online bestelling bij onze Local Heroes. 
+                        </p>
+                        <p>Voer de code <a href="" class="">{{ page.referral_promo_code }}</a> tijdens je registratie voor jouw tegoed.</p>
+                        <a href="" class="v-btn v-btn-tertiary app-download-btn" onclick="DetectAndServe('{{page.name}}')">
+                            <i class="fas fa-download"></i> <span>Download nu de app</span></a>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- HOW ITS WORKS -->
+    <section class="ref-section step-section skin-base">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="ref-title text-center">Meer weten?</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="step-item">
+                        <img src="{{ site.image_url }}/assets/step1.png?width=50" class="img-fluid" alt="Stap 1">
+                        <h4>Stap 1</h4>
+                        <p>Download de <span class="fw-black">Local Heroes app</span> in de App Store of Play Store.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="step-item">
+                        <img src="{{ site.image_url }}/assets/step2.png?width=50" class="img-fluid" alt="Stap 2">
+                        <h4>Stap 2</h4>
+                        <p>Voer de code {{ page.referral_promo_code }} in tijdens de registratie. Je ontvangt onmiddellijk {{ page.referral_amount }} euro krediet in de app.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="step-item">
+                        <img src="{{ site.image_url }}/assets/step3.png?width=50" class="img-fluid" alt="Stap 3">
+                        <h4>Stap 3</h4>
+                        <p>Als jij jouw eerste bestelling bij Local Heroes hebt voltooid, maak je {{ page.referral_owner_name }} ook blij. Hij/zij krijgt dan ook <span class="fw-black">{{ page.referral_amount }} euro tegoed</span> op zijn account.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
