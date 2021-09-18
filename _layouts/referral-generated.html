@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "nl" }}">
+
+{% include head_vendor.html %}
+
+{% if site.mixpanel-project-token and site.mixpanel-api-host %}
+<script type="text/javascript">
+    mixpanel.track("Visit Referral Promo Code", {
+        "Referral Promo Code": "{{page.referral_promo_code}}",
+        "Owner Name": "{{page.referral_owner_name}}",
+        "Points": "{{page.referral_points}}",
+    });
+</script>
+{% endif %}
+
+<body onload="fillPromoCodeReceiverName()">
+<body>
+    {% include navbar_product.html %}
+    
+    {{ content }}
+
+    {% include footer_dark.html %}
+</body>
+</html>
