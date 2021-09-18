@@ -18,14 +18,21 @@ $(window).scroll(function() {
   }
 });
 
-
+// REDIRECT TO THE PRODUCT TAG
 $('#bek-product').click(function(){
-      $('#v-pills-products').toggleClass('active show');
-      $('#v-pills-products-tab').toggleClass('active');
-      $('#v-pills-about').toggleClass('active show');
-      $('#v-pills-about-tab').toggleClass('active');
-  });
+    $('#v-pills-products').toggleClass('active show');
+    $('#v-pills-products-tab').toggleClass('active');
+    $('#v-pills-about').toggleClass('active show');
+    $('#v-pills-about-tab').toggleClass('active');
+});
 
+
+// PRODUCT DESCRIPTION SHOW MORE TEXT  
+$(".more").toggle(function(){
+  $(this).text("less..").siblings(".complete").show();    
+}, function(){
+  $(this).text("more..").siblings(".complete").hide();    
+});
 
 // TOOL TIP
 $(function () {
