@@ -13,6 +13,22 @@
   }
 }
 
+
+.description{
+    .complete{
+      @include tablet {
+        display:none;
+      }
+    }
+    .more{
+      display: none;
+      @include tablet{
+        display: inline-block;
+      }
+    }
+}
+
+
 // PAGE HEADER
 .page-header {
   height: 160px;
