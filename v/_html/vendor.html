@@ -75,12 +75,16 @@
                             </div>
                             <div class="content product-list">
                                 {% for item in site.data.hero-products %}
-                                {% if item.vendor_shop_name == page.vendor_shop_name %}
+                                {% if item.vendor_id == page.vendor_id %}
                                 <a href="{{ site.url }}/p/{{ item.product_id }}/{{ item.vendor_url }}/{{ item.product_url }}" class="">
                                     <div class="product-card product-list-item">
                                         <div class="rating-vote d-none d-sm-block">
                                             <div class="rating">
+<<<<<<< HEAD
                                                 <span><img src="../../assets/thumb.png" alt=""></span> {{ item.rating }}
+=======
+                                                <span><i class="fa fa-thumbs-up"></i></span> {{ item.product_rating }}
+>>>>>>> master
                                             </div>
                                         </div>
                                         <div class="product-card-img">
@@ -147,12 +151,16 @@
                             <!-- PRODUCTS for Desktop -->
                             <div class="content product-list hidden-xs">
                                 {% for item in site.data.products %}
-                                {% if item.vendor_shop_name == page.vendor_shop_name %}
+                                {% if item.vendor_id == page.vendor_id %}
                                 <a href="{{ site.url }}/p/{{ item.product_id }}/{{ item.vendor_url }}/{{ item.product_url }}" class="">
                                     <div class="product-card product-list-item">
                                         <div class="rating-vote">
                                             <div class="rating">
+<<<<<<< HEAD
                                                 <span><img src="../../assets/thumb.png" alt=""></span> {{ item.rating }}
+=======
+                                                <span><i class="fa fa-thumbs-up"></i></span> {{ item.product_rating }}
+>>>>>>> master
                                             </div>
                                         </div>
                                         <div class="product-card-img">
@@ -177,7 +185,7 @@
                             <!-- PRODUCTS for Mobile -->
                             <div class="content product-list-mobile">
                                 {% for item in site.data.products %}
-                                {% if item.vendor_shop_name == page.vendor_shop_name %}
+                                {% if item.vendor_id == page.vendor_id %}
                                 <a href="{{ site.url }}/p/{{ item.product_id }}/{{ item.vendor_url }}/{{ item.product_url }}" class="">
                                     <div class="product-list-mobile-item product-card-mobile">
                                         <div class="product-img">
@@ -193,7 +201,7 @@
                                         <div class="price-rating">
                                             <span class="price">€ {{ item.product_price| precision: 2 }}</span>
                                             <div class="rating">
-                                                <span class="icon icon-sm"><i class="fa fa-thumbs-up"></i></span> {{ item.rating }}
+                                                <span class="icon icon-sm"><i class="fa fa-thumbs-up"></i></span> {{ item.product_rating }}
                                             </div>
                                         </div>
                                     </div>
@@ -210,7 +218,7 @@
                                 <table class="table table-contact-us">
                                     <tbody>
                                         <tr>
-                                            <th>Mobile</th>
+                                            <th>Mobiel</th>
                                             <td><a href="https://wa.me/{{ page.vendor_whatsapp }}" class="link-secondary fw-bold"><span class="mr-2"><i class="fab fa-whatsapp"></i></span>{{ page.vendor_whatsapp }}</a></td>
                                         </tr>
                                         <tr>
@@ -228,7 +236,7 @@
                                             <td colspan="2">
                                                 <ul class="shop-timing">
                                                     {% for openinghours in site.data.openinghours-vendors %}
-                                                    {% if openinghours.vendor_url == page.vendor_url %}
+                                                    {% if openinghours.vendor_id == page.vendor_id %}
                                                     <li>{{ openinghours.day_type }} <span>{{ openinghours.start_time }} - {{ openinghours.end_time }}</span></li>
                                                     {% endif %}
                                                     {% endfor %}
