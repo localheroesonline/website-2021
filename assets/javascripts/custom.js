@@ -49,9 +49,7 @@ $(document).ready(function () {
 	});	
 });
 
-function isMobileDevice() {
-    return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
-}
+
 
 // APP NAVBAR
 $(window).scroll(function() {    
@@ -86,7 +84,7 @@ $('.mobile-navbar a').click(function(){
 // SLICK SLIDER
 $('.slick-carousel').slick({
   infinite: true,
-  slidesToShow: 3, // Shows a three slides at a time
+  slidesToShow: 4, // Shows a three slides at a time
   slidesToScroll: 1, // When you click an arrow, it scrolls 1 slide at a time
   arrows: true, // Adds arrows to sides of slider
   dots: false, // Adds the dots on the bottom
@@ -129,6 +127,12 @@ $('.slick-carousel').slick({
         },
       ],
 });
+
+
+function isMobileDevice() {
+    return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+}
+
 
 /* BEGIN Make the back link work in the product nav bar */
 

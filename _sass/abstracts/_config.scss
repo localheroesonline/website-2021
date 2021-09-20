@@ -1,20 +1,32 @@
 /** @format */
 
+// Brand Color
+$brand-primary-color:#035f68;
+$brand-secondary-color:#ffcffa;
+$brand-tertiary-color:#fe4934;
+$brand-links-color:#00de9a;
+
+
+// Theme Color
 $primary-color: #035f68;
 $secondary-color: #ffffff;
 $tertiary-color: #fe4933;
 $links-color: #2ac497;
-$text-color: #525252;
-$bg-color: #f0ede9;
-
 $base-color: #f0ede9;
+
+
+// Others color
 $light-color: #fff;
 $dark-color: #525252;
+
+$text-color: #525252;
+$bg-color: #f0ede9;
 
 $success-color: #009962;
 $warning-color: #f9bb01;
 $info-color: #0c67ff;
 $danger-color: #ec5744;
+
 
 $max-width: 1100px;
 
@@ -24,7 +36,7 @@ $max-width: 1100px;
 // 16px - 1rem        - md
 // 20px - 1.25rem     - lg
 // 32px - 2rem        - xl
-// 35px - 2.18rem        - xxl
+// 35px - 2.18rem     - xxl
 
 // FONT & STYLES WEIGHTS
 $font-weights: (
