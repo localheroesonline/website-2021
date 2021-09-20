@@ -7,10 +7,10 @@
                     <div class="rating-vote d-none d-md-flex justify-content-center">
                         <div class="rating ft-primary">
                             <span><i class="fa fa-thumbs-up"></i></span>
-                            {{ page.rating }}
+                            {{ page.product_rating }}
                         </div>
                         <div class="vote">
-                            {{ page.rating_count }} Stemmen
+                            {{ page.product_rating_count }} Stemmen
                         </div>   
                     </div>
                     <div class="product-img">
@@ -95,13 +95,13 @@
                     <!-- POPULAR PRODUCTS desktop -->
                     <div class="content popular-product-list hidden-xs">
                         {% for item in site.data.hero-products %}
-                        {% if item.vendor_shop_name == page.vendor_shop_name %}
+                        {% if item.vendor_id == page.vendor_id %}
                         <a href="{{ site.url }}/p/{{ item.product_id }}/{{ item.vendor_url }}/{{ item.product_url }}" class="">
                             <div class="product-card-sm product-list-item">
                                 <div class="rating-vote">
                                     <div class="rating small">
                                         <span><i class="fas fa-thumbs-up"></i></span>
-                                        {{ item.rating }}
+                                        {{ item.product_rating }}
                                     </div>
                                 </div>
                                 <div class="product-card-img">
@@ -122,7 +122,7 @@
                     <!-- POPULAR PRODUCTS mobile -->
                     <div class="content product-list-mobile">
                         {% for item in site.data.hero-products %}
-                        {% if item.vendor_shop_name == page.vendor_shop_name %}
+                        {% if item.vendor_id == page.vendor_id %}
                         <a href="{{ site.url }}/p/{{ item.product_id }}/{{ item.vendor_url }}/{{ item.product_url }}" class="">
                             <div class="product-list-mobile-item product-card-mobile">
                                 <div class="product-img">
@@ -138,7 +138,7 @@
                                 <div class="price-rating">
                                     <span class="price">€ {{ item.product_price| precision: 2 }}</span>
                                     <div class="rating">
-                                        <span class="icon icon-sm"><i class="fa fa-thumbs-up"></i></span> {{ item.rating }}
+                                        <span class="icon icon-sm"><i class="fa fa-thumbs-up"></i></span> {{ item.product_rating }}
                                     </div>
                                 </div>
                             </div>
