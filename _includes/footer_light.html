@@ -43,7 +43,13 @@
     });
 </script>
 
-{% for path in site.data.assets.js %} {%- if path contains '://' -%} {%- assign src = path -%} {%- else -%} {%- assign src = path | relative_url -%} {%- endif -%}
+{% for path in site.data.assets.js %}    
 
-<script src="{{ src }}" type="text/javascript"></script>
+  {%- if path contains '://' -%}
+    {%- assign src = path -%}
+  {%- else -%}
+    {%- assign src = path | relative_url -%}
+  {%- endif -%}
+
+  <script src="{{ src }}" type="text/javascript"></script>
 {% endfor %}
