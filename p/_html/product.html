@@ -7,10 +7,10 @@
                     <div class="rating-vote d-none d-md-flex justify-content-center">
                         <div class="rating ft-primary">
                             <span><i class="fa fa-thumbs-up"></i></span>
-                            {{ page.rating }}
+                            {{ page.product_rating }}
                         </div>
                         <div class="vote">
-                            {{ page.rating_count }} Stemmen
+                            {{ page.product_rating_count }} Stemmen
                         </div>   
                     </div>
                     <div class="product-img">
@@ -101,7 +101,7 @@
                                 <div class="rating-vote">
                                     <div class="rating small">
                                         <span><i class="fas fa-thumbs-up"></i></span>
-                                        {{ item.rating }}
+                                        {{ item.product_rating }}
                                     </div>
                                 </div>
                                 <div class="product-card-img">
@@ -138,7 +138,7 @@
                                 <div class="price-rating">
                                     <span class="price">€ {{ item.product_price| precision: 2 }}</span>
                                     <div class="rating">
-                                        <span class="icon icon-sm"><i class="fa fa-thumbs-up"></i></span> {{ item.rating }}
+                                        <span class="icon icon-sm"><i class="fa fa-thumbs-up"></i></span> {{ item.product_rating }}
                                     </div>
                                 </div>
                             </div>
