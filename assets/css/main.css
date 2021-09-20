@@ -1846,22 +1846,48 @@ hr.base {
   color: rgba(255, 255, 255, 0.5);
 }
 
+
 .app-footer {
-  background-color: #f1edea;
+  background-color: #f0ede9;
+  position: relative;
 }
 
 .app-footer .footer-links a {
-  color: #006068;
-  margin-bottom: 0.5rem;
-}
-.app-footer .footer-links a:hover{
-  text-decoration: underline;
+  color: #035f68;
 }
 
-@media (max-width: 767px) {
-  .app-footer.app-footer .footer-links {
+.app-footer .copyright {
+  text-align: center;
+}
+
+
+@media screen and (max-width: 768px) {
+  .app-footer .footer-links {
     text-align: center;
-    margin-bottom: 1.4rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.app-footer .social-icons a {
+  background-color: #035f68;
+  color: #f0ede9;
+}
+
+.app-footer .copyright {
+  color:  #035f68;
+  font-weight: 400;
+}
+
+.app-footer .copyright a {
+  color: #f0ede9;
+  font-size: 0.875rem;
+}
+
+@media screen and (max-width: 768px) {
+  .app-footer .copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -1876,17 +1902,17 @@ hr.base {
   width: 40px;
   height: 40px;
   display: block;
-  font-size: 1rem;
+  font-size: 0.937rem;
   margin-right: 0.5rem;
   border-radius: 50%;
   text-align: center;
-  background-color: #006068;
-  color: #fff;
   line-height: 40px;
+      background-color: #035f68;
+    color: #f0ede9;
 }
 
 .social-icons a:hover {
-  color: #fff !important;
+  color: #f0ede9 !important;
 }
 
 .social-icons a:last-child {
@@ -1910,12 +1936,33 @@ hr.base {
 }
 
 .social-icons a.email:hover {
-  background-color: #ff4934;
+  background-color: #ec5744;
 }
 
 .social-icons a.whatsapp:hover {
   background-color: #36cf4b;
 }
+
+@media (max-width: 768px) {
+  .social-icons {
+    margin: 1rem 0;
+  }
+}
+
+.europese-unie-logo {
+  width: 60px;
+  margin-left: auto;
+  display: inherit;
+}
+
+@media (max-width: 768px) {
+  .europese-unie-logo {
+    width: 50px;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+  }
+}
+
 
 .timing-hours li {
   padding: 0.4rem 0;
