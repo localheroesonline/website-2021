@@ -203,17 +203,3 @@ function DetectAndServe(campaign) {
   $(location).attr('href',url);
   return;
 };
-
-// Function
-function fillPromoCodeReceiverName() {
-  // process params
-  var urlParams = new URLSearchParams(window.location.hash.slice(1));
-
-  // Check if promo_code_receiver exists in the parameters
-  if (urlParams.has('promo_code_receiver')) {
-    var promoCodeReceiverName = 'Hey ';
-    promoCodeReceiverName = promoCodeReceiverName.concat(urlParams.get('promo_code_receiver'));
-    document.getElementById('promo_code_receiver').innerHTML = promoCodeReceiverName;
-  };  
-  
-}

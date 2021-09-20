@@ -13,6 +13,22 @@
 </script>
 {% endif %}
 
+<script type="text/javascript">
+// Function to fill in the promo code receiver name
+function fillPromoCodeReceiverName() {
+  // process params
+  var urlParams = new URLSearchParams(window.location.hash.slice(1));
+  var promoCodeReceiverName = '';
+
+  // Check if promo_code_receiver exists in the parameters
+  if (urlParams.has('promo_code_receiver')) {
+    console.log(promoCodeReceiverName);
+    promoCodeReceiverName = urlParams.get('promo_code_receiver');
+    document.getElementById('promo_code_receiver').innerHTML = promoCodeReceiverName;
+  };
+}
+</script>
+
 <body onload="fillPromoCodeReceiverName()">
 <body>
     {% include navbar_product.html %}
