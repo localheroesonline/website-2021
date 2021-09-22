@@ -13,7 +13,8 @@ This means no tracking is done in Google Analytics.
 Website events are tracked to Mixpanel to a test project for easy experimenting: https://eu.mixpanel.com/report/2293700/view/2840060/live:
 `bundle exec jekyll serve --watch --trace --config _config.yml,_config.dev.yml`
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/04fbc344-670b-4e27-86ac-80701a87a703/deploy-status)](https://app.netlify.com/sites/flamboyant-hamilton-7d94c5/deploys)
+Live: [![Netlify Status](https://api.netlify.com/api/v1/badges/a22cc245-9143-462e-9816-b575fc3d28a2/deploy-status)](https://app.netlify.com/sites/localheroes-website/deploys)
+Staging: [![Netlify Status](https://api.netlify.com/api/v1/badges/bdd1299a-f760-475b-83b2-34da50528ba9/deploy-status)](https://app.netlify.com/sites/hardcore-gates-3bc8f0/deploys)
 
 ## Plugins used + documentation:
 jekyll-sitemap: https://github.com/jekyll/jekyll-sitemap

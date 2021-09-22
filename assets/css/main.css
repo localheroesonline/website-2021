@@ -1624,6 +1624,7 @@ hr.base {
 .slick-carousel {
   margin: 0 auto;
   max-width: 1200px;
+  z-index: 2;
 }
 
 @media (max-width: 576px) {
@@ -1646,22 +1647,37 @@ hr.base {
 /* Color of the arrows */
 .slick-next::before,
 .slick-prev::before {
-  color: #006068;
+  color: #fdfdfd;
 }
 
 .section-our-heroes {
   position: relative;
   background-color: #f1edea;
+  z-index: 0;
+  min-height: 640px;
 }
 
 .section-our-heroes::before {
-  position: absolute;
-  content: "";
-  background-color: #006068;
-  left: 0;
-  right: 0;
-  height: 210px;
-  top: 394px;
+   position: absolute;
+    content: "";
+    background-color: #006068;
+    left: 0;
+    right: 0;
+    height: 420px;
+    bottom: 0;
+    clip-path: polygon(0 30%, 100% 0, 100% 100%, 0% 100%);
+    z-index: 1;
+}
+.section-our-heroes::after {
+    position: absolute;
+    content: "";
+    background-color: #00dc9b;
+    left: 0;
+    right: 0;
+    height: 420px;
+    bottom: 40px;
+    clip-path: polygon(0 35%, 100% 0%, 100% 100%, 0% 100%);
+    z-index: 0;
 }
 
 .section-our-heroes .heroes-wapper .slide-item .hero-img {
@@ -1685,8 +1701,18 @@ hr.base {
 }
 
 @media (max-width: 576px) {
+  .section-our-heroes {
+    min-height: 520px;
+  }
   .section-our-heroes.section-our-heroes::before {
-    top: 370px;
+        height: 270px;
+    bottom: 30px;
+    clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
+  }
+  .section-our-heroes.section-our-heroes::after {
+           height: 300px;
+    bottom: 40px;
+    clip-path: polygon(0 30%, 100% 0%, 100% 100%, 0% 100%);
   }
 }
 
