@@ -112,7 +112,7 @@ title: Bestel het beste uit de buurt
                     <h2 class="main-heading ft-base">Check of we ook al bij jou actief zijn</h2>
                     <div class="row">
                         <div class="col-md-4 offset-md-3">
-                            
+
                         </div>
                     </div>
                     <div class="row">
@@ -172,9 +172,15 @@ title: Bestel het beste uit de buurt
                                 "Lead Zipcode": document.getElementById("lead_zipcode").value,
                             });
                             mixpanel.identify(document.getElementById("lead_email").value);
-                            mixpanel.people.set({"First Name": document.getElementById("lead_first_name").value});
-                            mixpanel.people.set({"Zipcode": document.getElementById("lead_zipcode").value});
-                            mixpanel.people.set({"Role": "Consumer"});
+                            mixpanel.people.set({
+                                "First Name": document.getElementById("lead_first_name").value
+                            });
+                            mixpanel.people.set({
+                                "Zipcode": document.getElementById("lead_zipcode").value
+                            });
+                            mixpanel.people.set({
+                                "Role": "Consumer"
+                            });
                         </script>
                     </div>
                 </div>
@@ -296,13 +302,15 @@ title: Bestel het beste uit de buurt
                         <a href="#" class=""><i class="fa fa-star"></i></a>
                         <a href="#" class=""><i class="fa fa-star"></i></a>
                     </div>
-                    <p>Great stores and products for a good price! It's so convenient that delivery or pick up is the same day, just a few hours after making the order. The staff is super friendly and quick in responses. Especially in corona times this is amazing to avoid the crowds at the market and still support the locals. Will always recommend to everyone in the area!</p>
+                    <p>Great stores and products for a good price! It's so convenient that delivery or pick up is the same day, just a few hours after making the order. The staff is super friendly and quick in responses. Especially in corona times this is
+                        amazing to avoid the crowds at the market and still support the locals. Will always recommend to everyone in the area!</p>
                     <div class="sub-title">- Lea Friebe</div>
                 </div>
             </div>
             <div class="col-md-12" id="review_links">
                 <h4 class="ft-light text-center ft-sm fw-bold">Meer reviews op <a class="ft-secondary" href="https://www.google.com/search?q=local+heroes&sz=0&sxsrf=ALeKk00oVF6mlkt0gqgdJ3cdX-572O5iEA:1617876763740&tbas=0&biw=1920&bih=969&dpr=1#lrd=0x47c609899fcd2623:0x5ec9dccd8071f067,1,,," target="_blank">Google</a>,
-                    <a href="https://play.google.com/store/apps/details?id=com.localheroes.consumer&gl=NL&showAllReviews=true" class="ft-secondary" target="_blank">Google Play</a> & <a href="https://apps.apple.com/nl/app/local-heroes/id1470938037#see-all/reviews" class="ft-secondary" target="_blank">App Store</a></h4>
+                    <a href="https://play.google.com/store/apps/details?id=com.localheroes.consumer&gl=NL&showAllReviews=true" class="ft-secondary" target="_blank">Google Play</a> & <a href="https://apps.apple.com/nl/app/local-heroes/id1470938037#see-all/reviews"
+                        class="ft-secondary" target="_blank">App Store</a></h4>
             </div>
             <script type="text/javascript">
                 mixpanel.track_links("#review_links a", "Click review link", {
@@ -330,7 +338,7 @@ title: Bestel het beste uit de buurt
 
         $.getJSON("https://maps.googleapis.com/maps/api/geocode/json?latlng=" + position.coords.latitude + "," + position.coords.longitude + "&key=AIzaSyDhFRaugRy6QcMH9VA1PnHHMKu7466M_hY",
             function(data) {
-                $("#mijn_postcode").val(data.results[0].address_components[7].long_name.substring(0,4));
+                $("#mijn_postcode").val(data.results[0].address_components[7].long_name.substring(0, 4));
                 $("#lead_zipcode").val(data.results[0].address_components[7].long_name);
                 $("#mijn_postcode").keyup();
             });
