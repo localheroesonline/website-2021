@@ -1,11 +1,11 @@
 vendor_id,day_type,start_time,end_time,day_number
-2pyld7,Thursday,,,
-mbyvow,Thursday,,,
-mdkwl3,Thursday,,,
 m54xwy,Thursday,,,
 276bqo,Thursday,,,
 2xxvqr,Thursday,,,
+2zopzy,Thursday,,,
+2pyld7,Thursday,,,
 z2pn26,Thursday,,,
+mbyvow,Thursday,,,
 y2xezm,Tuesday,08:00,17:00,2
 y2xezm,Wednesday,08:00,17:00,3
 y2xezm,Thursday,08:00,17:00,4
@@ -170,6 +170,10 @@ mno5nk,Saturday,09:30,16:30,6
 2rxa35,Thursday,07:00,16:30,4
 2rxa35,Friday,06:30,18:00,5
 2rxa35,Saturday,06:30,17:00,6
+mdkwl3,Wednesday,09:00,15:30,3
+mdkwl3,Thursday,09:00,15:30,4
+mdkwl3,Friday,09:00,13:30,5
+mdkwl3,Saturday,08:30,17:00,6
 2xxvye,Monday,09:00,18:00,1
 2xxvye,Tuesday,09:00,18:00,2
 2xxvye,Wednesday,09:00,18:00,3
