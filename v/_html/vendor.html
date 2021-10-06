@@ -54,7 +54,7 @@
                                 <p>{{ page.vendor_description }}<a href="#" class="d-inline-block d-sm-none">Meer tonen</a> </p>
 
                                 <!-- <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. <span class="complete"> Dicta non magnam voluptas dolore nemo voluptatem, excepturi aliquid quas incidunt exercitationem earum quis porro, eveniet optio odit accusamus iste doloremque quasi! </span><a class="more">Meer tonen...</a></p> -->
-                                
+
                             </div>
                         </div>
                         <!-- HERO PRODUCTS -->
@@ -69,13 +69,12 @@
                                         </h2>
                                     </div>
                                     <div class="col-sm-6 col-md-7 text-right d-none d-sm-block">
-                                        <a id="bek-product"  href="#" class="">Bekijk alle producten <i class="fa fa-chevron-right"></i></a>
+                                        <a id="bek-product" href="#" class="">Bekijk alle producten <i class="fa fa-chevron-right"></i></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="content product-list">
-                                {% for item in site.data.hero-products %}
-                                {% if item.vendor_id == page.vendor_id %}
+                                {% for item in site.data.hero-products %} {% if item.vendor_id == page.vendor_id %}
                                 <a href="{{ site.url }}/p/{{ item.product_id }}/{{ item.vendor_url }}/{{ item.product_url }}" class="">
                                     <div class="product-card product-list-item">
                                         <div class="rating-vote d-none d-sm-block">
@@ -95,11 +94,10 @@
                                         </div>
                                     </div>
                                 </a>
-                                {% endif %}
-                                {% endfor %}
+                                {% endif %} {% endfor %}
                             </div>
                             <div class="footer d-block d-sm-none text-center pt-4">
-                                <a href="#" id="bek-product"  class="">Bekijk alle producten <i class="fa fa-chevron-right"></i></a>
+                                <a href="#" id="bek-product" class="">Bekijk alle producten <i class="fa fa-chevron-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -146,8 +144,7 @@
                             </div>
                             <!-- PRODUCTS for Desktop -->
                             <div class="content product-list hidden-xs">
-                                {% for item in site.data.products %}
-                                {% if item.vendor_id == page.vendor_id %}
+                                {% for item in site.data.products %} {% if item.vendor_id == page.vendor_id %}
                                 <a href="{{ site.url }}/p/{{ item.product_id }}/{{ item.vendor_url }}/{{ item.product_url }}" class="">
                                     <div class="product-card product-list-item">
                                         <div class="rating-vote">
@@ -161,8 +158,7 @@
                                         <div class="product-card-content">
                                             <h4>{{ item.product_name }}</h4>
                                             {% if item.product_stock_status == "Out_stock" %}
-                                            <span class="status out-stock disabled full-wd">Niet op voorraad</span>
-                                            {% else %}
+                                            <span class="status out-stock disabled full-wd">Niet op voorraad</span> {% else %}
                                             <div class="stuk-price">
                                                 <span class="stuk">{{ item.product_details }}</span>
                                                 <span class="price">€ {{ item.product_price| precision: 2 }}</span>
@@ -171,13 +167,11 @@
                                         </div>
                                     </div>
                                 </a>
-                                {% endif %}
-                                {% endfor %}
+                                {% endif %} {% endfor %}
                             </div>
                             <!-- PRODUCTS for Mobile -->
                             <div class="content product-list-mobile">
-                                {% for item in site.data.products %}
-                                {% if item.vendor_id == page.vendor_id %}
+                                {% for item in site.data.products %} {% if item.vendor_id == page.vendor_id %}
                                 <a href="{{ site.url }}/p/{{ item.product_id }}/{{ item.vendor_url }}/{{ item.product_url }}" class="">
                                     <div class="product-list-mobile-item product-card-mobile">
                                         <div class="product-img">
@@ -187,8 +181,7 @@
                                             <h4>{{ item.product_name }}</h4>
                                             <p class="stuk">{{ item.product_details }}</p>
                                             {% if item.product_stock_status == "Out_stock" %}
-                                            <span class="status out-stock disabled">Niet op voorraad</span>
-                                            {% endif %}
+                                            <span class="status out-stock disabled">Niet op voorraad</span> {% endif %}
                                         </div>
                                         <div class="price-rating">
                                             <span class="price">€ {{ item.product_price| precision: 2 }}</span>
@@ -198,8 +191,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                {% endif %}
-                                {% endfor %}
+                                {% endif %} {% endfor %}
                             </div>
                         </div>
                     </div>
@@ -227,11 +219,9 @@
                                         <tr>
                                             <td colspan="2">
                                                 <ul class="shop-timing">
-                                                    {% for openinghours in site.data.openinghours-vendors %}
-                                                    {% if openinghours.vendor_id == page.vendor_id %}
+                                                    {% for openinghours in site.data.openinghours-vendors %} {% if openinghours.vendor_id == page.vendor_id %}
                                                     <li>{{ openinghours.day_type }} <span>{{ openinghours.start_time }} - {{ openinghours.end_time }}</span></li>
-                                                    {% endif %}
-                                                    {% endfor %}
+                                                    {% endif %} {% endfor %}
                                                 </ul>
                                             </td>
                                         </tr>

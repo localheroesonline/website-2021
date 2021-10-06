@@ -6,39 +6,36 @@ exclude: true
 ---
 
 <style type="text/css" media="screen">
-  /* .container {
+    /* .container {
     margin: 10px auto;
     max-width: 600px;
     text-align: center;
   } */
-  h1 {
-    margin: 30px 0;
-    font-size: 3em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
+    
+    h1 {
+        margin: 30px 0;
+        font-size: 3em;
+        line-height: 1;
+        letter-spacing: -1px;
+    }
 </style>
 
 <div class="container">
-  <div class="row">
-    <div class="col-md-8 offset-md-2">
-      <h1>{{page.title}}</h1>
-      <p class="font-weight-bold">Je gewenste pagina is niet gevonden, sorry!</p>
-      <p>Hieronder een overzicht van alle pagina's op onze website:</p>
-      <ul class="list-group">
-        {% for apage in site.pages %}
-          {% if apage.exclude != true %}
-          <li class="list-group-item"><a href="{{site.canonical_domain}}{{site.baseurl}}{{apage.url}}">{{apage.title}}</a></li>
-          {% endif %}
-        {% endfor %}
-        <p>Hieronder een overzicht van alle posts op onze website:</p>
-        {% for item in site.posts %}
-          {% if item.exclude != true %}
-          <li class="list-group-item"><a href="{{site.canonical_domain}}{{site.baseurl}}{{item.url}}">{{item.title}}</a></li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-      </p> 
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h1>{{page.title}}</h1>
+            <p class="font-weight-bold">Je gewenste pagina is niet gevonden, sorry!</p>
+            <p>Hieronder een overzicht van alle pagina's op onze website:</p>
+            <ul class="list-group">
+                {% for apage in site.pages %} {% if apage.exclude != true %}
+                <li class="list-group-item"><a href="{{site.canonical_domain}}{{site.baseurl}}{{apage.url}}">{{apage.title}}</a></li>
+                {% endif %} {% endfor %}
+                <p>Hieronder een overzicht van alle posts op onze website:</p>
+                {% for item in site.posts %} {% if item.exclude != true %}
+                <li class="list-group-item"><a href="{{site.canonical_domain}}{{site.baseurl}}{{item.url}}">{{item.title}}</a></li>
+                {% endif %} {% endfor %}
+            </ul>
+            </p>
+        </div>
     </div>
-  </div> 
 </div>

@@ -1,16 +1,16 @@
 <!-- MAIN CONTENT -->
-<main class="main-content skin-base page-product">  
+<main class="main-content skin-base page-product">
     <div class="container">
         <div class="row">
-           <div class="col-sm-12 col-md-5">
-                   <div class="product-image-box">
+            <div class="col-sm-12 col-md-5">
+                <div class="product-image-box">
                     <div class="rating-vote d-none d-md-flex justify-content-center">
                         <div class="rating ft-primary">
                             <span><i class="fa fa-thumbs-up"></i></span> {{ page.product_rating }}
                         </div>
                         <div class="vote">
                             {{ page.product_rating_count }} stemmen
-                        </div>   
+                        </div>
                     </div>
                     <div class="product-img">
                         <img src="{{ site.cloudimg }}_prod_/product/{{ page.product_image }}?width=600" class="img-fluid" alt="{{ page.product_name }}">
@@ -18,7 +18,7 @@
                 </div>
                 <div class="accordion accordion-details d-none d-md-block" id="productDetails">
                     <div class="card">
-                        <div class="card-header" >
+                        <div class="card-header">
                             <a href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Product Details</a>
                         </div>
                         <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#productDetails">
@@ -28,46 +28,40 @@
                                     <li>Type <span>{{ page.product_unit }}</span></li>
                                     <li>Hoeveelheid <span>{{ page.product_details }}</span></li>
                                     <li>Prijs/Kg <span>€ {{ page.product_kg_price| precision: 2 }}</span></li>
-                                    <li>BTW	<span>{{ page.product_vat }} %</span></li>
+                                    <li>BTW <span>{{ page.product_vat }} %</span></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-           </div>
-           <div class="col-sm-12 col-md-7 product-details-wapper">
-               <div class="product-details">
+            </div>
+            <div class="col-sm-12 col-md-7 product-details-wapper">
+                <div class="product-details">
                     <div class="product-info">
                         <h3>{{ page.product_name }}</h3>
-                        <p class="price-n-stock">per stuk | 
-
-                        {% if page.product_stock_status=='Out_stock' %}
-                        <span class="status out-stock disabled">Niet op voorraad</span>
-                        {% else %}
-                        <span class="status in-stock">Op voorraad</span>
-                        {% endif %}
-                        <span class="price">€ {{ page.product_price| precision: 2 }}</span></p>
+                        <p class="price-n-stock">per stuk | {% if page.product_stock_status=='Out_stock' %}
+                            <span class="status out-stock disabled">Niet op voorraad</span> {% else %}
+                            <span class="status in-stock">Op voorraad</span> {% endif %}
+                            <span class="price">€ {{ page.product_price| precision: 2 }}</span></p>
                     </div>
                     <div class="product-info-mobile">
                         <div class="name-stock">
                             <h3>{{ page.product_name }}</h3>
                             {% if page.product_stock_status=='Out_stock' %}
-                            <span class="status out-stock disabled">Niet op voorraad</span>
-                            {% else %}
-                            <span class="status in-stock">Op voorraad</span>
-                            {% endif %}
+                            <span class="status out-stock disabled">Niet op voorraad</span> {% else %}
+                            <span class="status in-stock">Op voorraad</span> {% endif %}
                         </div>
                         <div class="price-stuk">
                             <h2>€ {{ page.product_price| precision: 2 }}</h2>
                             <span class="ft-sm">{{ page.product_details }}</span>
-                        </div>    
+                        </div>
                     </div>
                     <div class="product-description">
-                       <p>{{ page.product_information }}</p>
+                        <p>{{ page.product_information }}</p>
                     </div>
                     <div class="accordion accordion-details d-block d-md-none" id="productDetails">
                         <div class="card">
-                            <div class="card-header" >
+                            <div class="card-header">
                                 <a href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Product Details</a>
                             </div>
                             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#productDetails">
@@ -77,28 +71,26 @@
                                         <li>Type <span>{{ page.product_unit }}</span></li>
                                         <li>Hoeveelheid <span>{{ page.product_details }}</span></li>
                                         <li>Prijs/Kg <span>€ {{ page.product_kg_price| precision: 2 }}</span></li>
-                                        <li>BTW	<span>{{ page.product_vat }} %</span></li>
+                                        <li>BTW <span>{{ page.product_vat }} %</span></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="place-order">
-                       <a href="" onclick="DetectAndServe('{{page.name}}')" class="v-btn v-btn-tertiary place-order-btn"><i class="fas fa-download"></i><span>Bestellen</span></a>
-                       <p class="small ft-tertiary">Voor 15:00 besteld, vandaag in huis.</p>
+                        <a href="" onclick="DetectAndServe('{{page.name}}')" class="v-btn v-btn-tertiary place-order-btn"><i class="fas fa-download"></i><span>Bestellen</span></a>
+                        <p class="small ft-tertiary">Voor 15:00 besteld, vandaag in huis.</p>
                     </div>
-                    
+
                     <h1 class="mb-3 ft-primary pp-title">Populaire producten</h1>
                     <!-- POPULAR PRODUCTS desktop -->
                     <div class="content popular-product-list hidden-xs">
-                        {% for item in site.data.hero-products %}
-                        {% if item.vendor_id == page.vendor_id %}
+                        {% for item in site.data.hero-products %} {% if item.vendor_id == page.vendor_id %}
                         <a href="{{ site.url }}/p/{{ item.product_id }}/{{ item.vendor_url }}/{{ item.product_url }}" class="">
                             <div class="product-card-sm product-list-item">
                                 <div class="rating-vote">
                                     <div class="rating small">
-                                        <span><i class="fas fa-thumbs-up"></i></span>
-                                        {{ item.product_rating }}
+                                        <span><i class="fas fa-thumbs-up"></i></span> {{ item.product_rating }}
                                     </div>
                                 </div>
                                 <div class="product-card-img">
@@ -113,13 +105,11 @@
                                 </div>
                             </div>
                         </a>
-                        {% endif %}
-                        {% endfor %}
+                        {% endif %} {% endfor %}
                     </div>
                     <!-- POPULAR PRODUCTS mobile -->
                     <div class="content product-list-mobile">
-                        {% for item in site.data.hero-products %}
-                        {% if item.vendor_id == page.vendor_id %}
+                        {% for item in site.data.hero-products %} {% if item.vendor_id == page.vendor_id %}
                         <a href="{{ site.url }}/p/{{ item.product_id }}/{{ item.vendor_url }}/{{ item.product_url }}" class="">
                             <div class="product-list-mobile-item product-card-mobile">
                                 <div class="product-img">
@@ -129,8 +119,7 @@
                                     <h4>{{ item.product_name }}</h4>
                                     <p class="stuk">{{ item.product_details }}</p>
                                     {% if item.product_stock_status == "Out_stock" %}
-                                    <span class="status out-stock disabled">Niet op voorraad</span>
-                                    {% endif %}
+                                    <span class="status out-stock disabled">Niet op voorraad</span> {% endif %}
                                 </div>
                                 <div class="price-rating">
                                     <span class="price">€ {{ item.product_price| precision: 2 }}</span>
@@ -140,11 +129,10 @@
                                 </div>
                             </div>
                         </a>
-                        {% endif %}
-                        {% endfor %}
+                        {% endif %} {% endfor %}
                     </div>
-               </div>
-           </div>
+                </div>
+            </div>
         </div>
     </div>
 </main>
