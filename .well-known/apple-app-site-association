@@ -1,0 +1,55 @@
+{
+  "applinks": {
+      "details": [
+           {
+             "appIDs": [ "3Q664D87NK.com.LHConsumerApp" ],
+             "components": [
+               {
+                  "#": "no_universal_links",
+                  "exclude": true,
+                  "comment": "Matches any URL whose fragment equals no_universal_links and instructs the system not to open it as a universal link"
+               },
+               {
+                  "/": "/v/*",
+                  "comment": "Vendor pages"
+               },
+               {
+                  "/": "/e/*",
+                  "comment": "Express mode vendor page with FFO selection"
+               },
+               {
+                  "/": "/h/*",
+                  "comment": "Hub(location) pages"
+               },
+               {
+                  "/": "/l/*",
+                  "comment": "Location pages"
+               },
+               {
+                  "/": "/u/*",
+                  "comment": "Unit pages"
+               },
+               {
+                  "/": "/o/*",
+                  "comment": "Order details"
+               },
+               {
+                  "/": "/p/*",
+                  "comment": "Product pages"
+               },
+               {
+                  "/": "/c/*",
+                  "comment": "Category / browse"
+               },
+             ]
+           }
+       ]
+   },
+   "webcredentials": {
+      "apps": [ "3Q664D87NK.com.LHConsumerApp" ]
+   },
+
+    "appclips": {
+        "apps": ["3Q664D87NK.com.LHConsumerApp.Clip"]
+    }
+}
