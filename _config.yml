@@ -57,6 +57,7 @@ environment: production
 
 # tracking events
 google_analytics: G-Q7NWMYEB0P
+google_tag_manager: UA-260378921
 # mixpanel-project-token: 624a5eaf9d84caf4c6c5af9a45a08a4a # staging
 mixpanel-project-token: d75409912bb950e41f6c85be92aba32d # production
 mixpanel-api-host: https://api-eu.mixpanel.com
