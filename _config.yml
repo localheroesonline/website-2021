@@ -56,7 +56,7 @@ linkedin_mcoumans_url: https://www.linkedin.com/in/maarten-coumans-b78989/
 github_username:  localheroesonline
 android_app_id: com.localheroes.consumer
 ios_app_id: 1470938037
-ios_app_clip_bundle_id: 1470938037
+ios_app_clip_bundle_id: com.LHConsumerApp.Clip
 environment: production
 
 # tracking events
