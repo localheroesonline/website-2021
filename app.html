@@ -78,7 +78,7 @@ sitemap: false
                 "utm_medium": urlParams.get('utm_medium'),
                 "utm_campaign": urlParams.get('utm_campaign'),
             });
-            window.location.href = "https://play.google.com/store/apps/details?id=com.localheroes.consumer&utm_source=" + urlParams.get('utm_source') + "&utm_medium=" + urlParams.get('utm_medium') + "&utm_campaign=" + urlParams.get('utm_campaign');
+            window.location.href = "https://play.google.com/store/apps/details?id={{ site.android_app_id }}&utm_source=" + urlParams.get('utm_source') + "&utm_medium=" + urlParams.get('utm_medium') + "&utm_campaign=" + urlParams.get('utm_campaign');
         } else if (os == "iOS") {
             mixpanel.track("Goto App Marketplace", {
                 "Marketplace": "iOS",
@@ -88,7 +88,7 @@ sitemap: false
                 "utm_medium": urlParams.get('utm_medium'),
                 "utm_campaign": urlParams.get('utm_campaign'),                
             });
-            window.location.href = "https://apps.apple.com/us/app/lh-consumer/id1470938037?utm_source=" + urlParams.get('utm_source') + "&utm_medium=" + urlParams.get('utm_medium') + "&utm_campaign=" + urlParams.get('utm_campaign');
+            window.location.href = "https://apps.apple.com/us/app/lh-consumer/id{{ site.ios_app_id }}?utm_source=" + urlParams.get('utm_source') + "&utm_medium=" + urlParams.get('utm_medium') + "&utm_campaign=" + urlParams.get('utm_campaign');
         } else if (os == "Windows Phone") {
             mixpanel.track("Goto Local Heroes Home", {
                 "Campaign": page,

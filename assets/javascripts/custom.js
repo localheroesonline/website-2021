@@ -180,7 +180,7 @@ function DetectAndServe(campaign) {
   // window.alert(os);
   console.log('Campaign: ' + campaign);
   console.log('OS: ' + os);
-  var url = "https://apps.apple.com/us/app/lh-consumer/id1470938037";
+  var url = "https://apps.apple.com/us/app/lh-consumer/id{{ site.ios_app_id }}";
   if (os == "Android") {
       mixpanel.track("Goto App Marketplace", {
         "Marketplace": "Android",
@@ -188,7 +188,7 @@ function DetectAndServe(campaign) {
         "$os": os,  
       });
       console.log('Redirect to Android store');
-      url = "https://play.google.com/store/apps/details?id=com.localheroes.consumer";
+      url = "https://play.google.com/store/apps/details?id={{ site.android_app_id }}";
   } else if (os == "iOS") {
       mixpanel.track("Goto App Marketplace", {
         "Marketplace": "iOS",
@@ -196,7 +196,7 @@ function DetectAndServe(campaign) {
         "$os": os,
       });
       console.log('Redirect to iOS store');
-      url = "https://apps.apple.com/us/app/lh-consumer/id1470938037";
+      url = "https://apps.apple.com/us/app/lh-consumer/id{{ site.ios_app_id }}";
   // @todo: I disabled the redirect to the homepage as it is useless.
   // Redirect to apple store in case it is not android. Fix later.
   } else {
@@ -206,7 +206,7 @@ function DetectAndServe(campaign) {
       "$os": os,
     });
     console.log('Fallback to iOS store');
-    url = "https://apps.apple.com/us/app/lh-consumer/id1470938037";
+    url = "https://apps.apple.com/us/app/lh-consumer/id{{ site.ios_app_id }}";
   }
   console.log(url);
   // Try redirect using jQuery
