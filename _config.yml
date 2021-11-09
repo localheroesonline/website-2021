@@ -44,7 +44,7 @@ social: # used by jekyll-seo-tag
     - https://twitter.com/localheroesNL # used by jekyll-seo-tag
     - https://www.facebook.com/localheroesonelineamsterdam/ # used by jekyll-seo-tag
     - https://www.linkedin.com/company/local-heroes-online/ # used by jekyll-seo-tag
-    - https://www.instagram.com/local.heroes.online/ # used by jekyll-seo-tag
+    - https://www.instagram.com/localheroesNL/ # used by jekyll-seo-tag
     - https://github.com/localheroesonline # used by jekyll-seo-tag
 # TODO: override image & description for generated vendor & product pages
 twitter_url: https://twitter.com/localheroesNL 
