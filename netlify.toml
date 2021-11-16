@@ -25,6 +25,12 @@ to = "https://goudsmit.tech/:splat"
 status = 302
 force = true
 
+[[redirects]]
+from = "https://lancering.localheroesonline.com/*"
+to = "/lancering/:splat"
+status = 302
+force = true
+
 [[redirect]]
 from = "https://www.localheroesonline.com/api/img/email/*"
 to = "https://static.localheroesonline.com/email/:splat"
@@ -207,9 +213,3 @@ from = "https://www.localheroesonline.com/qr.html#utm_source=t-stoepje-niels-koe
 to = "https://www.localheroesonline.com/qr.html#utm_source=2pyld7&utm_medium=qr-banner&utm_campaign=pickup-awareness"
 status = 301
 force = false
-
-[[redirects]]
-from = "https://lancering.localheroesonline.com/*"
-to = "https://eenondernemer.nl/:splat"
-status = 302
-force = true
