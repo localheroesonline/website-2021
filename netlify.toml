@@ -19,6 +19,13 @@ to = "https://localheroes.recruitee.com/:splat"
 status = 302
 force = true
 
+# https://www.localheroesonline.com/jobs redirects to https://localheroes.recruitee.com/
+[[redirects]]
+from = "/jobs"
+to = "https://localheroes.recruitee.com/"
+status = 200
+force = true
+
 [[redirects]]
 from = "https://giel.localheroesonline.com/*"
 to = "https://goudsmit.tech/:splat"
@@ -41,13 +48,6 @@ force = true
 from = "https://www.localheroesonline.com/api/img/*"
 to = "https://static.localheroesonline.com/img/:splat"
 status = 302
-force = true
-
-# https://www.localheroesonline.com/jobs redirects to https://localheroes.recruitee.com/
-[[redirects]]
-from = "/jobs"
-to = "https://localheroes.recruitee.com/"
-status = 200
 force = true
 
 # redirect meant to display a continuous google slideshow on the smart television of hub pickup #002 (back of the hub)
