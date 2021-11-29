@@ -32,12 +32,6 @@ to = "https://goudsmit.tech/:splat"
 status = 302
 force = true
 
-[[redirects]]
-from = "https://lancering.localheroesonline.com/*"
-to = "https://www.localheroesonline.com/lancering/"
-status = 302
-force = true
-
 [[redirect]]
 from = "https://www.localheroesonline.com/api/img/email/*"
 to = "https://static.localheroesonline.com/email/:splat"
