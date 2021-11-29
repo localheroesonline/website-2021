@@ -41,13 +41,11 @@ image: https://www.localheroesonline.com/assets/logo.png # used by jekyll-seo-ta
 social: # used by jekyll-seo-tag
   name: Local Heroes Online # used by jekyll-seo-tag
   links:
-    - https://twitter.com/localheroesNL # used by jekyll-seo-tag
     - https://www.facebook.com/localheroesonelineamsterdam/ # used by jekyll-seo-tag
     - https://www.linkedin.com/company/local-heroes-online/ # used by jekyll-seo-tag
-    - https://www.instagram.com/localheroesNL/ # used by jekyll-seo-tag
+    - https://www.instagram.com/localheroes_nl/ # used by jekyll-seo-tag
     - https://github.com/localheroesonline # used by jekyll-seo-tag
 # TODO: override image & description for generated vendor & product pages
-twitter_url: https://twitter.com/localheroesNL 
 facebook_url: https://www.facebook.com/localheroesonelineamsterdam
 facebook_app_id: 102264097885036
 instagram_url: https://www.instagram.com/localheroes_nl/
