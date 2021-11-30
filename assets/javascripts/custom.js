@@ -178,8 +178,8 @@ function DetectAndServe(campaign) {
   event.preventDefault();
   let os = getMobileOperatingSystem();
   // window.alert(os);
-  console.log('Campaign: ' + campaign);
-  console.log('OS: ' + os);
+  //console.log('Campaign: ' + campaign);
+  //console.log('OS: ' + os);
   var url = "https://apps.apple.com/us/app/lh-consumer/id1470938037";
   if (os == "Android") {
       mixpanel.track("Goto App Marketplace", {
@@ -187,7 +187,7 @@ function DetectAndServe(campaign) {
         "Campaign": campaign,
         "$os": os,  
       });
-      console.log('Redirect to Android store');
+      //console.log('Redirect to Android store');
       url = "https://play.google.com/store/apps/details?id=com.localheroes.consumer";
   } else if (os == "iOS") {
       mixpanel.track("Goto App Marketplace", {
@@ -195,7 +195,7 @@ function DetectAndServe(campaign) {
         "Campaign": campaign,
         "$os": os,
       });
-      console.log('Redirect to iOS store');
+      //console.log('Redirect to iOS store');
       url = "https://apps.apple.com/us/app/lh-consumer/id1470938037";
   // @todo: I disabled the redirect to the homepage as it is useless.
   // Redirect to apple store in case it is not android. Fix later.
@@ -205,7 +205,7 @@ function DetectAndServe(campaign) {
       "Campaign": campaign,
       "$os": os,
     });
-    console.log('Fallback to iOS store');
+    //console.log('Fallback to iOS store');
     url = "https://apps.apple.com/us/app/lh-consumer/id1470938037";
   }
   // console.log(url);
