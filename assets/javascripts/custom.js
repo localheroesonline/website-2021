@@ -208,7 +208,7 @@ function DetectAndServe(campaign) {
     console.log('Fallback to iOS store');
     url = "https://apps.apple.com/us/app/lh-consumer/id1470938037";
   }
-  console.log(url);
+  // console.log(url);
   // Try redirect using jQuery
   $(location).attr('href',url);
   return;
