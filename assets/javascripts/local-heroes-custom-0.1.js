@@ -1,5 +1,3 @@
-var base_ur = "http://127.0.0.1:4000/";
-
 // ON SCROLL FIXED PRODUCT TAB ON MOBILE
 $(window).scroll(function() { 
 
@@ -154,32 +152,9 @@ element.onclick = function() {
 /* END Make the back link work in the product nav bar */
 
 // REDIRECT VISITOR TO APP STORE / PLAY STORE DEPENDING ON OS
-function getMobileOperatingSystem() {
-    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    // window.alert(userAgent);
-    // Windows Phone must come first because its UA also contains "Android"
-    if (/windows phone/i.test(userAgent)) {
-        return "Windows Phone";
-    }
-
-    if (/android/i.test(userAgent)) {
-        return "Android";
-    }
-
-    // iOS detection from: http://stackoverflow.com/a/9039885/177710
-    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-        return "iOS";
-    }
-    
-    return "unknown";
-};
-
 function DetectAndServe(campaign) {
   event.preventDefault();
   let os = getMobileOperatingSystem();
-  // window.alert(os);
-  //console.log('Campaign: ' + campaign);
-  //console.log('OS: ' + os);
   var url = "https://apps.apple.com/us/app/lh-consumer/id1470938037";
   if (os == "Android") {
       mixpanel.track("Goto App Marketplace", {
@@ -187,7 +162,6 @@ function DetectAndServe(campaign) {
         "Campaign": campaign,
         "$os": os,  
       });
-      //console.log('Redirect to Android store');
       url = "https://play.google.com/store/apps/details?id=com.localheroes.consumer";
   } else if (os == "iOS") {
       mixpanel.track("Goto App Marketplace", {
@@ -205,11 +179,27 @@ function DetectAndServe(campaign) {
       "Campaign": campaign,
       "$os": os,
     });
-    //console.log('Fallback to iOS store');
     url = "https://apps.apple.com/us/app/lh-consumer/id1470938037";
   }
-  // console.log(url);
   // Try redirect using jQuery
   $(location).attr('href',url);
   return;
+};
+
+function getMobileOperatingSystem() {
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    // Windows Phone must come first because its UA also contains "Android"
+    if (/windows phone/i.test(userAgent)) {
+        return "Windows Phone";
+    }
+
+    if (/android/i.test(userAgent)) {
+        return "Android";
+    }
+
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        return "iOS";
+    }
+    
+    return "unknown";
 };
