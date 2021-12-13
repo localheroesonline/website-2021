@@ -92,7 +92,7 @@ sitemap: false
                     "utm_medium": urlParams.get('utm_medium'),
                     "utm_campaign": urlParams.get('utm_campaign'),        
                 });
-                window.location.href = "{{site.url}}#utm_source=" + urlParams.get('utm_source') + "&utm_medium=" + urlParams.get('utm_medium') + "&utm_campaign=" + urlParams.get('utm_campaign');
+                window.location.href = "{{ site.url }}#utm_source=" + urlParams.get('utm_source') + "&utm_medium=" + urlParams.get('utm_medium') + "&utm_campaign=" + urlParams.get('utm_campaign');
             } else {
                 mixpanel.track("Goto Local Heroes Home", {
                     "Campaign": "qr-code-pickup-point-002",
@@ -101,7 +101,7 @@ sitemap: false
                     "utm_medium": urlParams.get('utm_medium'),
                     "utm_campaign": urlParams.get('utm_campaign'),                
                 });
-                window.location.href = "{{site.url}}#utm_source=" + urlParams.get('utm_source') + "&utm_medium=" + urlParams.get('utm_medium') + "&utm_campaign=" + urlParams.get('utm_campaign');
+                window.location.href = "{{ site.url }}#utm_source=" + urlParams.get('utm_source') + "&utm_medium=" + urlParams.get('utm_medium') + "&utm_campaign=" + urlParams.get('utm_campaign');
             }
         }
     </script>
