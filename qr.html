@@ -65,6 +65,10 @@ sitemap: false
         // https://stackoverflow.com/questions/11920697/how-to-get-hash-value-in-a-url-in-js
         // example url: https://www.localheroesonline.com/qr.html#utm_source=t-stoepje-aart-veldhuizen&utm_medium=qr-flyer&utm_campaign=pickup-awareness
         // example url with shortened utm params: https://www.localheroesonline.com/qr.html#s=pup003&m=qr-banner&c=front
+        // urlParams.get('utm_source') // t-stoepje-aart-veldhuizen
+        // urlParams.get('utm_medium') // qr-flyer
+        // urlParams.get('utm_campaign') // pickup-awareness
+        // https://www.localheroesonline.com/app.html#utm_source=email&utm_medium=whatsapp&utm_campaign=referral_code&utm_content=2021-06
         
         // Check if utm_source exists in the parameters
         if (urlParams.has('utm_source')) { 
@@ -127,7 +131,12 @@ sitemap: false
                 "utm_medium": utm_medium,
                 "utm_campaign": utm_campaign,     
             });
-            window.location.href = "{{ site.url }}/v/" + utm_source + "?utm_source=" + utm_source + "&utm_medium=" + utm_medium + "&utm_campaign=" + utm_campaign;
+            // Do we have a UTM source? Then redirect to vendor otherwise go to index
+            if ( utm_source == '' ) {
+                window.location.href = "{{site.url}}/index?utm_source=&utm_medium=" + utm_medium + "&utm_campaign=" + utm_campaign;        
+            } else {
+                window.location.href = "{{site.url}}/v/" + utm_source + "?utm_source=" + utm_source + "&utm_medium=" + utm_medium + "&utm_campaign=" + utm_campaign;
+            };
         } else {
             mixpanel.track("Goto Local Heroes Home", {
                 "Campaign": page,
@@ -136,7 +145,12 @@ sitemap: false
                 "utm_medium": utm_medium,
                 "utm_campaign": utm_campaign,              
             });
-            window.location.href = "{{ site.url }}/v/" + utm_source + "?utm_source=" + utm_source + "&utm_medium=" + utm_medium + "&utm_campaign=" + utm_campaign;
+            // Do we have a UTM source? Then redirect to vendor otherwise go to index
+            if ( utm_source == '' ) {
+                window.location.href = "{{site.url}}/index?utm_source=&utm_medium=" + utm_medium + "&utm_campaign=" + utm_campaign;        
+            } else {
+                window.location.href = "{{site.url}}/v/" + utm_source + "?utm_source=" + utm_source + "&utm_medium=" + utm_medium + "&utm_campaign=" + utm_campaign;
+            };
         }
     }
     </script>
