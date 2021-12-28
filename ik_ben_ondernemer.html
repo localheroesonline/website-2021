@@ -34,7 +34,7 @@ title: Ik ben ondernemer
                         <h2 class="b2b-section-title ft-light">Versterk je (online) presence</h2>
 
                         <p class="ft-light">Je winkel aansluiten op Local Heroes geeft je direct een online presence. Als Local Hero in onze app wordt je assortiment dagelijks bekeken door honderden klanten. Daarnaast genereren we voor je winkel direct een prachtige SEO
-                            geoptimaliseerde website met je <span class="ft-light fw-black">complete assortiment online</span>! Je <span class="ft-light fw-black">verhoogt daarmee de vindbaarheid, bereikbaarheid en zichtbaarheid van jouw winkel</span>                            bij geheel nieuwe maar ook bestaande klanten. Het totale assortiment van Local Heroes is inmiddels zo breed dat klanten ons vaker en vaker zien als "one stop shop". Dit heeft een aanzuigende werking waar je beslist onderdeel
+                            geoptimaliseerde website met je <span class="ft-light fw-black">complete assortiment online</span>! Je <span class="ft-light fw-black">verhoogt daarmee de vindbaarheid, bereikbaarheid en zichtbaarheid van jouw winkel</span> bij geheel nieuwe maar ook bestaande klanten. Het totale assortiment van Local Heroes is inmiddels zo breed dat klanten ons vaker en vaker zien als "one stop shop". Dit heeft een aanzuigende werking waar je beslist onderdeel
                             van wilt zijn.</p>
                         <a href="#reg-form" class="v-btn v-btn-primary btn-md mt-4">Ja, ik wil een online presence</a>
                     </div>
@@ -88,7 +88,7 @@ title: Ik ben ondernemer
             </div>
         </div>
     </section>
-    <!-- HOW ITS WORKS -->
+    <!-- HOW IT WORKS -->
     <section class="b2b-section b2b-how-work skin-base">
         <div class="container">
             <div class="row">
@@ -162,160 +162,371 @@ title: Ik ben ondernemer
                         <h2 class="b2b-section-title ft-light mb-1">Meld je nu aan</h2>
                         <p class="ft-light mb-3">Geheel kosteloos</p>
 
-                        <div class='bgn-wf-wrapper' id='crmWebToEntityForm'>
+                        <!-- Note :
+                        - You can modify the font style and form style to suit your website.
+                        - Code lines with comments Do not remove this code are required for the form to work properly, make sure that you do not remove these lines of code.
+                        - The Mandatory check script can modified as to suit your business needs.
+                        - It is important that you test the modified form before going live.-->
+                        <div id='crmWebToEntityForm' class='zcwf_lblLeft crmWebToEntityForm'>
                             <meta name='viewport' content='width=device-width, initial-scale=1.0'>
                             <META HTTP-EQUIV='content-type' CONTENT='text/html;charset=UTF-8'>
-                            <form action='https://bigin.zoho.eu/crm/WebToContactForm' name='CMIGNITEWebToContacts' method='POST' enctype='multipart/form-data' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory()' accept-charset='UTF-8'>
+                            <form action='https://crm.zoho.eu/crm/WebToContactForm' name=WebToContacts353036000000290731 method='POST' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory353036000000290731()' accept-charset='UTF-8'>
+                                <input type='text' style='display:none;' name='xnQsjsdp' value='6fe99b3f7f48f0cd229fdd3776846295ec8e10929fd81f22967907504d12e8f8'></input>
+                                <input type='hidden' name='zc_gad' id='zc_gad' value=''></input>
+                                <input type='text' style='display:none;' name='xmIwtLD' value='8b7b12d730e7d7baaa0350eff9390813aaeb0d08b63bf6a26d952294e55e2b69'></input>
+                                <input type='text' style='display:none;' name='actionType' value='Q29udGFjdHM='></input>
+                                <input type='text' style='display:none;' name='returnURL' value='https&#x3a;&#x2f;&#x2f;www.localheroesonline.com&#x2f;lead_business_confirmed.html'> </input>
                                 <!-- Do not remove this code. -->
-                                <input type='text' style='display:none;' name='xnQsjsdp' value='6fe99b3f7f48f0cd229fdd3776846295ec8e10929fd81f22967907504d12e8f8' />
-                                <input type='hidden' name='zc_gad' id='zc_gad' value='' />
-                                <input type='text' style='display:none;' name='xmIwtLD' value='8b7b12d730e7d7baaa0350eff9390813aaeb0d08b63bf6a26d952294e55e2b69' />
-                                <input type='text' style='display:none;' name='actionType' value='Q29udGFjdHM=' />
-                                <input type='text' style='display:none;' name='returnURL' value='{{ site.url }}/lead_business_confirmed.html' />
-                                <div>
-                                    <!-- <div class="bgn-wf-row">
-                                         <div class="bgn-wf-label">First Name
-                                              <span class="bgn-star">&#42;</span>
-                                         </div>
-                                         <div class="bgn-wf-field">
-                                              <input name="First Name" type="text" maxlength="40" value="" placeholder="" style=" border: 1px solid #e2e0df;padding: 10px 15px;max-width: 480px;border-radius:3px;width: 60%;"/>
-                                         </div>
-                                    </div>
-                                    <div class="bgn-wf-row">
-                                         <div class="bgn-wf-label">Last Name
-                                              <span class="bgn-star">&#42;</span>
-                                         </div>
-                                         <div class="bgn-wf-field">
-                                              <input name="Last Name" type="text" maxlength="80" value="" placeholder="" style=" border: 1px solid #e2e0df;padding: 10px 15px;max-width: 480px;border-radius:3px;width: 60%;"/>
-                                         </div>
-                                    </div> -->
-                                    <div class="form-group row">
-                                        <div class="col-6">
-                                            <label class="ft-secondary" for="inputFirstName">Voornaam</label>
-                                            <input type="text" name="First Name" class="form-control" placeholder="Voornaam" required>
-                                            <div class="invalid-feedback">Fijn als we weten hoe je heet!</div>
-                                            <div class="valid-feedback">Top!</div>
-                                        </div>
-                                        <div class="col-6">
-                                            <label class="ft-secondary" for="inputLastName">Achternaam</label>
-                                            <input type="text" name="Last Name" class="form-control" placeholder="Achternaam">
-                                        </div>
-                                    </div>
-                                    <!-- <div class="bgn-wf-row">
-                                         <div class="bgn-wf-label">Bedrijfnaam
-                                         </div>
-                                         <div class="bgn-wf-field">
-                                              <input name="Account Name" type="text" maxlength="120" value="" placeholder="" style=" border: 1px solid #e2e0df;padding: 10px 15px;max-width: 480px;border-radius:3px;width: 60%;"/>
-                                         </div>
-                                    </div>
-                                    <div class="bgn-wf-row">
-                                         <div class="bgn-wf-label">Mailing City
-                                         </div>
-                                         <div class="bgn-wf-field">
-                                              <input name="Mailing City" type="text" maxlength="100" value="" placeholder="" style=" border: 1px solid #e2e0df;padding: 10px 15px;max-width: 480px;border-radius:3px;width: 60%;"/>
-                                         </div>
-                                    </div> -->
-                                    <div class="form-group row">
-                                        <div class="col-6">
-                                            <label class="ft-secondary" for="inputShopName">Winkelnaam</label>
-                                            <input type="text" name="Account Name" class="form-control" placeholder="Winkelnaam">
-                                        </div>
-                                        <div class="col-6">
-                                            <label class="ft-secondary" for="inputCity">Plaats</label>
-                                            <input type="text" name="Mailing City" class="form-control" placeholder="Plaats">
-                                        </div>
-                                    </div>
-                                    <!-- <div class="bgn-wf-row">
-                                         <div class="bgn-wf-label">Phone
-                                         </div>
-                                         <div class="bgn-wf-field">
-                                              <input name="Phone" type="text" maxlength="50" value="" placeholder="" style=" border: 1px solid #e2e0df;padding: 10px 15px;max-width: 480px;border-radius:3px;width: 60%;"/>
-                                         </div>
-                                    </div>
-                                    <div class="bgn-wf-row">
-                                         <div class="bgn-wf-label">Email
-                                         </div>
-                                         <div class="bgn-wf-field">
-                                              <input name="Email" type="text" maxlength="100" value="" placeholder="" style=" border: 1px solid #e2e0df;padding: 10px 15px;max-width: 480px;border-radius:3px;width: 60%;"/>
-                                         </div>
-                                    </div> -->
-                                    <div class="form-group row">
-                                        <div class="col-6">
-                                            <label class="ft-secondary" for="inputPhone">Telefoon</label>
-                                            <input type="text" id="inputPhone" name="Phone" class="form-control" placeholder="06..." required>
-                                            <div class="invalid-feedback">Bellen werkt makkelijker met een geldig telefoonnr :-)</div>
-                                            <div class="valid-feedback">Fijn!</div>
-                                        </div>
-                                        <div class="col-6">
-                                            <label class="ft-secondary" for="inputEmail">Email</label>
-                                            <input type="email" id="inputEmail" name="Email" class="form-control" placeholder="Email Address" required>
-                                            <div class="invalid-feedback">Voer ajb een geldig email adres in</div>
-                                            <div class="valid-feedback">Ziet er goed uit!</div>
-                                        </div>
-                                    </div>
-                                    <!-- <div class="bgn-wf-row"><div class="bgn-wf-label"></div><div class="bgn-wf-field">
-                                         <input onclick='disableSubmitwhileReset()' type='reset' style='margin-right: 10px;margin-bottom: 10px;font-size:13px;border-radius: 3px;vertical-align: middle;background-color: #fff;border-color: #222;padding: 8px 15px;color: #3c3c3c;border: solid 1px #d4d3d2;display: inline-block;width: auto;' value='Opnieuw instellen' />
-                                         <input style='margin-bottom: 10px; opacity:; font-size:13px;color: #fff;border-radius: 3px;vertical-align: middle;background-color: #1980d8;border-color: #1980d8;padding: 8px 15px;display: inline-block;width: auto;'  id='formsubmit' type='submit' value='Indienen' />
-                                    </div></div> -->
-                                    <div class="form-group row">
-                                        <div class="col-md-12 text-md-right">
-                                            <button onclick='disableSubmitwhileReset()' class="v-btn v-btn-acent btn-lg" type='reset'>Opnieuw instellen</button>
-                                            <button class="v-btn v-btn-acent btn-lg" id='formsubmit' type='submit'>Indienen</button>
-                                        </div>
+                                <style>
+                                    html,
+                                    body {
+                                        margin: 0px;
+                                    }
+                                    
+                                    #crmWebToEntityForm.zcwf_lblLeft {
+                                        width: 100%;
+                                        padding: 25px;
+                                        margin: 0 auto;
+                                        box-sizing: border-box;
+                                    }
+                                    
+                                    #crmWebToEntityForm.zcwf_lblLeft * {
+                                        box-sizing: border-box;
+                                    }
+                                    
+                                    #crmWebToEntityForm {
+                                        text-align: left;
+                                    }
+                                    
+                                    #crmWebToEntityForm * {
+                                        direction: ltr;
+                                    }
+                                    
+                                    .zcwf_lblLeft .zcwf_title {
+                                        word-wrap: break-word;
+                                        padding: 0px 6px 10px;
+                                        font-weight: bold;
+                                    }
+                                    
+                                    .zcwf_lblLeft .zcwf_col_fld input[type=text],
+                                    .zcwf_lblLeft .zcwf_col_fld textarea {
+                                        width: 60%;
+                                        border: 1px solid #ccc !important;
+                                        resize: vertical;
+                                        border-radius: 2px;
+                                        float: left;
+                                    }
+                                    
+                                    .zcwf_lblLeft .zcwf_col_lab {
+                                        width: 30%;
+                                        word-break: break-word;
+                                        padding: 0px 6px 0px;
+                                        margin-right: 10px;
+                                        margin-top: 5px;
+                                        float: left;
+                                        min-height: 1px;
+                                    }
+                                    
+                                    .zcwf_lblLeft .zcwf_col_fld {
+                                        float: left;
+                                        width: 68%;
+                                        padding: 0px 6px 0px;
+                                        position: relative;
+                                        margin-top: 5px;
+                                    }
+                                    
+                                    .zcwf_lblLeft .zcwf_privacy {
+                                        padding: 6px;
+                                    }
+                                    
+                                    .zcwf_lblLeft .wfrm_fld_dpNn {
+                                        display: none;
+                                    }
+                                    
+                                    .dIB {
+                                        display: inline-block;
+                                    }
+                                    
+                                    .zcwf_lblLeft .zcwf_col_fld_slt {
+                                        width: 60%;
+                                        border: 1px solid #ccc;
+                                        background: #fff;
+                                        border-radius: 4px;
+                                        font-size: 15px;
+                                        float: left;
+                                        resize: vertical;
+                                    }
+                                    
+                                    .zcwf_lblLeft .zcwf_row:after,
+                                    .zcwf_lblLeft .zcwf_col_fld:after {
+                                        content: '';
+                                        display: table;
+                                        clear: both;
+                                    }
+                                    
+                                    .zcwf_lblLeft .zcwf_col_help {
+                                        float: left;
+                                        margin-left: 7px;
+                                        font-size: 15px;
+                                        max-width: 35%;
+                                        word-break: break-word;
+                                    }
+                                    
+                                    .zcwf_lblLeft .zcwf_help_icon {
+                                        cursor: pointer;
+                                        width: 16px;
+                                        height: 16px;
+                                        display: inline-block;
+                                        background: #fff;
+                                        border: 1px solid #ccc;
+                                        color: #ccc;
+                                        text-align: center;
+                                        font-size: 11px;
+                                        line-height: 16px;
+                                        font-weight: bold;
+                                        border-radius: 50%;
+                                    }
+                                    
+                                    .zcwf_lblLeft .zcwf_row {
+                                        margin: 15px 0px;
+                                    }
+                                    
+                                    .zcwf_lblLeft .formsubmit {
+                                        margin-right: 5px;
+                                        cursor: pointer;
+                                        color: #333;
+                                        font-size: 15px;
+                                    }
+                                    
+                                    .zcwf_lblLeft .zcwf_privacy_txt {
+                                        color: rgb(0, 0, 0);
+                                        font-size: 15px;
+                                        font-family: robotoregular;
+                                        display: inline-block;
+                                        vertical-align: top;
+                                        color: #333;
+                                        padding-top: 2px;
+                                        margin-left: 6px;
+                                    }
+                                    
+                                    .zcwf_lblLeft .zcwf_button {
+                                        font-size: 15px;
+                                        color: #333;
+                                        border: 1px solid #ccc;
+                                        padding: 3px 9px;
+                                        border-radius: 4px;
+                                        cursor: pointer;
+                                        max-width: 120px;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                        white-space: nowrap;
+                                    }
+                                    
+                                    .zcwf_lblLeft .zcwf_tooltip_over {
+                                        position: relative;
+                                    }
+                                    
+                                    .zcwf_lblLeft .zcwf_tooltip_ctn {
+                                        position: absolute;
+                                        background: #DEDEDE;
+                                        padding: 3px 6px;
+                                        top: 3px;
+                                        border-radius: 4px;
+                                        word-break: break-all;
+                                        min-width: 50px;
+                                        max-width: 150px;
+                                        color: #333;
+                                    }
+                                    
+                                    .zcwf_lblLeft .zcwf_ckbox {
+                                        float: left;
+                                    }
+                                    
+                                    .zcwf_lblLeft .zcwf_file {
+                                        width: 55%;
+                                        box-sizing: border-box;
+                                        float: left;
+                                    }
+                                    
+                                    .clearB:after {
+                                        content: '';
+                                        display: block;
+                                        clear: both;
+                                    }
+                                    
+                                    @media all and (max-width: 600px) {
+                                        .zcwf_lblLeft .zcwf_col_lab,
+                                        .zcwf_lblLeft .zcwf_col_fld {
+                                            width: auto;
+                                            float: none !important;
+                                        }
+                                        .zcwf_lblLeft .zcwf_col_help {
+                                            width: 40%;
+                                        }
+                                    }
+                                </style>
+                                <div class='zcwf_row'>
+                                    <div class='zcwf_col_lab'><label class="ft-secondary" for='First_Name'>First Name<span style='color:red;'>*</span></label></div>
+                                    <div class='zcwf_col_fld'><input type='text' id='First_Name' name='First Name' maxlength='40'></input>
+                                        <div class='zcwf_col_help'></div>
                                     </div>
                                 </div>
+                                <div class='zcwf_row'>
+                                    <div class='zcwf_col_lab'><label class="ft-secondary" for='Last_Name'>Last Name<span style='color:red;'>*</span></label></div>
+                                    <div class='zcwf_col_fld'><input type='text' id='Last_Name' name='Last Name' maxlength='80'></input>
+                                        <div class='zcwf_col_help'></div>
+                                    </div>
+                                </div>
+                                <div class='zcwf_row'>
+                                    <div class='zcwf_col_lab'><label class="ft-secondary" for='Account_Name'>Company Name</label></div>
+                                    <div class='zcwf_col_fld'><input type='text' id='Account_Name' name='Account Name' maxlength='100'></input>
+                                        <div class='zcwf_col_help'></div>
+                                    </div>
+                                </div>
+                                <div class='zcwf_row'>
+                                    <div class='zcwf_col_lab'><label class="ft-secondary" for='Mailing_City'>Mailing City</label></div>
+                                    <div class='zcwf_col_fld'><input type='text' id='Mailing_City' name='Mailing City' maxlength='100'></input>
+                                        <div class='zcwf_col_help'></div>
+                                    </div>
+                                </div>
+                                <div class='zcwf_row'>
+                                    <div class='zcwf_col_lab'><label class="ft-secondary" for='Email'>Email</label></div>
+                                    <div class='zcwf_col_fld'><input type='text' ftype='email' id='Email' name='Email' maxlength='100'></input>
+                                        <div class='zcwf_col_help'></div>
+                                    </div>
+                                </div>
+                                <div class='zcwf_row'>
+                                    <div class='zcwf_col_lab'><label class="ft-secondary" for='Mobile'>Mobile<span style='color:red;'>*</span></label></div>
+                                    <div class='zcwf_col_fld'><input type='text' id='Mobile' name='Mobile' maxlength='30'></input>
+                                        <div class='zcwf_col_help'></div>
+                                    </div>
+                                </div>
+                                <div class='zcwf_row'>
+                                    <div class='zcwf_col_lab'><label class="ft-secondary" for='CONTACTCF6'>Type Assortiment</label></div>
+                                    <div class='zcwf_col_fld'><select class='zcwf_col_fld_slt' id='CONTACTCF6' name='CONTACTCF6'>
+                                        <option value='-None-'>-None-</option>
+                                        <option value='Groenten&#x20;&amp;&#x20;Fruit'>Groenten &amp; Fruit</option>
+                                        <option value='Noten&#x20;&amp;&#x20;Vruchten'>Noten &amp; Vruchten</option>
+                                        <option value='Drogisterij'>Drogisterij</option>
+                                        <option value='Slagerij'>Slagerij</option>
+                                        <option value='Bakkerij'>Bakkerij</option>
+                                        <option value='Delicatessen'>Delicatessen</option>
+                                        <option value='Kaashandel'>Kaashandel</option>
+                                        <option value='Slijterij&#x2f;Wijnhandel'>Slijterij&#x2f;Wijnhandel</option>
+                                        <option value='Supermarkt'>Supermarkt</option>
+                                        <option value='Patisserie'>Patisserie</option>
+                                        <option value='Overig'>Overig</option>
+                                    </select>
+                                        <div class='zcwf_col_help'></div>
+                                    </div>
+                                </div>
+                                <div class='zcwf_row'>
+                                    <div class='zcwf_col_lab'><label class="ft-secondary" for='CONTACTCF7'>Grootte Assortiment</label></div>
+                                    <div class='zcwf_col_fld'><select class='zcwf_col_fld_slt' id='CONTACTCF7' name='CONTACTCF7'>
+                                        <option value='-None-'>-None-</option>
+                                        <option value='&lt;25'>&lt;25</option>
+                                        <option value='25-50'>25-50</option>
+                                        <option value='50-75'>50-75</option>
+                                        <option value='75-100'>75-100</option>
+                                        <option value='100&#x2b;'>100&#x2b;</option>
+                                    </select>
+                                        <div class='zcwf_col_help'></div>
+                                    </div>
+                                </div>
+                                <div class='zcwf_row wfrm_fld_dpNn'>
+                                    <div class='zcwf_col_lab'><label class="ft-secondary" for='Lead_Source'>Lead Source</label></div>
+                                    <div class='zcwf_col_fld'><select class='zcwf_col_fld_slt' id='Lead_Source' name='Lead Source'>
+                                        <option value='-None-'>-None-</option>
+                                    <option selected value='Webform'>Webform</option>
+                                        <option value='Manual'>Manual</option>
+                                        <option value='Scrape'>Scrape</option>
+                                    </select>
+                                        <div class='zcwf_col_help'></div>
+                                    </div>
+                                </div>
+                                <div class='zcwf_row'>
+                                    <div class='zcwf_col_lab'></div>
+                                    <div class='zcwf_col_fld'><input type='submit' id='formsubmit' class='formsubmit zcwf_button' value='Indienen' title='Indienen'><input type='reset' class='zcwf_button' name='reset' value='Opnieuw&#x20;instellen' title='Opnieuw&#x20;instellen'></div>
+                                </div>
                                 <script>
-                                    var mndFileds = new Array('First Name', 'Last Name');
-                                    var fldLangVal = new Array('First Name', 'Last Name');
-                                    var name = '';
-                                    var email = '';
-
-                                    function disableSubmitwhileReset() {
-                                        var e = document.getElementById("formsubmit");
-                                        null !== document.getElementById("privacyTool") || null !== document.getElementById("consentTool") ? (e.disabled = !0, e.style.opacity = "0.5;") : e.removeAttribute("disabled")
-                                    }
-
-                                    function checkMandatory() {
-                                        var e, t = mndFileds.length;
-                                        for (e = 0; e < t; e++) {
-                                            var i = document.forms.CMIGNITEWebToContacts[mndFileds[e]];
-                                            if (i) {
-                                                if (0 === i.value.replace(/^\s+|\s+$/g, "").length) return "file" === i.type ? (alert("Please select a file to upload."), i.focus(), !1) : (alert(fldLangVal[e] + " cannot be empty."), i.focus(), !1);
-                                                if ("SELECT" === i.nodeName) {
-                                                    if ("-None-" === i.options[i.selectedIndex].value) return alert(fldLangVal[e] + " cannot be none."), i.focus(), !1
-                                                } else if ("checkbox" === i.type && !1 === i.checked) return alert("Please accept  " + fldLangVal[e]), i.focus(), !1;
-                                                try {
-                                                    "Last Name" === i.name && (name = i.value)
-                                                } catch (e) {
-                                                    murphy.error(e)
+                                    function validateEmail353036000000290731() {
+                                        var form = document.forms['WebToContacts353036000000290731'];
+                                        var emailFld = form.querySelectorAll('[ftype=email]');
+                                        var i;
+                                        for (i = 0; i < emailFld.length; i++) {
+                                            var emailVal = emailFld[i].value;
+                                            if ((emailVal.replace(/^\s+|\s+$/g, '')).length != 0) {
+                                                var atpos = emailVal.indexOf('@');
+                                                var dotpos = emailVal.lastIndexOf('.');
+                                                if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= emailVal.length) {
+                                                    alert('Please enter a valid email address. ');
+                                                    emailFld[i].focus();
+                                                    return false;
                                                 }
                                             }
                                         }
-                                        return validateFileUpload()
+                                        return true;
                                     }
 
-                                    function validateFileUpload() {
-                                        var e = document.getElementById("theFile"),
-                                            t = 0;
-                                        if (e) {
-                                            if (e.files.length > 3) return alert("You can upload a maximum of three files at a time."), !1;
-                                            if ("files" in e) {
-                                                var i = e.files.length;
-                                                if (0 !== i) {
-                                                    for (var o = 0; o < i; o++) {
-                                                        var a = e.files[o];
-                                                        "size" in a && (t += a.size)
+                                    function checkMandatory353036000000290731() {
+                                        var mndFileds = new Array('First Name', 'Last Name', 'Mobile');
+                                        var fldLangVal = new Array('First\x20Name', 'Last\x20Name', 'Mobile');
+                                        for (i = 0; i < mndFileds.length; i++) {
+                                            var fieldObj = document.forms['WebToContacts353036000000290731'][mndFileds[i]];
+                                            if (fieldObj) {
+                                                if (((fieldObj.value).replace(/^\s+|\s+$/g, '')).length == 0) {
+                                                    if (fieldObj.type == 'file') {
+                                                        alert('Please select a file to upload.');
+                                                        fieldObj.focus();
+                                                        return false;
                                                     }
-                                                    if (t > 20971520) return alert("Total file(s) size should not exceed 20MB."), !1
+                                                    alert(fldLangVal[i] + ' cannot be empty.');
+                                                    fieldObj.focus();
+                                                    return false;
+                                                } else if (fieldObj.nodeName == 'SELECT') {
+                                                    if (fieldObj.options[fieldObj.selectedIndex].value == '-None-') {
+                                                        alert(fldLangVal[i] + ' cannot be none.');
+                                                        fieldObj.focus();
+                                                        return false;
+                                                    }
+                                                } else if (fieldObj.type == 'checkbox') {
+                                                    if (fieldObj.checked == false) {
+                                                        alert('Please accept  ' + fldLangVal[i]);
+                                                        fieldObj.focus();
+                                                        return false;
+                                                    }
                                                 }
+                                                try {
+                                                    if (fieldObj.name == 'Last Name') {
+                                                        name = fieldObj.value;
+                                                    }
+                                                } catch (e) {}
                                             }
+                                        }
+                                        if (!validateEmail353036000000290731()) {
+                                            return false;
+                                        }
+                                        document.querySelector('.crmWebToEntityForm .formsubmit').setAttribute('disabled', true);
+                                    }
+
+                                    function tooltipShow353036000000290731(el) {
+                                        var tooltip = el.nextElementSibling;
+                                        var tooltipDisplay = tooltip.style.display;
+                                        if (tooltipDisplay == 'none') {
+                                            var allTooltip = document.getElementsByClassName('zcwf_tooltip_over');
+                                            for (i = 0; i < allTooltip.length; i++) {
+                                                allTooltip[i].style.display = 'none';
+                                            }
+                                            tooltip.style.display = 'block';
+                                        } else {
+                                            tooltip.style.display = 'none';
                                         }
                                     }
                                 </script>
                             </form>
                         </div>
-
                     </div>
+
                 </div>
                 <div class="col-md-4 order-md-1">
                     <div class="vendor-img">
