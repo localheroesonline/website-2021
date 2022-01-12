@@ -4,7 +4,7 @@
     "namespace": "android_app",
     "package_name": "com.localheroes.consumer",
     "sha256_cert_fingerprints":
-    ["EB:1F:CA:94:9E:6D:D8:C0:D8:7B:F3:DC:57:33:D4:FD:96:CA:BF:7A:BE:C6:87:7A:4B:AE:B8:89:36:D1:D5:12"]
+    ["3A:C6:40:48:A8:0A:E9:9E:FB:6E:FB:13:9A:08:5B:AB:43:7E:6A:6A:0F:56:F7:83:57:18:2F:5D:E3:F8:43:E0"]
   }
 },
 {
@@ -13,7 +13,7 @@
     "namespace": "android_app",
     "package_name": "com.localheroes.consumer.local",
     "sha256_cert_fingerprints":
-    ["EB:1F:CA:94:9E:6D:D8:C0:D8:7B:F3:DC:57:33:D4:FD:96:CA:BF:7A:BE:C6:87:7A:4B:AE:B8:89:36:D1:D5:12"]
+    ["3A:C6:40:48:A8:0A:E9:9E:FB:6E:FB:13:9A:08:5B:AB:43:7E:6A:6A:0F:56:F7:83:57:18:2F:5D:E3:F8:43:E0"]
   }
 },
 {
@@ -22,6 +22,6 @@
     "namespace": "android_app",
     "package_name": "com.localheroes.consumer.qa",
     "sha256_cert_fingerprints":
-    ["EB:1F:CA:94:9E:6D:D8:C0:D8:7B:F3:DC:57:33:D4:FD:96:CA:BF:7A:BE:C6:87:7A:4B:AE:B8:89:36:D1:D5:12"]
+    ["3A:C6:40:48:A8:0A:E9:9E:FB:6E:FB:13:9A:08:5B:AB:43:7E:6A:6A:0F:56:F7:83:57:18:2F:5D:E3:F8:43:E0"]
   }
 }]
