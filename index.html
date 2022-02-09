@@ -347,7 +347,6 @@ title: Bestel het beste uit de buurt
 
     // getLocation();
 </script>
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script>
     $(document).ready(function() {
 
@@ -355,6 +354,8 @@ title: Bestel het beste uit de buurt
             var zip = $('#mijn_postcode').val();
             if (zip.length == 4) {
                 if (
+                    (zip == 1013) ||
+                    (zip == 1014) ||
                     (zip == 1015) ||
                     (zip == 1016) ||
                     (zip == 1051) ||
@@ -364,7 +365,15 @@ title: Bestel het beste uit de buurt
                     (zip == 1055) ||
                     (zip == 1056) ||
                     (zip == 1057) ||
-                    (zip == 1058)
+                    (zip == 1058) ||
+                    (zip == 1018) ||
+                    (zip == 1019) ||
+                    (zip == 1091) ||
+                    (zip == 1092) ||
+                    (zip == 1093) ||
+                    (zip == 1094) ||
+                    (zip == 1097) ||
+                    (zip == 1098)
                 ) {
                     $('#bezorgen_mogelijk').show();
                     $('#bezorgen_niet_mogelijk').hide();
