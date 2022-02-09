@@ -84,17 +84,19 @@ $('.mobile-navbar a').click(function(){
 // SLICK SLIDER
 $('.slick-carousel').slick({
   infinite: true,
-  slidesToShow: 4, // Shows a three slides at a time
-  slidesToScroll: 1, // When you click an arrow, it scrolls 1 slide at a time
+  speed: 300,
+  slidesToShow: 5, // Shows a three slides at a time
+  slidesToScroll: 5, // When you click an arrow, it scrolls 1 slide at a time
   arrows: true, // Adds arrows to sides of slider
   dots: false, // Adds the dots on the bottom
+  autoplay: true,
+  autoplaySpeed: 3000,  
   responsive: [
         {
           breakpoint: 1500,
           settings: {
-            slidesToShow: 4,
-            slidesToScroll: 4,
-            adaptiveHeight: true,
+            slidesToShow: 5,
+            slidesToScroll: 5,
           },
         },
         {
@@ -114,8 +116,8 @@ $('.slick-carousel').slick({
         {
           breakpoint: 768,
           settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
+            slidesToShow: 2,
+            slidesToScroll: 2,
           },
         },
         {
