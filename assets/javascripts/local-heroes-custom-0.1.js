@@ -85,8 +85,8 @@ $('.mobile-navbar a').click(function(){
 $('.slick-carousel').slick({
   infinite: true,
   speed: 300,
-  slidesToShow: 5, // Shows a three slides at a time
-  slidesToScroll: 5, // When you click an arrow, it scrolls 1 slide at a time
+  slidesToShow: 4, // Shows a three slides at a time
+  slidesToScroll: 4, // When you click an arrow, it scrolls 1 slide at a time
   arrows: true, // Adds arrows to sides of slider
   dots: false, // Adds the dots on the bottom
   autoplay: true,
@@ -95,8 +95,8 @@ $('.slick-carousel').slick({
         {
           breakpoint: 1500,
           settings: {
-            slidesToShow: 5,
-            slidesToScroll: 5,
+            slidesToShow: 4,
+            slidesToScroll: 4,
           },
         },
         {
