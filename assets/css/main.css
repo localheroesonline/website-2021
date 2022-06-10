@@ -1475,6 +1475,8 @@ hr.base {
   position: relative;
 }
 
+/**
+* floating EU logo on home screen
 .app-header::after{
     position: absolute;
     content: "";
@@ -1487,6 +1489,7 @@ hr.base {
     background-size: contain;
     background-repeat: no-repeat;
 }
+*/
 
 .app-header .header-mob {
   max-width: 530px;
@@ -1976,14 +1979,14 @@ hr.base {
 }
 
 .europese-unie-logo {
-  width: 105px;
+  width: 400px;
   margin-left: auto;
   display: inherit;
 }
 
 @media (max-width: 768px) {
   .europese-unie-logo {
-    width: 50px;
+    width: 70%;
     margin-top: 0.5rem;
     margin-left: 1rem;
   }
