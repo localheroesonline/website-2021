@@ -123,20 +123,6 @@ sitemap: false
                 "utm_campaign": utm_campaign,            
             });
             window.location.href = "https://apps.apple.com/us/app/lh-consumer/id1470938037?utm_source=" + utm_source + "&utm_medium=" + utm_medium + "&utm_campaign=" + utm_campaign;
-        } else if (os == "Windows Phone") {
-            mixpanel.track("Goto Local Heroes Home", {
-                "Campaign": page,
-                "$os": os,
-                "utm_source": utm_source,
-                "utm_medium": utm_medium,
-                "utm_campaign": utm_campaign,     
-            });
-            // Do we have a UTM source? Then redirect to vendor otherwise go to index
-            if ( utm_source == '' ) {
-                window.location.href = "{{site.url}}/index?utm_source=&utm_medium=" + utm_medium + "&utm_campaign=" + utm_campaign;        
-            } else {
-                window.location.href = "{{site.url}}/v/" + utm_source + "?utm_source=" + utm_source + "&utm_medium=" + utm_medium + "&utm_campaign=" + utm_campaign;
-            };
         } else {
             mixpanel.track("Goto Local Heroes Home", {
                 "Campaign": page,
@@ -146,11 +132,14 @@ sitemap: false
                 "utm_campaign": utm_campaign,              
             });
             // Do we have a UTM source? Then redirect to vendor otherwise go to index
+            /* temporarily disabled this code, rethink this piggybacking on utm_source
             if ( utm_source == '' ) {
                 window.location.href = "{{site.url}}/index?utm_source=&utm_medium=" + utm_medium + "&utm_campaign=" + utm_campaign;        
             } else {
                 window.location.href = "{{site.url}}/v/" + utm_source + "?utm_source=" + utm_source + "&utm_medium=" + utm_medium + "&utm_campaign=" + utm_campaign;
             };
+            */
+            window.location.href = "{{site.url}}/index.html#utm_source=" + utm_source + "&utm_medium=" + utm_medium + "&utm_campaign=" + utm_campaign;
         }
     }
     </script>
