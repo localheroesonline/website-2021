@@ -1,6 +1,6 @@
 hub_location_id,city,name,location,address,latitude,longitude
-z2pn26,Amsterdam,Oud-West,"Ten Kate Pick Up Point","Ten Katestraat tegenover Cafe Bax (119)",52.36550000,4.86770000
-zmb6em,Amsterdam,"Bouncespace Overtoom","Bouncespace Overtoom","Overtoom 141-3, Amsterdam",52.41413290,4.92218260
+z2pn26,Amsterdam,"Amsterdam ⭐⭐⭐",Amsterdam,"Thuisbezorgd in Amsterdam - ophalen Ten Katestraat tegenover Cafe Bax (119)",52.36550000,4.86770000
+zmb6em,Amsterdam,"Bouncespace Overtoom","Bouncespace Overtoom","Overtoom 141-3, Amsterdam",16.77348000,3.00742000
 rm56r2,Huizen,Oostermeent,Huizen,Oostermeent,52.29421070,5.26243930
 e23bmb,Vleuten,Hindersteinlaan,Vleuten,Hindersteinlaan,52.10580444,5.01324654
 rm5r2g,Wageningen,Markt,Wageningen,Markt,51.96464310,5.66261970
@@ -29,11 +29,10 @@ ymw4x2,Woudenberg,"Woudenberg 'Poortplein'",Woudenberg,"De Nieuwe Poort, Woudenb
 am6yx2,Achterberg,Achterberg,Achterberg,"Achterbergsestraatweg 184, Achterberg",51.97290500,5.58580600
 xmyz72,Maarn,Maarn,Maarn,"5-mei Plein, Maarn",52.06452600,5.37193100
 a2gan2,Beusichem,"Beusichem Markt",Beusichem,"Markt, Beusichem",51.94857100,5.29252100
-32zekm,Amsterdam,"Local Heroes Amsterdam","Ten Kate Pick Up Point","Ten Katestraat tegenover Cafe Bax (119)",52.36571020,4.88447380
 dmnoo2,Haarlem,Zomerkade,Haarlem,Zomerkade,,
 6mkb62,BOER&NLekker,Breda,BOER&NLekker,"Rietdijk 4",51.62124900,4.75276900
 zmbye2,Kaasdam,"Kleine Markt",Centrum,Haasland,0.00000000,0.00000000
-42reem,BOER&NLekker,Maren-Kessel,BOER&NLekker,"Burgemeester Smitsweg 10 (Maren-Kessel)",51.77186700,5.38272200
+42reem,BOER&NLekker,Maren-Kessel,BOER&NLekker,"Burgemeester Smitsweg 10",51.77186700,5.38272200
 ymd5r2,Wassenaar,Berkheiveld,Wassenaar,Berkheiveld,52.14716820,4.39149680
 y2x6z2,Bovenkerk,"Noorddammerweg ",Bovenkerk,"Noorddammerweg ",52.26667180,4.81435770
 e233b2,"De Kwakel",Kerklaan,"De Kwakel",Kerklaan,52.23857120,4.79338980
