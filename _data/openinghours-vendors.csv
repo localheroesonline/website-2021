@@ -1,5 +1,4 @@
 vendor_id,day_type,start_time,end_time,day_number
-2g3ng3,donderdag,,,
 mbyvlk,donderdag,,,
 2opela,donderdag,,,
 2xxy7l,donderdag,,,
@@ -17,10 +16,10 @@ m54qnv,donderdag,,,
 mdkyzg,donderdag,,,
 m66kpv,donderdag,,,
 2xxy5k,donderdag,,,
+2g3ng3,donderdag,,,
 y2xezm,dinsdag,08:00,17:00,2
 y2xezm,woensdag,08:00,17:00,3
 y2xezm,donderdag,08:00,17:00,4
-y2xezm,vrijdag,08:00,17:00,5
 y2xezm,zaterdag,08:00,17:00,6
 wm45x2,maandag,08:00,18:00,1
 wm45x2,dinsdag,08:00,18:00,2
@@ -306,11 +305,11 @@ mnoldb,zaterdag,08:00,17:00,6
 2le5n6,donderdag,09:00,15:00,4
 2le5n6,vrijdag,09:00,17:00,5
 2le5n6,zaterdag,09:00,12:00,6
-mav7ng,maandag,09:30,18:30,1
-mav7ng,dinsdag,09:30,18:30,2
-mav7ng,woensdag,09:30,18:30,3
-mav7ng,donderdag,09:30,18:30,4
-mav7ng,vrijdag,09:30,18:30,5
+mav7ng,maandag,09:30,18:00,1
+mav7ng,dinsdag,09:30,18:00,2
+mav7ng,woensdag,09:30,18:00,3
+mav7ng,donderdag,09:30,18:00,4
+mav7ng,vrijdag,09:30,18:00,5
 2qzq5k,maandag,09:00,17:00,1
 2qzq5k,woensdag,09:00,17:00,3
 2qzq5k,donderdag,09:00,17:00,4
