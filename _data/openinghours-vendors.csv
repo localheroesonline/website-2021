@@ -1,4 +1,10 @@
 vendor_id,day_type,start_time,end_time,day_number
+m66kpv,donderdag,,,
+mwz63b,donderdag,,,
+2v3vzx,donderdag,,,
+my3obz,donderdag,,,
+2g3ng3,donderdag,,,
+2g3n63,donderdag,,,
 2zopx5,donderdag,,,
 mdkyzg,donderdag,,,
 2zopy5,donderdag,,,
@@ -12,12 +18,6 @@ m54qb6,donderdag,,,
 mav7gp,donderdag,,,
 mbyvlk,donderdag,,,
 mwz6xk,donderdag,,,
-m66kpv,donderdag,,,
-mwz63b,donderdag,,,
-2v3vzx,donderdag,,,
-my3obz,donderdag,,,
-2g3ng3,donderdag,,,
-2g3n63,donderdag,,,
 y2xezm,dinsdag,08:00,17:00,2
 y2xezm,woensdag,08:00,17:00,3
 y2xezm,donderdag,08:00,17:00,4
@@ -279,6 +279,12 @@ mkb3r7,woensdag,12:00,17:30,3
 mkb3r7,donderdag,12:00,17:30,4
 mkb3r7,vrijdag,12:00,17:30,5
 mkb3r7,zaterdag,09:00,17:00,6
+mbyvdk,maandag,09:00,18:00,1
+mbyvdk,dinsdag,09:00,18:00,2
+mbyvdk,woensdag,09:00,18:00,3
+mbyvdk,donderdag,09:00,18:00,4
+mbyvdk,vrijdag,09:00,18:00,5
+mbyvdk,zaterdag,09:00,16:00,6
 mwz6wb,dinsdag,09:30,17:00,2
 mwz6wb,woensdag,09:30,17:00,3
 mwz6wb,donderdag,09:30,17:00,4
