@@ -1,17 +1,27 @@
----
-layout: default
-title: Bestel het beste uit de buurt
----
 <!-- HUB LOCATION -->
 <section id="onze-heroes" class="section-wrap section-our-heroes">
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
+        <div class="row justify-content-md-center">
+            <div class="col-md-6">
                 <h2 class="main-heading ft-primary text-center mb-4">{{ page.hub_location_name }}</h2>
-                <p>Welkom op deze Local Heroes locatie in {{ page.hub_location_city }} met als adres {{ page.hub_location_address }}.</p>
-                <p><img src="http://maps.googleapis.com/maps/api/staticmap?center={{ page.hub_location_latitude }},{{ page.hub_location_longitude }}&zoom=11&size=400x400&sensor=false"></p>
+                <p>Welkom op deze Local Heroes locatie in {{ page.hub_location_city }}</p>
+                <p>{{ page.hub_location_address }}</p>
             </div>
         </div>
+
+        <div class="row justify-content-md-center">
+            <div class="col-md-6">
+				<div class="embed-responsive embed-responsive-4by3 d-flex p-2">
+					<iframe class="embed-responsive-item" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q={{ page.hub_location_latitude }},{{ page.hub_location_longitude }}&hl=nl&z=15&output=embed"></iframe>
+				</div>
+            </div>
+        </div>
+
+		<div class="row">
+			&nbsp;
+			&nbsp;
+			&nbsp;
+		</div>
 
         <div class="row">
             <div class="col-md-12">
@@ -21,13 +31,13 @@ title: Bestel het beste uit de buurt
                     <div class="slide-item">
                         <!-- You can put an image or text inside each slide div -->
                         <div class="hero-img">
-                            <a href="{{ item.vendor_permalink }}"><img src="{{ site.cloudimg }}_prod_/vendor-profile/{{ item.vendor_image }}?width=300" alt="{{ item.vendor_shop_name }} - {{ item.vendor_category_name }}"></a>
+                            <a href="{{ site.url }}/{{ item.vendor_permalink }}"><img src="{{ site.cloudimg }}_prod_/vendor-profile/{{ item.vendor_image }}?width=300" alt="{{ item.vendor_shop_name }} - {{ item.vendor_category_name }}"></a>
                         </div>
                         <div class="content text-center">
                             <h2 class="ft-secondary ft-xs">{{ item.vendor_shop_name }}</h2>
                             <h3 class="ft-xs ft-base">{{ item.vendor_category_name }}</h3>
                         </div>
-                        <a href="{{ item.vendor_permalink }}" class="v-btn v-btn-acent btn-md fw-bold">Toon assortiment</a>
+                        <a href="{{ site.url }}/{{ item.vendor_permalink }}" class="v-btn v-btn-acent btn-md fw-bold">Toon assortiment</a>
                     </div>
                     {% endfor %}
                 </div>
