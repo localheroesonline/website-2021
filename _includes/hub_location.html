@@ -1,0 +1,76 @@
+---
+layout: default
+title: Bestel het beste uit de buurt
+---
+<!-- HUB LOCATION -->
+<section id="onze-heroes" class="section-wrap section-our-heroes">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="main-heading ft-primary text-center mb-4">{{ page.hub_location_name }}</h2>
+                <p>Welkom op deze Local Heroes locatie in {{ page.hub_location_city }} met als adres {{ page.hub_location_address }}.</p>
+                <p><img src="http://maps.googleapis.com/maps/api/staticmap?center={{ page.hub_location_latitude }},{{ page.hub_location_longitude }}&zoom=11&size=400x400&sensor=false"></p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="slick-carousel heroes-wapper" id="vendor-carousel">
+                    <!-- Inside the containing div, add one div for each slide -->
+                    {% for item in site.data.vendors %}
+                    <div class="slide-item">
+                        <!-- You can put an image or text inside each slide div -->
+                        <div class="hero-img">
+                            <a href="{{ item.vendor_permalink }}"><img src="{{ site.cloudimg }}_prod_/vendor-profile/{{ item.vendor_image }}?width=300" alt="{{ item.vendor_shop_name }} - {{ item.vendor_category_name }}"></a>
+                        </div>
+                        <div class="content text-center">
+                            <h2 class="ft-secondary ft-xs">{{ item.vendor_shop_name }}</h2>
+                            <h3 class="ft-xs ft-base">{{ item.vendor_category_name }}</h3>
+                        </div>
+                        <a href="{{ item.vendor_permalink }}" class="v-btn v-btn-acent btn-md fw-bold">Toon assortiment</a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript">
+    mixpanel.track_links("#vendor-carousel a", "Click vendor link", {
+        "referrer": document.referrer
+    });
+</script>
+<!-- UNIQUE SELLING POINTS -->
+<section class="section-wrap features skin-base">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="features-content">
+                    <div class="logo">
+                        <img src="{{ site.image_url }}/assets/home/logo.png?width=200" class="img-fluid" alt="Local Heroes logo">
+                    </div>
+                    <div class="additional-info">
+                        <h2 class="fw-bold mb-2 ft-primary">Boodschappen doen via Local Heroes is een win-win-win.</h2>
+                        <ul class="">
+                            <li>
+                                <img src="{{ site.image_url }}/assets/home/check-icon.png?width=20" alt="Steun lokale ondernemers">
+                                <h3>Steun lokale ondernemers</h3>
+                            </li>
+                            <li>
+                                <img src="{{ site.image_url }}/assets/home/check-icon.png?width=20" alt="Altijd verse en lekkere producten van de markt in huis">
+                                <h3>Verse ambachtelijke producten uit de buurt</h3>
+                            </li>
+                            <li>
+                                <img src="{{ site.image_url }}/assets/home/check-icon.png?width=20" alt="Bespaar tijd, geld én moeite">
+                                <h3>Bespaar tijd, geld én moeite</h3>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="feature-mob">
+        <img src="{{ site.image_url }}/assets/mockup_footer.png?width=360" class="img-fluid" alt="Bakkerij Straathof">
+    </div>
+</section>
