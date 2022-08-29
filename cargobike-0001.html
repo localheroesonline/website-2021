@@ -66,6 +66,7 @@ sitemap: false
 
             if (os == "Android") {
                 mixpanel.track("Goto App Marketplace", {
+                    "User agent": navigator.userAgent,
                     "Marketplace": "Android",
                     "Campaign": "qr-code-cargo-bike-0001",
                     "$os": os,
@@ -76,6 +77,7 @@ sitemap: false
                 window.location.href = "https://play.google.com/store/apps/details?id=com.localheroes.consumer&utm_source=" + urlParams.get('utm_source') + "&utm_medium=" + urlParams.get('utm_medium') + "&utm_campaign=" + urlParams.get('utm_campaign');
             } else if (os == "iOS") {
                 mixpanel.track("Goto App Marketplace", {
+                    "User agent": navigator.userAgent,
                     "Marketplace": "iOS",
                     "Campaign": "qr-code-cargo-bike-0001",
                     "$os": os,
@@ -86,6 +88,7 @@ sitemap: false
                 window.location.href = "https://apps.apple.com/us/app/lh-consumer/id1470938037?utm_source=" + urlParams.get('utm_source') + "&utm_medium=" + urlParams.get('utm_medium') + "&utm_campaign=" + urlParams.get('utm_campaign');
             } else if (os == "Windows Phone") {
                 mixpanel.track("Goto Local Heroes Home", {
+                    "User agent": navigator.userAgent,
                     "Campaign": "qr-code-cargo-bike-0001",
                     "$os": os,
                     "utm_source": urlParams.get('utm_source'),
@@ -95,6 +98,7 @@ sitemap: false
                 window.location.href = "{{ site.url }}#utm_source=" + urlParams.get('utm_source') + "&utm_medium=" + urlParams.get('utm_medium') + "&utm_campaign=" + urlParams.get('utm_campaign');
             } else {
                 mixpanel.track("Goto Local Heroes Home", {
+                    "User agent": navigator.userAgent,
                     "Campaign": "qr-code-cargo-bike-0001",
                     "$os": os,
                     "utm_source": urlParams.get('utm_source'),

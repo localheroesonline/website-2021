@@ -160,6 +160,7 @@ function DetectAndServe(campaign) {
   var url = "https://apps.apple.com/us/app/lh-consumer/id1470938037";
   if (os == "Android") {
       mixpanel.track("Goto App Marketplace", {
+        "User agent": navigator.userAgent,
         "Marketplace": "Android",
         "Campaign": campaign,
         "$os": os,  
@@ -167,6 +168,7 @@ function DetectAndServe(campaign) {
       url = "https://play.google.com/store/apps/details?id=com.localheroes.consumer";
   } else if (os == "iOS") {
       mixpanel.track("Goto App Marketplace", {
+        "User agent": navigator.userAgent,
         "Marketplace": "iOS",
         "Campaign": campaign,
         "$os": os,
@@ -177,6 +179,7 @@ function DetectAndServe(campaign) {
   // Redirect to apple store in case it is not android. Fix later.
   } else {
     mixpanel.track("Goto App Marketplace", {
+      "User agent": navigator.userAgent,
       "Marketplace": "Unknown",
       "Campaign": campaign,
       "$os": os,

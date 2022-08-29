@@ -46,6 +46,7 @@ title: Bestel het beste uit de buurt
 </section>
 <script type="text/javascript">
     mixpanel.track_links("#home a", "Click b2b link", {
+        "User agent": navigator.userAgent,
         "referrer": document.referrer
     });
 </script>
@@ -171,6 +172,7 @@ title: Bestel het beste uit de buurt
                         </form>
                         <script type="text/javascript">
                             mixpanel.track_forms("#register_consumer", "Lead registered", {
+                                "User agent": navigator.userAgent,
                                 "referrer": document.referrer,
                                 "Lead First name": document.getElementById("lead_first_name").value,
                                 "Lead Email": document.getElementById("lead_email").value,
@@ -225,6 +227,7 @@ title: Bestel het beste uit de buurt
 </section>
 <script type="text/javascript">
     mixpanel.track_links("#vendor-carousel a", "Click vendor link", {
+        "User agent": navigator.userAgent,
         "referrer": document.referrer
     });
 </script>
@@ -319,6 +322,7 @@ title: Bestel het beste uit de buurt
             </div>
             <script type="text/javascript">
                 mixpanel.track_links("#review_links a", "Click review link", {
+                    "User agent": navigator.userAgent,
                     "referrer": document.referrer
                 });
             </script>
@@ -387,6 +391,7 @@ title: Bestel het beste uit de buurt
                     $('#bezorgen_niet_mogelijk').show();
                 }
                 mixpanel.track('Zipcode entered', {
+                    "User agent": navigator.userAgent,
                     "Zipcode": zip
                 });
             }

@@ -28,5 +28,7 @@
 <!-- TODO: Navigate within index.html to #over-ons -->
 <script type="text/javascript">
     var eventNavigate = "Navigate within index.html";
-    mixpanel.track_links("#navbar_list a", eventNavigate);
+    mixpanel.track_links("#navbar_list a", eventNavigate, {
+        "User agent": navigator.userAgent,
+    });
 </script>
