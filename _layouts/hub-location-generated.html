@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "nl" }}">
+
+{% include head_hub_location.html %}
+
+{% if site.mixpanel-project-token and site.mixpanel-api-host %}
+<script type="text/javascript">
+    mixpanel.track("Visit {{page.name}}", {
+        "User agent": navigator.userAgent,
+        "Page Title": "{{page.title}}",
+        "Page URL": "{{page.url}}",
+        "Page Name": "{{page.name}}",
+    });
+    </script>    
+{% endif %}
+
+<body>
+    {% include app_navbar.html %}
+    
+    {{content}}
+
+    {% include footer_light.html %}
+</body>
+</html>
