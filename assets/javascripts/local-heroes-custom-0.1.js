@@ -188,8 +188,8 @@ function DetectAndServe(campaign) {
     });
     url = "https://apps.apple.com/us/app/lh-consumer/id1470938037";
   }
-  // Try redirect using jQuery
-  $(location).attr('href',url);
+  // Redirect
+  window.location.href = url;
   return;
 };
 
@@ -199,8 +199,8 @@ function TrackAndServe(redirectURL) {
   mixpanel.track("Goto " + redirectURL, {
       "User agent": navigator.userAgent,
     });
-  // Try redirect using jQuery
-  $(location).attr('href',redirectURL);
+  // redirect
+  window.location.href = redirectURL;
   return;
 };
 
