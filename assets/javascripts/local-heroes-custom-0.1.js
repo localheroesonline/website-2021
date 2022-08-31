@@ -193,6 +193,17 @@ function DetectAndServe(campaign) {
   return;
 };
 
+// REDIRECT VISITOR TO given URL
+function TrackAndServe(redirectURL) {
+  event.preventDefault();
+  mixpanel.track("Goto " + redirectURL, {
+      "User agent": navigator.userAgent,
+    });
+  // Try redirect using jQuery
+  $(location).attr('href',redirectURL);
+  return;
+};
+
 function getMobileOperatingSystem() {
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
     // Windows Phone must come first because its UA also contains "Android"
