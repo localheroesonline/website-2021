@@ -40,7 +40,7 @@
                {
                   "/": "/c/*",
                   "comment": "Category / browse"
-               },
+               }
              ]
            }
        ]
