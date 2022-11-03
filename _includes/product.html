@@ -13,7 +13,7 @@
                         </div>
                     </div>
                     <div class="product-img">
-                        <img src="{{ site.cloudimg }}_prod_/product/{{ page.product_image }}?width=600" class="img-fluid" alt="{{ page.product_name }}">
+                        <img src="{{ site.cloudimg }}_prod_/product/{{ page.product_image_hash }}?width=600" class="img-fluid" alt="{{ page.product_name }}">
                     </div>
                 </div>
                 <div class="accordion accordion-details d-none d-md-block" id="productDetails">
@@ -24,10 +24,18 @@
                         <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#productDetails">
                             <div class="card-body">
                                 <ul class="details-list">
-                                    <li>Bewaren <span>{{ page.product_type }}</span></li>
-                                    <li>Type <span>{{ page.product_unit }}</span></li>
-                                    <li>Hoeveelheid <span>{{ page.product_details }}</span></li>
-                                    <li>Prijs/Kg <span>€ {{ page.product_kg_price| precision: 2 }}</span></li>
+                                    <li>Bewaren <span>{{ page.product_temperature }}</span></li>
+                                    {% if page.product_measurement == 'piece' %}
+                                        <li>Type <span>stuks</span></li>
+                                    {% else %}
+                                        <li>Type <span>gewicht</span></li>
+                                    {% endif %}
+                                    <li>Hoeveelheid <span>{{ page.product_quantity_description }}</span></li>
+                                    {% if page.product_measurement <> 'piece' %}
+                                        <li>Prijs/Kg <span>€ {{ page.product_unit_price / page.product_base_quantity * 1000 | precision: 2 }}</span></li>
+                                    {% else %}
+                                        <li>Prijs <span>€ {{ page.product_unit_price | precision: 2 }}</span></li>
+                                    {% endif %}
                                     <li>BTW <span>{{ page.product_vat }} %</span></li>
                                 </ul>
                             </div>
@@ -39,25 +47,30 @@
                 <div class="product-details">
                     <div class="product-info">
                         <h3>{{ page.product_name }}</h3>
-                        <p class="price-n-stock">per stuk | {% if page.product_stock_status=='Out_stock' %}
-                            <span class="status out-stock disabled">Niet op voorraad</span> {% else %}
-                            <span class="status in-stock">Op voorraad</span> {% endif %}
-                            <span class="price">€ {{ page.product_price| precision: 2 }}</span></p>
+                        <p class="price-n-stock">per stuk |
+                            {% if page.product_is_available=="0" %}
+                                <span class="status out-stock disabled">Niet op voorraad</span>
+                            {% else %}
+                                <span class="status in-stock">Op voorraad</span>
+                            {% endif %}
+                            <span class="price">€ {{ page.product_unit_price | precision: 2 }}</span></p>
                     </div>
                     <div class="product-info-mobile">
                         <div class="name-stock">
                             <h3>{{ page.product_name }}</h3>
-                            {% if page.product_stock_status=='Out_stock' %}
-                            <span class="status out-stock disabled">Niet op voorraad</span> {% else %}
-                            <span class="status in-stock">Op voorraad</span> {% endif %}
+                            {% if page.product_is_available== "0" %}
+                                <span class="status out-stock disabled">Niet op voorraad</span>
+                            {% else %}
+                                <span class="status in-stock">Op voorraad</span>
+                            {% endif %}
                         </div>
                         <div class="price-stuk">
-                            <h2>€ {{ page.product_price| precision: 2 }}</h2>
-                            <span class="ft-sm">{{ page.product_details }}</span>
+                            <h2>€ {{ page.product_unit_price | precision: 2 }}</h2>
+                            <span class="ft-sm">{{ page.product_quantity_description }}</span>
                         </div>
                     </div>
                     <div class="product-description">
-                        <p>{{ page.product_information }}</p>
+                        <p>{{ page.product_description }}</p>
                     </div>
                     <div class="accordion accordion-details d-block d-md-none" id="productDetails">
                         <div class="card">
@@ -67,10 +80,14 @@
                             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#productDetails">
                                 <div class="card-body">
                                     <ul class="details-list">
-                                        <li>Bewaren <span>{{ page.product_type }}</span></li>
-                                        <li>Type <span>{{ page.product_unit }}</span></li>
-                                        <li>Hoeveelheid <span>{{ page.product_details }}</span></li>
-                                        <li>Prijs/Kg <span>€ {{ page.product_kg_price| precision: 2 }}</span></li>
+                                        <li>Bewaren <span>{{ page.product_temperature }}</span></li>
+                                        <li>Type <span>{{ page.product_measurement }}</span></li>
+                                        <li>Hoeveelheid <span>{{ page.product_quantity_description }}</span></li>
+                                        {% if page.product_measurement <> 'piece' %}
+                                            <li>Prijs/Kg <span>€ {{ ( page.product_unit_price / page.product_base_quantity ) * 10 ) | precision: 2 }}</span></li>
+                                        {% else %}
+                                            <li>Prijs <span>€ {{ page.product_unit_price | precision: 2 }}</span></li>
+                                        {% endif %}
                                         <li>BTW <span>{{ page.product_vat }} %</span></li>
                                     </ul>
                                 </div>
@@ -85,51 +102,56 @@
                     <h1 class="mb-3 ft-primary pp-title">Populaire producten</h1>
                     <!-- POPULAR PRODUCTS desktop -->
                     <div class="content popular-product-list hidden-xs">
-                        {% for item in site.data.hero-products %} {% if item.vendor_id == page.vendor_id %}
-                        <a href="{{ site.url }}/p/{{ item.product_id }}/{{ item.vendor_url }}/{{ item.product_url }}" class="">
-                            <div class="product-card-sm product-list-item">
-                                <div class="rating-vote">
-                                    <div class="rating small">
-                                        <span><i class="fas fa-thumbs-up"></i></span> {{ item.product_rating }}
+                        {% for item in site.data.hero-products %}
+                            {% if item.vendor_id == page.vendor_id %}
+                            <a href="{{ site.url }}/p/{{ item.product_id }}/{{ item.vendor_url }}/{{ item.product_url }}" class="">
+                                <div class="product-card-sm product-list-item">
+                                    <div class="rating-vote">
+                                        <div class="rating small">
+                                            <span><i class="fas fa-thumbs-up"></i></span> {{ item.product_rating }}
+                                        </div>
+                                    </div>
+                                    <div class="product-card-img">
+                                        <img src="{{ site.cloudimg }}_prod_/product/{{ item.product_image_hash }}?width=150" alt="{{ item.product_name }}">
+                                    </div>
+                                    <div class="product-card-content">
+                                        <h4>{{ item.product_name }}</h4>
+                                        <div class="stuk-price">
+                                            <span class="stuk">{{ item.product_quantity_description }}</span>
+                                            <span class="price">€ {{ item.product_unit_price | precision: 2 }}</span>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="product-card-img">
-                                    <img src="{{ site.cloudimg }}_prod_/product/{{ item.product_image }}?width=150" alt="{{ item.product_name }}">
-                                </div>
-                                <div class="product-card-content">
-                                    <h4>{{ item.product_name }}</h4>
-                                    <div class="stuk-price">
-                                        <span class="stuk">{{ item.product_details }}</span>
-                                        <span class="price">€ {{ item.product_price| precision: 2 }}</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        {% endif %} {% endfor %}
+                            </a>
+                            {% endif %}
+                        {% endfor %}
                     </div>
                     <!-- POPULAR PRODUCTS mobile -->
                     <div class="content product-list-mobile">
-                        {% for item in site.data.hero-products %} {% if item.vendor_id == page.vendor_id %}
-                        <a href="{{ site.url }}/p/{{ item.product_id }}/{{ item.vendor_url }}/{{ item.product_url }}" class="">
-                            <div class="product-list-mobile-item product-card-mobile">
-                                <div class="product-img">
-                                    <img src="{{ site.cloudimg }}_prod_/product/{{ item.product_image }}?width=110" class="img-fluid" alt="{{ item.product_name }}">
-                                </div>
-                                <div class="product-content">
-                                    <h4>{{ item.product_name }}</h4>
-                                    <p class="stuk">{{ item.product_details }}</p>
-                                    {% if item.product_stock_status == "Out_stock" %}
-                                    <span class="status out-stock disabled">Niet op voorraad</span> {% endif %}
-                                </div>
-                                <div class="price-rating">
-                                    <span class="price">€ {{ item.product_price| precision: 2 }}</span>
-                                    <div class="rating">
-                                        <span class="icon icon-sm"><i class="fa fa-thumbs-up"></i></span> {{ item.product_rating }}
+                        {% for item in site.data.hero-products %}
+                            {% if item.vendor_id == page.vendor_id %}
+                            <a href="{{ site.url }}/p/{{ item.product_id }}/{{ item.vendor_url }}/{{ item.product_url }}" class="">
+                                <div class="product-list-mobile-item product-card-mobile">
+                                    <div class="product-img">
+                                        <img src="{{ site.cloudimg }}_prod_/product/{{ item.product_image_hash }}?width=110" class="img-fluid" alt="{{ item.product_name }}">
+                                    </div>
+                                    <div class="product-content">
+                                        <h4>{{ item.product_name }}</h4>
+                                        <p class="stuk">{{ item.product_quantity_description }}</p>
+                                        {% if item.product_is_available == "0" %}
+                                            <span class="status out-stock disabled">Niet op voorraad</span>
+                                        {% endif %}
+                                    </div>
+                                    <div class="price-rating">
+                                        <span class="price">€ {{ item.product_unit_price | precision: 2 }}</span>
+                                        <div class="rating">
+                                            <span class="icon icon-sm"><i class="fa fa-thumbs-up"></i></span> {{ item.product_rating }}
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </a>
-                        {% endif %} {% endfor %}
+                            </a>
+                            {% endif %}
+                        {% endfor %}
                     </div>
                 </div>
             </div>

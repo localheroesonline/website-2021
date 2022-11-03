@@ -84,17 +84,19 @@ $('.mobile-navbar a').click(function(){
 // SLICK SLIDER
 $('.slick-carousel').slick({
   infinite: true,
+  speed: 300,
   slidesToShow: 4, // Shows a three slides at a time
-  slidesToScroll: 1, // When you click an arrow, it scrolls 1 slide at a time
+  slidesToScroll: 4, // When you click an arrow, it scrolls 1 slide at a time
   arrows: true, // Adds arrows to sides of slider
   dots: false, // Adds the dots on the bottom
+  autoplay: true,
+  autoplaySpeed: 3000,  
   responsive: [
         {
           breakpoint: 1500,
           settings: {
             slidesToShow: 4,
             slidesToScroll: 4,
-            adaptiveHeight: true,
           },
         },
         {
@@ -114,8 +116,8 @@ $('.slick-carousel').slick({
         {
           breakpoint: 768,
           settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
+            slidesToShow: 2,
+            slidesToScroll: 2,
           },
         },
         {
@@ -128,28 +130,30 @@ $('.slick-carousel').slick({
       ],
 });
 
-/* BEGIN Make the back link work in the product nav bar */
+/* BEGIN Make the back link work in the vendor nav bar */
 
 // Source: https://stackoverflow.com/questions/8814472/how-to-make-an-html-back-link
 var element = document.getElementById('back-link');
 
+if (!element) {
 // Provide a standard href to facilitate standard browser features such as 
 //  - Hover to see link
 //  - Right click and copy link
 //  - Right click and open in new tab
-element.setAttribute('href', document.referrer);
+  element.setAttribute('href', document.referrer);
 
 // We can't let the browser use the above href for navigation. If it does, 
 // the browser will think that it is a regular link, and place the current 
 // page on the browser history, so that if the user clicks "back" again,
 // it'll actually return to this page. We need to perform a native back to
 // integrate properly into the browser's history behavior
-element.onclick = function() {
-  history.back();
-  return false;
+  element.onclick = function() {
+    history.back();
+    return false;
+  }
 }
 
-/* END Make the back link work in the product nav bar */
+/* END Make the back link work in the vendor nav bar */
 
 // REDIRECT VISITOR TO APP STORE / PLAY STORE DEPENDING ON OS
 function DetectAndServe(campaign) {
@@ -158,6 +162,7 @@ function DetectAndServe(campaign) {
   var url = "https://apps.apple.com/us/app/lh-consumer/id1470938037";
   if (os == "Android") {
       mixpanel.track("Goto App Marketplace", {
+        "User agent": navigator.userAgent,
         "Marketplace": "Android",
         "Campaign": campaign,
         "$os": os,  
@@ -165,6 +170,7 @@ function DetectAndServe(campaign) {
       url = "https://play.google.com/store/apps/details?id=com.localheroes.consumer";
   } else if (os == "iOS") {
       mixpanel.track("Goto App Marketplace", {
+        "User agent": navigator.userAgent,
         "Marketplace": "iOS",
         "Campaign": campaign,
         "$os": os,
@@ -175,14 +181,26 @@ function DetectAndServe(campaign) {
   // Redirect to apple store in case it is not android. Fix later.
   } else {
     mixpanel.track("Goto App Marketplace", {
+      "User agent": navigator.userAgent,
       "Marketplace": "Unknown",
       "Campaign": campaign,
       "$os": os,
     });
     url = "https://apps.apple.com/us/app/lh-consumer/id1470938037";
   }
-  // Try redirect using jQuery
-  $(location).attr('href',url);
+  // Redirect
+  window.location.href = url;
+  return;
+};
+
+// REDIRECT VISITOR TO given URL
+function TrackAndServe(redirectURL) {
+  event.preventDefault();
+  mixpanel.track("Goto " + redirectURL, {
+      "User agent": navigator.userAgent,
+    });
+  // redirect
+  window.location.href = redirectURL;
   return;
 };
 

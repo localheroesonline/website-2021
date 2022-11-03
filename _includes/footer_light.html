@@ -10,9 +10,11 @@
                 </div>
             </div>
             <div class="col-md-3 order-md-3 d-none d-sm-block align-self-center">
-                <a href="https://www.europaomdehoek.nl/" target="_blank" class="europese-unie-logo" rel="noopener noreferrer">
-                    <img src="{{ site.image_url }}/assets/logo_efro.jpg?width=300" class="" alt="Europa om de Hoek logo">
-                </a>
+                <div class="europese-unie-logo">
+                    <a href="{{ site.url}}/faq#headingEFRO">
+                        <img src="{{ site.url}}/assets/faq/Logo-Europees-Fonds-voor-Regionale-Ontwikkeling.png?width=500" class="img-fluid" alt="Europees Fonds voor Regionale Ontwikkeling">
+                    </a>
+                </div>
             </div>
             <div class="col-md-6  order-md-2 align-self-center">
                 <div class="social-icons">
@@ -22,23 +24,24 @@
                     <a href="{{site.linkedin_company_url}}" target="_blank" rel="noopener noreferrer" class="linkedin"><i class="fab fa-linkedin"></i></a>
                     <a href="{{site.instagram_url}}" target="_blank" rel="noopener noreferrer" class="instagram"><i class="fab fa-instagram"></i></a>
                 </div>
-
                 <div class="copyright">
                     <div class="copy">
                         <span>&copy; {{ site.time | date: '%Y' }} <a href="/" class="ft-primary fw-bold">Local Heroes</a></span>
                     </div>
-                    <a href="https://www.europaomdehoek.nl/" class="europese-unie-logo d-block d-sm-none" target="_blank" rel="noopener noreferrer">
-                        <img src="{{ site.image_url }}/assets/logo_efro.jpg?width=300" class="" alt="Europa om de Hoek logo">
-                    </a>
+                    <div class="europese-unie-logo d-block d-sm-none">
+                        <a href="{{ site.url}}/faq#headingEFRO">
+                            <img src="{{ site.url}}/assets/faq/Logo-Europees-Fonds-voor-Regionale-Ontwikkeling.png?width=500" class="img-fluid" alt="Europees Fonds voor Regionale Ontwikkeling">
+                        </a>
+                    </div>
                 </div>
             </div>
-
         </div>
     </div>
 </footer>
 
 <script type="text/javascript">
     mixpanel.track_links("#contact a", "Click footer link", {
+        "User agent": navigator.userAgent,
         "referrer": document.referrer
     });
 </script>

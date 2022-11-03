@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "nl" }}">
+
+{% include head_vendor.html %}
+
+{% if site.mixpanel-project-token and site.mixpanel-api-host %}
+<script type="text/javascript">
+    mixpanel.track("Visit {{page.name}}", {
+        "User agent": navigator.userAgent,
+        "Page Title": "{{page.title}}",
+        "Page URL": "{{page.url}}",
+        "Page Name": "{{page.name}}",
+    });
+    </script>    
+{% endif %}
+
+<body style="background-color: #f1edea;">
+    
+    {{content}}
+
+    {% for path in site.data.assets.js %}    
+
+    {%- if path contains '://' -%}
+        {%- assign src = path -%}
+    {%- else -%}
+        {%- assign src = path | relative_url -%}
+    {%- endif -%}
+
+    <script src="{{ src }}" type="text/javascript"></script>
+    {% endfor %}
+    
+</body>
+</html>

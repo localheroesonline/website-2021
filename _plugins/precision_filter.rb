@@ -1,6 +1,9 @@
 module Jekyll
     module PrecisionFilter
       def precision(input, value=0)
+        if input == nil
+          input = 0
+        end
         ("%.#{value}f" % input)
       end
     end

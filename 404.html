@@ -1,6 +1,6 @@
 ---
 permalink: /404.html
-layout: default
+layout: default_footer_light
 title: Oeps, pagina niet gevonden
 exclude: true
 ---
@@ -25,15 +25,65 @@ exclude: true
         <div class="col-md-8 offset-md-2">
             <h1>{{page.title}}</h1>
             <p class="font-weight-bold">Je gewenste pagina is niet gevonden, sorry!</p>
-            <p>Hieronder een overzicht van alle pagina's op onze website:</p>
+            <p>Misschien kunnen we je helpen met één van onderstaande links?</p>
             <ul class="list-group">
-                {% for apage in site.pages %} {% if apage.exclude != true %}
-                <li class="list-group-item"><a href="{{site.canonical_domain}}{{site.baseurl}}{{apage.url}}">{{apage.title}}</a></li>
-                {% endif %} {% endfor %}
-                <p>Hieronder een overzicht van alle posts op onze website:</p>
-                {% for item in site.posts %} {% if item.exclude != true %}
-                <li class="list-group-item"><a href="{{site.canonical_domain}}{{site.baseurl}}{{item.url}}">{{item.title}}</a></li>
-                {% endif %} {% endfor %}
+                <li class="list-group-item">
+                    <a href="{{site.canonical_domain}}{{site.baseurl}}index">Home</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://localheroes.recruitee.com/">Vacatures</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="{{site.canonical_domain}}{{site.baseurl}}ik_ben_ondernemer">Ik ben ondernemer</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="{{site.canonical_domain}}{{site.baseurl}}ik_ben_beleidsmaker">Ik ben beleidsmaker</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="{{site.canonical_domain}}{{site.baseurl}}faq">FAQ</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="{{site.canonical_domain}}{{site.baseurl}}l/z2pn26/amsterdam">Local Heroes locatie in Amsterdam</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="{{site.canonical_domain}}{{site.baseurl}}l/6mkb62/breda">Local Heroes locatie in Breda in samenwerking met BOER&amp;NLekker</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="{{site.canonical_domain}}{{site.baseurl}}l/42reem/maren-kessel">Local Heroes locatie in Maren-Kessel in samenwerking met BOER&amp;NLekker</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="{{site.canonical_domain}}{{site.baseurl}}instant_app_ios">Local Heroes app-clip (iOS)</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="{{site.canonical_domain}}{{site.baseurl}}instant_app_android">Local Heroes instant app (Android)</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://wa.me/31621351869">Local Heroes whatsapp support</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="mailto::info@localheroesonline.com">Local Heroes email support</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://www.facebook.com/localheroesonelineamsterdam">Local Heroes op Facebook</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://www.linkedin.com/company/local-heroes-online/">Local Heroes op Linkedin</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://www.instagram.com/localheroes_nl/">Local Heroes op Instagram</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="{{site.canonical_domain}}{{site.baseurl}}terms-conditions">Algemene voorwaarden</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="{{site.canonical_domain}}{{site.baseurl}}disclaimer-web">Disclaimer website</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="{{site.canonical_domain}}{{site.baseurl}}disclaimer-app">Disclaimer app</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="{{site.canonical_domain}}{{site.baseurl}}privacyverklaring">Privacy verklaring</a>
+                </li>
             </ul>
             </p>
         </div>

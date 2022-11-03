@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "nl" }}">
 
-{% include head_vendor.html %}
+{% include head_product.html %}
 
 {% if site.mixpanel-project-token and site.mixpanel-api-host %}
 <script type="text/javascript">
     mixpanel.track("Visit Product", {
+        "User agent": navigator.userAgent,
         "Product Name": "{{page.product_name}}",
         "Product URL": "{{page.product_url}}",
         "Product ID": "{{page.product_id}}",

@@ -83,13 +83,13 @@
                                             </div>
                                         </div>
                                         <div class="product-card-img">
-                                            <img src="{{ site.cloudimg }}_prod_/product/{{ item.product_image }}?height=150" alt="{{ item.product_name }}">
+                                            <img src="{{ site.cloudimg }}_prod_/product/{{ item.product_image_hash }}?height=150" alt="{{ item.product_name }}">
                                         </div>
                                         <div class="product-card-content">
                                             <h4>{{ item.product_name }}</h4>
                                             <div class="stuk-price">
-                                                <span class="stuk">{{ item.product_details }}</span>
-                                                <span class="price">€ {{ item.product_price| precision: 2 }}</span>
+                                                <span class="stuk">{{ item.product_quantity_description }}</span>
+                                                <span class="price">€ {{ item.product_unit_price | precision: 2 }}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -153,15 +153,15 @@
                                             </div>
                                         </div>
                                         <div class="product-card-img">
-                                            <img src="{{ site.cloudimg }}_prod_/product/{{ item.product_image }}?height=150" alt="{{ item.product_name }}">
+                                            <img src="{{ site.cloudimg }}_prod_/product/{{ item.product_image_hash }}?height=150" alt="{{ item.product_name }}">
                                         </div>
                                         <div class="product-card-content">
                                             <h4>{{ item.product_name }}</h4>
-                                            {% if item.product_stock_status == "Out_stock" %}
+                                            {% if item.product_is_available == "0" %}
                                             <span class="status out-stock disabled full-wd">Niet op voorraad</span> {% else %}
                                             <div class="stuk-price">
-                                                <span class="stuk">{{ item.product_details }}</span>
-                                                <span class="price">€ {{ item.product_price| precision: 2 }}</span>
+                                                <span class="stuk">{{ item.product_quantity_description }}</span>
+                                                <span class="price">€ {{ item.product_unit_price | precision: 2 }}</span>
                                             </div>
                                             {% endif %}
                                         </div>
@@ -175,16 +175,16 @@
                                 <a href="{{ site.url }}/p/{{ item.product_id }}/{{ item.vendor_url }}/{{ item.product_url }}" class="">
                                     <div class="product-list-mobile-item product-card-mobile">
                                         <div class="product-img">
-                                            <img src="{{ site.cloudimg }}_prod_/product/{{ item.product_image }}?width=110" class="img-fluid" alt="{{ item.product_name }}">
+                                            <img src="{{ site.cloudimg }}_prod_/product/{{ item.product_image_hash }}?width=110" class="img-fluid" alt="{{ item.product_name }}">
                                         </div>
                                         <div class="product-content">
                                             <h4>{{ item.product_name }}</h4>
-                                            <p class="stuk">{{ item.product_details }}</p>
-                                            {% if item.product_stock_status == "Out_stock" %}
+                                            <p class="stuk">{{ item.product_quantity_description }}</p>
+                                            {% if item.product_is_available == "0" %}
                                             <span class="status out-stock disabled">Niet op voorraad</span> {% endif %}
                                         </div>
                                         <div class="price-rating">
-                                            <span class="price">€ {{ item.product_price| precision: 2 }}</span>
+                                            <span class="price">€ {{ item.product_unit_price | precision: 2 }}</span>
                                             <div class="rating">
                                                 <span class="icon icon-sm"><i class="fa fa-thumbs-up"></i></span> {{ item.product_rating }}
                                             </div>
