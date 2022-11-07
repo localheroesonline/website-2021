@@ -4,14 +4,14 @@
 {% include head_referral.html %}
 
 {% if site.mixpanel-project-token and site.mixpanel-api-host %}
-<script type="text/javascript">
-    mixpanel.track("Visit Referral Promo Code", {
-        "User agent": navigator.userAgent,
-        "Referral Promo Code": "{{page.referral_promo_code}}",
-        "Owner Name": "{{page.referral_owner_name}}",
-        "Points": "{{page.referral_points}}",
-    });
-</script>
+  <script type="text/javascript">
+      mixpanel.track("Visit Referral Promo Code", {
+          "User agent": navigator.userAgent,
+          "Referral Promo Code": "{{page.referral_promo_code}}",
+          "Owner Name": "{{page.referral_owner_name}}",
+          "Points": "{{page.referral_points}}",
+      });
+  </script>
 {% endif %}
 
 <script type="text/javascript">
