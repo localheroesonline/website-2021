@@ -29,9 +29,10 @@ ymw4x2,Woudenberg,"Woudenberg 'Poortplein'",Woudenberg,"De Nieuwe Poort, Woudenb
 am6yx2,Achterberg,Achterberg,Achterberg,"Achterbergsestraatweg 184, Achterberg",51.97290500,5.58580600
 xmyz72,Maarn,Maarn,Maarn,"5-mei Plein, Maarn",52.06452600,5.37193100
 a2gan2,Beusichem,"Beusichem Markt",Beusichem,"Markt, Beusichem",51.94857100,5.29252100
-dmnoo2,Haarlem,Zomerkade,Haarlem,Zomerkade,52.37699810,4.64934580
+dmnoo2,Haarlem,"Den Hollander Kaas",Haarlem,Zomerkade,52.22044070,4.53914240
 6mkb62,BOER&NLekker,Breda,BOER&NLekker,"Rietdijk 4",51.62124900,4.75276900
 zmbye2,Kaasdam,"Kleine Markt",Centrum,Haasland,0.00000000,0.00000000
+z2pwnm,Timboektoe,"Kleine Markt",Centrum,"Haasland 4",0.00000000,0.00000000
 42reem,BOER&NLekker,Maren-Kessel,BOER&NLekker,"Burgemeester Smitsweg 10",51.77186700,5.38272200
 ymd5r2,Wassenaar,Berkheiveld,Wassenaar,Berkheiveld,52.14716820,4.39149680
 y2x6z2,Bovenkerk,"Noorddammerweg ",Bovenkerk,"Noorddammerweg ",52.26667180,4.81435770
@@ -39,10 +40,10 @@ e233b2,"De Kwakel",Kerklaan,"De Kwakel",Kerklaan,52.23857120,4.79338980
 rm5yrm,Overveen,Bloemendaalseweg,Overveen,Bloemendaalseweg,52.40410680,4.61885730
 wm4lxm,Linschoten,"Jacob Barneveldstraat",Linschoten,"Jacob Barneveldstraat",52.06429340,4.91631570
 a2lvp2,"Almere Poort",Homeruskwartier,"Almere Poort",Homeruskwartier,52.35269120,5.11716950
-62ev5m,Pernis,"G.A. Soetemanweg",Pernis,"G.A. Soetemanweg",51.88776030,4.38927180
-zmawnm,Oudewater,"Korte Havenstraat",Oudewater,"Korte Havenstraat",52.02273130,4.87036880
-e2qvom,Mierlo,Dorpstraat,Mierlo,Dorpstraat,51.44398060,5.61435170
-6mkw6m,Teteringen,"Willem Alexanderplein",Teteringen,"Willem Alexanderplein",51.61071590,4.81618900
+62ev5m,Pernis,"G.A. Soetemanweg 73",Pernis,"G.A. Soetemanweg 73 (Bakkerij Dekker)",51.88776030,4.38927180
+zmawnm,Oudewater,"Korte Havenstraat 18",Oudewater,"Korte Havenstraat 18 (DA Johan Schouten)",52.02273130,4.87036880
+e2qvom,Mierlo,"Margrietstraat 106",Mierlo,"Margrietstraat 106 (Sported)",51.44398060,5.61435170
+6mkw6m,Teteringen,"Scheperij 1",Teteringen,"Scheperij 1 (Mitra Ad van Dongen)",51.61071590,4.81618900
 zmbxem,Zegveld,Hoofdweg,Zegveld,Hoofdweg,52.10606330,4.84713200
 ymwdx2,Ochten,"Dokter M. van Drielplein",Ochten,"Dokter M. van Drielplein",51.90640350,5.56277430
 a2gbnm,Groesbeek,"Marktterrein Spoorlaan",Groesbeek,"Marktterrein Spoorlaan",51.77709270,5.93377950
@@ -57,10 +58,20 @@ dmnp4m,Hilvarenbeek,"Weekmarkt Hilverhof",Hilvarenbeek,"Weekmarkt Hilverhof",51.
 ymdrom,Uden,"Weekmarkt De Markt",Uden,"Weekmarkt De Markt",51.65725410,5.61739420
 y2xaqm,Sint-Michielsgestel,"Weekmarkt Petrus Dondersplein",Sint-Michielsgestel,"Weekmarkt Petrus Dondersplein",51.63808320,5.34848120
 42ryem,BOER&NLekker,Oosterhout,BOER&NLekker,"Hoogstraat 82-B",51.63899950,4.87710930
-ymdrrm,"Bakkerij Straathof","Bakkerij Straathof",Amsterdam,"Ten Katestraat 21",,
+ymdrrm,"Bakkerij Straathof","Bakkerij Straathof",Amsterdam,"Ten Katestraat 21",52.36756260,4.86444430
 e23zbm,BOER&NLekker,"Welkoop Wijk en Aalburg",BOER&NLekker,"Parallelweg 4",51.74638510,5.10958520
 rm5erm,BOER&NLekker,"Welkoop Udenhout",BOER&NLekker,"Kreitenmolenstraat 151",51.60782900,5.14922650
 wm46xm,BOER&NLekker,"Welkoop Middelbeers",BOER&NLekker,"Het Ven 1",51.46845960,5.24852690
 62ex5m,BOER&NLekker,"Welkoop Hulsel",BOER&NLekker,"Vooreind 16a",51.38909290,5.16832890
 zmaonm,BOER&NLekker,"Welkoop Someren",BOER&NLekker,"Witvrouwenbergweg 15",51.39670920,5.71621030
 e23znm,Schijndel,"Weekmarkt centrum",Schijndel,"Weekmarkt centrum",51.61915650,5.43245790
+zmapd2,"fa. Koopman","fa. Koopman","fa. Koopman","Elandsgracht 100",52.36953380,4.87760630
+e2qyz2,"De Visscher Amersfoort","De Visscher Amersfoort","De Visscher Amersfoort","Emiclaerhof 236",52.18576550,5.39767600
+6mkqwm,"Vakbeurs Foodspecialiteiten","Expo Houten","Vakbeurs Foodspecialiteiten","Meidoornkade 24",52.03827160,5.13962320
+zmbnpm,"Spakenburgse Visbeurs","Jachthaven Nieuwboer","Spakenburgse Visbeurs","Westdijk 36",52.26070480,5.37079310
+ymwll2,BOER&NLekker,"Breda Wolfslaar",BOER&NLekker,"Wolfslaardreef 95",51.56128917,4.80184003
+k27a72,BOER&NLekker,Goirle,BOER&NLekker,"Hoge Wal 15",51.53282533,5.08607166
+32z6x2,Opmeer,"De Heer van Opmeer",Opmeer,"Lindengracht 1",52.70349520,4.94575940
+72okg2,Amsterdam,"The Sandwich Bar",Amsterdam,"Heisteeg 8",52.36885870,4.88839750
+wm4vam,Moordrecht,"Kaashandel Marco Voshol",Moordrecht,"Kerklaan 2",51.98793790,4.66819390
+a2gl5m,Maasdam,"Kaashandel Marco Voshol",Maasdam,"Dorpsstraat 37",51.78389360,4.55571410

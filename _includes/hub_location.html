@@ -27,18 +27,23 @@
             <div class="col-md-12">
                 <div class="slick-carousel heroes-wapper" id="vendor-carousel">
                     <!-- Inside the containing div, add one div for each slide -->
-                    {% for item in site.data.vendors %}
-                    <div class="slide-item">
-                        <!-- You can put an image or text inside each slide div -->
-                        <div class="hero-img">
-                            <a href="{{ site.url }}/{{ item.vendor_permalink }}"><img src="{{ site.cloudimg }}_prod_/vendor-profile/{{ item.vendor_image }}?width=300" alt="{{ item.vendor_shop_name }} - {{ item.vendor_category_name }}"></a>
-                        </div>
-                        <div class="content text-center">
-                            <h2 class="ft-secondary ft-xs">{{ item.vendor_shop_name }}</h2>
-                            <h3 class="ft-xs ft-base">{{ item.vendor_category_name }}</h3>
-                        </div>
-                        <a href="{{ site.url }}/{{ item.vendor_permalink }}" class="v-btn v-btn-acent btn-md fw-bold">Toon assortiment</a>
-                    </div>
+                    {% for hub_location in site.data.hub_location_vendors %}
+                        {% for vendor in site.data.vendors %}
+                            <!-- Add vendors to the carrousel if they are part of the selected hub_location -->
+                            {% if hub_location.hub_location_id ==  page.hub_location_id and vendor.vendor_id == hub_location.vendor_id %}
+                                <div class="slide-item">
+                                    <!-- You can put an image or text inside each slide div -->
+                                    <div class="hero-img">
+                                        <a href="{{ site.url }}/{{ vendor.vendor_permalink }}"><img src="{{ site.cloudimg }}_prod_/vendor-profile/{{ vendor.vendor_image }}?width=300" alt="{{ vendor.vendor_shop_name }} - {{ vendor.vendor_category_name }}"></a>
+                                    </div>
+                                    <div class="content text-center">
+                                        <h2 class="ft-secondary ft-xs">{{ vendor.vendor_shop_name }}</h2>
+                                        <h3 class="ft-xs ft-base">{{ vendor.vendor_category_name }}</h3>
+                                    </div>
+                                    <a href="{{ site.url }}/{{ vendor.vendor_permalink }}" class="v-btn v-btn-acent btn-md fw-bold">Toon assortiment</a>
+                                </div>
+                            {% endif %}        
+                        {% endfor %}
                     {% endfor %}
                 </div>
             </div>

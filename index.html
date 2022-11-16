@@ -356,45 +356,47 @@ title: Bestel het beste uit de buurt
 
     // getLocation();
 </script>
-<script>
-    $(document).ready(function() {
+{% if site.mixpanel-project-token and site.mixpanel-api-host %}
+    <script>
+        $(document).ready(function() {
 
-        $("#mijn_postcode").keyup(function() {
-            var zip = $('#mijn_postcode').val();
-            if (zip.length == 4) {
-                if (
-                    (zip == 1013) ||
-                    (zip == 1014) ||
-                    (zip == 1015) ||
-                    (zip == 1016) ||
-                    (zip == 1051) ||
-                    (zip == 1052) ||
-                    (zip == 1053) ||
-                    (zip == 1054) ||
-                    (zip == 1055) ||
-                    (zip == 1056) ||
-                    (zip == 1057) ||
-                    (zip == 1058) ||
-                    (zip == 1018) ||
-                    (zip == 1019) ||
-                    (zip == 1091) ||
-                    (zip == 1092) ||
-                    (zip == 1093) ||
-                    (zip == 1094) ||
-                    (zip == 1097) ||
-                    (zip == 1098)
-                ) {
-                    $('#bezorgen_mogelijk').show();
-                    $('#bezorgen_niet_mogelijk').hide();
-                } else {
-                    $('#bezorgen_mogelijk').hide();
-                    $('#bezorgen_niet_mogelijk').show();
+            $("#mijn_postcode").keyup(function() {
+                var zip = $('#mijn_postcode').val();
+                if (zip.length == 4) {
+                    if (
+                        (zip == 1013) ||
+                        (zip == 1014) ||
+                        (zip == 1015) ||
+                        (zip == 1016) ||
+                        (zip == 1051) ||
+                        (zip == 1052) ||
+                        (zip == 1053) ||
+                        (zip == 1054) ||
+                        (zip == 1055) ||
+                        (zip == 1056) ||
+                        (zip == 1057) ||
+                        (zip == 1058) ||
+                        (zip == 1018) ||
+                        (zip == 1019) ||
+                        (zip == 1091) ||
+                        (zip == 1092) ||
+                        (zip == 1093) ||
+                        (zip == 1094) ||
+                        (zip == 1097) ||
+                        (zip == 1098)
+                    ) {
+                        $('#bezorgen_mogelijk').show();
+                        $('#bezorgen_niet_mogelijk').hide();
+                    } else {
+                        $('#bezorgen_mogelijk').hide();
+                        $('#bezorgen_niet_mogelijk').show();
+                    }
+                    mixpanel.track('Zipcode entered', {
+                        "User agent": navigator.userAgent,
+                        "Zipcode": zip
+                    });
                 }
-                mixpanel.track('Zipcode entered', {
-                    "User agent": navigator.userAgent,
-                    "Zipcode": zip
-                });
-            }
+            });
         });
-    });
-</script>
+    </script>
+{% endif %}
