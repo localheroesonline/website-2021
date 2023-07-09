@@ -18,15 +18,17 @@ sitemap: false
         gtag('js', new Date());
         gtag('config', 'UA-260378921');
     </script>
-    <script type="text/javascript">
-        (function(f,b){if(!b.__SV){var e,g,i,h;window.mixpanel=b;b._i=[];b.init=function(e,f,c){function g(a,d){var b=d.split(".");2==b.length&&(a=a[b[0]],d=b[1]);a[d]=function(){a.push([d].concat(Array.prototype.slice.call(arguments,0)))}}var a=b;"undefined"!==typeof c?a=b[c]=[]:c="mixpanel";a.people=a.people||[];a.toString=function(a){var d="mixpanel";"mixpanel"!==c&&(d+="."+c);a||(d+=" (stub)");return d};a.people.toString=function(){return a.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
-        for(h=0;h<i.length;h++)g(a,i[h]);var j="set set_once union unset remove delete".split(" ");a.get_group=function(){function b(c){d[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));a.push([e,call2])}}for(var d={},e=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<j.length;c++)b(j[c]);return d};b._i.push([e,f,c])};b.__SV=1.2;e=f.createElement("script");e.type="text/javascript";e.async=!0;e.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
-        MIXPANEL_CUSTOM_LIB_URL:"file:"===f.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";g=f.getElementsByTagName("script")[0];g.parentNode.insertBefore(e,g)}})(document,window.mixpanel||[]);
+    {% if site.mixpanel-project-token and site.mixpanel-api-host %}
+        <script type="text/javascript">
+            (function(f,b){if(!b.__SV){var e,g,i,h;window.mixpanel=b;b._i=[];b.init=function(e,f,c){function g(a,d){var b=d.split(".");2==b.length&&(a=a[b[0]],d=b[1]);a[d]=function(){a.push([d].concat(Array.prototype.slice.call(arguments,0)))}}var a=b;"undefined"!==typeof c?a=b[c]=[]:c="mixpanel";a.people=a.people||[];a.toString=function(a){var d="mixpanel";"mixpanel"!==c&&(d+="."+c);a||(d+=" (stub)");return d};a.people.toString=function(){return a.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+            for(h=0;h<i.length;h++)g(a,i[h]);var j="set set_once union unset remove delete".split(" ");a.get_group=function(){function b(c){d[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));a.push([e,call2])}}for(var d={},e=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<j.length;c++)b(j[c]);return d};b._i.push([e,f,c])};b.__SV=1.2;e=f.createElement("script");e.type="text/javascript";e.async=!0;e.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
+            MIXPANEL_CUSTOM_LIB_URL:"file:"===f.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";g=f.getElementsByTagName("script")[0];g.parentNode.insertBefore(e,g)}})(document,window.mixpanel||[]);
 
-        mixpanel.init("{{ site.mixpanel-project-token }}", {
-            api_host: "{{ site.mixpanel-api-host }}"
-        });
-    </script>
+            mixpanel.init("{{ site.mixpanel-project-token }}", {
+                api_host: "{{ site.mixpanel-api-host }}"
+            });
+        </script>
+    {% endif %}
     <meta charset="utf-8" />
     <script>
         function getMobileOperatingSystem() {
@@ -50,105 +52,109 @@ sitemap: false
         }
     </script>
 
-    <script>
-    function DetectAndServe() {
-        var path = window.location.pathname;
-        var page = path.split("/").pop();
-        console.log( page );
-        
-        let os = getMobileOperatingSystem();
-        let params = {};
+    {% if site.mixpanel-project-token and site.mixpanel-api-host %}
+        <script>
+        function DetectAndServe() {
+            var path = window.location.pathname;
+            var page = path.split("/").pop();
+            console.log( page );
+            
+            let os = getMobileOperatingSystem();
+            let params = {};
 
-        // process utm params
-        var urlParams = new URLSearchParams(window.location.hash.slice(1));
+            // process utm params
+            var urlParams = new URLSearchParams(window.location.hash.slice(1));
 
-        // https://stackoverflow.com/questions/11920697/how-to-get-hash-value-in-a-url-in-js
-        // example url: https://www.localheroesonline.com/qr.html#utm_source=t-stoepje-aart-veldhuizen&utm_medium=qr-flyer&utm_campaign=pickup-awareness
-        // example url with shortened utm params: https://www.localheroesonline.com/qr.html#s=pup003&m=qr-banner&c=front
-        // urlParams.get('utm_source') // t-stoepje-aart-veldhuizen
-        // urlParams.get('utm_medium') // qr-flyer
-        // urlParams.get('utm_campaign') // pickup-awareness
-        // https://www.localheroesonline.com/app.html#utm_source=email&utm_medium=whatsapp&utm_campaign=referral_code&utm_content=2021-06
-        
-        // Check if utm_source exists in the parameters
-        if (urlParams.has('utm_source')) { 
-            utm_source = urlParams.get('utm_source')
-        } // Check if s exists in the parameters
-        else if (urlParams.has('s')) { 
-            utm_source = urlParams.get('s')
-        }
-        else {
-            utm_source = '';
-        };
-
-        // Check if utm_medium exists in the parameters
-        if (urlParams.has('utm_medium')) { 
-            utm_medium = urlParams.get('utm_medium')
-        } // Check if m exists in the parameters
-        else if (urlParams.has('m')) { 
-            utm_medium = urlParams.get('m')
-        }
-        else {
-            utm_medium = '';
-        };
-
-        // Check if utm_campaign exists in the parameters
-        if (urlParams.has('utm_campaign')) { 
-            utm_campaign = urlParams.get('utm_campaign')
-        } // Check if c exists in the parameters
-        else if (urlParams.has('c')) { 
-            utm_campaign = urlParams.get('c')
-        }
-        else {
-            utm_campaign = '';
-        };
-
-        if (os == "Android") {
-            mixpanel.track("Goto App Marketplace", {
-                "User agent": navigator.userAgent,
-                "Marketplace": "Android",
-                "Campaign": page,
-                "$os": os,
-                "utm_source": utm_source,
-                "utm_medium": utm_medium,
-                "utm_campaign": utm_campaign,
-            });
-            window.location.href = "https://play.google.com/store/apps/details?id=com.localheroes.consumer&utm_source=" + utm_source + "&utm_medium=" + utm_medium + "&utm_campaign=" + utm_campaign;
-        } else if (os == "iOS") {
-            mixpanel.track("Goto App Marketplace", {
-                "User agent": navigator.userAgent,
-                "Marketplace": "iOS",
-                "Campaign": page,
-                "$os": os,
-                "utm_source": utm_source,
-                "utm_medium": utm_medium,
-                "utm_campaign": utm_campaign,            
-            });
-            window.location.href = "https://apps.apple.com/us/app/lh-consumer/id1470938037?utm_source=" + utm_source + "&utm_medium=" + utm_medium + "&utm_campaign=" + utm_campaign;
-        } else {
-            mixpanel.track("Goto Local Heroes Home", {
-                "User agent": navigator.userAgent,
-                "Campaign": page,
-                "$os": os,
-                "utm_source": utm_source,
-                "utm_medium": utm_medium,
-                "utm_campaign": utm_campaign,              
-            });
-            // Do we have a UTM source? Then redirect to vendor otherwise go to index
-            /* temporarily disabled this code, rethink this piggybacking on utm_source
-            if ( utm_source == '' ) {
-                window.location.href = "{{site.url}}/index?utm_source=&utm_medium=" + utm_medium + "&utm_campaign=" + utm_campaign;        
-            } else {
-                window.location.href = "{{site.url}}/v/" + utm_source + "?utm_source=" + utm_source + "&utm_medium=" + utm_medium + "&utm_campaign=" + utm_campaign;
+            // https://stackoverflow.com/questions/11920697/how-to-get-hash-value-in-a-url-in-js
+            // example url: https://www.localheroesonline.com/qr.html#utm_source=t-stoepje-aart-veldhuizen&utm_medium=qr-flyer&utm_campaign=pickup-awareness
+            // example url with shortened utm params: https://www.localheroesonline.com/qr.html#s=pup003&m=qr-banner&c=front
+            // urlParams.get('utm_source') // t-stoepje-aart-veldhuizen
+            // urlParams.get('utm_medium') // qr-flyer
+            // urlParams.get('utm_campaign') // pickup-awareness
+            // https://www.localheroesonline.com/app.html#utm_source=email&utm_medium=whatsapp&utm_campaign=referral_code&utm_content=2021-06
+            
+            // Check if utm_source exists in the parameters
+            if (urlParams.has('utm_source')) { 
+                utm_source = urlParams.get('utm_source')
+            } // Check if s exists in the parameters
+            else if (urlParams.has('s')) { 
+                utm_source = urlParams.get('s')
+            }
+            else {
+                utm_source = '';
             };
-            */
-            window.location.href = "{{site.url}}/index.html#utm_source=" + utm_source + "&utm_medium=" + utm_medium + "&utm_campaign=" + utm_campaign;
+
+            // Check if utm_medium exists in the parameters
+            if (urlParams.has('utm_medium')) { 
+                utm_medium = urlParams.get('utm_medium')
+            } // Check if m exists in the parameters
+            else if (urlParams.has('m')) { 
+                utm_medium = urlParams.get('m')
+            }
+            else {
+                utm_medium = '';
+            };
+
+            // Check if utm_campaign exists in the parameters
+            if (urlParams.has('utm_campaign')) { 
+                utm_campaign = urlParams.get('utm_campaign')
+            } // Check if c exists in the parameters
+            else if (urlParams.has('c')) { 
+                utm_campaign = urlParams.get('c')
+            }
+            else {
+                utm_campaign = '';
+            };
+
+            if (os == "Android") {
+                mixpanel.track("Goto App Marketplace", {
+                    "User agent": navigator.userAgent,
+                    "Marketplace": "Android",
+                    "Campaign": page,
+                    "$os": os,
+                    "utm_source": utm_source,
+                    "utm_medium": utm_medium,
+                    "utm_campaign": utm_campaign,
+                });
+                window.location.href = "https://play.google.com/store/apps/details?id=com.localheroes.consumer&utm_source=" + utm_source + "&utm_medium=" + utm_medium + "&utm_campaign=" + utm_campaign;
+            } else if (os == "iOS") {
+                mixpanel.track("Goto App Marketplace", {
+                    "User agent": navigator.userAgent,
+                    "Marketplace": "iOS",
+                    "Campaign": page,
+                    "$os": os,
+                    "utm_source": utm_source,
+                    "utm_medium": utm_medium,
+                    "utm_campaign": utm_campaign,            
+                });
+                window.location.href = "https://apps.apple.com/us/app/lh-consumer/id1470938037?utm_source=" + utm_source + "&utm_medium=" + utm_medium + "&utm_campaign=" + utm_campaign;
+            } else {
+                mixpanel.track("Goto Local Heroes Home", {
+                    "User agent": navigator.userAgent,
+                    "Campaign": page,
+                    "$os": os,
+                    "utm_source": utm_source,
+                    "utm_medium": utm_medium,
+                    "utm_campaign": utm_campaign,              
+                });
+                // Do we have a UTM source? Then redirect to vendor otherwise go to index
+                /* temporarily disabled this code, rethink this piggybacking on utm_source
+                if ( utm_source == '' ) {
+                    window.location.href = "{{site.url}}/index?utm_source=&utm_medium=" + utm_medium + "&utm_campaign=" + utm_campaign;        
+                } else {
+                    window.location.href = "{{site.url}}/v/" + utm_source + "?utm_source=" + utm_source + "&utm_medium=" + utm_medium + "&utm_campaign=" + utm_campaign;
+                };
+                */
+                window.location.href = "{{site.url}}/index.html#utm_source=" + utm_source + "&utm_medium=" + utm_medium + "&utm_campaign=" + utm_campaign;
+            }
         }
-    }
-    </script>
+        </script>
+    {% endif %}
 </head>
 
-<body onload="DetectAndServe()">
-</body>
+{% if site.mixpanel-project-token and site.mixpanel-api-host %}
+    <body onload="DetectAndServe()">
+    </body>
+{% endif %}
 
 </html>

@@ -4,15 +4,15 @@
 {% include head_vendor.html %}
 
 {% if site.mixpanel-project-token and site.mixpanel-api-host %}
-<script type="text/javascript">
-    mixpanel.track("Visit Vendor", {
-        "User agent": navigator.userAgent,
-        "Vendor Shop Name": "{{page.vendor_shop_name}}",
-        "Vendor URL": "{{page.vendor_url}}",
-        "Vendor Address": "{{page.vendor_address}}",
-        "Vendor ID": "{{page.vendor_id}}",
-    });
-</script>
+    <script type="text/javascript">
+        mixpanel.track("Visit Vendor", {
+            "User agent": navigator.userAgent,
+            "Vendor Shop Name": "{{page.vendor_shop_name}}",
+            "Vendor URL": "{{page.vendor_url}}",
+            "Vendor Address": "{{page.vendor_address}}",
+            "Vendor ID": "{{page.vendor_id}}",
+        });
+    </script>
 {% endif %}
 
 <body>

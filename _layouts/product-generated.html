@@ -4,18 +4,18 @@
 {% include head_product.html %}
 
 {% if site.mixpanel-project-token and site.mixpanel-api-host %}
-<script type="text/javascript">
-    mixpanel.track("Visit Product", {
-        "User agent": navigator.userAgent,
-        "Product Name": "{{page.product_name}}",
-        "Product URL": "{{page.product_url}}",
-        "Product ID": "{{page.product_id}}",
-        "Vendor Shop Name": "{{page.vendor_shop_name}}",
-        "Vendor URL": "{{page.vendor_url}}",
-        "Vendor Address": "{{page.vendor_address}}",
-        "Vendor ID": "{{page.vendor_id}}",
-    });
-</script>
+    <script type="text/javascript">
+        mixpanel.track("Visit Product", {
+            "User agent": navigator.userAgent,
+            "Product Name": "{{page.product_name}}",
+            "Product URL": "{{page.product_url}}",
+            "Product ID": "{{page.product_id}}",
+            "Vendor Shop Name": "{{page.vendor_shop_name}}",
+            "Vendor URL": "{{page.vendor_url}}",
+            "Vendor Address": "{{page.vendor_address}}",
+            "Vendor ID": "{{page.vendor_id}}",
+        });
+    </script>
 {% endif %}
 
 <body>

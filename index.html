@@ -2,6 +2,24 @@
 layout: default_footer_light
 title: Bestel het beste uit de buurt
 ---
+<!-- POPUP -->
+<script type="text/javascript">
+    $(window).on('load', function() {
+        $('#myModal').modal('show');
+    });
+</script>
+<div class="modal hide fade" id="myModal">
+    <div class="modal-header">
+        <a class="close" data-dismiss="modal">×</a>
+        <h3>Voor nu nemen we afscheid...</h3>
+    </div>
+    <div class="modal-body">
+        <p>Helaas, Local Heroes heeft haar deuren moeten sluiten in Amsterdam. De missie om lokale ondernemers te ondersteunen blijft in ons hart en daarom onderzoeken we een doorstart. Blijf vooral kopen bij deze helden, want ze verdienen het! Hopelijk tot ziens.</p>
+    </div>
+    <div class="modal-footer">
+        <a href="#" class="btn">Sluit dit bericht</a>
+    </div>
+</div>
 <!-- HEADER -->
 <section id="home" class="section-wrap app-header skin-base">
     <div class="container">
@@ -12,10 +30,10 @@ title: Bestel het beste uit de buurt
                         <img src="{{ site.image_url }}/assets/home/logo.png?width=200" class="img-fluid" alt="Local Heroes logo">
                     </div>
                     <h1 class="header-title">
-                        Bestel het beste <br>uit de buurt
+                        Bestel het beste <br>uit de buurt<br> met Click & Collect
                     </h1>
                     <div class="content">
-                        Local Heroes is hét e-commerce platform waarmee je eenvoudig en altijd via de app het aanbod van <span class="ft-danger">lokale ondernemers</span> kan bestellen
+                        Local Heroes is hét e-commerce platform waarmee je eenvoudig en altijd via de app het aanbod van <span class="ft-danger">jouw lokale ondernemer(s)</span> kan bestellen
                     </div>
                 </div>
                 <div id="app-store-btn" class=""></div>
@@ -50,6 +68,7 @@ title: Bestel het beste uit de buurt
         "referrer": document.referrer
     });
 </script>
+
 <!-- HOE WERKT HET -->
 <section id="hoe-werkt-het" class="section-wrap how-work skin-primary">
     <div class="container">
@@ -68,20 +87,20 @@ title: Bestel het beste uit de buurt
             <div class="col-md-3">
                 <div class="hw-block">
                     <img src="{{ site.image_url }}/assets/home/icon-fruits-100.png?width=100" class="img-fluid" alt="Selecteer boodschappen van je favoriete lokale ondernemers">
-                    <div class="title">Selecteer boodschappen van je favoriete lokale ondernemers</div>
+                    <div class="title">Vul jouw postcode in en zie welke lokale ondernemer(s) beschikbaar is/zijn in jouw buurt</div>
 
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="hw-block">
                     <img src="{{ site.image_url }}/assets/home/icon-veggies-100.png?width=100" class="img-fluid" alt="Wij verzamelen je boodschappen, sit back & relax">
-                    <div class="title">Wij verzamelen je boodschappen, sit back & relax</div>
+                    <div class="title">Bestel producten bij jouw favoriete lokale ondernemer(s)</div>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="hw-block">
                     <img src="{{ site.image_url }}/assets/home/icon-cart-100.png?width=100" class="img-fluid" alt="Laat je boodschappen thuis bezorgen óf haal ze op bij ons Pick Up Point!">
-                    <div class="title">Laat je boodschappen thuis bezorgen óf haal ze op bij ons Pick Up Point!</div>
+                    <div class="title">Kies een tijdslot wanneer jij jouw bestelling op kan halen bij de lokale ondernemer(s)</div>
                 </div>
             </div>
         </div>
@@ -89,7 +108,7 @@ title: Bestel het beste uit de buurt
 </section>
 <!-- OVER ONS VIDEO -->
 <section id="over-ons" class="video-wrap">
-    <iframe src="https://www.youtube.com/embed/RNPJ1t_u1Ag" title="Local Heroes - Bestel het beste uit de buurt" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/nO3aqHe_dvY" title="Local Heroes - Bestel het beste uit de buurt" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </section>
 <section class="section-wrap local-hero skin-base">
     <div class="container">
@@ -97,8 +116,8 @@ title: Bestel het beste uit de buurt
             <div class="col-md-6">
                 <div class="our-hero-content">
                     <h2 class="main-heading fw-bold mb-4">Over Local Heroes</h2>
-                    <p>Wij geloven in de kwaliteit en ambacht van de lokale ondernemer. Van de groenteman en bakker op de hoek. Tot jouw favoriete traiteur, het kaaswinkeltje en de visverkoper op de markt. We geven deze <span class="ft-danger">vaklieden</span>                        het online podium dat ze verdienen.</p>
-                    <p>Via Local Heroes kun je gemakkelijk je boodschappen doen bij de lokale ondernemers uit jouw buurt. Dagelijks verzamelen we de bestellingen en leggen deze klaar op het Pick Up Point óf we brengen je boodschappen vers naar je voordeur.</p>
+                    <p>Local Heroes gelooft in de kwaliteit en ambacht van de lokale ondernemer. Van de groenteman en bakker op de hoek, tot jouw favoriete traiteur, kaaswinkeltje en visverkoper op de markt. Ons doel is om deze lokale helden te helpen met digitaliseren, maar ook om hen te stimuleren samen te werken door een collectief te vormen.</p> 
+                    <p>Via Local Heroes kun je gemakkelijk je boodschappen doen bij jouw favoriete lokale ondernemer(s) en ophalen op het door jou gekozen tijdslot.</p>
                 </div>
             </div>
             <div class="col-md-6">
@@ -245,7 +264,7 @@ title: Bestel het beste uit de buurt
                         <ul class="">
                             <li>
                                 <img src="{{ site.image_url }}/assets/home/check-icon.png?width=20" alt="Steun lokale ondernemers">
-                                <h3>Steun lokale ondernemers</h3>
+                                <h3>Steun de lokale ondernemer(s)</h3>
                             </li>
                             <li>
                                 <img src="{{ site.image_url }}/assets/home/check-icon.png?width=20" alt="Altijd verse en lekkere producten van de markt in huis">
@@ -356,45 +375,47 @@ title: Bestel het beste uit de buurt
 
     // getLocation();
 </script>
-<script>
-    $(document).ready(function() {
+{% if site.mixpanel-project-token and site.mixpanel-api-host %}
+    <script>
+        $(document).ready(function() {
 
-        $("#mijn_postcode").keyup(function() {
-            var zip = $('#mijn_postcode').val();
-            if (zip.length == 4) {
-                if (
-                    (zip == 1013) ||
-                    (zip == 1014) ||
-                    (zip == 1015) ||
-                    (zip == 1016) ||
-                    (zip == 1051) ||
-                    (zip == 1052) ||
-                    (zip == 1053) ||
-                    (zip == 1054) ||
-                    (zip == 1055) ||
-                    (zip == 1056) ||
-                    (zip == 1057) ||
-                    (zip == 1058) ||
-                    (zip == 1018) ||
-                    (zip == 1019) ||
-                    (zip == 1091) ||
-                    (zip == 1092) ||
-                    (zip == 1093) ||
-                    (zip == 1094) ||
-                    (zip == 1097) ||
-                    (zip == 1098)
-                ) {
-                    $('#bezorgen_mogelijk').show();
-                    $('#bezorgen_niet_mogelijk').hide();
-                } else {
-                    $('#bezorgen_mogelijk').hide();
-                    $('#bezorgen_niet_mogelijk').show();
+            $("#mijn_postcode").keyup(function() {
+                var zip = $('#mijn_postcode').val();
+                if (zip.length == 4) {
+                    if (
+                        (zip == 1013) ||
+                        (zip == 1014) ||
+                        (zip == 1015) ||
+                        (zip == 1016) ||
+                        (zip == 1051) ||
+                        (zip == 1052) ||
+                        (zip == 1053) ||
+                        (zip == 1054) ||
+                        (zip == 1055) ||
+                        (zip == 1056) ||
+                        (zip == 1057) ||
+                        (zip == 1058) ||
+                        (zip == 1018) ||
+                        (zip == 1019) ||
+                        (zip == 1091) ||
+                        (zip == 1092) ||
+                        (zip == 1093) ||
+                        (zip == 1094) ||
+                        (zip == 1097) ||
+                        (zip == 1098)
+                    ) {
+                        $('#bezorgen_mogelijk').show();
+                        $('#bezorgen_niet_mogelijk').hide();
+                    } else {
+                        $('#bezorgen_mogelijk').hide();
+                        $('#bezorgen_niet_mogelijk').show();
+                    }
+                    mixpanel.track('Zipcode entered', {
+                        "User agent": navigator.userAgent,
+                        "Zipcode": zip
+                    });
                 }
-                mixpanel.track('Zipcode entered', {
-                    "User agent": navigator.userAgent,
-                    "Zipcode": zip
-                });
-            }
+            });
         });
-    });
-</script>
+    </script>
+{% endif %}
